@@ -3,12 +3,12 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef SPORK_H
-#define SPORK_H
+#ifndef FXTC_SPORK_H
+#define FXTC_SPORK_H
 
-#include "hash.h"
-#include "net.h"
-#include "utilstrencodings.h"
+#include <hash.h>
+#include <net.h>
+#include <utilstrencodings.h>
 
 // FXTC BEGIN
 class CSporkDB;
@@ -167,4 +167,4 @@ public:
     bool SetPrivKey(std::string strPrivKey);
 };
 
-#endif
+#endif // FXTC_SPORK_H

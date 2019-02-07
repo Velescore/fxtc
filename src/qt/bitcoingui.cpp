@@ -37,8 +37,8 @@
 #include <util.h>
 
 // Dash
-#include "masternode-sync.h"
-#include "masternodelist.h"
+#include <masternode-sync.h>
+#include <qt/masternodelist.h>
 //
 
 #include <iostream>

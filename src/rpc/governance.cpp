@@ -5,34 +5,36 @@
 
 //#define ENABLE_DASH_DEBUG
 
-#include "activemasternode.h"
-#include "consensus/validation.h"
-#include "core_io.h"
-#include "governance.h"
-#include "governance-vote.h"
-#include "governance-classes.h"
-#include "governance-validators.h"
-#include "init.h"
-#include "validation.h"
-#include "masternode.h"
-#include "masternode-sync.h"
-#include "masternodeconfig.h"
-#include "masternodeman.h"
-#include "messagesigner.h"
-#include "primitives/block.h"
-#include "rpc/server.h"
-#include "util.h"
-#include "utilmoneystr.h"
+#include <activemasternode.h>
+#include <consensus/validation.h>
+#include <core_io.h>
+#include <governance.h>
+#include <governance-vote.h>
+#include <governance-classes.h>
+#include <governance-validators.h>
+#include <init.h>
+#include <validation.h>
+#include <masternode.h>
+#include <masternode-sync.h>
+#include <masternodeconfig.h>
+#include <masternodeman.h>
+#include <messagesigner.h>
+#include <primitives/block.h>
+#include <rpc/server.h>
+#include <util.h>
+#include <utilmoneystr.h>
 #ifdef ENABLE_WALLET
-#include "wallet/wallet.h"
+#include <wallet/wallet.h>
 #endif // ENABLE_WALLET
 
 #include <boost/lexical_cast.hpp>
 
 UniValue gobject(const JSONRPCRequest& request)
 {
+#ifdef ENABLE_WALLET
     std::shared_ptr<CWallet> const wallet = GetWalletForJSONRPCRequest(request);
     CWallet* const pwallet = wallet.get();
+#endif // ENABLE_WALLET
 
     std::string strCommand;
     if (request.params.size() >= 1)

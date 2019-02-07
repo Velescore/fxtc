@@ -22,11 +22,11 @@
 #include <ui_interface.h>
 #include <utilstrencodings.h>
 
-#include "instantx.h"
-#include "netmessagemaker.h"
-#include "masternode-sync.h"
-#include "masternodeman.h"
-#include "privatesend.h"
+#include <instantx.h>
+#include <netmessagemaker.h>
+#include <masternode-sync.h>
+#include <masternodeman.h>
+#include <privatesend.h>
 
 #ifdef WIN32
 #include <string.h>

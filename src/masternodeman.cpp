@@ -3,20 +3,20 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include "activemasternode.h"
-#include "addrman.h"
-#include "governance.h"
-#include "masternode-payments.h"
-#include "masternode-sync.h"
-#include "masternodeman.h"
-#include "messagesigner.h"
-#include "netfulfilledman.h"
-#include "netmessagemaker.h"
+#include <activemasternode.h>
+#include <addrman.h>
+#include <governance.h>
+#include <masternode-payments.h>
+#include <masternode-sync.h>
+#include <masternodeman.h>
+#include <messagesigner.h>
+#include <netfulfilledman.h>
+#include <netmessagemaker.h>
 #ifdef ENABLE_WALLET
-#include "privatesend-client.h"
+#include <privatesend-client.h>
 #endif // ENABLE_WALLET
-#include "script/standard.h"
-#include "util.h"
+#include <script/standard.h>
+#include <util.h>
 
 /** Masternode manager */
 CMasternodeMan mnodeman;
@@ -765,6 +765,7 @@ void CMasternodeMan::ProcessMessage(CNode* pfrom, const std::string& strCommand,
             // use announced Masternode as a peer
             connman.AddNewAddress(CAddress(mnb.addr, NODE_NETWORK), pfrom->addr, 2*60*60);
         } else if(nDos > 0) {
+            LOCK(cs_main);
             Misbehaving(pfrom->GetId(), nDos);
         }
 
@@ -830,7 +831,7 @@ void CMasternodeMan::ProcessMessage(CNode* pfrom, const std::string& strCommand,
 
         LogPrint(BCLog::MASTERNODE, "DSEG -- Masternode list, masternode=%s\n", vin.prevout.ToStringShort());
 
-        LOCK(cs);
+        LOCK2(cs_main, cs);
 
         if(vin == CTxIn()) { //only should ask for this once
             //local network
@@ -1071,6 +1072,8 @@ bool CMasternodeMan::SendVerifyRequest(const CAddress& addr, const std::vector<C
 
 void CMasternodeMan::SendVerifyReply(CNode* pnode, CMasternodeVerification& mnv, CConnman& connman)
 {
+    AssertLockHeld(cs_main);
+
     // only masternodes can sign this, why would someone ask regular node?
     if(!fMasterNode) {
         // do not ban, malicious node might be using my IP
@@ -1111,6 +1114,8 @@ void CMasternodeMan::SendVerifyReply(CNode* pnode, CMasternodeVerification& mnv,
 
 void CMasternodeMan::ProcessVerifyReply(CNode* pnode, CMasternodeVerification& mnv)
 {
+    AssertLockHeld(cs_main);
+
     std::string strError;
 
     // did we even ask for it? if that's the case we should have matching fulfilled request
@@ -1220,6 +1225,8 @@ void CMasternodeMan::ProcessVerifyReply(CNode* pnode, CMasternodeVerification& m
 
 void CMasternodeMan::ProcessVerifyBroadcast(CNode* pnode, const CMasternodeVerification& mnv)
 {
+    AssertLockHeld(cs_main);
+
     std::string strError;
 
     if(mapSeenMasternodeVerification.find(mnv.GetHash()) != mapSeenMasternodeVerification.end()) {

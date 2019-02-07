@@ -54,27 +54,27 @@
 
 // FXTC BEGIN
 // Dasg
-#include "activemasternode.h"
-#include "dsnotificationinterface.h"
-#include "flat-database.h"
-#include "governance.h"
-#include "instantx.h"
+#include <activemasternode.h>
+#include <dsnotificationinterface.h>
+#include <flat-database.h>
+#include <governance.h>
+#include <instantx.h>
 #ifdef ENABLE_WALLET
-#include "keepass.h"
+#include <keepass.h>
 #endif
-#include "masternode-payments.h"
-#include "masternode-sync.h"
-#include "masternodeman.h"
-#include "masternodeconfig.h"
-#include "messagesigner.h"
-#include "netfulfilledman.h"
+#include <masternode-payments.h>
+#include <masternode-sync.h>
+#include <masternodeman.h>
+#include <masternodeconfig.h>
+#include <messagesigner.h>
+#include <netfulfilledman.h>
 #ifdef ENABLE_WALLET
-#include "privatesend-client.h"
+#include <privatesend-client.h>
 #endif // ENABLE_WALLET
-#include "privatesend-server.h"
-#include "spork.h"
+#include <privatesend-server.h>
+#include <spork.h>
 // Pivx
-#include "sporkdb.h"
+#include <sporkdb.h>
 //
 //
 // FXTC END

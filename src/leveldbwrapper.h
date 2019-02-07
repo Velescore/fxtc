@@ -2,14 +2,14 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_LEVELDBWRAPPER_H
-#define BITCOIN_LEVELDBWRAPPER_H
+#ifndef FXTC_LEVELDBWRAPPER_H
+#define FXTC_LEVELDBWRAPPER_H
 
-#include "clientversion.h"
-#include "serialize.h"
-#include "streams.h"
-#include "util.h"
-#include "version.h"
+#include <clientversion.h>
+#include <serialize.h>
+#include <streams.h>
+#include <util.h>
+#include <version.h>
 
 #include <boost/filesystem/path.hpp>
 
@@ -170,4 +170,4 @@ public:
     }
 };
 
-#endif // BITCOIN_LEVELDBWRAPPER_H
+#endif // FXTC_LEVELDBWRAPPER_H

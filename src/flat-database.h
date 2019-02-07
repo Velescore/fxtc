@@ -3,18 +3,18 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FLAT_DATABASE_H
-#define FLAT_DATABASE_H
+#ifndef FXTC_FLAT_DATABASE_H
+#define FXTC_FLAT_DATABASE_H
 
-#include "chainparams.h"
-#include "clientversion.h"
-#include "hash.h"
-#include "streams.h"
-#include "util.h"
+#include <chainparams.h>
+#include <clientversion.h>
+#include <hash.h>
+#include <streams.h>
+#include <util.h>
 
 #include <boost/filesystem.hpp>
 
-/** 
+/**
 *   Generic Dumping and Loading
 *   ---------------------------
 */
@@ -227,4 +227,4 @@ public:
 };
 
 
-#endif
+#endif // FXTC_FLAT_DATABASE_H

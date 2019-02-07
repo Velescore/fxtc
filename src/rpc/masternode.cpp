@@ -3,30 +3,31 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include "activemasternode.h"
-#include "init.h"
-#include "netbase.h"
-#include "key_io.h"
-#include "validation.h"
-#include "masternode-payments.h"
-#include "masternode-sync.h"
-#include "masternodeconfig.h"
-#include "masternodeman.h"
+#include <activemasternode.h>
+#include <init.h>
+#include <netbase.h>
+#include <key_io.h>
+#include <validation.h>
+#include <masternode-payments.h>
+#include <masternode-sync.h>
+#include <masternodeconfig.h>
+#include <masternodeman.h>
 #ifdef ENABLE_WALLET
-#include "privatesend-client.h"
+#include <privatesend-client.h>
 #endif // ENABLE_WALLET
-#include "privatesend-server.h"
-#include "rpc/server.h"
-#include "util.h"
-#include "utilmoneystr.h"
+#include <privatesend-server.h>
+#include <rpc/server.h>
+#include <util.h>
+#include <utilmoneystr.h>
 
 #include <fstream>
 #include <iomanip>
 #include <univalue.h>
 
+UniValue masternodelist(const JSONRPCRequest& request);
+
 #ifdef ENABLE_WALLET
 void EnsureWalletIsUnlocked();
-UniValue masternodelist(const JSONRPCRequest& request);
 
 UniValue privatesend(const JSONRPCRequest& request)
 {
@@ -74,8 +75,10 @@ UniValue privatesend(const JSONRPCRequest& request)
 
 UniValue getpoolinfo(const JSONRPCRequest& request)
 {
+#ifdef ENABLE_WALLET
     std::shared_ptr<CWallet> const wallet = GetWalletForJSONRPCRequest(request);
     CWallet* const pwallet = wallet.get();
+#endif // ENABLE_WALLET
 
     if (request.fHelp || request.params.size() != 0)
         throw std::runtime_error(
@@ -116,8 +119,10 @@ UniValue getpoolinfo(const JSONRPCRequest& request)
 
 UniValue masternode(const JSONRPCRequest& request)
 {
+#ifdef ENABLE_WALLET
     std::shared_ptr<CWallet> const wallet = GetWalletForJSONRPCRequest(request);
     CWallet* const pwallet = wallet.get();
+#endif // ENABLE_WALLET
 
     std::string strCommand;
     if (request.params.size() >= 1) {
@@ -392,6 +397,7 @@ UniValue masternode(const JSONRPCRequest& request)
     if (strCommand == "outputs") {
         // Find possible candidates
         std::vector<COutput> vPossibleCoins;
+        LOCK2(cs_main, pwallet->cs_wallet);
         pwallet->AvailableCoins(vPossibleCoins, true, NULL, false, ONLY_MASTERNODE_COLLATERAL);
 
         UniValue obj(UniValue::VOBJ);
@@ -630,8 +636,10 @@ bool DecodeHexVecMnb(std::vector<CMasternodeBroadcast>& vecMnb, std::string strH
 
 UniValue masternodebroadcast(const JSONRPCRequest& request)
 {
+#ifdef ENABLE_WALLET
     std::shared_ptr<CWallet> const wallet = GetWalletForJSONRPCRequest(request);
     CWallet* const pwallet = wallet.get();
+#endif // ENABLE_WALLET
 
     std::string strCommand;
     if (request.params.size() >= 1)

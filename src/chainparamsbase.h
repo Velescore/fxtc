@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_CHAINPARAMSBASE_H
-#define BITCOIN_CHAINPARAMSBASE_H
+#ifndef FXTC_CHAINPARAMSBASE_H
+#define FXTC_CHAINPARAMSBASE_H
 
 #include <memory>
 #include <string>
@@ -53,4 +53,4 @@ const CBaseChainParams& BaseParams();
 /** Sets the params returned by Params() to those for the given network. */
 void SelectBaseParams(const std::string& chain);
 
-#endif // BITCOIN_CHAINPARAMSBASE_H
+#endif // FXTC_CHAINPARAMSBASE_H

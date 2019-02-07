@@ -34,16 +34,16 @@
 #include <memory>
 
 // Dash
-#include "spork.h"
-#include "governance.h"
-#include "instantx.h"
-#include "masternode-payments.h"
-#include "masternode-sync.h"
-#include "masternodeman.h"
+#include <spork.h>
+#include <governance.h>
+#include <instantx.h>
+#include <masternode-payments.h>
+#include <masternode-sync.h>
+#include <masternodeman.h>
 #ifdef ENABLE_WALLET
-#include "privatesend-client.h"
+#include <privatesend-client.h>
 #endif // ENABLE_WALLET
-#include "privatesend-server.h"
+#include <privatesend-server.h>
 //
 
 #if defined(NDEBUG)
@@ -2525,6 +2525,8 @@ bool static ProcessMessage(CNode* pfrom, const std::string& strCommand, CDataStr
         CValidationState state;
 
         pfrom->setAskFor.erase(inv.hash);
+        mapAlreadyAskedFor.erase(inv.hash);
+
         // Dash
         // Process custom logic, no matter if tx will be accepted to mempool later or not
         if (strCommand == NetMsgType::TXLOCKREQUEST) {
@@ -2562,11 +2564,7 @@ bool static ProcessMessage(CNode* pfrom, const std::string& strCommand, CDataStr
             mempool.PrioritiseTransaction(hashTx, 0.1*COIN);
             mnodeman.DisallowMixing(dstx.vin.prevout);
         }
-
-        LOCK(cs_main);
-
         //
-        mapAlreadyAskedFor.erase(inv.hash);
 
         std::list<CTransactionRef> lRemovedTxn;
 

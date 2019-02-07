@@ -45,11 +45,11 @@
  * @author   Thomas Pornin <thomas.pornin@cryptolog.com>
  */
 
-#ifndef SPH_WHIRLPOOL_H__
-#define SPH_WHIRLPOOL_H__
+#ifndef FXTC_CRYPTO_SPH_WHIRLPOOL_H
+#define FXTC_CRYPTO_SPH_WHIRLPOOL_H
 
 #include <stddef.h>
-#include "sph_types.h"
+#include <crypto/sph_types.h>
 
 #ifdef __cplusplus
 extern "C"{
@@ -214,4 +214,5 @@ void sph_whirlpool1_close(void *cc, void *dst);
 
 #ifdef __cplusplus
 }
-#endif
+
+#endif // FXTC_CRYPTO_SPH_WHIRLPOOL_H

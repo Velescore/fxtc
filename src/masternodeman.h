@@ -3,11 +3,11 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef MASTERNODEMAN_H
-#define MASTERNODEMAN_H
+#ifndef FXTC_MASTERNODEMAN_H
+#define FXTC_MASTERNODEMAN_H
 
-#include "masternode.h"
-#include "sync.h"
+#include <masternode.h>
+#include <sync.h>
 
 using namespace std;
 
@@ -238,4 +238,4 @@ public:
 
 };
 
-#endif
+#endif // FXTC_MASTERNODEMAN_H

@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_POW_H
-#define BITCOIN_POW_H
+#ifndef FXTC_POW_H
+#define FXTC_POW_H
 
 #include <consensus/params.h>
 
@@ -24,4 +24,4 @@ bool CheckProofOfWork(uint256 hash, unsigned int nBits, const Consensus::Params&
 unsigned int GetHandbrakeForce(int32_t nVersion, int nHeight);
 // FXTC END
 
-#endif // BITCOIN_POW_H
+#endif // FXTC_POW_H

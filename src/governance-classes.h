@@ -2,16 +2,17 @@
 // Copyright (c) 2018 FXTC developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
-#ifndef GOVERNANCE_CLASSES_H
-#define GOVERNANCE_CLASSES_H
+
+#ifndef FXTC_GOVERNANCE_CLASSES_H
+#define FXTC_GOVERNANCE_CLASSES_H
 
 //#define ENABLE_DASH_DEBUG
 
-#include "governance.h"
-#include "key.h"
-#include "key_io.h"
-#include "script/standard.h"
-#include "util.h"
+#include <governance.h>
+#include <key.h>
+#include <key_io.h>
+#include <script/standard.h>
+#include <util.h>
 
 #include <boost/shared_ptr.hpp>
 
@@ -206,4 +207,4 @@ public:
     bool IsValid(const CTransactionRef txNew, int nBlockHeight, CAmount blockReward, CBlockHeader pblock);
 };
 
-#endif
+#endif // FXTC_GOVERNANCE_CLASSES_H

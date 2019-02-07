@@ -5,8 +5,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_WALLET_WALLETDB_H
-#define BITCOIN_WALLET_WALLETDB_H
+#ifndef FXTC_WALLET_WALLETDB_H
+#define FXTC_WALLET_WALLETDB_H
 
 #include <amount.h>
 #include <primitives/transaction.h>
@@ -261,4 +261,4 @@ void MaybeCompactWalletDB();
 //bool AutoBackupWallet (CWallet* wallet, std::string strWalletFile, std::string& strBackupWarning, std::string& strBackupError);
 //
 
-#endif // BITCOIN_WALLET_WALLETDB_H
+#endif // FXTC_WALLET_WALLETDB_H

@@ -9,8 +9,8 @@
  * Server/client environment: argument handling, config file parsing,
  * thread wrappers, startup time
  */
-#ifndef BITCOIN_UTIL_H
-#define BITCOIN_UTIL_H
+#ifndef FXTC_UTIL_H
+#define FXTC_UTIL_H
 
 #if defined(HAVE_CONFIG_H)
 #include <config/bitcoin-config.h>
@@ -433,4 +433,4 @@ std::string IntVersionToString(uint32_t nVersion);
 std::string SafeIntVersionToString(uint32_t nVersion);
 //
 
-#endif // BITCOIN_UTIL_H
+#endif // FXTC_UTIL_H

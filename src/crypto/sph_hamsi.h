@@ -32,11 +32,11 @@
  * @author   Thomas Pornin <thomas.pornin@cryptolog.com>
  */
 
-#ifndef SPH_HAMSI_H__
-#define SPH_HAMSI_H__
+#ifndef FXTC_CRYPTO_SPH_HAMSI_H
+#define FXTC_CRYPTO_SPH_HAMSI_H
 
 #include <stddef.h>
-#include "sph_types.h"
+#include <crypto/sph_types.h>
 
 #ifdef __cplusplus
 extern "C"{
@@ -318,4 +318,4 @@ void sph_hamsi512_addbits_and_close(
 }
 #endif
 
-#endif
+#endif // FXTC_CRYPTO_SPH_HAMSI_H
