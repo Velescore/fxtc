@@ -394,10 +394,10 @@ crypto_libbitcoin_crypto_base_a_SOURCES += \
   crypto/jh.c \
   crypto/keccak.c \
   crypto/luffa.c \
-  crypto/Lyra2.c \
-  crypto/Lyra2.h \
-  crypto/Lyra2Z.c \
-  crypto/Lyra2Z.h \
+  crypto/lyra2.c \
+  crypto/lyra2.h \
+  crypto/lyra2z.c \
+  crypto/lyra2z.h \
   crypto/nist5.h \
   crypto/scrypt-sse2.cpp \
   crypto/scrypt.cpp \
@@ -429,8 +429,8 @@ crypto_libbitcoin_crypto_base_a_SOURCES += \
   crypto/sph_types.h \
   crypto/sph_whirlpool.c \
   crypto/sph_whirlpool.h \
-  crypto/Sponge.c \
-  crypto/Sponge.h \
+  crypto/sponge.c \
+  crypto/sponge.h \
   crypto/x11.h \
   crypto/x16r.h
 
