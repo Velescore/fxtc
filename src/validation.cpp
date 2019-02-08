@@ -1240,11 +1240,14 @@ double ConvertBitsToDouble(unsigned int nBits)
 //FXTC END
 
 // VELES BEGIN
+// Note that this method will return the correct results only if nStartVlock and nEndBlock are
+// within the same halving epoch.
 CAmount CountBlockRewards(int nStartBlock, int nEndBlock, HalvingParameters *halvingParams)
 {
     CBlockIndex *pb = chainActive.Tip();
     CAmount nRewards = 0;
 
+    // use indexed value if exists
     if (totalSupplyIndex.count(nStartBlock) && totalSupplyIndex[nStartBlock].count(nEndBlock))
         return totalSupplyIndex[nStartBlock][nEndBlock];
 
@@ -1255,73 +1258,15 @@ CAmount CountBlockRewards(int nStartBlock, int nEndBlock, HalvingParameters *hal
             nRewards += GetBlockSubsidy(pb->nHeight, pb->GetBlockHeader(), Params().GetConsensus(), false, halvingParams);
         }
     }
-
-    totalSupplyIndex[nStartBlock][nEndBlock] = nRewards;
+    totalSupplyIndex[nStartBlock][nEndBlock] = nRewards;    // update the index
 
     return nRewards;
 }
 
-CAmount GetTotalSupply(CCoinsView *view, int nHeight/* = 0*/)
-{
-    std::map<int, CAmount>::const_iterator it = totalSupplyIndex[0].find(nHeight);
-
-    if (it != totalSupplyIndex[0].end())
-        return it->second;
-
-    //if (totalSupplyIndex.count(0) && totalSupplyIndex[0].count(nHeight))
-    //    return totalSupplyIndex[0][nHeight];
-
-    CAmount nTotalAmount = 0;
-    std::unique_ptr<CCoinsViewCursor> pcursor(view->Cursor());
-    uint256 prevkey;
-    std::map<uint32_t, Coin> outputs;
-    Coin coin;
-    assert(pcursor);
-
-    while (pcursor->Valid()) {
-        boost::this_thread::interruption_point();
-        COutPoint key;
-        if (pcursor->GetKey(key) && pcursor->GetValue(coin)) {
-            if (!outputs.empty() && key.hash != prevkey) {
-                for (const auto& output : outputs) {
-                    if (!nHeight || (int)coin.nHeight <= nHeight)
-                        nTotalAmount += output.second.out.nValue;
-                }
-                outputs.clear();
-            }
-            prevkey = key.hash;
-            outputs[key.n] = std::move(coin);
-        } else {
-            return error("%s: unable to read value", __func__);
-        }
-        pcursor->Next();
-    }
-    if (!outputs.empty()) {
-        for (const auto& output : outputs) {
-            if (!nHeight || (int)coin.nHeight <= nHeight)
-                nTotalAmount += output.second.out.nValue;
-        }
-    }
-    // Save result to the index
-    totalSupplyIndex[0][nHeight] = nTotalAmount;
-
-    return nTotalAmount;
-}
-
-CAmount GetTotalSupply(int nHeight)
-{
-   // return GetTotalSupply(pcoinsdbview.get());
-   return CountBlockRewards(0, nHeight, GetSubsidyHalvingParameters(nHeight, Params().GetConsensus()));
-}
-
 HalvingParameters *GetSubsidyHalvingParameters(int nHeight, const Consensus::Params& consensusParams)
 {
-    const double nMinSupplyTarget = 0.80;
-    const double nMinBoostTarget = 0.60;
-
     int nHeightOffset = (int)sporkManager.GetSporkValue(SPORK_VELES_04_REWARD_UPGRADE_ALPHA_START);
     int nCurrentEpoch = 0;
-    double nMaxBoostFactorStep = 0.5;
     HalvingParameters *params = new HalvingParameters();
     CAmount nCurrentMaxSupply = 0;
     CAmount nCurrentHalvingRealSupply = 0;
@@ -1390,36 +1335,31 @@ HalvingParameters *GetSubsidyHalvingParameters(int nHeight, const Consensus::Par
 
         // let's check whether we have released enough coins to the circulation,
         // then halve the subsidy and double the halving interval
-        if (nCurrentHalvingRealSupply >= nCurrentMaxSupply * nMinSupplyTarget) {
+        if (nCurrentHalvingRealSupply >= nCurrentMaxSupply * HALVING_MIN_SUPPLY_TARGET) {
             params->nHalvingInterval *= 2;
             params->nHalvingCount++;
             params->epochs[nCurrentEpoch].nMaxBlockSubsidy >>= 1;
             params->epochs[nCurrentEpoch].fIsSubsidyHalved = true;
             nCurrentHalvingRealSupply = 0;
             // slow down the dynamic reward boost
-            if (params->epochs[nCurrentEpoch].nDynamicRewardsBoostFactor > nMaxBoostFactorStep)
+            if (params->epochs[nCurrentEpoch].nDynamicRewardsBoostFactor > HALVING_MAX_BOOST_STEP)
                 params->epochs[nCurrentEpoch].nDynamicRewardsBoostFactor /= 2;
             else
                 params->epochs[nCurrentEpoch].nDynamicRewardsBoostFactor = 0;
 
         } else {
             // boost dynamic rewards if we're far from target supply
-            if (nCurrentEpochRealSupply < nCurrentMaxSupply * nMinBoostTarget) {
+            if (nCurrentEpochRealSupply < nCurrentMaxSupply * HALVING_MIN_BOOST_SUPPLY_TARGET) {
                 if (params->epochs[nCurrentEpoch].nDynamicRewardsBoostFactor)
                     params->epochs[nCurrentEpoch].nDynamicRewardsBoostFactor *= 2;
                 else
-                    params->epochs[nCurrentEpoch].nDynamicRewardsBoostFactor = nMaxBoostFactorStep;
+                    params->epochs[nCurrentEpoch].nDynamicRewardsBoostFactor = HALVING_MAX_BOOST_STEP;
             }
         }
         // complete the next epoch struct
         params->epochs[nCurrentEpoch].nEndBlock = params->epochs[nCurrentEpoch - 1].nEndBlock + params->nHalvingInterval;
         // update halving params
         params->nDynamicRewardsBoostFactor = params->epochs[nCurrentEpoch].nDynamicRewardsBoostFactor;
-    }
-
-    if (nHeight < sporkManager.GetSporkValue(SPORK_VELES_03_NO_SUBSIDY_HALVING_START)) {
-        params->nHalvingCount = 0;
-        params->nHalvingInterval = consensusParams.nSubsidyHalvingInterval;
     }
 
     return params;
@@ -2627,6 +2567,9 @@ bool CChainState::ConnectBlock(const CBlock& block, CValidationState& state, CBl
                                REJECT_INVALID, "bad-cb-amount");
 
     // FXTC BEGIN
+    // VELES EDIT: Check disabled, made optional
+    // VELES TODO: remove in next release
+    /*
     CAmount founderReward = GetFounderReward(pindex->nHeight, block.vtx[0]->GetValueOut());
     if (!sporkManager.IsSporkActive(SPORK_FXTC_02_IGNORE_FOUNDER_REWARD_CHECK) && founderReward > 0) {
         CTxDestination destination = DecodeDestination(Params().FounderAddress());
@@ -2647,7 +2590,7 @@ bool CChainState::ConnectBlock(const CBlock& block, CValidationState& state, CBl
             return state.DoS(0, error("ConnectBlock(VELES): invalid founder reward destination"), REJECT_INVALID, "invalid-founder-reward-destination");
         }
     }
-
+    */
     // FXTC END
 
     // DASH : MODIFIED TO CHECK MASTERNODE PAYMENTS AND SUPERBLOCKS

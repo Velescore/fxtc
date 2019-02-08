@@ -3,7 +3,7 @@ AC_PREREQ([2.60])
 define(_CLIENT_VERSION_MAJOR, 0)
 define(_CLIENT_VERSION_MINOR, 17)
 define(_CLIENT_VERSION_REVISION, 0)
-define(_CLIENT_VERSION_BUILD, 21)
+define(_CLIENT_VERSION_BUILD, 22)
 define(_CLIENT_VERSION_IS_RELEASE, true)
 define(_COPYRIGHT_YEAR, 2019)
 dnl VELES BEGIN
@@ -11,7 +11,7 @@ dnl We should declare correct copyright years also for other projects our code
 dnl is based on, and update it any time we import/merge changes from 
 dnl those projects. Only Satoshi's copyright year will remain hard-coded until
 dnl the real Satoshi Nakamoto reveals himself and we import his new code.
-define(_BITCORE_COPYRIGHT_YEAR, 2018)
+define(_BITCORE_COPYRIGHT_YEAR, 2019)
 define(_DASH_COPYRIGHT_YEAR, 2017)
 define(_FXTC_COPYRIGHT_YEAR, 2019)
 dnl VELES END

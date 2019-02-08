@@ -160,13 +160,13 @@ static void BlockTestPrintSubsidyParams(int nHeight, uint32_t nBits, uint32_t nV
         (nHeight >= consensusParams.nBudgetPaymentsStartBlock) ? "YES" : "NO",
         consensusParams.nBudgetPaymentsStartBlock
     );
+    /*
     fprintf(
         stdout, 
         " No subsidy halving spork:         %s\n", 
-        (nHeight >= sporkManager.GetSporkValue(SPORK_VELES_03_NO_SUBSIDY_HALVING_START)) ? "YES" : "NO"
+        (nHeight >= sporkManager.GetSporkValue(SPORK_VELES_03_RECALCULATE_HALVING_PARAMETERS)) ? "YES" : "NO"
     //    (int) sporkManager.GetSporkValue(SPORK_VELES_03_NO_SUBSIDY_HALVING_START)
     );
-    /*
     fprintf(
         stdout, 
         " Smooth subsidy halving spork:     %s\n", 

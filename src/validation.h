@@ -142,6 +142,12 @@ static const bool DEFAULT_PEERBLOOMFILTERS = true;
 /** Default for -stopatheight */
 static const int DEFAULT_STOPATHEIGHT = 0;
 
+// VELES BEGIN
+static const double HALVING_MIN_SUPPLY_TARGET = 0.80;
+static const double HALVING_MIN_BOOST_SUPPLY_TARGET = 0.60;
+static const double HALVING_MAX_BOOST_STEP = 0.5;
+// VELES END
+
 struct BlockHasher
 {
     size_t operator()(const uint256& hash) const { return hash.GetCheapHash(); }
@@ -303,8 +309,6 @@ struct HalvingEpoch
 	CAmount nEndSupply = 0;
 //	CAmount nMaxSupply;
 };
-CAmount GetTotalSupply(CCoinsView *view, int nHeight = 0);
-CAmount GetTotalSupply(int nHeight = 0);
 struct HalvingParameters
 {
     int nHalvingCount = 0;
@@ -314,6 +318,8 @@ struct HalvingParameters
 //    int nLastHalvingBlockHeight = 0;
     std::vector<HalvingEpoch> epochs;
 };
+CAmount CountBlockRewards(int nStartBlock, int nEndBlock, HalvingParameters *halvingParams);
+CAmount GetTotalSupply(int nHeight = 0);
 HalvingParameters *GetSubsidyHalvingParameters(int nHeight, const Consensus::Params& consensusParams);
 HalvingParameters *GetSubsidyHalvingParameters(int nHeight);
 HalvingParameters *GetSubsidyHalvingParameters();

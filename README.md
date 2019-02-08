@@ -2,7 +2,7 @@
 
 Veles Core integration/staging tree
 ======================================
-Branch "master" is the current version of Veles Core. The latest official release of Veles Core is Alpha release R4, version v0.17.0.20 "Aged Amnesia".
+Branch "master" is the current version of Veles Core. The latest official release of Veles Core is Alpha release R4, version v0.17.0.22 "Aged Amnesia".
 
 https://veles.network
 
