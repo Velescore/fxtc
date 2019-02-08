@@ -4,8 +4,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_QT_GUIUTIL_H
-#define BITCOIN_QT_GUIUTIL_H
+#ifndef FXTC_QT_GUIUTIL_H
+#define FXTC_QT_GUIUTIL_H
 
 #include <amount.h>
 #include <fs.h>
@@ -254,4 +254,4 @@ namespace GUIUtil
     };
 } // namespace GUIUtil
 
-#endif // BITCOIN_QT_GUIUTIL_H
+#endif // FXTC_QT_GUIUTIL_H

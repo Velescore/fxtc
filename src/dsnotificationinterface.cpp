@@ -3,16 +3,16 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include "chainparams.h"
-#include "dsnotificationinterface.h"
-#include "instantx.h"
-#include "governance.h"
-#include "masternodeman.h"
-#include "masternode-payments.h"
-#include "masternode-sync.h"
-#include "privatesend.h"
+#include <chainparams.h>
+#include <dsnotificationinterface.h>
+#include <instantx.h>
+#include <governance.h>
+#include <masternodeman.h>
+#include <masternode-payments.h>
+#include <masternode-sync.h>
+#include <privatesend.h>
 #ifdef ENABLE_WALLET
-#include "privatesend-client.h"
+#include <privatesend-client.h>
 #endif // ENABLE_WALLET
 
 void CDSNotificationInterface::InitializeCurrentBlockTip()

@@ -33,11 +33,11 @@
  * @author   Thomas Pornin <thomas.pornin@cryptolog.com>
  */
 
-#ifndef SPH_SHABAL_H__
-#define SPH_SHABAL_H__
+#ifndef FXTC_CRYPTO_SPH_SHABAL_H
+#define FXTC_CRYPTO_SPH_SHABAL_H
 
 #include <stddef.h>
-#include "sph_types.h"
+#include <crypto/sph_types.h>
 #ifdef __cplusplus
 extern "C"{
 #endif
@@ -340,4 +340,4 @@ void sph_shabal512_addbits_and_close(
 }
 #endif
 
-#endif
+#endif // FXTC_CRYPTO_SPH_SHABAL_H

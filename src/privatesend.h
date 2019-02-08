@@ -3,16 +3,16 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef PRIVATESEND_H
-#define PRIVATESEND_H
+#ifndef FXTC_PRIVATESEND_H
+#define FXTC_PRIVATESEND_H
 
-#include "chain.h"
-#include "chainparams.h"
-#include "primitives/transaction.h"
-#include "pubkey.h"
-#include "sync.h"
-#include "tinyformat.h"
-#include "timedata.h"
+#include <chain.h>
+#include <chainparams.h>
+#include <primitives/transaction.h>
+#include <pubkey.h>
+#include <sync.h>
+#include <tinyformat.h>
+#include <timedata.h>
 
 class CPrivateSend;
 class CConnman;
@@ -359,4 +359,4 @@ public:
 
 void ThreadCheckPrivateSend(CConnman& connman);
 
-#endif
+#endif // FXTC_PRIVATESEND_H

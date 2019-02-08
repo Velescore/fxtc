@@ -2,12 +2,13 @@
 // Copyright (c) 2018 FXTC developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
-#ifndef INSTANTX_H
-#define INSTANTX_H
 
-#include "chain.h"
-#include "net.h"
-#include "primitives/transaction.h"
+#ifndef FXTC_INSTANTX_H
+#define FXTC_INSTANTX_H
+
+#include <chain.h>
+#include <net.h>
+#include <primitives/transaction.h>
 
 class CTxLockVote;
 class COutPointLock;
@@ -261,4 +262,4 @@ public:
     void Relay(CConnman& connman) const;
 };
 
-#endif
+#endif // FXTC_INSTANTX_H

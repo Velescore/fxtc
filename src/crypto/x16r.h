@@ -4,28 +4,29 @@
 // Copyright (c) 2018 FXTC developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
-#ifndef X16R_H
-#define X16R_H
 
-#include "uint256.h"
+#ifndef FXTC_CRYPTO_X16R_H
+#define FXTC_CRYPTO_X16R_H
 
-#include "crypto/sph_blake.h"
-#include "crypto/sph_bmw.h"
-#include "crypto/sph_groestl.h"
-#include "crypto/sph_jh.h"
-#include "crypto/sph_keccak.h"
-#include "crypto/sph_skein.h"
-#include "crypto/sph_luffa.h"
-#include "crypto/sph_cubehash.h"
-#include "crypto/sph_shavite.h"
-#include "crypto/sph_simd.h"
-#include "crypto/sph_echo.h"
-#include "crypto/sph_hamsi.h"
-#include "crypto/sph_fugue.h"
-#include "crypto/sph_shabal.h"
-#include "crypto/sph_whirlpool.h"
+#include <uint256.h>
+
+#include <crypto/sph_blake.h>
+#include <crypto/sph_bmw.h>
+#include <crypto/sph_groestl.h>
+#include <crypto/sph_jh.h>
+#include <crypto/sph_keccak.h>
+#include <crypto/sph_skein.h>
+#include <crypto/sph_luffa.h>
+#include <crypto/sph_cubehash.h>
+#include <crypto/sph_shavite.h>
+#include <crypto/sph_simd.h>
+#include <crypto/sph_echo.h>
+#include <crypto/sph_hamsi.h>
+#include <crypto/sph_fugue.h>
+#include <crypto/sph_shabal.h>
+#include <crypto/sph_whirlpool.h>
 extern "C"{
-#include "crypto/sph_sha2.h"
+#include <crypto/sph_sha2.h>
 }
 
 inline int GetHashSelection(const uint256 PrevBlockHash, int index) {
@@ -169,4 +170,4 @@ inline uint256 HashX16R(const T1 pbegin, const T1 pend, const uint256 PrevBlockH
     return hash[15].trim256();
 }
 
-#endif
+#endif // FXTC_CRYPTO_X16R_H

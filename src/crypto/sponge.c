@@ -21,8 +21,8 @@
 #include <string.h>
 #include <stdio.h>
 #include <time.h>
-#include "Sponge.h"
-#include "Lyra2.h"
+#include <crypto/sponge.h>
+#include <crypto/lyra2.h>
 
 
 
