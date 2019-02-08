@@ -19,8 +19,8 @@
 * OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
 * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
-#ifndef SPONGE_H_
-#define SPONGE_H_
+#ifndef FXTC_CRYPTO_SPONGE_H
+#define FXTC_CRYPTO_SPONGE_H
 
 #include <stdint.h>
 
@@ -105,4 +105,4 @@ void printArray(unsigned char *array, unsigned int size, char *name);
 /////////////
 
 
-#endif /* SPONGE_H_ */
+#endif // FXTC_CRYPTO_SPONGE_H

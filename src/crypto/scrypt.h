@@ -1,5 +1,6 @@
-#ifndef SCRYPT_H
-#define SCRYPT_H
+#ifndef FXTC_CRYPTO_SCRYPT_H
+#define FXTC_CRYPTO_SCRYPT_H
+
 #include <stdlib.h>
 #include <stdint.h>
 
@@ -45,4 +46,5 @@ static inline void le32enc(void *pp, uint32_t x)
         p[3] = (x >> 24) & 0xff;
 }
 #endif
-#endif
+
+#endif // FXTC_CRYPTO_SCRYPT_H

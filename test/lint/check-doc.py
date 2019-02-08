@@ -22,7 +22,7 @@ CMD_ROOT_DIR = '`git rev-parse --show-toplevel`/{}'.format(FOLDER_GREP)
 CMD_GREP_ARGS = r"git grep --perl-regexp '{}' -- {} ':(exclude){}'".format(REGEX_ARG, CMD_ROOT_DIR, FOLDER_TEST)
 CMD_GREP_DOCS = r"git grep --perl-regexp '{}' {}".format(REGEX_DOC, CMD_ROOT_DIR)
 # list unsupported, deprecated and duplicate args as they need no documentation
-SET_DOC_OPTIONAL = set(['-rpcssl', '-benchmark', '-h', '-help', '-socks', '-tor', '-debugnet', '-whitelistalwaysrelay', '-promiscuousmempoolflags', '-blockminsize', '-dbcrashratio', '-forcecompactdb', '-usehd'])
+SET_DOC_OPTIONAL = set(['-rpcssl', '-benchmark', '-h', '-help', '-socks', '-tor', '-debugnet', '-whitelistalwaysrelay', '-promiscuousmempoolflags', '-blockminsize', '-dbcrashratio', '-forcecompactdb', '-usehd', '-privatesendamount', '-masternodeprivkey', '-enableprivatesend', '-keepassname', '-walletbackupsdir', '-instantsenddepth', '-liquidityprovider', '-keepassid', '-litemode', '-instantsendnotify', '-enableinstantsend', '-keepassport', '-privatesendmultisession', '-keepasskey', '-sporkkey', '-mnconflock', '-keepass', '-masternode', '-createwalletbackups', '-privatesendrounds'])
 
 
 def main():

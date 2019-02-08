@@ -3,20 +3,20 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include "masternodelist.h"
-#include "forms/ui_masternodelist.h"
+#include <qt/masternodelist.h>
+#include <qt/forms/ui_masternodelist.h>
 
-#include "activemasternode.h"
-#include "clientmodel.h"
-#include "guiutil.h"
-#include "init.h"
-#include "key_io.h"
-#include "masternode-sync.h"
-#include "masternodeconfig.h"
-#include "masternodeman.h"
-#include "sync.h"
-#include "wallet/wallet.h"
-#include "walletmodel.h"
+#include <activemasternode.h>
+#include <qt/clientmodel.h>
+#include <qt/guiutil.h>
+#include <init.h>
+#include <key_io.h>
+#include <masternode-sync.h>
+#include <masternodeconfig.h>
+#include <masternodeman.h>
+#include <sync.h>
+#include <wallet/wallet.h>
+#include <qt/walletmodel.h>
 
 #include <QTimer>
 #include <QMessageBox>

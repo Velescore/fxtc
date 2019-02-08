@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_ZMQ_ZMQABSTRACTNOTIFIER_H
-#define BITCOIN_ZMQ_ZMQABSTRACTNOTIFIER_H
+#ifndef FXTC_ZMQ_ZMQABSTRACTNOTIFIER_H
+#define FXTC_ZMQ_ZMQABSTRACTNOTIFIER_H
 
 #include <zmq/zmqconfig.h>
 
@@ -41,4 +41,4 @@ protected:
     std::string address;
 };
 
-#endif // BITCOIN_ZMQ_ZMQABSTRACTNOTIFIER_H
+#endif // FXTC_ZMQ_ZMQABSTRACTNOTIFIER_H
