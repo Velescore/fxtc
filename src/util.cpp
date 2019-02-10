@@ -1290,19 +1290,18 @@ std::string CopyrightHolders(const std::string& strPrefix)
     // VELES BEGIN
     // The original notice forked from FXTC forked from Bitcoin Core is not complete
     // and doesn't include some other project we use the code from. Also we cannot use
-    // the prefix as it's not correct for all contributors.
+    // the same copytight years as the're different for all contributors.
 
-    std::string strCopyrightHolders = strprintf(_("Copyright (C) %i-%i "), 2018, COPYRIGHT_YEAR) +
-        strprintf(_(COPYRIGHT_HOLDERS), _("Veles Core")) +
-        strprintf(_("\nCopyright (C) %i-%i "), 2018, FXTC_COPYRIGHT_YEAR) + strprintf(_(COPYRIGHT_HOLDERS), _("FXTC")) + 
-        strprintf(_("\nCopyright (C) %i-%i "), 2014, DASH_COPYRIGHT_YEAR) + strprintf(_(COPYRIGHT_HOLDERS), _("Dash Core")) +
-        strprintf(_("\nCopyright (C) %i-%i "), 2009, BITCORE_COPYRIGHT_YEAR) + strprintf(_(COPYRIGHT_HOLDERS), _("Bitcoin Core")) +
-        "\nCopyright (c) 2009-2010 Satoshi Nakamoto";
+    std::string strCopyrightHolders = "Copyright (C) 2018-" + std::to_string(COPYRIGHT_YEAR) + " The Veles Core developers"
+        + "\nCopyright (C) 2018-" + std::to_string(FXTC_COPYRIGHT_YEAR) + "The FXTC developers"
+        + "\nCopyright (C) 2014-" + std::to_string(DASH_COPYRIGHT_YEAR) + "The Dash Core developers"
+        + "\nCopyright (C) 2009-" + std::to_string(BITCORE_COPYRIGHT_YEAR) + "The Bitcoin Core developers"
+        + "\nCopyright (c) 2009-2010 Satoshi Nakamoto";
 
     return strCopyrightHolders;
-    
+
     // VELES END
-    /* 
+    /*
     // VELES edit: Unused original code:
     std::string strCopyrightHolders = strPrefix + strprintf(_(COPYRIGHT_HOLDERS), _(COPYRIGHT_HOLDERS_SUBSTITUTION)); // VELES edit
 
