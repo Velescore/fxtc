@@ -188,6 +188,7 @@ BITCOIN_CORE_H = \
   utiltime.h \
   validation.h \
   validationinterface.h \
+  veleslogo.h \
   versionbits.h \
   walletinitinterface.h \
   wallet/coincontrol.h \
