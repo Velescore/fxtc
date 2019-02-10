@@ -246,7 +246,8 @@ private:
     void startThread();
 };
 
-#include <qt/bitcoin.moc>
+// VELES edit
+//#include <qt/bitcoin.moc>
 
 BitcoinCore::BitcoinCore(interfaces::Node& node) :
     QObject(), m_node(node)
