@@ -125,9 +125,10 @@ jobs:
         BITCOIN_CONFIG="--enable-zmq --with-incompatible-bdb --enable-glibc-back-compat --enable-reduce-exports --with-gui=qt5 CPPFLAGS=-DDEBUG_LOCKORDER"
 # x86_64 Linux, No wallet
     - stage: test
+      name: 'x86_64 Linux  [GOAL: install]  [bionic]  [no wallet]'
       env: >-
         HOST=x86_64-unknown-linux-gnu
-        PACKAGES="python3"
+        PACKAGES="python3-zmq"
         DEP_OPTS="NO_WALLET=1"
         RUN_TESTS=false
         GOAL="install"
