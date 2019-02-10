@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef VELES_LOGO_H
-#define VELES_LOGO_H
+#ifndef VELES_VELESLOGO_H
+#define VELES_VELESLOGO_H
 
 #include <string>
 
@@ -15,4 +15,4 @@ _\\___\\_/___/____ |  |   ____   _____\\_   ___ \\  ___________   ____  \n\
     \\___/  \\___  >____/\\___  >____  >\\______  /\\____/|__|    \\___  >\n\
                \\/          \\/     \\/        \\/                   \\/ \n";
 
-#endif // VELES_LOGO_H
+#endif // VELES_VELESLOGO_H
