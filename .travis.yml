@@ -78,7 +78,6 @@ jobs:
         RUN_TESTS=false
         GOAL="install"
         BITCOIN_CONFIG="--enable-glibc-back-compat --enable-reduce-exports"
-        
     - stage: test
       env: >-
         HOST=arm-linux-gnueabihf
