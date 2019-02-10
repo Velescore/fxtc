@@ -24,7 +24,7 @@
 
 #include <stdio.h>
 // VELES BEGIN
-#include "veleslogo.h"
+#include <veleslogo.h>
 // VELES END
 
 /* Introduction text for doxygen: */
