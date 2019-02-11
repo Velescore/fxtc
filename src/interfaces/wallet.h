@@ -146,6 +146,21 @@ public:
     //! List locked coins.
     virtual void listLockedCoins(std::vector<COutPoint>& outputs) = 0;
 
+    // VELES BEGIN
+#ifndef ENABLE_WALLET
+    // Dash, from wallet/wallet.h
+    enum AvailableCoinsType
+    {
+        ALL_COINS,
+        ONLY_DENOMINATED,
+        ONLY_NONDENOMINATED,
+        ONLY_MASTERNODE_COLLATERAL, // find masternode outputs including locked ones (use with caution)
+        ONLY_PRIVATESEND_COLLATERAL
+    };
+    //
+    // VELES END
+#endif
+
     //! Create transaction.
     virtual std::unique_ptr<PendingWalletTx> createTransaction(const std::vector<CRecipient>& recipients,
         const CCoinControl& coin_control,
