@@ -11,7 +11,12 @@
 #include <script/standard.h>           // For CTxDestination
 #include <support/allocators/secure.h> // For SecureString
 #include <ui_interface.h>              // For ChangeType
+// VELES BEGIN
+// Othervise build fails with NO_WALLET=1
+#ifdef ENABLE_WALLET
 #include <wallet/wallet.h>
+#endif
+// VELES END
 
 #include <functional>
 #include <map>

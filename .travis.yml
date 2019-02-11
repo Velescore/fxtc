@@ -79,6 +79,7 @@ jobs:
         GOAL="install"
         BITCOIN_CONFIG="--enable-glibc-back-compat --enable-reduce-exports"
     - stage: test
+      name: 'ARM  [GOAL: install]  [no unit or functional tests]'
       env: >-
         HOST=arm-linux-gnueabihf
         PACKAGES="g++-arm-linux-gnueabihf"
@@ -87,6 +88,7 @@ jobs:
         BITCOIN_CONFIG="--enable-glibc-back-compat --enable-reduce-exports"
 # Win32
     - stage: test
+      name: 'Win32  [GOAL: deploy]  [no gui tests]'
       env: >-
         HOST=i686-w64-mingw32
         DPKG_ADD_ARCH="i386"
@@ -97,6 +99,7 @@ jobs:
         BITCOIN_CONFIG="--enable-reduce-exports"
 # Win64
     - stage: test
+      name: 'Win64  [GOAL: deploy]  [no gui tests]'
       env: >-
         HOST=x86_64-w64-mingw32
         DEP_OPTS="NO_QT=1"
@@ -106,6 +109,7 @@ jobs:
         BITCOIN_CONFIG="--enable-reduce-exports"
 # 32-bit + dash
     - stage: test
+      name: '32-bit + dash  [GOAL: install]'
       env: >-
         HOST=i686-pc-linux-gnu
         PACKAGES="g++-multilib python3-zmq"
@@ -116,6 +120,7 @@ jobs:
         CONFIG_SHELL="/bin/dash"
 # x86_64 Linux (uses qt5 dev package instead of depends Qt to speed up build and avoid timeout)
     - stage: test
+      name: 'x86_64 Linux  [GOAL: install]  [bionic]  [uses qt5 dev package instead of depends Qt to speed up build and avoid timeout]'
       env: >-
         HOST=x86_64-unknown-linux-gnu
         PACKAGES="python3-zmq qtbase5-dev qttools5-dev-tools protobuf-compiler libdbus-1-dev libharfbuzz-dev libprotobuf-dev"
@@ -126,6 +131,7 @@ jobs:
         BITCOIN_CONFIG="--enable-zmq --with-gui=qt5 --enable-glibc-back-compat --enable-reduce-exports --enable-debug CXXFLAGS=\"-g0 -O2\""
 # x86_64 Linux (Qt5 & system libs)
     - stage: test
+      name: 'x86_64 Linux  [GOAL: install]  [trusty]  [no functional tests, no depends, only system libs]'
       env: >-
         HOST=x86_64-unknown-linux-gnu
         PACKAGES="python3-zmq qtbase5-dev qttools5-dev-tools libssl1.0-dev libevent-dev bsdmainutils libboost-system-dev libboost-filesystem-dev libboost-chrono-dev libboost-test-dev libboost-thread-dev libdb5.3++-dev libminiupnpc-dev libzmq3-dev libprotobuf-dev protobuf-compiler libqrencode-dev"
@@ -145,6 +151,7 @@ jobs:
         BITCOIN_CONFIG="--enable-glibc-back-compat --enable-reduce-exports"
 # Cross-Mac
     - stage: test
+      name: 'macOS 10.10  [GOAL: deploy] [no functional tests]'
       env: >-
         HOST=x86_64-apple-darwin14
         PACKAGES="cmake imagemagick libcap-dev librsvg2-bin libz-dev libbz2-dev libtiff-tools python-dev python3-setuptools-git"
