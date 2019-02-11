@@ -68,16 +68,6 @@ after_script:
 jobs:
   include:
 # ARM
-# # x86_64 Linux, No wallet
-    - stage: test
-      name: 'x86_64 Linux  [GOAL: install]  [bionic]  [no wallet]'
-      env: >-
-        HOST=x86_64-unknown-linux-gnu
-        PACKAGES="python3-zmq libdb5.3++-dev"
-        DEP_OPTS="NO_WALLET=1"
-        RUN_TESTS=false
-        GOAL="install"
-        BITCOIN_CONFIG="--enable-glibc-back-compat --enable-reduce-exports"
     - stage: test
       name: 'ARM  [GOAL: install]  [no unit or functional tests]'
       env: >-
@@ -145,7 +135,7 @@ jobs:
       env: >-
         HOST=x86_64-unknown-linux-gnu
         PACKAGES="python3-zmq"
-        DEP_OPTS="NO_WALLET=1"
+        DEP_OPTS="NO_WALLET=1 NO_QT=1"
         RUN_TESTS=false
         GOAL="install"
         BITCOIN_CONFIG="--enable-glibc-back-compat --enable-reduce-exports"
