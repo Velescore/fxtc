@@ -3,15 +3,15 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef MASTERNODE_PAYMENTS_H
-#define MASTERNODE_PAYMENTS_H
+#ifndef FXTC_MASTERNODE_PAYMENTS_H
+#define FXTC_MASTERNODE_PAYMENTS_H
 
-#include "util.h"
-#include "core_io.h"
-#include "key.h"
-#include "masternode.h"
-#include "net_processing.h"
-#include "utilstrencodings.h"
+#include <util.h>
+#include <core_io.h>
+#include <key.h>
+#include <masternode.h>
+#include <net_processing.h>
+#include <utilstrencodings.h>
 
 class CMasternodePayments;
 class CMasternodePaymentVote;
@@ -224,4 +224,4 @@ public:
     void UpdatedBlockTip(const CBlockIndex *pindex, CConnman& connman);
 };
 
-#endif
+#endif // FXTC_MASTERNODE-PAYMENTS_H

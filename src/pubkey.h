@@ -4,8 +4,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_PUBKEY_H
-#define BITCOIN_PUBKEY_H
+#ifndef FXTC_PUBKEY_H
+#define FXTC_PUBKEY_H
 
 #include <hash.h>
 #include <serialize.h>
@@ -260,4 +260,4 @@ public:
     ~ECCVerifyHandle();
 };
 
-#endif // BITCOIN_PUBKEY_H
+#endif // FXTC_PUBKEY_H

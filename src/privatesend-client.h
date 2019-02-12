@@ -3,13 +3,13 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef PRIVATESENDCLIENT_H
-#define PRIVATESENDCLIENT_H
+#ifndef FXTC_PRIVATESEND_CLIENT_H
+#define FXTC_PRIVATESEND_CLIENT_H
 
-#include "masternode.h"
-#include "privatesend.h"
-#include "wallet/wallet.h"
-#include "privatesend-util.h"
+#include <masternode.h>
+#include <privatesend.h>
+#include <wallet/wallet.h>
+#include <privatesend-util.h>
 
 class CPrivateSendClient;
 class CConnman;
@@ -148,4 +148,4 @@ public:
 
 void ThreadCheckPrivateSendClient(CConnman& connman);
 
-#endif
+#endif // FXTC_PRIVATESEND_CLIENT_H

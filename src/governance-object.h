@@ -3,19 +3,19 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef GOVERNANCE_OBJECT_H
-#define GOVERNANCE_OBJECT_H
+#ifndef FXTC_GOVERNANCE_OBJECT_H
+#define FXTC_GOVERNANCE_OBJECT_H
 
 //#define ENABLE_DASH_DEBUG
 
-#include "cachemultimap.h"
-#include "governance-exceptions.h"
-#include "governance-vote.h"
-#include "governance-votedb.h"
-#include "key.h"
-#include "net.h"
-#include "sync.h"
-#include "util.h"
+#include <cachemultimap.h>
+#include <governance-exceptions.h>
+#include <governance-vote.h>
+#include <governance-votedb.h>
+#include <key.h>
+#include <net.h>
+#include <sync.h>
+#include <util.h>
 
 #include <univalue.h>
 
@@ -355,4 +355,4 @@ private:
 };
 
 
-#endif
+#endif // FXTC_GOVERNANCE_OBJECT_H

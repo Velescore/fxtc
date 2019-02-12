@@ -3,13 +3,13 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef ACTIVEMASTERNODE_H
-#define ACTIVEMASTERNODE_H
+#ifndef FXTC_ACTIVEMASTERNODE_H
+#define FXTC_ACTIVEMASTERNODE_H
 
-#include "chainparams.h"
-#include "key.h"
-#include "net.h"
-#include "primitives/transaction.h"
+#include <chainparams.h>
+#include <key.h>
+#include <net.h>
+#include <primitives/transaction.h>
 
 class CActiveMasternode;
 
@@ -82,4 +82,4 @@ private:
     void ManageStateRemote();
 };
 
-#endif
+#endif // FXTC_ACTIVEMASTERNODE_H

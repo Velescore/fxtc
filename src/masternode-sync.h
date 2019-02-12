@@ -2,11 +2,12 @@
 // Copyright (c) 2018 FXTC developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
-#ifndef MASTERNODE_SYNC_H
-#define MASTERNODE_SYNC_H
 
-#include "chain.h"
-#include "net.h"
+#ifndef FXTC_MASTERNODE_SYNC_H
+#define FXTC_MASTERNODE_SYNC_H
+
+#include <chain.h>
+#include <net.h>
 
 #include <univalue.h>
 
@@ -81,4 +82,4 @@ public:
     void UpdatedBlockTip(const CBlockIndex *pindexNew, bool fInitialDownload, CConnman& connman);
 };
 
-#endif
+#endif // FXTC_MASTERNODE_SYNC_H

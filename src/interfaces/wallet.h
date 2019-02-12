@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_INTERFACES_WALLET_H
-#define BITCOIN_INTERFACES_WALLET_H
+#ifndef FXTC_INTERFACES_WALLET_H
+#define FXTC_INTERFACES_WALLET_H
 
 #include <amount.h>                    // For CAmount
 #include <pubkey.h>                    // For CKeyID and CScriptID (definitions needed in CTxDestination instantiation)
@@ -11,7 +11,12 @@
 #include <script/standard.h>           // For CTxDestination
 #include <support/allocators/secure.h> // For SecureString
 #include <ui_interface.h>              // For ChangeType
+// VELES BEGIN
+// Othervise build fails with NO_WALLET=1
+#ifdef ENABLE_WALLET
 #include <wallet/wallet.h>
+#endif
+// VELES END
 
 #include <functional>
 #include <map>
@@ -140,6 +145,21 @@ public:
 
     //! List locked coins.
     virtual void listLockedCoins(std::vector<COutPoint>& outputs) = 0;
+
+    // VELES BEGIN
+#ifndef ENABLE_WALLET
+    // Dash, from wallet/wallet.h
+    enum AvailableCoinsType
+    {
+        ALL_COINS,
+        ONLY_DENOMINATED,
+        ONLY_NONDENOMINATED,
+        ONLY_MASTERNODE_COLLATERAL, // find masternode outputs including locked ones (use with caution)
+        ONLY_PRIVATESEND_COLLATERAL
+    };
+    //
+    // VELES END
+#endif
 
     //! Create transaction.
     virtual std::unique_ptr<PendingWalletTx> createTransaction(const std::vector<CRecipient>& recipients,
@@ -391,4 +411,4 @@ std::unique_ptr<Wallet> MakeWallet(const std::shared_ptr<CWallet>& wallet);
 
 } // namespace interfaces
 
-#endif // BITCOIN_INTERFACES_WALLET_H
+#endif // FXTC_INTERFACES_WALLET_H
