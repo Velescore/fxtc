@@ -8,10 +8,7 @@
 
 export LC_ALL=C
 HEADER_ID_PREFIX="FXTC_"
-<<<<<<< HEAD
 HEADER_ID_PREFIX_ALT="VELES_"
-=======
->>>>>>> fxtc-0.17
 HEADER_ID_SUFFIX="_H"
 
 REGEXP_EXCLUDE_FILES_WITH_PREFIX="src/(crypto/ctaes/|leveldb/|secp256k1/|tinyformat.h|univalue/)"
