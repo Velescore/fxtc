@@ -3120,6 +3120,8 @@ bool CWallet::SelectCoins(const std::vector<COutput>& vAvailableCoins, const CAm
 // Dash
 bool CWallet::SelectCoinsByDenominations(int nDenom, CAmount nValueMin, CAmount nValueMax, std::vector<CTxDSIn>& vecTxDSInRet, std::vector<COutput>& vCoinsRet, CAmount& nValueRet, int nPrivateSendRoundsMin, int nPrivateSendRoundsMax)
 {
+    LOCK2(cs_main, cs_wallet);
+
     vecTxDSInRet.clear();
     vCoinsRet.clear();
     nValueRet = 0;
@@ -3293,7 +3295,7 @@ bool CWallet::SelectCoinsGrouppedByAddresses(std::vector<CompactTallyItem>& vecT
         std::string strMessage = "SelectCoinsGrouppedByAddresses - vecTallyRet:\n";
         for (auto& item : vecTallyRet)
             strMessage += strprintf("  %s %f\n", EncodeDestination(item.txdest).c_str(), float(item.nAmount)/COIN);
-        LogPrint(BCLog::SELECTCOINS, "%s", strMessage);
+        LogPrint(BCLog::SELECTCOINS, "%s\n", strMessage);
     }
 
     return vecTallyRet.size() > 0;
@@ -3301,6 +3303,8 @@ bool CWallet::SelectCoinsGrouppedByAddresses(std::vector<CompactTallyItem>& vecT
 
 bool CWallet::SelectCoinsDark(CAmount nValueMin, CAmount nValueMax, std::vector<CTxIn>& vecTxInRet, CAmount& nValueRet, int nPrivateSendRoundsMin, int nPrivateSendRoundsMax) const
 {
+    LOCK2(cs_main, cs_wallet);
+
     CCoinControl *coinControl=NULL;
 
     vecTxInRet.clear();
@@ -3340,6 +3344,8 @@ bool CWallet::SelectCoinsDark(CAmount nValueMin, CAmount nValueMax, std::vector<
 
 bool CWallet::GetCollateralTxDSIn(CTxDSIn& txdsinRet, CAmount& nValueRet) const
 {
+    LOCK2(cs_main, cs_wallet);
+
     vector<COutput> vCoins;
 
     AvailableCoins(vCoins);
@@ -3359,6 +3365,8 @@ bool CWallet::GetCollateralTxDSIn(CTxDSIn& txdsinRet, CAmount& nValueRet) const
 
 bool CWallet::GetMasternodeOutpointAndKeys(COutPoint& outpointRet, CPubKey& pubKeyRet, CKey& keyRet, std::string strTxHash, std::string strOutputIndex)
 {
+    LOCK2(cs_main, cs_wallet);
+
     // wait for reindex and/or import to finish
     if (fImporting || fReindex) return false;
 
@@ -3445,6 +3453,8 @@ int CWallet::CountInputsWithAmount(CAmount nInputAmount)
 
 bool CWallet::HasCollateralInputs(bool fOnlyConfirmed) const
 {
+    LOCK2(cs_main, cs_wallet);
+
     vector<COutput> vCoins;
     AvailableCoins(vCoins, fOnlyConfirmed, NULL, false, ONLY_PRIVATESEND_COLLATERAL);
 
@@ -4271,13 +4281,10 @@ DBErrors CWallet::LoadWallet(bool& fFirstRunRet)
     }
 
     // Dash
-    {
-        LOCK2(cs_main, cs_wallet);
-        for (auto& pair : mapWallet) {
-            for(unsigned int i = 0; i < pair.second.tx->vout.size(); ++i) {
-                if (IsMine(pair.second.tx->vout[i]) && !IsSpent(pair.first, i)) {
-                    setWalletUTXO.insert(COutPoint(pair.first, i));
-                }
+    for (auto& pair : mapWallet) {
+        for(unsigned int i = 0; i < pair.second.tx->vout.size(); ++i) {
+            if (IsMine(pair.second.tx->vout[i]) && !IsSpent(pair.first, i)) {
+                setWalletUTXO.insert(COutPoint(pair.first, i));
             }
         }
     }

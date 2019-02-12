@@ -3,24 +3,24 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include "activemasternode.h"
-#include "instantx.h"
-#include "key.h"
-#include "validation.h"
-#include "masternode-sync.h"
-#include "masternodeman.h"
-#include "messagesigner.h"
-#include "net.h"
-#include "protocol.h"
-#include "reverse_iterator.h"
-#include "spork.h"
-#include "sync.h"
-#include "txmempool.h"
-#include "util.h"
-#include "consensus/validation.h"
-#include "validationinterface.h"
+#include <activemasternode.h>
+#include <instantx.h>
+#include <key.h>
+#include <validation.h>
+#include <masternode-sync.h>
+#include <masternodeman.h>
+#include <messagesigner.h>
+#include <net.h>
+#include <protocol.h>
+#include <reverse_iterator.h>
+#include <spork.h>
+#include <sync.h>
+#include <txmempool.h>
+#include <util.h>
+#include <consensus/validation.h>
+#include <validationinterface.h>
 #ifdef ENABLE_WALLET
-#include "wallet/wallet.h"
+#include <wallet/wallet.h>
 #endif // ENABLE_WALLET
 
 #include <boost/algorithm/string/replace.hpp>
@@ -954,12 +954,12 @@ bool CTxLockRequest::IsValid() const
     if(vout.size() < 1) return false;
 
     if(vin.size() > WARN_MANY_INPUTS) {
-        LogPrint(BCLog::INSTANTSEND, "CTxLockRequest::IsValid -- WARNING: Too many inputs: tx=%s", ToString());
+        LogPrint(BCLog::INSTANTSEND, "CTxLockRequest::IsValid -- WARNING: Too many inputs: tx=%s\n", ToString());
     }
 
     LOCK(cs_main);
     if(!CheckFinalTx(*this)) {
-        LogPrint(BCLog::INSTANTSEND, "CTxLockRequest::IsValid -- Transaction is not final: tx=%s", ToString());
+        LogPrint(BCLog::INSTANTSEND, "CTxLockRequest::IsValid -- Transaction is not final: tx=%s\n", ToString());
         return false;
     }
 
@@ -988,14 +988,14 @@ bool CTxLockRequest::IsValid() const
     }
 
     if(nValueIn > sporkManager.GetSporkValue(SPORK_5_INSTANTSEND_MAX_VALUE)*COIN) {
-        LogPrint(BCLog::INSTANTSEND, "CTxLockRequest::IsValid -- Transaction value too high: nValueIn=%d, tx=%s", nValueIn, ToString());
+        LogPrint(BCLog::INSTANTSEND, "CTxLockRequest::IsValid -- Transaction value too high: nValueIn=%d, tx=%s\n", nValueIn, ToString());
         return false;
     }
 
     CAmount nValueOut = CTransaction(*this).GetValueOut();
 
     if(nValueIn - nValueOut < GetMinFee()) {
-        LogPrint(BCLog::INSTANTSEND, "CTxLockRequest::IsValid -- did not include enough fees in transaction: fees=%d, tx=%s", nValueOut - nValueIn, ToString());
+        LogPrint(BCLog::INSTANTSEND, "CTxLockRequest::IsValid -- did not include enough fees in transaction: fees=%d, tx=%s\n", nValueOut - nValueIn, ToString());
         return false;
     }
 

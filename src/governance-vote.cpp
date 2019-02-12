@@ -3,12 +3,12 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#include "governance-vote.h"
-#include "governance-object.h"
-#include "masternode-sync.h"
-#include "masternodeman.h"
-#include "messagesigner.h"
-#include "util.h"
+#include <governance-vote.h>
+#include <governance-object.h>
+#include <masternode-sync.h>
+#include <masternodeman.h>
+#include <messagesigner.h>
+#include <util.h>
 
 #include <boost/lexical_cast.hpp>
 
@@ -198,7 +198,7 @@ vote_signal_enum_t CGovernanceVoting::ConvertVoteSignal(std::string strVoteSigna
     {
         std::ostringstream ostr;
         ostr << "CGovernanceVote::ConvertVoteSignal: error : " << e.what() << std::endl;
-        LogPrintf(ostr.str().c_str());
+        LogPrintf("%s\n", ostr.str().c_str());
     }
 
     return eSignal;

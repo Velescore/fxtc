@@ -26,7 +26,7 @@
 
 #include <univalue.h>
 // VELES BEGIN
-#include "veleslogo.h"
+#include <veleslogo.h>
 // VELES END
 
 

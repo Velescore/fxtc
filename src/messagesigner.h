@@ -3,10 +3,10 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef MESSAGESIGNER_H
-#define MESSAGESIGNER_H
+#ifndef FXTC_MESSAGESIGNER_H
+#define FXTC_MESSAGESIGNER_H
 
-#include "key.h"
+#include <key.h>
 
 /** Helper class for signing messages and checking their signatures
  */
@@ -32,4 +32,4 @@ public:
     static bool VerifyHash(const uint256& hash, const CPubKey pubkey, const std::vector<unsigned char>& vchSig, std::string& strErrorRet);
 };
 
-#endif
+#endif // FXTC_MESSAGESIGNER_H

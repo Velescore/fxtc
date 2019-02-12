@@ -5,8 +5,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_NET_H
-#define BITCOIN_NET_H
+#ifndef FXTC_NET_H
+#define FXTC_NET_H
 
 #include <addrdb.h>
 #include <addrman.h>
@@ -1003,4 +1003,4 @@ public:
 /** Return a timestamp in the future (in microseconds) for exponentially distributed events. */
 int64_t PoissonNextSend(int64_t now, int average_interval_seconds);
 
-#endif // BITCOIN_NET_H
+#endif // FXTC_NET_H

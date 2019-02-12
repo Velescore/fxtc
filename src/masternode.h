@@ -3,12 +3,12 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef MASTERNODE_H
-#define MASTERNODE_H
+#ifndef FXTC_MASTERNODE_H
+#define FXTC_MASTERNODE_H
 
-#include "key.h"
-#include "validation.h"
-#include "spork.h"
+#include <key.h>
+#include <validation.h>
+#include <spork.h>
 
 class CMasternode;
 class CMasternodeBroadcast;
@@ -414,4 +414,4 @@ public:
     }
 };
 
-#endif
+#endif // FXTC_MASTERNODE_H

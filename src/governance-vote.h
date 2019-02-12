@@ -3,11 +3,12 @@
 
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
-#ifndef GOVERNANCE_VOTE_H
-#define GOVERNANCE_VOTE_H
 
-#include "key.h"
-#include "primitives/transaction.h"
+#ifndef FXTC_GOVERNANCE_VOTE_H
+#define FXTC_GOVERNANCE_VOTE_H
+
+#include <key.h>
+#include <primitives/transaction.h>
 
 #include <boost/lexical_cast.hpp>
 
@@ -220,4 +221,4 @@ public:
 
 */
 
-#endif
+#endif // FXTC_GOVERNANCE_VOTE_H

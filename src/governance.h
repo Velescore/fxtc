@@ -3,22 +3,22 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef GOVERNANCE_H
-#define GOVERNANCE_H
+#ifndef FXTC_GOVERNANCE_H
+#define FXTC_GOVERNANCE_H
 
 //#define ENABLE_DASH_DEBUG
 
-#include "bloom.h"
-#include "cachemap.h"
-#include "cachemultimap.h"
-#include "chain.h"
-#include "governance-exceptions.h"
-#include "governance-object.h"
-#include "governance-vote.h"
-#include "net.h"
-#include "sync.h"
-#include "timedata.h"
-#include "util.h"
+#include <bloom.h>
+#include <cachemap.h>
+#include <cachemultimap.h>
+#include <chain.h>
+#include <governance-exceptions.h>
+#include <governance-object.h>
+#include <governance-vote.h>
+#include <net.h>
+#include <sync.h>
+#include <timedata.h>
+#include <util.h>
 
 class CGovernanceManager;
 class CGovernanceTriggerManager;
@@ -461,4 +461,4 @@ private:
 
 };
 
-#endif
+#endif // FXTC_GOVERNANCE_H

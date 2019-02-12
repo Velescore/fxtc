@@ -17,7 +17,7 @@ define(_FXTC_COPYRIGHT_YEAR, 2019)
 dnl VELES END
 define(_COPYRIGHT_HOLDERS,[The %s developers])
 define(_COPYRIGHT_HOLDERS_SUBSTITUTION,[[Veles Core]])
-AC_INIT([Veles Core],[_CLIENT_VERSION_MAJOR._CLIENT_VERSION_MINOR._CLIENT_VERSION_REVISION],[https://github.com/Velescore],[bitcoin],[http://veles.network/])
+AC_INIT([Veles Core],[_CLIENT_VERSION_MAJOR._CLIENT_VERSION_MINOR._CLIENT_VERSION_REVISION],[https://github.com/Velescore/Veles/issues],[bitcoin],[https://veles.network/])
 AC_CONFIG_SRCDIR([src/validation.cpp])
 AC_CONFIG_HEADERS([src/config/bitcoin-config.h])
 AC_CONFIG_AUX_DIR([build-aux])
