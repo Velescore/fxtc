@@ -29,8 +29,8 @@
 #include <warnings.h>
 
 // Dash
-#include "masternode-sync.h"
-#include "spork.h"
+#include <masternode-sync.h>
+#include <spork.h>
 //
 
 #include <stdint.h>
@@ -157,7 +157,7 @@ UniValue spork(const JSONRPCRequest& request)
         "<value> is a epoch datetime to enable or disable spork\n"
         + HelpRequiringPassphrase(pwallet));
 #else // ENABLE_WALLET
-    throw runtime_error(
+    throw std::runtime_error(
         "spork <name>\n"
         "<name> is the corresponding spork name, or 'show' to show all current spork settings, active to show which sporks are active\n");
 #endif // ENABLE_WALLET

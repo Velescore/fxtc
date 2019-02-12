@@ -36,9 +36,9 @@
 #include <warnings.h>
 
 // Dash
-#include "governance-classes.h"
-#include "masternode-payments.h"
-#include "masternode-sync.h"
+#include <governance-classes.h>
+#include <masternode-payments.h>
+#include <masternode-sync.h>
 //
 
 #include <memory>
@@ -401,9 +401,9 @@ static UniValue gethalvingstatus(const JSONRPCRequest& request)
     FlushStateToDisk();
 
     obj.pushKV("halvings_occured", halvingParams->nHalvingCount);
-    obj.pushKV("epochs_occured", halvingParams->epochs.size());
+    obj.pushKV("epochs_occured", (int)halvingParams->epochs.size());
     obj.pushKV("halving_interval", halvingParams->nHalvingInterval);
-    obj.pushKV("blocks_to_next_epoch", halvingParams->epochs.back().nEndBlock - chainActive.Height());
+    obj.pushKV("blocks_to_next_epoch", (uint64_t)halvingParams->epochs.back().nEndBlock - chainActive.Height());
 
     // list of mining epochs
     for (int i = 0; i < (int)halvingParams->epochs.size(); i++) {

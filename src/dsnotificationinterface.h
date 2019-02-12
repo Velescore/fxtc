@@ -3,10 +3,10 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_DSNOTIFICATIONINTERFACE_H
-#define BITCOIN_DSNOTIFICATIONINTERFACE_H
+#ifndef FXTC_DSNOTIFICATIONINTERFACE_H
+#define FXTC_DSNOTIFICATIONINTERFACE_H
 
-#include "validationinterface.h"
+#include <validationinterface.h>
 
 class CDSNotificationInterface : public CValidationInterface
 {
@@ -28,4 +28,4 @@ private:
     CConnman& connman;
 };
 
-#endif // BITCOIN_DSNOTIFICATIONINTERFACE_H
+#endif // FXTC_DSNOTIFICATIONINTERFACE_H

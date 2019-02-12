@@ -5,8 +5,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITCOIN_UTILTIME_H
-#define BITCOIN_UTILTIME_H
+#ifndef FXTC_UTILTIME_H
+#define FXTC_UTILTIME_H
 
 #include <stdint.h>
 #include <string>
@@ -41,4 +41,4 @@ std::string FormatISO8601Time(int64_t nTime);
 std::string DurationToDHMS(int64_t nDurationTime);
 //
 
-#endif // BITCOIN_UTILTIME_H
+#endif // FXTC_UTILTIME_H

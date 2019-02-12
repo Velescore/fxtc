@@ -26,9 +26,9 @@
 #include <warnings.h>
 
 // Dash
-#include "masternodeman.h"
-#include "masternode-sync.h"
-#include "privatesend.h"
+#include <masternodeman.h>
+#include <masternode-sync.h>
+#include <privatesend.h>
 //
 
 #include <stdint.h>
