@@ -2,7 +2,7 @@
 
 Veles Core integration/staging tree
 ======================================
-![Licence](https://img.shields.io/github/license/Velescore/Veles.svg?style=flat)   ![Latest Release](https://img.shields.io/github/release/Velescore/Veles.svg?style=flat) ![Master Build Status](https://api.travis-ci.com/Velescore/Veles.svg?branch=master)    ![Development Version](https://img.shields.io/github/tag-pre/Velescore/Veles.svg?colorB=blue&label=dev&logo=github&style=flat) ![Development Build Status](https://img.shields.io/travis/com/Velescore/Veles/development.svg?logo=github&style=flat)
+![Licence](https://img.shields.io/github/license/Velescore/Veles.svg?style=for-the-badge)   ![Latest Release](https://img.shields.io/github/release/Velescore/Veles.svg?style=for-the-badge) ![Master Build Status](https://img.shields.io/travis/com/Velescore/Veles/master.svg?logo=github&style=for-the-badge)    ![Development Version](https://img.shields.io/github/tag-pre/Velescore/Veles.svg?colorB=blue&label=dev&logo=github&style=for-the-badge) ![Development Build Status](https://img.shields.io/travis/com/Velescore/Veles/development.svg?logo=github&style=for-the-badge)
 
 Official repository for Veles Core node and wallet. Current version of Veles Core is **v0.17.0 "Aged Amnesia"**. Default branch **master** contains source code for the latest stable release of Veles Core. Builds from the **development** branch are not recommended for mining or production environment. 
 
