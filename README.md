@@ -13,11 +13,11 @@ Veles is an ecosystem and innovative cryptocurrency supporting multiple PoW algo
 
 Build Instructions and Notes
 -----------------------------
-1.  Download the latest stable source code from [Releases](https://github.com/velescore/veles/releases) section on our github repository in `tar.gz` format using `wget` command (make sure you replace link in the example below with link for the **latest release**), extract it and enter the directory:
+1.  Clone the repository and checkout to latest stable release using following commands. (Alternatively you can download and extract the latest source tarball manually from [Releases](https://github.com/velescore/veles/releases) page on our github.
 
-        wget https://github.com/velescore/veles/archive/v0.17.0.21.tar.gz
-        tar xvf https://github.com/velescore/veles/archive/v0.17.0.21.tar.gz
-        cd v0.17.0.21
+        git clone https://github.com/velescore/veles.git
+        cd veles
+        git checkout `git tag | sort -V | grep -v "\-rc" | tail -1`
 
 2.  Build Veles Core:
     Configure and build the headless Veles Core binaries as well as the GUI (if Qt is found).
