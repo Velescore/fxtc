@@ -8,12 +8,12 @@ https://veles.network
 
 About Veles
 ------------
-Veles is an ecosystem and innovative cryptocurrency supporting multiple PoW algorithms, with unique dynamic block reward system. Mail goal of the project is to implement decentralised VPN solution to protect privacy and anonymity of Internet users around the globe.
+Veles Core is innovative cryptocurrency supporting multiple PoW algorithms, with unique dynamic block reward system. Main goal of the project is to implement decentralised VPN solution to protect privacy and anonymity of Internet users around the globe.
 
 
 Build Instructions and Notes
 -----------------------------
-1.  Clone the repository and checkout to latest stable release using following commands. (Alternatively you can download and extract the latest source tarball manually from [Releases](https://github.com/velescore/veles/releases) page on our github.
+1.  Clone the repository and checkout to latest stable release using following commands. (Alternatively you can download and extract the latest source tarball manually from [Releases](https://github.com/velescore/veles/releases) page on our GitHub.)
 
         git clone https://github.com/velescore/veles.git
         cd veles
