@@ -27,9 +27,9 @@ bool CMasternodeConfig::read(std::string& strErr) {
     if (!streamConfig.good()) {
         FILE* configFile = fopen(pathMasternodeConfigFile.string().c_str(), "a");
         if (configFile != NULL) {
-            std::string strHeader = "# Masternode config file\n"
+            std::string strHeader = "# Veles Core Masternode config file\n"
                           "# Format: alias IP:port masternodeprivkey collateral_output_txid collateral_output_index\n"
-                          "# Example: mn1 127.0.0.2:9468 7y9mBodVbq5nytRyZNg169ABTeKffDNqekCPiXKWGP2ZYDRHYbk ddaa0ebeed10aef980adbf9579718aed85b533eb5816adde661221f656382dd6 0\n";
+                          "# Example: mn1 35.228.223.14:21337 7y9mBodVbq5nytRyZNg169ABTeKffDNqekCPiXKWGP2ZYDRHYbk ddaa0ebeed10aef980adbf9579718aed85b533eb5816adde661221f656382dd6 0\n";
             fwrite(strHeader.c_str(), std::strlen(strHeader.c_str()), 1, configFile);
             fclose(configFile);
         }
