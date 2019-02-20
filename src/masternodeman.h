@@ -236,6 +236,9 @@ public:
      */
     void NotifyMasternodeUpdates(CConnman& connman);
 
+    // VELES BEGIN
+    void CheckRemoteActivation(CConnman& connman);
+    // VELES END
 };
 
 #endif // FXTC_MASTERNODEMAN_H

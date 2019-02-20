@@ -470,6 +470,12 @@ void ThreadCheckPrivateSend(CConnman& connman)
             // make sure to check all masternodes first
             mnodeman.Check();
 
+            // VELES BEGIN
+            // check whether remote masternodes in PRE_ENABLED state need to be re-activated, fixes veles#20
+            if(nTick % (MASTERNODE_MIN_MNP_SECONDS / 4) == 30)
+                mnodeman.CheckRemoteActivation(connman);
+            // VELES END
+
             // check if we should activate or ping every few minutes,
             // slightly postpone first run to give net thread a chance to connect to some peers
             if(nTick % MASTERNODE_MIN_MNP_SECONDS == 15)

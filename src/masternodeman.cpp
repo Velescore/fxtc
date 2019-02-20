@@ -17,6 +17,9 @@
 #endif // ENABLE_WALLET
 #include <script/standard.h>
 #include <util.h>
+// VELES BEGIN
+#include <masternodeconfig.h>
+// VELES END
 
 /** Masternode manager */
 CMasternodeMan mnodeman;
@@ -342,6 +345,43 @@ void CMasternodeMan::CheckAndRemove(CConnman& connman)
         NotifyMasternodeUpdates(connman);
     }
 }
+
+// VELES BEGIN
+void CMasternodeMan::CheckRemoteActivation(CConnman& connman)
+{
+    LogPrintf("CMasternodeMan::CheckRemoteActivation\n");
+ 
+    for (CMasternodeConfig::CMasternodeEntry mne : masternodeConfig.getEntries()) {
+        COutPoint outpoint = COutPoint(uint256S(mne.getTxHash()), uint32_t(atoi(mne.getOutputIndex().c_str())));
+        CMasternode mn;
+        bool fFound = Get(outpoint, mn);
+        std::string strStatus = fFound ? mn.GetStatus() : "MISSING";
+
+        if (!fFound) {
+            LogPrint(BCLog::MASTERNODE, "CMasternodeMan::CheckRemoteActivation -- Skipping entry not found in the masternode list - alias=%s\n", mne.getAlias());
+            continue;
+        }
+
+        if (strStatus == "PRE_ENABLED") {
+            std::string strError;
+            CMasternodeBroadcast mnb;
+
+            bool fResult = CMasternodeBroadcast::Create(mne.getIp(), mne.getPrivKey(), mne.getTxHash(), mne.getOutputIndex(), strError, mnb);
+
+            if(fResult) {
+                LogPrint(BCLog::MASTERNODE, "CMasternodeMan::CheckRemoteActivation -- Rebroadcasting of activation message for PRE_ENABLED masternode: SUCCESS - alias=%s\n", mne.getAlias());
+                UpdateMasternodeList(mnb, connman);
+                mnb.Relay(connman);
+            } else {
+                LogPrint(BCLog::MASTERNODE, "CMasternodeMan::CheckRemoteActivation -- Rebroadcasting of activation message for PRE_ENABLED masternode: FAIL - alias=%s, error=%s\n", mne.getAlias(), strError);
+            }
+            NotifyMasternodeUpdates(connman);
+        } else {
+            LogPrint(BCLog::MASTERNODE, "CMasternodeMan::CheckRemoteActivation -- Skipping entry in other than PRE_ENABLED state - alias=%s, status=%s\n", mne.getAlias(), strStatus);
+        }
+    }
+}
+// VELES END
 
 void CMasternodeMan::Clear()
 {
