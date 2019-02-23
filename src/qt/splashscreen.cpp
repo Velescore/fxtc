@@ -1,4 +1,5 @@
 // Copyright (c) 2011-2018 The Bitcoin Core developers
+// Copyright (c) 2018-2019 The Veles Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -47,6 +48,19 @@ SplashScreen::SplashScreen(interfaces::Node& node, Qt::WindowFlags f, const Netw
 
     QString font            = QApplication::font().toString();
 
+    // VELES BEGIN
+    QString splashScreenPath = ":/images/splash";
+    if(gArgs.GetBoolArg("-regtest", false))
+        splashScreenPath = ":/images/splash_testnet";
+    if(gArgs.GetBoolArg("-testnet", false))
+        splashScreenPath = ":/images/splash_testnet";
+    QPixmap splashPixmap;
+    QRect splashRect(QPoint(0,0), QSize(480,320));
+    // Break the line at semantically correct possition
+    copyrightText.replace("The ", " -\n  The ");
+    copyrightText.replace("Satoshi ", " -\n  Satoshi ");
+    // VELES END
+
     // create a bitmap according to device pixelratio
     QSize splashSize(480*devicePixelRatio,320*devicePixelRatio);
     pixmap = QPixmap(splashSize);
@@ -67,12 +81,19 @@ SplashScreen::SplashScreen(interfaces::Node& node, Qt::WindowFlags f, const Netw
     pixPaint.fillRect(rGradient, gradient);
 
     // draw the bitcoin icon, expected size of PNG: 1024x1024
+    // VELES BEGIN
+    // use custom splash screen instead of the icon
+    splashPixmap = QPixmap(splashScreenPath);
+    pixPaint.drawPixmap(splashRect, splashPixmap);
+    /*
     QRect rectIcon(QPoint(-150,-122), QSize(430,430));
 
     const QSize requiredSize(1024,1024);
     QPixmap icon(networkStyle->getAppIcon().pixmap(requiredSize));
 
     pixPaint.drawPixmap(rectIcon, icon);
+    */
+    // VELES END
 
     // check font size and drawing with
     pixPaint.setFont(QFont(font, 33*fontFactor));

@@ -96,4 +96,10 @@
         <file alias="spinner-034">res/movies/spinner-034.png</file>
         <file alias="spinner-035">res/movies/spinner-035.png</file>
     </qresource>
+    <!-- VELES BEGIN -->
+    <qresource prefix="/images">
+        <file alias="splash">res/images/splash.png</file>
+        <file alias="splash_testnet">res/images/splash_testnet.png</file>
+    </qresource>
+    <!-- VELES END -->
 </RCC>
