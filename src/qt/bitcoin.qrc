@@ -88,7 +88,6 @@
         <file alias="history">res/icons/dark/history.png</file>
         <!-- Dash -->
         <file alias="masternodes">res/icons/dark/masternodes.png</file>
-        <!--      -->
         <file alias="overview">res/icons/dark/overview.png</file>
         <file alias="export">res/icons/dark/export.png</file>
         <file alias="synced">res/icons/dark/synced.png</file>
