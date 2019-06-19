@@ -312,57 +312,57 @@ RES_ICONS = \
   qt/res/icons/light/tx_output.png \
   qt/res/icons/light/tx_mined.png \
   qt/res/icons/light/verify.png \
-  qt/res/icons/legacy/add.png \
-  qt/res/icons/legacy/address-book.png \
-  qt/res/icons/legacy/about_veles.png \
-  qt/res/icons/legacy/about_qt.png \
-  qt/res/icons/legacy/clock1.png \
-  qt/res/icons/legacy/clock2.png \
-  qt/res/icons/legacy/clock3.png \
-  qt/res/icons/legacy/clock4.png \
-  qt/res/icons/legacy/clock5.png \
-  qt/res/icons/legacy/configure.png \
-  qt/res/icons/legacy/connect0.png \
-  qt/res/icons/legacy/connect1.png \
-  qt/res/icons/legacy/connect2.png \
-  qt/res/icons/legacy/connect3.png \
-  qt/res/icons/legacy/connect4.png \
-  qt/res/icons/legacy/debugwindow.png \
-  qt/res/icons/legacy/edit.png \
-  qt/res/icons/legacy/editcopy.png \
-  qt/res/icons/legacy/editpaste.png \
-  qt/res/icons/legacy/export.png \
-  qt/res/icons/legacy/eye.png \
-  qt/res/icons/legacy/eye_minus.png \
-  qt/res/icons/legacy/eye_plus.png \
-  qt/res/icons/legacy/filesave.png \
-  qt/res/icons/legacy/fontbigger.png \
-  qt/res/icons/legacy/fontsmaller.png \
-  qt/res/icons/legacy/hd_disabled.png \
-  qt/res/icons/legacy/hd_enabled.png \
-  qt/res/icons/legacy/history.png \
-  qt/res/icons/legacy/info.png \
-  qt/res/icons/legacy/key.png \
-  qt/res/icons/legacy/lock_closed.png \
-  qt/res/icons/legacy/lock_open.png \
-  qt/res/icons/legacy/network_disabled.png \
-  qt/res/icons/legacy/open.png \
-  qt/res/icons/legacy/overview.png \
-  qt/res/icons/legacy/proxy.png \
-  qt/res/icons/legacy/quit.png \
-  qt/res/icons/legacy/receive.png \
-  qt/res/icons/legacy/remove.png \
-  qt/res/icons/legacy/send.png \
-  qt/res/icons/legacy/synced.png \
-  qt/res/icons/legacy/transaction0.png \
-  qt/res/icons/legacy/transaction2.png \
-  qt/res/icons/legacy/transaction_abandoned.png \
-  qt/res/icons/legacy/transaction_conflicted.png \
-  qt/res/icons/legacy/tx_inout.png \
-  qt/res/icons/legacy/tx_input.png \
-  qt/res/icons/legacy/tx_output.png \
-  qt/res/icons/legacy/tx_mined.png \
-  qt/res/icons/legacy/verify.png \
+  qt/res/icons/velesTheme/add.png \
+  qt/res/icons/velesTheme/address-book.png \
+  qt/res/icons/velesTheme/about_veles.png \
+  qt/res/icons/velesTheme/about_qt.png \
+  qt/res/icons/velesTheme/clock1.png \
+  qt/res/icons/velesTheme/clock2.png \
+  qt/res/icons/velesTheme/clock3.png \
+  qt/res/icons/velesTheme/clock4.png \
+  qt/res/icons/velesTheme/clock5.png \
+  qt/res/icons/velesTheme/configure.png \
+  qt/res/icons/velesTheme/connect0.png \
+  qt/res/icons/velesTheme/connect1.png \
+  qt/res/icons/velesTheme/connect2.png \
+  qt/res/icons/velesTheme/connect3.png \
+  qt/res/icons/velesTheme/connect4.png \
+  qt/res/icons/velesTheme/debugwindow.png \
+  qt/res/icons/velesTheme/edit.png \
+  qt/res/icons/velesTheme/editcopy.png \
+  qt/res/icons/velesTheme/editpaste.png \
+  qt/res/icons/velesTheme/export.png \
+  qt/res/icons/velesTheme/eye.png \
+  qt/res/icons/velesTheme/eye_minus.png \
+  qt/res/icons/velesTheme/eye_plus.png \
+  qt/res/icons/velesTheme/filesave.png \
+  qt/res/icons/velesTheme/fontbigger.png \
+  qt/res/icons/velesTheme/fontsmaller.png \
+  qt/res/icons/velesTheme/hd_disabled.png \
+  qt/res/icons/velesTheme/hd_enabled.png \
+  qt/res/icons/velesTheme/history.png \
+  qt/res/icons/velesTheme/info.png \
+  qt/res/icons/velesTheme/key.png \
+  qt/res/icons/velesTheme/lock_closed.png \
+  qt/res/icons/velesTheme/lock_open.png \
+  qt/res/icons/velesTheme/network_disabled.png \
+  qt/res/icons/velesTheme/open.png \
+  qt/res/icons/velesTheme/overview.png \
+  qt/res/icons/velesTheme/proxy.png \
+  qt/res/icons/velesTheme/quit.png \
+  qt/res/icons/velesTheme/receive.png \
+  qt/res/icons/velesTheme/remove.png \
+  qt/res/icons/velesTheme/send.png \
+  qt/res/icons/velesTheme/synced.png \
+  qt/res/icons/velesTheme/transaction0.png \
+  qt/res/icons/velesTheme/transaction2.png \
+  qt/res/icons/velesTheme/transaction_abandoned.png \
+  qt/res/icons/velesTheme/transaction_conflicted.png \
+  qt/res/icons/velesTheme/tx_inout.png \
+  qt/res/icons/velesTheme/tx_input.png \
+  qt/res/icons/velesTheme/tx_output.png \
+  qt/res/icons/velesTheme/tx_mined.png \
+  qt/res/icons/velesTheme/verify.png \
   qt/res/icons/dark/add.png \
   qt/res/icons/dark/address-book.png \
   qt/res/icons/dark/about_veles.png \
@@ -419,7 +419,7 @@ RES_ICONS = \
 RES_ICONS += \
   qt/res/icons/light/masternodes.png \
   qt/res/icons/dark/masternodes.png \
-  qt/res/icons/legacy/masternodes.png
+  qt/res/icons/velesTheme/masternodes.png
 #
 
 BITCOIN_QT_BASE_CPP = \
@@ -499,15 +499,15 @@ RES_IMAGES = \
   qt/res/images/light/splash_testnet.png \
   qt/res/images/light/splash_prerelease.png \
   qt/res/images/light/header_bg.png \
-  qt/res/images/legacy/splash.png \
-  qt/res/images/legacy/splash_testnet.png \
-  qt/res/images/legacy/splash_prerelease.png \
-  qt/res/images/legacy/header_bg.png \
-  qt/res/images/legacy/bg-pattern.png
+  qt/res/images/velesTheme/splash.png \
+  qt/res/images/velesTheme/splash_testnet.png \
+  qt/res/images/velesTheme/splash_prerelease.png \
+  qt/res/images/velesTheme/header_bg.png \
+  qt/res/images/velesTheme/bg-pattern.png
 
 RES_CSS = \
   qt/res/css/dark.css \
-  qt/res/css/legacy.css \
+  qt/res/css/velesTheme.css \
   qt/res/css/light.css
 # VELES END
 

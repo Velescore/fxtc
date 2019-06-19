@@ -849,7 +849,7 @@ QString getThemeName()
     if(!theme.isEmpty()){
         return theme;
     }
-    return QString("legacy");
+    return QString("velesTheme");
 }
 
 // Open CSS when configured
@@ -874,8 +874,8 @@ QString loadStyleSheet()
         cssName = QString(":/css/") + theme;    // custom style from settings
 
      } else {
-        cssName = QString(":/css/legacy");       // default style
-        settings.setValue("theme", "legacy");
+        cssName = QString(":/css/velesTheme");       // default style
+        settings.setValue("theme", "velesTheme");
      }
 
     // load the css

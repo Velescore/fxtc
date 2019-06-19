@@ -1,7 +1,7 @@
 /******************************************************************************/
 /******************************************************************************/
 /*
- * The Veles Core Qt GUI legacy stylesheet.
+ * The Veles Core Qt GUI Veles-theme stylesheet.
  *
  * Copyright (c) 2018-2019 The Veles Core developers
  *
@@ -33,7 +33,7 @@ WalletFrame {
 }
 
 QMainWindow {
-	background-image: url(':/images/legacy/bg-pattern');
+	background-image: url(':/images/velesTheme/bg-pattern');
 	color:#fff;
 	background-color: #c4bebe;
 }
@@ -120,7 +120,7 @@ QAbstractSpinBox::up-arrow {
 		max-height: 15px;
 		margin-bottom: 1px;
 		margin-right: 3px;
-    image: url(':/icons/legacy/smallUpArrow') 0 0 0 0 stretch stretch;
+    image: url(':/icons/velesTheme/smallUpArrow') 0 0 0 0 stretch stretch;
 }
 
 QAbstractSpinBox::down-button {
@@ -141,7 +141,7 @@ QAbstractSpinBox::down-arrow {
 		max-height: 15px;
 		margin-right: 3px;
 		margin-top: 1px;
-    image: url(':/icons/legacy/smallDownArrow') 0 0 0 0 stretch stretch;
+    image: url(':/icons/velesTheme/smallDownArrow') 0 0 0 0 stretch stretch;
 }
 
 
@@ -181,7 +181,7 @@ QComboBox::drop-down:hover {
 }
 
 QComboBox::down-arrow {
-    border-image: url(':/icons/legacy/smallDownArrow') 0 0 0 0 stretch stretch;
+    border-image: url(':/icons/velesTheme/smallDownArrow') 0 0 0 0 stretch stretch;
 }
 
 QComboBox QListView {
@@ -292,11 +292,11 @@ QHeaderView::section:hover {
 }
 */
 QHeaderView::down-arrow {
-    image: url(':/icons/legacy/smallDownArrow');
+    image: url(':/icons/velesTheme/smallDownArrow');
 }
 
 QHeaderView::up-arrow {
-    image: url(':/icons/legacy/smallUpArrow');
+    image: url(':/icons/velesTheme/smallUpArrow');
 }
 
 QHeaderView::section:last {
@@ -511,7 +511,7 @@ QPushButton#openBitcoinConfButton {
 QPushButton#warningIcon,
 QPushButton#labelTransactionsStatus,
 QPushButton#labelWalletStatus {
-	qproperty-icon: url(":/icons/legacy/warning");
+	qproperty-icon: url(":/icons/velesTheme/warning");
 	background-color: transparent;
 	border: none;
 }
@@ -530,7 +530,7 @@ QPushButton#labelTransactionsStatus {
 /******************************* Dialog Boxes *********************************/
 
 QDialog {
-	background-image: url(':/images/legacy/bg-pattern');
+	background-image: url(':/images/velesTheme/bg-pattern');
 	background-color: #c4bebe;
 }
 
@@ -866,19 +866,19 @@ QScrollBar:right-arrow {
 }
 /*
 QScrollBar:up-arrow {
-    background-image: url(':/images/legacy/upArrow');
+    background-image: url(':/images/velesTheme/upArrow');
 }
 
 QScrollBar:down-arrow {
-    background-image: url(':/images/legacy/downArrow');
+    background-image: url(':/images/velesTheme/downArrow');
 }
 
 QScrollBar:left-arrow {
-    background-image: url(':/images/legacy/leftArrow');
+    background-image: url(':/images/velesTheme/leftArrow');
 }
 
 QScrollBar:right-arrow {
-    background-image: url(':/images/legacy/rightArrow');
+    background-image: url(':/images/velesTheme/rightArrow');
 }
 */
 QScrollBar::sub-line:vertical {
