@@ -24,7 +24,7 @@
 
 #include <openssl/ssl.h>
 
-#if defined(QT_STATICPLUGIN)&& QT_VERSION < 0x050000
+#if defined(QT_STATICPLUGIN)
 #include <QtPlugin>
 #if defined(QT_QPA_PLATFORM_MINIMAL)
 Q_IMPORT_PLUGIN(QMinimalIntegrationPlugin);
