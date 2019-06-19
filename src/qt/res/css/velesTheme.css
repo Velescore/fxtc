@@ -109,11 +109,12 @@ QAbstractSpinBox::up-button {
     padding-right: 1px;
     padding-left: 5px;
     padding-top: 2px;
-		border-top: 2px solid rgba(228, 185, 156, 0.7);
+		/*border-top: 2px solid rgba(228, 185, 156, 0.7);*/
 }
 
 QAbstractSpinBox::up-button:hover {
-		border-top: 2px solid #f19b7e;
+		/*border-top: 2px solid #f19b7e;*/
+		background-color: #555;
 }
 
 QAbstractSpinBox::up-arrow {
@@ -130,11 +131,12 @@ QAbstractSpinBox::down-button {
 		padding-left: 5px;
     padding-bottom: 2px;
 		border-top: 1px solid rgba(17, 17, 17, 0.5);
-		border-bottom: 2px solid rgba(228, 185, 156, 0.7);
+		/*border-bottom: 2px solid rgba(228, 185, 156, 0.7);*/
 }
 
 QAbstractSpinBox::down-button:hover {
-		border-bottom: 2px solid #f19b7e;
+		/*border-bottom: 2px solid #f19b7e;*/
+		background-color: #555;
 }
 
 QAbstractSpinBox::down-arrow {
@@ -173,11 +175,12 @@ QComboBox::drop-down {
 		border-radius: 1px;
     background-color: #323232;
 		border-left: 1px solid rgba(17, 17, 17, 0.5);
-		border-bottom: 2px solid rgba(228, 185, 156, 0.7);
+		/*border-bottom: 2px solid rgba(228, 185, 156, 0.7);*/
 }
 
 QComboBox::drop-down:hover {
-		border-bottom: 2px solid #f19b7e;
+		/*border-bottom: 2px solid #f19b7e;*/
+		background-color: #555;
 }
 
 QComboBox::down-arrow {
@@ -210,7 +213,7 @@ QComboBox::item:selected {
 	font-weight:bold;
 	/*border-top: 1px solid rgba(17, 17, 17, 0.7);
 	border-bottom: 1px solid rgba(17, 17, 17, 0.7);*/
-	border-left: 2px solid #F19B7E;
+	/*border-left: 2px solid #F19B7E;*/
 }
 
 QComboBox::indicator {
@@ -368,7 +371,7 @@ QToolBar > QToolButton {
 	padding: 0em 1em;
 	font-weight:bold;
 	margin-top: 5px;
-	border-top: 3px solid transparent;
+	border-bottom: 2px solid transparent;
 }
 
 QToolBar > QToolButton:hover {
@@ -388,6 +391,7 @@ QToolBar > QToolButton:checked {
 /************************** Menu on the top ***********************************/
 
 QMenuBar {
+	/* Top menu bar */
 	background-color: black;
 	color: #eee;
 	padding-bottom: 2px;
@@ -402,7 +406,7 @@ QMenuBar::item:selected {
 	background-color: rgba(100, 100, 100, 0.3);
 	color: #eee;
 	font-weight:bold;
-	border-top: 2px solid #F19B7E;
+	/*border-top: 2px solid #F19B7E;*/
 }
 
 QMenu {
@@ -412,6 +416,10 @@ QMenu {
 
 QMenu::item {
 	background: transparent;
+}
+
+QMenu::item:disabled {
+	background-color: rgba(100, 100, 100, 0.3);
 }
 
 QMenu::item:selected {
@@ -589,21 +597,33 @@ QWidget#SendCoinsDialog > QFrame {
 }
 
 QObject#addressBookButton {
-	background-color: transparent;
+	background-color: #323232;
 	height: 25px;
-	border: 1px solid rgba(17, 17, 17, 0.8);
+	border: 1px solid rgba(17, 17, 17, 0.5);
+}
+
+QObject#addressBookButton:hover {
+	background-color: #555;
 }
 
 QObject#pasteButton {
-	background-color: transparent;
+	background-color: #323232;
 	height: 25px;
-	border: 1px solid rgba(17, 17, 17, 0.8);
+	border: 1px solid rgba(17, 17, 17, 0.5);
+}
+
+QObject#pasteButton:hover {
+	background-color: #555;
 }
 
 QObject#deleteButton {
-	background-color: transparent;
+	background-color: #323232;
 	height: 25px;
-	border: 1px solid rgba(17, 17, 17, 0.8);
+	border: 1px solid rgba(17, 17, 17, 0.5);
+}
+
+QObject#deleteButton:hover {
+	background-color: #555;
 }
 
 QObject#buttonMinimizeFee {
@@ -665,7 +685,8 @@ QDialog#CoinControlDialog .CoinControlTreeWidget#treeWidget::item:checked {
 }
 /******************************* Help Dialog **********************************/
 
-QObject#HelpMessageDialog {
+QObject#HelpMessageDialog *{
+	color: #eee;
 	border-radius: 3px;
 }
 
