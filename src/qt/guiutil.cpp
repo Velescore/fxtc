@@ -849,7 +849,7 @@ QString getThemeName()
     if(!theme.isEmpty()){
         return theme;
     }
-    return QString("velesTheme");
+    return QString("Veles");
 }
 
 // Open CSS when configured

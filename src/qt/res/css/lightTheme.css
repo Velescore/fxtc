@@ -171,13 +171,33 @@ QPushButton#labelTransactionsStatus {
 
 
 /* Per page stuff */
-QWidget#SendCoinsDialog QFrame * {
-	background-color: #fff;
-	color: #111;
+
+QLabel {
+	background-color: transparent;
+}
+
+QObject#labelCoinControlAutomaticallySelected {
+	background-color: transparent;
+	border: 0px;
+}
+
+QObject#labelCoinControlFeatures {
+	background-color: transparent;
+	border: 0px;
+}
+
+QObject#checkBoxCoinControlChange {
+	background-color: transparent;
+	border: 0px;
+}
+
+QObject#labelCoinControlChangeLabel {
+	background-color: transparent;
+	border: 0px;
 }
 
 QWidget#OverviewPage > QFrame {
-	color: transparent;
+	color: black;
 	border: none;
 }
 
@@ -219,7 +239,12 @@ QToolTip {
     padding: 5px;
 }
 
-
+/* Syncing modal */
+QObject#contentWidget {
+	background-color: white;
+	border-radius: 3px;
+	border: 1px solid  rgba(17, 17, 17, 0.5);
+}
 /*
 Might be useful:
 
