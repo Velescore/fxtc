@@ -363,62 +363,62 @@ RES_ICONS = \
   qt/res/icons/velesTheme/tx_output.png \
   qt/res/icons/velesTheme/tx_mined.png \
   qt/res/icons/velesTheme/verify.png \
-  qt/res/icons/dark/add.png \
-  qt/res/icons/dark/address-book.png \
-  qt/res/icons/dark/about_veles.png \
-  qt/res/icons/dark/about_qt.png \
-  qt/res/icons/dark/clock1.png \
-  qt/res/icons/dark/clock2.png \
-  qt/res/icons/dark/clock3.png \
-  qt/res/icons/dark/clock4.png \
-  qt/res/icons/dark/clock5.png \
-  qt/res/icons/dark/configure.png \
-  qt/res/icons/dark/connect0.png \
-  qt/res/icons/dark/connect1.png \
-  qt/res/icons/dark/connect2.png \
-  qt/res/icons/dark/connect3.png \
-  qt/res/icons/dark/connect4.png \
-  qt/res/icons/dark/debugwindow.png \
-  qt/res/icons/dark/edit.png \
-  qt/res/icons/dark/editcopy.png \
-  qt/res/icons/dark/editpaste.png \
-  qt/res/icons/dark/export.png \
-  qt/res/icons/dark/eye.png \
-  qt/res/icons/dark/eye_minus.png \
-  qt/res/icons/dark/eye_plus.png \
-  qt/res/icons/dark/filesave.png \
-  qt/res/icons/dark/fontbigger.png \
-  qt/res/icons/dark/fontsmaller.png \
-  qt/res/icons/dark/hd_disabled.png \
-  qt/res/icons/dark/hd_enabled.png \
-  qt/res/icons/dark/history.png \
-  qt/res/icons/dark/info.png \
-  qt/res/icons/dark/key.png \
-  qt/res/icons/dark/lock_closed.png \
-  qt/res/icons/dark/lock_open.png \
-  qt/res/icons/dark/network_disabled.png \
-  qt/res/icons/dark/open.png \
-  qt/res/icons/dark/overview.png \
-  qt/res/icons/dark/proxy.png \
-  qt/res/icons/dark/quit.png \
-  qt/res/icons/dark/receive.png \
-  qt/res/icons/dark/remove.png \
-  qt/res/icons/dark/send.png \
-  qt/res/icons/dark/synced.png \
-  qt/res/icons/dark/transaction0.png \
-  qt/res/icons/dark/transaction2.png \
-  qt/res/icons/dark/transaction_abandoned.png \
-  qt/res/icons/dark/transaction_conflicted.png \
-  qt/res/icons/dark/tx_inout.png \
-  qt/res/icons/dark/tx_input.png \
-  qt/res/icons/dark/tx_output.png \
-  qt/res/icons/dark/tx_mined.png \
-  qt/res/icons/dark/verify.png
+  qt/res/icons/darkTheme/add.png \
+  qt/res/icons/darkTheme/address-book.png \
+  qt/res/icons/darkTheme/about_veles.png \
+  qt/res/icons/darkTheme/about_qt.png \
+  qt/res/icons/darkTheme/clock1.png \
+  qt/res/icons/darkTheme/clock2.png \
+  qt/res/icons/darkTheme/clock3.png \
+  qt/res/icons/darkTheme/clock4.png \
+  qt/res/icons/darkTheme/clock5.png \
+  qt/res/icons/darkTheme/configure.png \
+  qt/res/icons/darkTheme/connect0.png \
+  qt/res/icons/darkTheme/connect1.png \
+  qt/res/icons/darkTheme/connect2.png \
+  qt/res/icons/darkTheme/connect3.png \
+  qt/res/icons/darkTheme/connect4.png \
+  qt/res/icons/darkTheme/debugwindow.png \
+  qt/res/icons/darkTheme/edit.png \
+  qt/res/icons/darkTheme/editcopy.png \
+  qt/res/icons/darkTheme/editpaste.png \
+  qt/res/icons/darkTheme/export.png \
+  qt/res/icons/darkTheme/eye.png \
+  qt/res/icons/darkTheme/eye_minus.png \
+  qt/res/icons/darkTheme/eye_plus.png \
+  qt/res/icons/darkTheme/filesave.png \
+  qt/res/icons/darkTheme/fontbigger.png \
+  qt/res/icons/darkTheme/fontsmaller.png \
+  qt/res/icons/darkTheme/hd_disabled.png \
+  qt/res/icons/darkTheme/hd_enabled.png \
+  qt/res/icons/darkTheme/history.png \
+  qt/res/icons/darkTheme/info.png \
+  qt/res/icons/darkTheme/key.png \
+  qt/res/icons/darkTheme/lock_closed.png \
+  qt/res/icons/darkTheme/lock_open.png \
+  qt/res/icons/darkTheme/network_disabled.png \
+  qt/res/icons/darkTheme/open.png \
+  qt/res/icons/darkTheme/overview.png \
+  qt/res/icons/darkTheme/proxy.png \
+  qt/res/icons/darkTheme/quit.png \
+  qt/res/icons/darkTheme/receive.png \
+  qt/res/icons/darkTheme/remove.png \
+  qt/res/icons/darkTheme/send.png \
+  qt/res/icons/darkTheme/synced.png \
+  qt/res/icons/darkTheme/transaction0.png \
+  qt/res/icons/darkTheme/transaction2.png \
+  qt/res/icons/darkTheme/transaction_abandoned.png \
+  qt/res/icons/darkTheme/transaction_conflicted.png \
+  qt/res/icons/darkTheme/tx_inout.png \
+  qt/res/icons/darkTheme/tx_input.png \
+  qt/res/icons/darkTheme/tx_output.png \
+  qt/res/icons/darkTheme/tx_mined.png \
+  qt/res/icons/darkTheme/verify.png
 
 # Dash
 RES_ICONS += \
   qt/res/icons/lightTheme/masternodes.png \
-  qt/res/icons/dark/masternodes.png \
+  qt/res/icons/darkTheme/masternodes.png \
   qt/res/icons/velesTheme/masternodes.png
 #
 
@@ -491,10 +491,10 @@ endif
 
 # VELES BEGIN
 RES_IMAGES = \
-  qt/res/images/dark/splash.png \
-  qt/res/images/dark/splash_testnet.png \
-  qt/res/images/dark/splash_prerelease.png \
-  qt/res/images/dark/header_bg.png \
+  qt/res/images/darkTheme/splash.png \
+  qt/res/images/darkTheme/splash_testnet.png \
+  qt/res/images/darkTheme/splash_prerelease.png \
+  qt/res/images/darkTheme/header_bg.png \
   qt/res/images/lightTheme/splash.png \
   qt/res/images/lightTheme/splash_testnet.png \
   qt/res/images/lightTheme/splash_prerelease.png \
@@ -506,7 +506,7 @@ RES_IMAGES = \
   qt/res/images/velesTheme/bg-pattern.png
 
 RES_CSS = \
-  qt/res/css/dark.css \
+  qt/res/css/darkTheme.css \
   qt/res/css/velesTheme.css \
   qt/res/css/lightTheme.css
 # VELES END
