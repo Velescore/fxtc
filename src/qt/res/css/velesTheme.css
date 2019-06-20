@@ -419,7 +419,7 @@ QMenu::item {
 }
 
 QMenu::item:disabled {
-	background-color: rgba(100, 100, 100, 0.3);
+	color: grey;
 }
 
 QMenu::item:selected {
@@ -528,6 +528,10 @@ QPushButton#labelWalletStatus {
 QWidget#OverviewPage .QPushButton {
 	background-color: transparent;
 	border: none;
+}
+
+QObject#listTransactions {
+	color:white;
 }
 
 QPushButton#labelTransactionsStatus {
@@ -721,6 +725,9 @@ QObject#ReceiveCoinsDialog > QWidget#frame2, QWidget#frame {
 	border-radius: 3px;
 }
 
+QObject#outUri {
+	color: white;
+}
 /*************************** Masternode page **********************************/
 
 QWidget#tabWidget {
@@ -781,12 +788,12 @@ QStatusBar QLabel {
 QProgressBar {
 	background-color: transparent;
 	color: #fff;
-	border: 0px solid #322c1e;
+	border: 1px solid #262626;
     border-radius: 3px;
 }
 
 QProgressBar::chunk {
-	background:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgbargba(241, 155, 126, 0.3), stop:1 rgba(228, 185, 156, 0.3));
+	background: rgba(92, 184, 92, 0.7);
 	color: #fff;
 	border: 1px solid rgba(0, 0, 0, .15);
 	border-top-color: rgba(255, 255, 255, .15);
