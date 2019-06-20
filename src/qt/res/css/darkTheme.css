@@ -16,9 +16,7 @@
 
 /* alternative-backgroud-color: rgba(85, 85, 85, 1)    #262626                */
 
-/* veles-orange;                rgba(241, 155, 126, 1) #f19b7e                */
-
-/* veles-brown:                 rgba(228, 185, 156, 1) #e4b99c                */
+/* blue;                        rgba(129, 158, 239, 1)                        */
 
 /* border-color:                rgba(17, 17, 17, 1)                           */
 
@@ -250,7 +248,7 @@ QCheckBox::indicator:unchecked:pressed {
 */
 QCheckBox::indicator:checked {
 	color: white;
-	background-color: rgba(91, 192, 222, 0.8);
+	background-color: rgba(129, 158, 239, 0.8);
 	border: 1px solid rgba(17, 17, 17, 0.5);
 }
 /*
@@ -286,7 +284,7 @@ QHeaderView::section {
     padding-bottom: 1px;
 		color: white;
 		border-right: 1px solid rgba(17, 17, 17, 0.5);
-		border-bottom: 2px solid rgba(91, 192, 222, 0.8);
+		border-bottom: 2px solid rgba(129, 158, 239, 0.8);
 }
 /*
 QHeaderView::section:hover {
@@ -329,7 +327,7 @@ QTableView::item:selected {
     background-color: #464646;
 		/*border-top: 1px solid rgba(228, 185, 156, 0.7);
 		border-bottom: 1px solid rgba(228, 185, 156, 0.7);*/
-    color: rgba(91, 192, 222, 1);
+    color: rgba(129, 158, 239, 1);
 }
 
 QTableWidget {
@@ -347,7 +345,7 @@ QTableView:focus {
 }
 
 QWidget {
-    selection-background-color: rgba(91, 192, 222, 0.8);
+    selection-background-color: rgba(129, 158, 239, 0.8);
     /* Object highlight color */
     selection-color: #333;
     outline: 0;
@@ -358,7 +356,7 @@ QWidget {
 
 QToolBar {
 	background-color: #131313;
-	border-bottom: 2px solid rgba(91, 192, 222, 0.8);
+	border-bottom: 0px solid rgba(129, 158, 239, 0.8);
 	padding: 5px 0px 0px;
 }
 
@@ -571,7 +569,7 @@ QTabBar::tab {
 
 QTabBar::tab::selected{
 	background-color: #3d3d3d;
-	border-top: 1px solid rgba(91, 192, 222, 0.8);
+	border-top: 1px solid rgba(129, 158, 239, 0.8);
 }
 
 QTabBar::tab:hover:!selected {
@@ -587,8 +585,7 @@ QWidget#OverviewPage > QWidget {
 }
 
 QObject#line {
-	outline: 0;
-	background-color: rgba(91, 192, 222, 0.8);
+	background-color: rgba(129, 158, 239, 0.5);
 }
 
 /******************************** Send Page ***********************************/
@@ -643,7 +640,7 @@ QDialog#SendCoinsDialog QLabel#labelBalance {
     margin-left: 0px;
     padding-left: 0px;
 		font: 13px;
-    color: rgba(91, 192, 222, 0.8);
+    color: rgba(129, 158, 239, 0.8);
     min-height: 27px;
 }
 
@@ -678,13 +675,13 @@ QDialog#CoinControlDialog .CoinControlTreeWidget#treeWidget::item:selected {
 	background-color: #464646;
 	/*border-top: 1px solid rgba(228, 185, 156, 0.7);
 	border-bottom: 1px solid rgba(228, 185, 156, 0.7);*/
-	color: rgba(91, 192, 222, 1);
+	color: rgba(129, 158, 239, 1);
 }
 
 QDialog#CoinControlDialog .CoinControlTreeWidget#treeWidget::item:checked {
     /* Coin Control Item (checked) */
     background-color: #464646;
-    color: rgba(91, 192, 222, 1);
+    color: rgba(129, 158, 239, 1);
 }
 /******************************* Help Dialog **********************************/
 
@@ -787,12 +784,12 @@ QStatusBar QLabel {
 QProgressBar {
 	background-color: transparent;
 	color: #fff;
-	border: 1px solid #262626;
+	border: 1px solid rgba(17, 17, 17, 0.3);
     border-radius: 3px;
 }
 
 QProgressBar::chunk {
-	background: rgba(91, 192, 222, 0.7);
+	background-color: rgba(129, 158, 239, 0.5);
 	color: #fff;
 	border: 1px solid rgba(0, 0, 0, .15);
 	border-top-color: rgba(255, 255, 255, .15);
@@ -803,7 +800,7 @@ QProgressBar::chunk {
 
 QToolTip {
     background-color: #131313;
-    color: rgba(91, 192, 222, 0.7);
+    color: #eee;
     padding: 5px;
 		border: 1px solid #131313;
 }
@@ -831,7 +828,7 @@ QScrollBar:horizontal {
 QScrollBar::handle:vertical {
 		background-color: #262626;
 		outline: 0px solid slategrey;
-		border-left: 2px solid grey;
+		border-left: 2px solid rgba(129, 158, 239, 0.8);
 		border-right: 1px solid #131313;
 		border-top: 1px solid #131313;
 		border-bottom: 1px solid #131313;
@@ -841,7 +838,7 @@ QScrollBar::handle:vertical {
 QScrollBar::handle:vertical:pressed {
 		background-color: #262626;
 		outline: 0px solid slategrey;
-		border-left: 2px solid rgba(91, 192, 222, 0.8);
+		border-left: 2px solid #819eef;;
     min-height: 7px;
 }
 

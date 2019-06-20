@@ -111,6 +111,8 @@
         <file alias="fontsmaller">res/icons/darkTheme/fontsmaller.png</file>
         <file alias="prompticon">res/icons/darkTheme/chevron.png</file>
         <file alias="transaction_abandoned">res/icons/darkTheme/transaction_abandoned.png</file>
+        <file alias="smallUpArrow">res/icons/darkTheme/small_up_button_arrow.png</file>
+        <file alias="smallDownArrow">res/icons/darkTheme/small_down_button_arrow.png</file>
         <file alias="hd_enabled">res/icons/darkTheme/hd_enabled.png</file>
         <file alias="hd_disabled">res/icons/darkTheme/hd_disabled.png</file>
         <file alias="network_disabled">res/icons/darkTheme/network_disabled.png</file>
