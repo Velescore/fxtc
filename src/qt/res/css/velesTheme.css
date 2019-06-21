@@ -488,7 +488,6 @@ QPushButton#clearButton:hover {
 	border: 1px solid rgba(17, 17, 17, 0.8);
 }
 
-
 QPushButton#cancelButton:pressed,
 QPushButton#removeRequestButton:pressed,
 QPushButton#clearButton:pressed {
