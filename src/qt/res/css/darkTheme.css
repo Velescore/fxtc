@@ -36,6 +36,7 @@ QMainWindow {
 }
 
 QLabel {
+	background: transparent;
 	background-color: transparent;
 	color: #fff;
 }
@@ -253,7 +254,7 @@ QCheckBox::indicator:checked {
 }
 /*
 QCheckBox::indicator:checked:hover {
-	background-color: black;
+	background-color: #131313;
 }
 */
 QCheckBox::indicator:checked:pressed {
@@ -356,7 +357,7 @@ QWidget {
 
 QToolBar {
 	background-color: #131313;
-	border-bottom: 0px solid rgba(129, 158, 239, 0.8);
+	border-bottom: 0px solid transparent;
 	padding: 5px 0px 0px;
 }
 
@@ -368,21 +369,21 @@ QToolBar > QToolButton {
 	padding: 0em 1em;
 	font-weight:bold;
 	margin-top: 5px;
-	border-bottom: 2px solid transparent;
+	border-bottom: 1px solid transparent;
 }
 
 QToolBar > QToolButton:hover {
 	background-color: rgba(100, 100, 100, 0.3);
 	color: #fff;
 	font-weight:bold;
-	border-bottom: 2px solid transparent;
+	border-bottom: 1px solid rgba(129, 158, 239, 0.8);
 }
 
 QToolBar > QToolButton:checked {
-	background-color: rgba(100, 100, 100, 0.3);
+	background-color: transparent;
 	color: #fff;
 	font-weight:bold;
-	border-bottom: 2px solid transparent;
+	border-bottom: 1px solid rgba(129, 158, 239, 0.8);
 }
 
 /************************** Menu on the top ***********************************/
@@ -546,7 +547,7 @@ AskPassphraseDialog {
     background-color: #262626;
 }
 
-QDialog .QTabWidget::pane {
+QDialog .QTabWidget::panel {
     border: 1px solid #262626;
 }
 
@@ -569,7 +570,7 @@ QTabBar::tab {
 
 QTabBar::tab::selected{
 	background-color: #3d3d3d;
-	border-top: 1px solid rgba(129, 158, 239, 0.8);
+	border-bottom: 1px solid rgba(129, 158, 239, 0.8);
 }
 
 QTabBar::tab:hover:!selected {
@@ -590,7 +591,13 @@ QObject#line {
 
 /******************************** Send Page ***********************************/
 
-QWidget#SendCoinsDialog > QFrame {
+QObject#frameCoinControl {
+	background-color: #3d3d3d;
+	border-radius: 3px;
+	border: 1px solid rgba(17, 17, 17, 0.5);
+}
+
+QObject#frameFee {
 	background-color: #3d3d3d;
 	border-radius: 3px;
 	border: 1px solid rgba(17, 17, 17, 0.5);
@@ -633,6 +640,7 @@ QObject#buttonMinimizeFee {
 
 QWidget#SendCoinsDialog > QLabel {
 	background-color: transparent;
+	background: transparent;
 	border: 0px;
 }
 
@@ -808,19 +816,19 @@ QToolTip {
 /****************************** Scroll Bar ************************************/
 
 QScrollBar {
-	background-color: black;
+	background-color: #131313;
 }
 
 QScrollBar:vertical {
     border: 0;
-    background: black;
+    background: #131313;
     width: 12px;
     margin: 0px 0px 0px 0px;
 }
 
 QScrollBar:horizontal {
     border: 0;
-    background: black;
+    background: #131313;
     height: 12px;
 		margin: 0px 0px 0px 22px;
 }
@@ -860,14 +868,14 @@ QScrollBar::handle:horizontal:pressed {
 
 QScrollBar::add-page,
 QScrollBar::sub-page {
-    background-color: black;
+    background-color: #131313;
 }
 
 QScrollBar::add-line:vertical,
 QScrollBar::sub-line:vertical,
 QScrollBar::add-line:horizontal,
 QScrollBar::sub-line:horizontal {
-    background-color: black;
+    background-color: #131313;
     border: 0px solid transparent;
     width: 10px;
     height: 10px;
@@ -877,14 +885,14 @@ QScrollBar::add-line:vertical:pressed,
 QScrollBar::sub-line:vertical:pressed,
 QScrollBar::add-line:horizontal:pressed,
 QScrollBar::sub-line:horizontal:pressed {
-    background-color: black;
+    background-color: #131313;
 }
 
 QScrollBar:up-arrow,
 QScrollBar:down-arrow,
 QScrollBar:left-arrow,
 QScrollBar:right-arrow {
-		background-color: #black;
+		background-color: ##131313;
     width: 10px;
     height: 10px;
 }
