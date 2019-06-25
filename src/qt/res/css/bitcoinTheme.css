@@ -1,0 +1,15 @@
+/**
+ * The Veles Core Qt GUI Bitcoin Theme stylesheet.
+ *
+ * Copyright (c) 2018-2019 The Veles Core developers
+ *
+ * Distributed under the MIT software license, see the accompanying
+ * file COPYING or http://www.opensource.org/licenses/mit-license.php.
+ */
+
+/* Syncing modal */
+QObject#contentWidget {
+	background-color: white;
+	border-radius: 3px;
+	border: 1px solid  rgba(17, 17, 17, 0.5);
+}
