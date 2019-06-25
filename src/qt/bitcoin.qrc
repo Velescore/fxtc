@@ -56,7 +56,6 @@
         <file alias="proxy">res/icons/bitcoinTheme/proxy.png</file>
     </qresource>
     <qresource prefix="/icons/lightTheme">
-        <file alias="bitcoin">res/icons/lightTheme/veles.png</file>
         <file alias="address-book">res/icons/lightTheme/address-book.png</file>
         <file alias="quit">res/icons/lightTheme/quit.png</file>
         <file alias="send">res/icons/lightTheme/send.png</file>
@@ -104,10 +103,8 @@
         <file alias="about">res/icons/lightTheme/about_veles.png</file>
         <file alias="about_qt">res/icons/lightTheme/about_qt.png</file>
         <file alias="verify">res/icons/lightTheme/verify.png</file>
-        <file alias="warning">res/icons/lightTheme/warning.png</file>
         <file alias="fontbigger">res/icons/lightTheme/fontbigger.png</file>
         <file alias="fontsmaller">res/icons/lightTheme/fontsmaller.png</file>
-        <file alias="prompticon">res/icons/lightTheme/chevron.png</file>
         <file alias="transaction_abandoned">res/icons/lightTheme/transaction_abandoned.png</file>
         <file alias="hd_enabled">res/icons/lightTheme/hd_enabled.png</file>
         <file alias="hd_disabled">res/icons/lightTheme/hd_disabled.png</file>
@@ -115,7 +112,6 @@
         <file alias="proxy">res/icons/lightTheme/proxy.png</file>
     </qresource>
     <qresource prefix="/icons/darkTheme">
-        <file alias="bitcoin">res/icons/darkTheme/veles.png</file>
         <file alias="address-book">res/icons/darkTheme/address-book.png</file>
         <file alias="quit">res/icons/darkTheme/quit.png</file>
         <file alias="send">res/icons/darkTheme/send.png</file>
@@ -162,10 +158,8 @@
         <file alias="about">res/icons/darkTheme/about_veles.png</file>
         <file alias="about_qt">res/icons/darkTheme/about_qt.png</file>
         <file alias="verify">res/icons/darkTheme/verify.png</file>
-        <file alias="warning">res/icons/darkTheme/warning.png</file>
         <file alias="fontbigger">res/icons/darkTheme/fontbigger.png</file>
         <file alias="fontsmaller">res/icons/darkTheme/fontsmaller.png</file>
-        <file alias="prompticon">res/icons/darkTheme/chevron.png</file>
         <file alias="transaction_abandoned">res/icons/darkTheme/transaction_abandoned.png</file>
         <file alias="smallUpArrow">res/icons/darkTheme/small_up_button_arrow.png</file>
         <file alias="smallDownArrow">res/icons/darkTheme/small_down_button_arrow.png</file>
@@ -175,7 +169,6 @@
         <file alias="proxy">res/icons/darkTheme/proxy.png</file>
     </qresource>
     <qresource prefix="/icons/velesTheme">
-        <file alias="bitcoin">res/icons/velesTheme/veles.png</file>
         <file alias="address-book">res/icons/velesTheme/address-book.png</file>
         <file alias="quit">res/icons/velesTheme/quit.png</file>
         <file alias="send">res/icons/velesTheme/send.png</file>
@@ -225,10 +218,8 @@
         <file alias="about">res/icons/velesTheme/about_veles.png</file>
         <file alias="about_qt">res/icons/velesTheme/about_qt.png</file>
         <file alias="verify">res/icons/velesTheme/verify.png</file>
-        <file alias="warning">res/icons/velesTheme/warning.png</file>
         <file alias="fontbigger">res/icons/velesTheme/fontbigger.png</file>
         <file alias="fontsmaller">res/icons/velesTheme/fontsmaller.png</file>
-        <file alias="prompticon">res/icons/velesTheme/chevron.png</file>
         <file alias="transaction_abandoned">res/icons/velesTheme/transaction_abandoned.png</file>
         <file alias="hd_enabled">res/icons/velesTheme/hd_enabled.png</file>
         <file alias="hd_disabled">res/icons/velesTheme/hd_disabled.png</file>
@@ -273,7 +264,7 @@
         <file alias="spinner-034">res/movies/spinner-034.png</file>
         <file alias="spinner-035">res/movies/spinner-035.png</file>
     </qresource>
-    <!-- VELES BEGIN -->
+    <!-- VELES  BEGIN -->
     <qresource prefix="/images/bitcoinTheme">
         <file alias="splash">res/images/bitcoinTheme/splash.png</file>
         <file alias="splash_testnet">res/images/bitcoinTheme/splash_testnet.png</file>
@@ -284,20 +275,16 @@
         <file alias="splash_testnet">res/images/lightTheme/splash_testnet.png</file>
         <file alias="splash_prerelease">res/images/lightTheme/splash_prerelease.png</file>
         <file alias="header_bg">res/images/lightTheme/header_bg.png</file>
-        <file alias="bg-pattern">res/images/lightTheme/bg-pattern.png</file>
     </qresource>
     <qresource prefix="/images/darkTheme">
         <file alias="splash">res/images/darkTheme/splash.png</file>
         <file alias="splash_testnet">res/images/darkTheme/splash_testnet.png</file>
         <file alias="splash_prerelease">res/images/darkTheme/splash_prerelease.png</file>
-        <file alias="header_bg">res/images/darkTheme/header_bg.png</file>
-        <file alias="bg-pattern">res/images/darkTheme/bg-pattern.png</file>
     </qresource>
     <qresource prefix="/images/velesTheme">
         <file alias="splash">res/images/velesTheme/splash.png</file>
         <file alias="splash_testnet">res/images/velesTheme/splash_testnet.png</file>
         <file alias="splash_prerelease">res/images/velesTheme/splash_prerelease.png</file>
-        <file alias="header_bg">res/images/velesTheme/header_bg.png</file>
         <file alias="bg-pattern">res/images/velesTheme/bg-pattern.png</file>
     </qresource>
     <qresource prefix="/fonts">

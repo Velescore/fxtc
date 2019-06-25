@@ -546,11 +546,9 @@ RES_IMAGES = \
   qt/res/images/bitcoinTheme/splash.png \
   qt/res/images/bitcoinTheme/splash_testnet.png \
   qt/res/images/bitcoinTheme/splash_prerelease.png \
-  qt/res/images/bitcoinTheme/header_bg.png \
   qt/res/images/darkTheme/splash.png \
   qt/res/images/darkTheme/splash_testnet.png \
   qt/res/images/darkTheme/splash_prerelease.png \
-  qt/res/images/darkTheme/header_bg.png \
   qt/res/images/lightTheme/splash.png \
   qt/res/images/lightTheme/splash_testnet.png \
   qt/res/images/lightTheme/splash_prerelease.png \
@@ -558,7 +556,6 @@ RES_IMAGES = \
   qt/res/images/velesTheme/splash.png \
   qt/res/images/velesTheme/splash_testnet.png \
   qt/res/images/velesTheme/splash_prerelease.png \
-  qt/res/images/velesTheme/header_bg.png \
   qt/res/images/velesTheme/bg-pattern.png
 
 RES_CSS = \
