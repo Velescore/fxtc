@@ -866,10 +866,10 @@ QString loadStyleSheet()
     QString customCssPath = QString::fromStdString(gArgs.GetArg("-loadcss", ""));
     QString dumpCssPath = QString::fromStdString(gArgs.GetArg("-dumpcss", ""));
 
-     /*if(customCssPath != "") {
+/*     if(customCssPath != "") {
         cssName = customCssPath;                // load custom CSS for dev / testing purposes
-     }*/
-
+     }
+     */
      if(!theme.isEmpty()) {
         cssName = QString(":/css/") + theme;    // custom style from settings
 

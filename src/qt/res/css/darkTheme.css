@@ -12,11 +12,11 @@
 /************************** Global Color Codes ********************************/
 /******************************************************************************/
 
-/* backround-color:             rgba #3d3d3d                                  */
+/* backround-color:             rgba #1c1c1c                                  */
 
 /* alternative-backgroud-color: rgba(85, 85, 85, 1)    #262626                */
 
-/* blue;                        rgba(129, 158, 239, 1)                        */
+/* blue;                        rgba(74, 121, 179, 1)                        */
 
 /* border-color:                rgba(17, 17, 17, 1)                           */
 
@@ -32,7 +32,7 @@ WalletFrame {
 
 QMainWindow {
 	color:#fff;
-	background-color: #232323;
+	background-color: #2d2d2d;
 }
 
 QLabel {
@@ -55,9 +55,9 @@ QLabel#greyTitle {
 }
 
 QLineEdit {
-	background-color: rgba(85, 85, 85, 0.5);
+	background-color: #313131;
 	color: #fff;
-	border: 1px solid rgba(17, 17, 17, 0.5);
+	border: 1px solid transparent;
 	border-radius: 3px;
 	min-height: 25px;
 }
@@ -73,15 +73,15 @@ QLineEdit {
 }
 
 .QValidatedLineEdit:!focus {
-    background-color: rgba(85, 85, 85, 0.6);
+    background-color: #313131;
 }
 
 .QLineEdit:!focus {
-    background-color: rgba(85, 85, 85, 0.6);
+    background-color: #313131;
 }
 
 .QTextEdit:!focus {
-    background-color: rgba(85, 85, 85, 0.6);
+    background-color: #313131;
 }
 
 /***************** Double buttons(etc for setting fee value) ******************/
@@ -93,21 +93,21 @@ QAbstractSpinBox {
     outline: 0;
     padding: 3px;
 		color: white;
-    border: 1px solid rgba(17, 17, 17, 0.5);
-    background-color: rgba(85, 85, 85, 0.6);
+    border: 1px solid transparent;
+    background-color: #313131;
 }
 
 QAbstractSpinBox:!focus {
-    background-color: rgba(85, 85, 85, 0.7);
+    background-color: #313131;
 }
 
 QAbstractSpinBox::up-button {
     width: 12px;
-    background-color: #323232;
+    background-color: #313131;
     padding-right: 1px;
     padding-left: 5px;
     padding-top: 2px;
-		/*border-top: 2px solid rgba(228, 185, 156, 0.7);*/
+		border-left: 1px solid #161616;
 }
 
 QAbstractSpinBox::up-button:hover {
@@ -124,12 +124,12 @@ QAbstractSpinBox::up-arrow {
 
 QAbstractSpinBox::down-button {
     width: 12px;
-    background-color: #323232;
+    background-color: #313131;
     padding-right: 1px;
 		padding-left: 5px;
     padding-bottom: 2px;
 		border-top: 1px solid rgba(17, 17, 17, 0.5);
-		/*border-bottom: 2px solid rgba(228, 185, 156, 0.7);*/
+		border-left: 1px solid #161616;
 }
 
 QAbstractSpinBox::down-button:hover {
@@ -149,8 +149,8 @@ QAbstractSpinBox::down-arrow {
 
 QComboBox {
     /* Dropdown Menus */
-    background: rgba(85, 85, 85, 0.6);
-		border: 1px solid rgba(17, 17, 17, 0.5);
+    background: #313131;
+		border: 0px solid #161616;
 		height: 23px;
 		margin-left: 3px;
 		padding-left: 3px;
@@ -162,17 +162,17 @@ QComboBox:checked {
 }
 
 QComboBox:editable {
-    background: rgba(85, 85, 85, 0.6);
+    background: #313131;
     color: #d6d6d6;
-    border: 1px solid rgba(17, 17, 17, 0.5);
+    border: 0px solid transparent;
 }
 
 QComboBox::drop-down {
     width: 12px;
     border: 0px;
 		border-radius: 1px;
-    background-color: #323232;
-		border-left: 1px solid rgba(17, 17, 17, 0.5);
+    background-color: #313131;
+		border-left: 1px solid #161616;
 		/*border-bottom: 2px solid rgba(228, 185, 156, 0.7);*/
 }
 
@@ -186,8 +186,8 @@ QComboBox::down-arrow {
 }
 
 QComboBox QListView {
-    background-color: #555;
-    border: 1px solid rgba(17, 17, 17, 0.7);
+    background-color: #313131;
+    border: 0px solid #161616;
     padding: 2px;
     color: #eee;
 }
@@ -201,7 +201,7 @@ QComboBox::item {
 }
 
 QComboBox::item:alternate {
-    background-color: #373737;
+    background-color: #313131;
 }
 
 QComboBox::item:selected {
@@ -249,7 +249,7 @@ QCheckBox::indicator:unchecked:pressed {
 */
 QCheckBox::indicator:checked {
 	color: white;
-	background-color: rgba(129, 158, 239, 0.8);
+	background-color: rgba(74, 121, 179, 0.8);
 	border: 1px solid rgba(17, 17, 17, 0.5);
 }
 /*
@@ -259,7 +259,7 @@ QCheckBox::indicator:checked:hover {
 */
 QCheckBox::indicator:checked:pressed {
 	color: white;
-	background-color: rgba(241, 155, 126, 0.7);
+	background-color: transparent;
 	border: 1px solid rgba(17, 17, 17, 0.5);
 }
 
@@ -267,6 +267,7 @@ QCheckBox::indicator:checked:pressed {
 
 QHeaderView {
     /* Table Header */
+		border: 0px solid transparent;
     background-color: transparent;
     outline: 0;
 }
@@ -274,7 +275,7 @@ QHeaderView {
 QHeaderView::section {
     /* Table Header Sections */
     qproperty-alignment: center;
-    background-color: #444;
+    background-color: #313131;
     min-height: 25px;
 		font-weight: bold;
     font-size: 12px;
@@ -284,8 +285,8 @@ QHeaderView::section {
     padding-top: 1px;
     padding-bottom: 1px;
 		color: white;
-		border-right: 1px solid rgba(17, 17, 17, 0.5);
-		border-bottom: 2px solid rgba(129, 158, 239, 0.8);
+		border-right: 1px solid #161616;
+		border-bottom: 2px solid rgba(74, 121, 179, 0.8);
 }
 /*
 QHeaderView::section:hover {
@@ -310,14 +311,14 @@ QHeaderView::section:last {
 }
 
 .QTableView {
-    background: rgba(85, 85, 85, 0.5);
+    background: #313131;
     border: 1px solid rgba(17, 17, 17, 0.7);
 		border-radius: 3px;
 }
 
 QTableView::item {
     /* Table Item */
-		background: rgba(85, 85, 85, 0.8);
+		background: #313131;
     font-size: 12px;
 		border: 0px;
     color: #f2f2f2;
@@ -328,7 +329,7 @@ QTableView::item:selected {
     background-color: #464646;
 		/*border-top: 1px solid rgba(228, 185, 156, 0.7);
 		border-bottom: 1px solid rgba(228, 185, 156, 0.7);*/
-    color: rgba(129, 158, 239, 1);
+    color: rgba(74, 121, 179, 1);
 }
 
 QTableWidget {
@@ -346,7 +347,7 @@ QTableView:focus {
 }
 
 QWidget {
-    selection-background-color: rgba(129, 158, 239, 0.8);
+    selection-background-color: rgba(74, 121, 179, 0.8);
     /* Object highlight color */
     selection-color: #333;
     outline: 0;
@@ -369,21 +370,22 @@ QToolBar > QToolButton {
 	padding: 0em 1em;
 	font-weight:bold;
 	margin-top: 5px;
-	border-bottom: 1px solid transparent;
+	border-top: 2px solid transparent;
 }
 
 QToolBar > QToolButton:hover {
-	background-color: rgba(100, 100, 100, 0.3);
+	/*background-color: rgba(100, 100, 100, 0.3);*/
+	background-color: #2d2d2d;
 	color: #fff;
 	font-weight:bold;
-	border-bottom: 1px solid rgba(129, 158, 239, 0.8);
+	border-top: 2px solid rgba(74, 121, 179, 0.8);
 }
 
 QToolBar > QToolButton:checked {
 	background-color: transparent;
 	color: #fff;
 	font-weight:bold;
-	border-bottom: 1px solid rgba(129, 158, 239, 0.8);
+	border-top: 2px solid rgba(74, 121, 179, 0.8);
 }
 
 /************************** Menu on the top ***********************************/
@@ -409,7 +411,7 @@ QMenuBar::item:selected {
 
 QMenu {
 	color: #eee;
-  background-color: #3d3d3d;
+  background-color: #2d2d2d;
 }
 
 QMenu::item {
@@ -429,7 +431,7 @@ QMenu::item:selected {
 
 QPushButton {
 	color: #EEE;
-	background-color: #555;
+	background-color: #313131;
 	border: 1px solid rgba(17, 17, 17, 0.5);
 	border-radius: 0px;
 	padding: 6px 12px;
@@ -454,13 +456,13 @@ QPushButton#okButton,
 QPushButton#sendButton {
 	color: #EEE;
 	background-color: rgba(92, 184, 92, 0.7);
-	border: 1px solid rgba(17, 17, 17, 0.8);
+	border: 1px solid rgba(17, 17, 17, 0.5);
 }
 
 QPushButton#okButton:hover,
 QPushButton#sendButton:hover {
 	background-color: rgba(76, 174, 76, 0.7);
-	border: 1px solid rgba(17, 17, 17, 0.8);
+	border: 1px solid rgba(17, 17, 17, 0.5);
 }
 
 QPushButton#okButton:pressed,
@@ -474,14 +476,14 @@ QPushButton#removeRequestButton,
 QPushButton#clearButton {
 	color: #EEE;
 	background-color: rgba(217, 83, 79, 0.7);
-	border: 1px solid rgba(17, 17, 17, 0.8);
+	border: 1px solid rgba(17, 17, 17, 0.5);
 }
 
 QPushButton#cancelButton:hover,
 QPushButton#removeRequestButton:hover,
 QPushButton#clearButton:hover {
 	background-color: rgba(201, 67, 63, 0.7);
-	border: 1px solid rgba(17, 17, 17, 0.8);
+	border: 1px solid rgba(17, 17, 17, 0.5);
 }
 
 QPushButton#cancelButton:pressed,
@@ -495,13 +497,13 @@ QPushButton#resetButton,
 QPushButton#clearButton {
 	color: #EEE;
 	background-color: rgba(240, 173, 78, 0.7);
-	border: 1px solid rgba(17, 17, 17, 0.8);
+	border: 1px solid rgba(17, 17, 17, 0.5);
 }
 
 QPushButton#resetButton:hover,
 QPushButton#clearButton:hover {
 	background-color: rgba(238, 162, 54, 0.7);
-	border: 1px solid rgba(17, 17, 17, 0.8);
+	border: 1px solid rgba(17, 17, 17, 0.5);
 }
 
 QPushButton#resetButton:pressed,
@@ -540,67 +542,67 @@ QPushButton#labelTransactionsStatus {
 /******************************* Dialog Boxes *********************************/
 
 QDialog {
-	background-color: #232323;
+	background-color: #1c1c1c;
 }
 
 AskPassphraseDialog {
-    background-color: #262626;
+    background-color: #2d2d2d;
 }
 
 QDialog .QTabWidget::panel {
-    border: 1px solid #262626;
+    border: 1px solid transparent;
 }
 
 QDialog .QTabWidget .QWidget {
-    background-color: #3d3d3d;
+    background-color: #1c1c1c;
     color: #d6d6d6;
 }
 
 QTabBar::tab {
-		background-color: #3d3d3d;
+		background-color: #1c1c1c;
 		padding:0 5px 0 5px;
 		margin-right: 1px;
     color: #fff;
-		border-top: 1px solid #262626;
-		border-left: 0px solid #262626;
-		border-right: 0px solid #262626;
+		border-top: 2px solid transparent;
 		height: 30px;
 		min-width: 60px;
 }
 
 QTabBar::tab::selected{
-	background-color: #3d3d3d;
-	border-bottom: 1px solid rgba(129, 158, 239, 0.8);
+	background-color: #1c1c1c;
+	border-top: 2px solid rgba(74, 121, 179, 0.8);
 }
 
 QTabBar::tab:hover:!selected {
+	border-top: 2px solid rgba(74, 121, 179, 0.8);
   background-color: rgba(85, 85, 85, 0.5);
 }
 
 /******************************* Overview Page ********************************/
 
 QWidget#OverviewPage > QWidget {
-	background-color: #3d3d3d;
-	border: 1px solid rgba(17, 17, 17, 0.5);
-	border-radius: 3px;
+	background-color: #1c1c1c;
+	border: 0px solid transparent;
 }
 
 QObject#line {
-	background-color: rgba(129, 158, 239, 0.5);
+	background-color: rgba(74, 121, 179, 0.5);
 }
 
 /******************************** Send Page ***********************************/
 
+QDialog#SendCoinsDialog {
+	background-color: transparent;
+}
+
 QObject#frameCoinControl {
-	background-color: #3d3d3d;
-	border-radius: 3px;
-	border: 1px solid rgba(17, 17, 17, 0.5);
+	background-color: #1c1c1c;
+	border: 0px solid transparent;
 }
 
 QObject#frameFee {
-	background-color: #3d3d3d;
-	border-radius: 3px;
-	border: 1px solid rgba(17, 17, 17, 0.5);
+	background-color: #1c1c1c;
+	border: 0px solid transparent;
 }
 
 QObject#addressBookButton {
@@ -643,18 +645,32 @@ QWidget#SendCoinsDialog > QLabel {
 	background: transparent;
 	border: 0px;
 }
+/*
+QPushButton#addButton {
+	background-color: #1c1c1c;
+	border: 1px solid rgba(31, 31, 31, 0.5);
+}
 
+QPushButton#addButton:hover {
+	background-color: rgba(31, 31, 31, 0.8);
+	border: 1px solid rgba(31, 31, 31, 0.5);
+}
+
+QPushButton#addButton::pressed {
+	background-color: #555;
+}
+*/
 QDialog#SendCoinsDialog QLabel#labelBalance {
     margin-left: 0px;
     padding-left: 0px;
 		font: 13px;
-    color: rgba(129, 158, 239, 0.8);
+    color: rgba(74, 121, 179, 0.8);
     min-height: 27px;
 }
 
 QDialog#SendCoinsDialog .QScrollArea#scrollArea .QWidget#scrollAreaWidgetContents {
     /* Send To Widget */
-    background-color: #373737;
+    background-color: #1c1c1c;
 		padding-bottom: 5px;
 }
 
@@ -665,9 +681,8 @@ QDialog#CoinControlDialog > QFrame#frame {
 
 QDialog#CoinControlDialog .CoinControlTreeWidget#treeWidget {
     /* Coin Control Widget Container */
-		background: rgba(85, 85, 85, 0.5);
-    border: 1px solid rgba(17, 17, 17, 0.7);
-		border-radius: 3px;
+		background: #313131;
+    border: 1px solid transparent;
 }
 
 QDialog#CoinControlDialog .CoinControlTreeWidget#treeWidget::item {
@@ -683,13 +698,13 @@ QDialog#CoinControlDialog .CoinControlTreeWidget#treeWidget::item:selected {
 	background-color: #464646;
 	/*border-top: 1px solid rgba(228, 185, 156, 0.7);
 	border-bottom: 1px solid rgba(228, 185, 156, 0.7);*/
-	color: rgba(129, 158, 239, 1);
+	color: rgba(74, 121, 179, 1);
 }
 
 QDialog#CoinControlDialog .CoinControlTreeWidget#treeWidget::item:checked {
     /* Coin Control Item (checked) */
     background-color: #464646;
-    color: rgba(129, 158, 239, 1);
+    color: rgba(74, 121, 179, 1);
 }
 /******************************* Help Dialog **********************************/
 
@@ -712,21 +727,48 @@ QObject#HelpMessageDialog > QFrame {
 /************************ Sign Verify Message *********************************/
 
 QObject#messageIn_SM {
-	background-color: rgba(85, 85, 85, 0.5);
-	border-radius: 3px;
+	background-color: #313131;
 }
 
 QObject#messageIn_VM {
-	background-color: rgba(85, 85, 85, 0.5);
-	border-radius: 3px;
+	background-color: #313131;
 }
 
+QObject#SignVerifyMessageDialog {
+	background-color: #2d2d2d;
+}
+
+/****************************Options Dialog************************************/
+
+QDialog#OptionsDialog {
+	background-color: #2d2d2d;
+}
+
+QPushButton#openBitcoinConfButton {
+	background-color: #1c1c1c;
+	border: 1px solid rgba(31, 31, 31, 0.5);
+}
+
+QObject#groupBox {
+	color: white;
+}
+
+QPushButton#openBitcoinConfButton:hover {
+	background-color: rgba(31, 31, 31, 0.8);
+	border: 1px solid rgba(31, 31, 31, 0.5);
+}
+
+QPushButton#openBitcoinConfButton::pressed {
+	background-color: #555;
+}
 /*****************************Recieve Page*************************************/
+QDialog#ReceiveCoinsDialog {
+	background-color: transparent;
+}
 
 QObject#ReceiveCoinsDialog > QWidget#frame2, QWidget#frame {
-	background-color: #3d3d3d;
-	border: 1px solid rgba(17, 17, 17, 0.5);
-	border-radius: 3px;
+	background-color: #1c1c1c;
+	border: 0px solid transparent;
 }
 
 QObject#outUri {
@@ -736,33 +778,25 @@ QObject#outUri {
 
 QWidget#tabWidget {
 	outline: 0;
-	background-color: #282828;
-	border: 1px solid rgba(17, 17, 17, 0.5);
+	background: #141414;
+	border: 0px solid transparent;
 	border-radius: 5px;
 }
 
 QObject#tableWidgetMyMasternodes {
-	border-radius: 3px;
 	border: 1px solid rgba(17, 17, 17, 0.7);
-	background-color: rgba(85, 85, 85, 0.5);
+	background-color: #313131;
 }
-/*
-QObject#tableWidgetMyMasternodes > .QTableView {
-    background: rgba(85, 85, 85, 0.5);
-    border: 1px solid rgba(17, 17, 17, 0.7);
-		border-radius: 3px;
-}
-*/
+
 QObject#tableWidgetMasternodes {
- background-color: rgba(85, 85, 85, 0.5);
- border-radius: 3px;
+ background-color: #313131;
  border: 1px solid rgba(17, 17, 17, 0.7);
 }
 
 /************** Syncing Status Modal (poping at start wallet) *****************/
 
 QObject#contentWidget {
-	background-color: #232323;
+	background-color: #202020;
 	border-radius: 3px;
 	border: 1px solid  rgba(17, 17, 17, 0.5);
 }
@@ -792,16 +826,15 @@ QStatusBar QLabel {
 QProgressBar {
 	background-color: transparent;
 	color: #fff;
-	border: 1px solid rgba(17, 17, 17, 0.3);
-    border-radius: 3px;
+	margin-bottom: 1px;
+	border: 1px solid rgba(156, 156, 156, 0.2);
 }
 
 QProgressBar::chunk {
-	background-color: rgba(129, 158, 239, 0.5);
+	background-color: #313131;
 	color: #fff;
-	border: 1px solid rgba(0, 0, 0, .15);
-	border-top-color: rgba(255, 255, 255, .15);
-    border-radius: 3px;
+	border: 1px solid transparent;
+	border-top-color: #2d2d2d;
 }
 
 /****************************** Tooltips **************************************/
@@ -836,7 +869,7 @@ QScrollBar:horizontal {
 QScrollBar::handle:vertical {
 		background-color: #262626;
 		outline: 0px solid slategrey;
-		border-left: 2px solid rgba(129, 158, 239, 0.8);
+		border-left: 2px solid rgba(74, 121, 179, 0.8);
 		border-right: 1px solid #131313;
 		border-top: 1px solid #131313;
 		border-bottom: 1px solid #131313;

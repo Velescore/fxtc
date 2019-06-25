@@ -706,6 +706,11 @@ QObject#HelpMessageDialog > QFrame {
 	border: 0px;
 	padding: 20px;
 }
+/************************** Options Dialog ************************************/
+
+QObject#groupBox {
+	color: white;
+}
 
 /************************ Sign Verify Message *********************************/
 
