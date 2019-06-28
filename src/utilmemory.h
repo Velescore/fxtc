@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FXTC_UTILMEMORY_H
-#define FXTC_UTILMEMORY_H
+#ifndef VELES_UTILMEMORY_H
+#define VELES_UTILMEMORY_H
 
 #include <memory>
 #include <utility>

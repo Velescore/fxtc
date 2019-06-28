@@ -66,12 +66,12 @@
         <translation>Mottaksadresser</translation>
     </message>
     <message>
-        <source>These are your FxTCoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Dette er dine FxTCoin-adresser for sending av betalinger. Sjekk alltid beløpet og mottakeradressen før sending av mynter.</translation>
+        <source>These are your Veles addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Dette er dine Veles-adresser for sending av betalinger. Sjekk alltid beløpet og mottakeradressen før sending av mynter.</translation>
     </message>
     <message>
-        <source>These are your FxTCoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Dette er dine FxTCoin-adresser for å sende betalinger med. Det er anbefalt å bruke en ny mottaksadresse for hver transaksjon.</translation>
+        <source>These are your Veles addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Dette er dine Veles-adresser for å sende betalinger med. Det er anbefalt å bruke en ny mottaksadresse for hver transaksjon.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -330,8 +330,8 @@
         <translation>Reindekserer blokker på harddisk...</translation>
     </message>
     <message>
-        <source>Send coins to a FxTCoin address</source>
-        <translation>Send til en FxTCoin-adresse</translation>
+        <source>Send coins to a Veles address</source>
+        <translation>Send til en Veles-adresse</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -354,8 +354,8 @@
         <translation>&amp;Verifiser melding...</translation>
     </message>
     <message>
-        <source>FxTCoin</source>
-        <translation>FxTCoin</translation>
+        <source>Veles</source>
+        <translation>Veles</translation>
     </message>
     <message>
         <source>&amp;Send</source>
@@ -378,12 +378,12 @@
         <translation>Krypter de private nøklene som tilhører lommeboken din</translation>
     </message>
     <message>
-        <source>Sign messages with your FxTCoin addresses to prove you own them</source>
-        <translation>Signer en melding med FxTCoin-adressene dine for å bevise at du eier dem</translation>
+        <source>Sign messages with your Veles addresses to prove you own them</source>
+        <translation>Signer en melding med Veles-adressene dine for å bevise at du eier dem</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified FxTCoin addresses</source>
-        <translation>Bekreft meldinger for å være sikker på at de ble signert av en angitt FxTCoin-adresse</translation>
+        <source>Verify messages to ensure they were signed with specified Veles addresses</source>
+        <translation>Bekreft meldinger for å være sikker på at de ble signert av en angitt Veles-adresse</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -402,8 +402,8 @@
         <translation>Verktøylinje for faner</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and fxtcoin: URIs)</source>
-        <translation>Forespør betalinger (genererer QR-koder og fxtcoin: URIer)</translation>
+        <source>Request payments (generates QR codes and Veles: URIs)</source>
+        <translation>Forespør betalinger (genererer QR-koder og Veles: URIer)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -414,16 +414,16 @@
         <translation>Vis listen over bruke mottaksadresser og merkelapper</translation>
     </message>
     <message>
-        <source>Open a fxtcoin: URI or payment request</source>
-        <translation>Åpne en FxTCoin: URI eller betalingsetterspørring</translation>
+        <source>Open a Veles: URI or payment request</source>
+        <translation>Åpne en Veles: URI eller betalingsetterspørring</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation>&amp;Kommandolinjevalg</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to FxTCoin network</source>
-        <translation><numerusform>%n aktiv forbindelse til FxTCoin-nettverket</numerusform><numerusform>%n aktive forbindelser til FxTCoin-nettverket</numerusform></translation>
+        <source>%n active connection(s) to Veles network</source>
+        <translation><numerusform>%n aktiv forbindelse til Veles-nettverket</numerusform><numerusform>%n aktive forbindelser til Veles-nettverket</numerusform></translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -466,8 +466,8 @@
         <translation>Oppdatert</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible FxTCoin command-line options</source>
-        <translation>Vis %1 hjelpemeldingen for å få en liste med mulige FxTCoin kommandolinjevalg.</translation>
+        <source>Show the %1 help message to get a list with possible Veles command-line options</source>
+        <translation>Vis %1 hjelpemeldingen for å få en liste med mulige Veles kommandolinjevalg.</translation>
     </message>
     <message>
         <source>&amp;Window</source>
@@ -544,8 +544,8 @@
         <translation>Lommeboken er &lt;b&gt;kryptert&lt;/b&gt; og for tiden &lt;b&gt;låst&lt;/b&gt;</translation>
     </message>
     <message>
-        <source>A fatal error occurred. FxTCoin can no longer continue safely and will quit.</source>
-        <translation>En fatal feil har inntruffet. FxTCoin kan ikke lenger trygt fortsette, og må derfor avslutte.</translation>
+        <source>A fatal error occurred. Veles can no longer continue safely and will quit.</source>
+        <translation>En fatal feil har inntruffet. Veles kan ikke lenger trygt fortsette, og må derfor avslutte.</translation>
     </message>
 </context>
 <context>
@@ -734,8 +734,8 @@
         <translation>Rediger utsendingsadresse</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid FxTCoin address.</source>
-        <translation>Den angitte adressen "%1" er ikke en gyldig FxTCoin-adresse.</translation>
+        <source>The entered address "%1" is not a valid Veles address.</source>
+        <translation>Den angitte adressen "%1" er ikke en gyldig Veles-adresse.</translation>
     </message>
     <message>
         <source>Could not unlock wallet.</source>
@@ -823,8 +823,8 @@
         <translation>Bruk en egendefinert datamappe:</translation>
     </message>
     <message>
-        <source>FxTCoin</source>
-        <translation>FxTCoin</translation>
+        <source>Veles</source>
+        <translation>Veles</translation>
     </message>
     <message>
         <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
@@ -835,8 +835,8 @@
         <translation>Omtrent %1GB data vil bli lagret i denne mappen.</translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the FxTCoin block chain.</source>
-        <translation>%1 vil laste ned og lagre en kopi av FxTCoin blokkjeden.</translation>
+        <source>%1 will download and store a copy of the Veles block chain.</source>
+        <translation>%1 vil laste ned og lagre en kopi av Veles blokkjeden.</translation>
     </message>
     <message>
         <source>The wallet will also be stored in this directory.</source>
@@ -866,12 +866,12 @@
         <translation>Skjema</translation>
     </message>
     <message>
-        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the fxtcoin network, as detailed below.</source>
-        <translation>Det kan hende nylige transaksjoner ikke vises enda, og at lommeboksaldoen dermed blir uriktig. Denne informasjonen vil rette seg når synkronisering av lommeboka mot fxtcoin-nettverket er fullført, som anvist nedenfor.</translation>
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the Veles network, as detailed below.</source>
+        <translation>Det kan hende nylige transaksjoner ikke vises enda, og at lommeboksaldoen dermed blir uriktig. Denne informasjonen vil rette seg når synkronisering av lommeboka mot Veles-nettverket er fullført, som anvist nedenfor.</translation>
     </message>
     <message>
-        <source>Attempting to spend fxtcoins that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
-        <translation>Forsøk på å bruke fxtcoin som er påvirket av transaksjoner som ikke er vist enda godtas ikke av nettverket.</translation>
+        <source>Attempting to spend Veles that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <translation>Forsøk på å bruke Veles som er påvirket av transaksjoner som ikke er vist enda godtas ikke av nettverket.</translation>
     </message>
     <message>
         <source>Number of blocks left</source>
@@ -1028,8 +1028,8 @@
         <translation>&amp;Bruk ubekreftet veksel</translation>
     </message>
     <message>
-        <source>Automatically open the FxTCoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Åpne automatisk FxTCoin klientporten på ruteren. Dette virker kun om din ruter støtter UPnP og dette er påslått.</translation>
+        <source>Automatically open the Veles client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Åpne automatisk Veles klientporten på ruteren. Dette virker kun om din ruter støtter UPnP og dette er påslått.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -1044,8 +1044,8 @@
         <translation>Tillatt innkommend&amp;e tilkoblinger</translation>
     </message>
     <message>
-        <source>Connect to the FxTCoin network through a SOCKS5 proxy.</source>
-        <translation>Koble til FxTCoin-nettverket gjennom en SOCKS5 proxy.</translation>
+        <source>Connect to the Veles network through a SOCKS5 proxy.</source>
+        <translation>Koble til Veles-nettverket gjennom en SOCKS5 proxy.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1080,8 +1080,8 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the FxTCoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Koble til FxTCoin-nettverket gjennom en separat SOCKS5 mellomtjener for Tor skjulte tjenester.</translation>
+        <source>Connect to the Veles network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Koble til Veles-nettverket gjennom en separat SOCKS5 mellomtjener for Tor skjulte tjenester.</translation>
     </message>
     <message>
         <source>&amp;Window</source>
@@ -1117,7 +1117,7 @@
     </message>
     <message>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Velg standard delt enhet for visning i grensesnittet og for sending av fxtcoins.</translation>
+        <translation>Velg standard delt enhet for visning i grensesnittet og for sending av Veles.</translation>
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
@@ -1187,8 +1187,8 @@
         <translation>Skjema</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the FxTCoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>Informasjonen som vises kan være foreldet. Din lommebok synkroniseres automatisk med FxTCoin-nettverket etter at tilkobling er opprettet, men denne prosessen er ikke ferdig enda.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Veles network after a connection is established, but this process has not completed yet.</source>
+        <translation>Informasjonen som vises kan være foreldet. Din lommebok synkroniseres automatisk med Veles-nettverket etter at tilkobling er opprettet, men denne prosessen er ikke ferdig enda.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1262,8 +1262,8 @@
         <translation>Feil ved betalingsforespørsel</translation>
     </message>
     <message>
-        <source>Cannot start fxtcoin: click-to-pay handler</source>
-        <translation>Kan ikke starte fxtcoin: Klikk-og-betal håndterer</translation>
+        <source>Cannot start Veles: click-to-pay handler</source>
+        <translation>Kan ikke starte Veles: Klikk-og-betal håndterer</translation>
     </message>
     <message>
         <source>URI handling</source>
@@ -1278,8 +1278,8 @@
         <translation>Ugyldig betalingsadresse %1</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid FxTCoin address or malformed URI parameters.</source>
-        <translation>URI kan ikke fortolkes! Dette kan være forårsaket av en ugyldig fxtcoin-adresse eller feilformede URI-parametre.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid Veles address or malformed URI parameters.</source>
+        <translation>URI kan ikke fortolkes! Dette kan være forårsaket av en ugyldig Veles-adresse eller feilformede URI-parametre.</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -1380,8 +1380,8 @@
         <translation>Beløp</translation>
     </message>
     <message>
-        <source>Enter a FxTCoin address (e.g. %1)</source>
-        <translation>Oppgi en FxTCoin-adresse (f.eks. %1)</translation>
+        <source>Enter a Veles address (e.g. %1)</source>
+        <translation>Oppgi en Veles-adresse (f.eks. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1800,8 +1800,8 @@
         <translation>&amp;Melding:</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the FxTCoin network.</source>
-        <translation>En valgfri melding å tilknytte betalingsetterspørringen, som vil bli vist når forespørselen er åpnet. Meldingen vil ikke bli sendt med betalingen over FxTCoin-nettverket.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Veles network.</source>
+        <translation>En valgfri melding å tilknytte betalingsetterspørringen, som vil bli vist når forespørselen er åpnet. Meldingen vil ikke bli sendt med betalingen over Veles-nettverket.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -1958,7 +1958,7 @@
     <name>SendCoinsDialog</name>
     <message>
         <source>Send Coins</source>
-        <translation>Send FxTCoins</translation>
+        <translation>Send Veles</translation>
     </message>
     <message>
         <source>Coin Control Features</source>
@@ -2193,8 +2193,8 @@
         <translation><numerusform>Antatt bekreftelsesbegynnelse innen %n blokk.</numerusform><numerusform>Antatt bekreftelsesbegynnelse innen %n blokker.</numerusform></translation>
     </message>
     <message>
-        <source>Warning: Invalid FxTCoin address</source>
-        <translation>Advarsel Ugyldig fxtcoin-adresse</translation>
+        <source>Warning: Invalid Veles address</source>
+        <translation>Advarsel Ugyldig Veles-adresse</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -2236,8 +2236,8 @@
         <translation>Dette er en normal betaling.</translation>
     </message>
     <message>
-        <source>The FxTCoin address to send the payment to</source>
-        <translation>FxTCoin-adressen betalingen skal sendes til</translation>
+        <source>The Veles address to send the payment to</source>
+        <translation>Veles-adressen betalingen skal sendes til</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -2256,8 +2256,8 @@
         <translation>Fjern denne oppføringen</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less fxtcoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation>Gebyret vil bli trukket fra beløpet som blir sendt. Mottakeren vil motta mindre fxtcoins enn det du skriver inn i beløpsfeltet. Hvis det er valgt flere mottakere, deles gebyret likt.</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less Veles than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation>Gebyret vil bli trukket fra beløpet som blir sendt. Mottakeren vil motta mindre Veles enn det du skriver inn i beløpsfeltet. Hvis det er valgt flere mottakere, deles gebyret likt.</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -2284,8 +2284,8 @@
         <translation>Skriv inn en merkelapp for denne adressen for å legge den til listen av brukte adresser</translation>
     </message>
     <message>
-        <source>A message that was attached to the fxtcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the FxTCoin network.</source>
-        <translation>En melding som var tilknyttet fxtcoinen: URI vil bli lagret med transaksjonen for din oversikt. Denne meldingen vil ikke bli sendt over FxTCoin-nettverket.</translation>
+        <source>A message that was attached to the Veles: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Veles network.</source>
+        <translation>En melding som var tilknyttet Velesen: URI vil bli lagret med transaksjonen for din oversikt. Denne meldingen vil ikke bli sendt over Veles-nettverket.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -2329,12 +2329,12 @@
         <translation>&amp;Signer Melding</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive fxtcoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation>Du kan signere meldinger/avtaler med adresser for å bevise at du kan motta fxtcoins sendt til dem. Vær forsiktig med å signere noe vagt eller tilfeldig, siden phishing-angrep kan prøve å lure deg til å signere din identitet over til dem. Bare signer fullt detaljerte utsagn som du er enig i.</translation>
+        <source>You can sign messages/agreements with your addresses to prove you can receive Veles sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <translation>Du kan signere meldinger/avtaler med adresser for å bevise at du kan motta Veles sendt til dem. Vær forsiktig med å signere noe vagt eller tilfeldig, siden phishing-angrep kan prøve å lure deg til å signere din identitet over til dem. Bare signer fullt detaljerte utsagn som du er enig i.</translation>
     </message>
     <message>
-        <source>The FxTCoin address to sign the message with</source>
-        <translation>FxTCoin-adressen meldingen skal signeres med</translation>
+        <source>The Veles address to sign the message with</source>
+        <translation>Veles-adressen meldingen skal signeres med</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2365,8 +2365,8 @@
         <translation>Kopier valgt signatur til utklippstavle</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this FxTCoin address</source>
-        <translation>Signer meldingen for å bevise at du eier denne FxTCoin-adressen</translation>
+        <source>Sign the message to prove you own this Veles address</source>
+        <translation>Signer meldingen for å bevise at du eier denne Veles-adressen</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -2389,12 +2389,12 @@
         <translation>Skriv inn mottakerens adresse, melding (forsikre deg om at du kopier linjeskift, mellomrom, faner osv. nøyaktig) og underskrift nedenfor for å bekrefte meldingen. Vær forsiktig så du ikke leser mer ut av signaturen enn hva som er i den signerte meldingen i seg selv, for å unngå å bli lurt av et man-in-the-middle-angrep. Merk at dette bare beviser at den som signerer kan motta med adressen, dette beviser ikke hvem som har sendt transaksjoner!</translation>
     </message>
     <message>
-        <source>The FxTCoin address the message was signed with</source>
-        <translation>FxTCoin-adressen meldingen ble signert med</translation>
+        <source>The Veles address the message was signed with</source>
+        <translation>Veles-adressen meldingen ble signert med</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified FxTCoin address</source>
-        <translation>Verifiser meldingen for å være sikker på at den ble signert av den angitte FxTCoin-adressen</translation>
+        <source>Verify the message to ensure it was signed with the specified Veles address</source>
+        <translation>Verifiser meldingen for å være sikker på at den ble signert av den angitte Veles-adressen</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -2607,7 +2607,7 @@
     </message>
     <message>
         <source>Generated coins must mature %1 blocks before they can be spent. When you generated this block, it was broadcast to the network to be added to the block chain. If it fails to get into the chain, its state will change to "not accepted" and it won't be spendable. This may occasionally happen if another node generates a block within a few seconds of yours.</source>
-        <translation>Genererte fxtcoins må modne %1 blokker før de kan brukes. Da du genererte denne blokken ble den kringkastet på nettverket for å bli lagt til i kjeden av blokker. Hvis den ikke kommer med i kjeden vil den endre seg til "ikke akseptert", og vil ikke kunne brukes. Dette vil noen ganger skje hvis en annen node genererer en blokk innen noen sekunder av din.</translation>
+        <translation>Genererte Veles må modne %1 blokker før de kan brukes. Da du genererte denne blokken ble den kringkastet på nettverket for å bli lagt til i kjeden av blokker. Hvis den ikke kommer med i kjeden vil den endre seg til "ikke akseptert", og vil ikke kunne brukes. Dette vil noen ganger skje hvis en annen node genererer en blokk innen noen sekunder av din.</translation>
     </message>
     <message>
         <source>Debug information</source>
@@ -3037,8 +3037,8 @@
         <translation>Kunne ikke starte HTTP-tjener. Se feilrettingslogg for detaljer.</translation>
     </message>
     <message>
-        <source>FxTCoin Core</source>
-        <translation>FxTCoin Core</translation>
+        <source>Veles Core</source>
+        <translation>Veles Core</translation>
     </message>
     <message>
         <source>The %s developers</source>

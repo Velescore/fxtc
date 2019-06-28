@@ -130,8 +130,8 @@
         <translation>Kõvakettal olevate plokkide reindekseerimine...</translation>
     </message>
     <message>
-        <source>FxTCoin</source>
-        <translation>FxTCoin</translation>
+        <source>Veles</source>
+        <translation>Veles</translation>
     </message>
     <message>
         <source>&amp;Send</source>
@@ -261,8 +261,8 @@
         <translation>Tere tulemast</translation>
     </message>
     <message>
-        <source>FxTCoin</source>
-        <translation>FxTCoin</translation>
+        <source>Veles</source>
+        <translation>Veles</translation>
     </message>
     <message>
         <source>Error</source>
@@ -755,8 +755,8 @@
 <context>
     <name>bitcoin-core</name>
     <message>
-        <source>FxTCoin Core</source>
-        <translation>FxTCoin Core</translation>
+        <source>Veles Core</source>
+        <translation>Veles Core</translation>
     </message>
     <message>
         <source>Information</source>

@@ -66,12 +66,12 @@
         <translation>Địa chỉ đang nhận</translation>
     </message>
     <message>
-        <source>These are your FxTCoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your Veles addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>Đây là những địa chỉ đang thực hiện thanh toán. Luôn kiểm tra số lượng và địa chỉ nhận trước khi gửi coins.</translation>
     </message>
     <message>
-        <source>These are your FxTCoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Đây là địa chỉ FxTCoin của bạn để nhận thanh toán. Khuyến cáo nên sử dụng địa chỉ mới cho mỗi giao dịch.</translation>
+        <source>These are your Veles addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Đây là địa chỉ Veles của bạn để nhận thanh toán. Khuyến cáo nên sử dụng địa chỉ mới cho mỗi giao dịch.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -184,8 +184,8 @@
         <translation>Ví đã được mã hóa</translation>
     </message>
     <message>
-        <source>Your wallet is now encrypted. Remember that encrypting your wallet cannot fully protect your fxtcoins from being stolen by malware infecting your computer.</source>
-        <translation>Ví bạn đã được mã hóa bây giờ. Hãy nhớ rằng việc mã hóa ví bạn không thể hoàn toàn bảo vệ fxtcoin của bạn bị đánh cắp bới phần mềm độc hại dính vào máy tính bạn</translation>
+        <source>Your wallet is now encrypted. Remember that encrypting your wallet cannot fully protect your Veles from being stolen by malware infecting your computer.</source>
+        <translation>Ví bạn đã được mã hóa bây giờ. Hãy nhớ rằng việc mã hóa ví bạn không thể hoàn toàn bảo vệ Veles của bạn bị đánh cắp bới phần mềm độc hại dính vào máy tính bạn</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -338,8 +338,8 @@
         <translation>Proxy là &lt;b&gt; cho phép &lt;/b&gt;: %1</translation>
     </message>
     <message>
-        <source>Send coins to a FxTCoin address</source>
-        <translation>Gửi coin đến một địa chỉ FxTCoin</translation>
+        <source>Send coins to a Veles address</source>
+        <translation>Gửi coin đến một địa chỉ Veles</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -362,8 +362,8 @@
         <translation>&amp;Lời nhắn xác nhận...</translation>
     </message>
     <message>
-        <source>FxTCoin</source>
-        <translation>FxTCoin</translation>
+        <source>Veles</source>
+        <translation>Veles</translation>
     </message>
     <message>
         <source>&amp;Send</source>
@@ -386,12 +386,12 @@
         <translation>Mã hóa private key thuộc về ví của bạn</translation>
     </message>
     <message>
-        <source>Sign messages with your FxTCoin addresses to prove you own them</source>
-        <translation>Đăng ký lời nhắn với địa chỉ FxTCoin của bạn để chứng minh quyền sở hữu chúng</translation>
+        <source>Sign messages with your Veles addresses to prove you own them</source>
+        <translation>Đăng ký lời nhắn với địa chỉ Veles của bạn để chứng minh quyền sở hữu chúng</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified FxTCoin addresses</source>
-        <translation>Xác minh lời nhắn để chắc chắn đã được đăng ký với địa chỉ FxTCoin xác định</translation>
+        <source>Verify messages to ensure they were signed with specified Veles addresses</source>
+        <translation>Xác minh lời nhắn để chắc chắn đã được đăng ký với địa chỉ Veles xác định</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -410,8 +410,8 @@
         <translation>Các thanh công cụ</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and fxtcoin: URIs)</source>
-        <translation>Yêu cầu thanh toán (tạo QR code và fxtcoin: URIs)</translation>
+        <source>Request payments (generates QR codes and Veles: URIs)</source>
+        <translation>Yêu cầu thanh toán (tạo QR code và Veles: URIs)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -422,16 +422,16 @@
         <translation>Hiển thị danh sách các địa chỉ và nhãn đã dùng để nhận</translation>
     </message>
     <message>
-        <source>Open a fxtcoin: URI or payment request</source>
-        <translation>Mở một fxtcoin: URI hoặc yêu cầu thanh toán</translation>
+        <source>Open a Veles: URI or payment request</source>
+        <translation>Mở một Veles: URI hoặc yêu cầu thanh toán</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation>&amp;Tùy chỉnh Command-line </translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to FxTCoin network</source>
-        <translation><numerusform>%n kết nối đến FxTCoin network</numerusform></translation>
+        <source>%n active connection(s) to Veles network</source>
+        <translation><numerusform>%n kết nối đến Veles network</numerusform></translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -498,8 +498,8 @@
         <translation>Đông ví</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible FxTCoin command-line options</source>
-        <translation>Hiển thị %1 tin nhắn hỗ trợ để nhận được danh sách FxTCoin command-line khả dụng</translation>
+        <source>Show the %1 help message to get a list with possible Veles command-line options</source>
+        <translation>Hiển thị %1 tin nhắn hỗ trợ để nhận được danh sách Veles command-line khả dụng</translation>
     </message>
     <message>
         <source>default wallet</source>
@@ -580,8 +580,8 @@
         <translation>Ví thì &lt;b&gt;encrypted&lt;/b&gt; và hiện tại &lt;b&gt;locked&lt;/b&gt;</translation>
     </message>
     <message>
-        <source>A fatal error occurred. FxTCoin can no longer continue safely and will quit.</source>
-        <translation>Một lỗi nghiêm trọng vừa xảy ra. FxTCoin có thể không còn tiếp tục an toàn và sẽ bị bỏ.</translation>
+        <source>A fatal error occurred. Veles can no longer continue safely and will quit.</source>
+        <translation>Một lỗi nghiêm trọng vừa xảy ra. Veles có thể không còn tiếp tục an toàn và sẽ bị bỏ.</translation>
     </message>
 </context>
 <context>
@@ -770,8 +770,8 @@
         <translation>Edit address đang gửi</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid FxTCoin address.</source>
-        <translation>Address đã nhập "%1" không valid FxTCoin address.</translation>
+        <source>The entered address "%1" is not a valid Veles address.</source>
+        <translation>Address đã nhập "%1" không valid Veles address.</translation>
     </message>
     <message>
         <source>Could not unlock wallet.</source>
@@ -859,8 +859,8 @@
         <translation>Sử dụng custom danh mục data:</translation>
     </message>
     <message>
-        <source>FxTCoin</source>
-        <translation>FxTCoin</translation>
+        <source>Veles</source>
+        <translation>Veles</translation>
     </message>
     <message>
         <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
@@ -871,8 +871,8 @@
         <translation>Gần đúng %1 GB of data sẽ được lưu giữ trong danh mục này.</translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the FxTCoin block chain.</source>
-        <translation>%1 sẽ download và lưu trữ một bản copy của FxTCoin block chain.</translation>
+        <source>%1 will download and store a copy of the Veles block chain.</source>
+        <translation>%1 sẽ download và lưu trữ một bản copy của Veles block chain.</translation>
     </message>
     <message>
         <source>The wallet will also be stored in this directory.</source>
@@ -902,12 +902,12 @@
         <translation>Form</translation>
     </message>
     <message>
-        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the fxtcoin network, as detailed below.</source>
-        <translation>Giao dịch gần đây có thể chưa được hiển thị, và vì vậy số dư wallet của bạn có thể không dúng. Thông tin này sẽ được làm đúng khi wallet hoàn thành đồng bộ với fxtcoin network, như chi tiết bên dưới.</translation>
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the Veles network, as detailed below.</source>
+        <translation>Giao dịch gần đây có thể chưa được hiển thị, và vì vậy số dư wallet của bạn có thể không dúng. Thông tin này sẽ được làm đúng khi wallet hoàn thành đồng bộ với Veles network, như chi tiết bên dưới.</translation>
     </message>
     <message>
-        <source>Attempting to spend fxtcoins that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
-        <translation>Cố gắng spend các fxtcoins bị ảnh hưởng bởi các giao dịch chưa được hiển thị sẽ không được chấp nhận bởi mạng.</translation>
+        <source>Attempting to spend Veles that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <translation>Cố gắng spend các Veles bị ảnh hưởng bởi các giao dịch chưa được hiển thị sẽ không được chấp nhận bởi mạng.</translation>
     </message>
     <message>
         <source>Number of blocks left</source>
@@ -1052,16 +1052,16 @@
         <translation>&amp;Spend unconfirmed change</translation>
     </message>
     <message>
-        <source>Automatically open the FxTCoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Automatically open the FxTCoin client port on the router. This only works when your router supports UPnP and it is enabled.</translation>
+        <source>Automatically open the Veles client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Automatically open the Veles client port on the router. This only works when your router supports UPnP and it is enabled.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>Map port using &amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the FxTCoin network through a SOCKS5 proxy.</source>
-        <translation>Kết nối đến FxTCoin network qua một SOCKS5 proxy.</translation>
+        <source>Connect to the Veles network through a SOCKS5 proxy.</source>
+        <translation>Kết nối đến Veles network qua một SOCKS5 proxy.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1096,8 +1096,8 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the FxTCoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Kết nối đến FxTCoin network qua một nhánh rời SOCKS5 proxy của Tor hidden services.</translation>
+        <source>Connect to the Veles network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Kết nối đến Veles network qua một nhánh rời SOCKS5 proxy của Tor hidden services.</translation>
     </message>
     <message>
         <source>&amp;Window</source>
@@ -1199,8 +1199,8 @@
         <translation>Form</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the FxTCoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>Thông tin được hiển thị có thể đã lỗi thời. Cái wallet tự động đồng bộ với FxTCoin network sau một connection được thiết lập, nhưng quá trình này vẫn chưa completed yet.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Veles network after a connection is established, but this process has not completed yet.</source>
+        <translation>Thông tin được hiển thị có thể đã lỗi thời. Cái wallet tự động đồng bộ với Veles network sau một connection được thiết lập, nhưng quá trình này vẫn chưa completed yet.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1274,8 +1274,8 @@
         <translation>Payment request error</translation>
     </message>
     <message>
-        <source>Cannot start fxtcoin: click-to-pay handler</source>
-        <translation>Không thể khởi tạo fxtcoin: click-to-pay handler</translation>
+        <source>Cannot start Veles: click-to-pay handler</source>
+        <translation>Không thể khởi tạo Veles: click-to-pay handler</translation>
     </message>
     <message>
         <source>URI handling</source>
@@ -1290,8 +1290,8 @@
         <translation>Invalid payment address %1</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid FxTCoin address or malformed URI parameters.</source>
-        <translation>URI không thể phân tích cú pháp! Đây có thể gây nên bởi invalid FxTCoin address hoặc URI không đúng định dạng tham số.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid Veles address or malformed URI parameters.</source>
+        <translation>URI không thể phân tích cú pháp! Đây có thể gây nên bởi invalid Veles address hoặc URI không đúng định dạng tham số.</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -1392,8 +1392,8 @@
         <translation>Số lượng</translation>
     </message>
     <message>
-        <source>Enter a FxTCoin address (e.g. %1)</source>
-        <translation>Nhập một FxTCoin address (e.g. %1)</translation>
+        <source>Enter a Veles address (e.g. %1)</source>
+        <translation>Nhập một Veles address (e.g. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1804,8 +1804,8 @@
         <translation>&amp;Message:</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the FxTCoin network.</source>
-        <translation>Một optional lời nhắn để đính kèm đến payment request, cái mà sẽ được hiển thị khi mà request đang mở. Lưu ý: Tin nhắn này sẽ không được gửi với payment over the FxTCoin network.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Veles network.</source>
+        <translation>Một optional lời nhắn để đính kèm đến payment request, cái mà sẽ được hiển thị khi mà request đang mở. Lưu ý: Tin nhắn này sẽ không được gửi với payment over the Veles network.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -2181,8 +2181,8 @@
         <translation><numerusform>Dự kiến bắt đầu xác nhận trong vòng %n blocks.</numerusform></translation>
     </message>
     <message>
-        <source>Warning: Invalid FxTCoin address</source>
-        <translation>Warning: Invalid FxTCoin address</translation>
+        <source>Warning: Invalid Veles address</source>
+        <translation>Warning: Invalid Veles address</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -2224,8 +2224,8 @@
         <translation>Đây là một thông thường payment.</translation>
     </message>
     <message>
-        <source>The FxTCoin address to send the payment to</source>
-        <translation>The FxTCoin address để gửi the payment đến</translation>
+        <source>The Veles address to send the payment to</source>
+        <translation>The Veles address để gửi the payment đến</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -2244,8 +2244,8 @@
         <translation>Xóa bỏ entry này</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less fxtcoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation>The fee sẽ được khấu trừ từ số tiền đang gửi. Người nhận sẽ receive ít fxtcoins hơn bạn gõ vào khoảng trống. Nếu nhiều người gửi được chọn, fee sẽ được chia đều.</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less Veles than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation>The fee sẽ được khấu trừ từ số tiền đang gửi. Người nhận sẽ receive ít Veles hơn bạn gõ vào khoảng trống. Nếu nhiều người gửi được chọn, fee sẽ được chia đều.</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -2268,8 +2268,8 @@
         <translation>Nhập một label cho cái address này để thêm vào danh sách địa chỉ đã sử dụng</translation>
     </message>
     <message>
-        <source>A message that was attached to the fxtcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the FxTCoin network.</source>
-        <translation>Một tin nhắn được đính kèm với số fxtcoin: URI mà sẽ được lưu giữ với transaction dành cho tài liệu tham khảo. Lưu ý: Tin nhắn này sẽ không được gửi thông qua FxTCoin network.</translation>
+        <source>A message that was attached to the Veles: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Veles network.</source>
+        <translation>Một tin nhắn được đính kèm với số Veles: URI mà sẽ được lưu giữ với transaction dành cho tài liệu tham khảo. Lưu ý: Tin nhắn này sẽ không được gửi thông qua Veles network.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -2313,12 +2313,12 @@
         <translation>&amp;Sign Tin nhắn</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive fxtcoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation>Bạn có thể ký/đồng ý với địa chỉ chứng minh bạn có thể receive fxtcoins đã gửi đến chúng. Cẩn thận không ký bất cứ không rõ hay random, như các cuộc tấn công lừa đảo có thể cố lừa bạn ký tên vào danh tính của bạn.. Chỉ ký các bản tuyên bố hoàn chỉnh mà bạn đồng ý.</translation>
+        <source>You can sign messages/agreements with your addresses to prove you can receive Veles sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <translation>Bạn có thể ký/đồng ý với địa chỉ chứng minh bạn có thể receive Veles đã gửi đến chúng. Cẩn thận không ký bất cứ không rõ hay random, như các cuộc tấn công lừa đảo có thể cố lừa bạn ký tên vào danh tính của bạn.. Chỉ ký các bản tuyên bố hoàn chỉnh mà bạn đồng ý.</translation>
     </message>
     <message>
-        <source>The FxTCoin address to sign the message with</source>
-        <translation>The FxTCoin address để ký với tin nhắn</translation>
+        <source>The Veles address to sign the message with</source>
+        <translation>The Veles address để ký với tin nhắn</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2349,8 +2349,8 @@
         <translation>Copy hiện tại signature tới system clipboard</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this FxTCoin address</source>
-        <translation>Ký tin nhắn để chứng minh bạn sở hữu FxTCoin address này</translation>
+        <source>Sign the message to prove you own this Veles address</source>
+        <translation>Ký tin nhắn để chứng minh bạn sở hữu Veles address này</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -2373,12 +2373,12 @@
         <translation>Nhập vào address người nhận, tin nhắn (chắc rằng bạn copy line breaks, khoảng trống, tabs, etc. chính xác) và signature bên dưới verify tin nhắn. Cẩn thận không đọc nhiều hơn từ signature so với cái được ký trong bản thân tin nhắn, để tránh bị lừa bới man-in-the-middle tấn công. Lưu ý rằng điều này chỉ chứng nhận nhóm những người nhân với address, nó không thể chứng minh bên gửi có bất kỳ transaction!</translation>
     </message>
     <message>
-        <source>The FxTCoin address the message was signed with</source>
-        <translation>The FxTCoin address tin nhắn đã ký với</translation>
+        <source>The Veles address the message was signed with</source>
+        <translation>The Veles address tin nhắn đã ký với</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified FxTCoin address</source>
-        <translation>Verify tin nhắn để chắc rằng nó đã được ký với xác định FxTCoin address</translation>
+        <source>Verify the message to ensure it was signed with the specified Veles address</source>
+        <translation>Verify tin nhắn để chắc rằng nó đã được ký với xác định Veles address</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -3025,8 +3025,8 @@
         <translation>Unable to start HTTP server. See debug log for details.</translation>
     </message>
     <message>
-        <source>FxTCoin Core</source>
-        <translation>FxTCoin Core</translation>
+        <source>Veles Core</source>
+        <translation>Veles Core</translation>
     </message>
     <message>
         <source>The %s developers</source>

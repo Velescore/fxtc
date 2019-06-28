@@ -11,7 +11,7 @@
   </array>
 
   <key>CFBundleIconFile</key>
-  <string>fxtc.icns</string>
+  <string>veles.icns</string>
 
   <key>CFBundlePackageType</key>
   <string>APPL</string>
@@ -29,16 +29,16 @@
   <string>????</string>
 
   <key>CFBundleExecutable</key>
-  <string>FxTC-Qt</string>
+  <string>Veles-Qt</string>
   
   <key>CFBundleName</key>
-  <string>FxTC-Qt</string>
+  <string>Veles-Qt</string>
 
   <key>LSHasLocalizedDisplayName</key>
   <true/>
 
   <key>CFBundleIdentifier</key>
-  <string>org.fxtcoinfoundation.FxTC-Qt</string>
+  <string>org.Velesfoundation.Veles-Qt</string>
 
   <key>CFBundleURLTypes</key>
   <array>
@@ -46,10 +46,10 @@
       <key>CFBundleTypeRole</key>
       <string>Editor</string>
       <key>CFBundleURLName</key>
-      <string>org.fxtcoin.FxTCoinPayment</string>
+      <string>org.Veles.VelesPayment</string>
       <key>CFBundleURLSchemes</key>
       <array>
-        <string>fxtcoin</string>
+        <string>Veles</string>
       </array>
     </dict>
   </array>
@@ -58,9 +58,9 @@
   <array>
     <dict>
       <key>UTTypeIdentifier</key>
-      <string>org.fxtcoin.paymentrequest</string>
+      <string>org.Veles.paymentrequest</string>
       <key>UTTypeDescription</key>
-      <string>FxTCoin payment request</string>
+      <string>Veles payment request</string>
       <key>UTTypeConformsTo</key>
       <array>
         <string>public.data</string>
@@ -68,10 +68,10 @@
       <key>UTTypeTagSpecification</key>
       <dict>
         <key>public.mime-type</key>
-        <string>application/x-fxtcoin-payment-request</string>
+        <string>application/x-Veles-payment-request</string>
         <key>public.filename-extension</key>
         <array>
-          <string>fxtcoinpaymentrequest</string>
+          <string>Velespaymentrequest</string>
         </array>
       </dict>
     </dict>
@@ -84,7 +84,7 @@
       <string>Editor</string>
       <key>LSItemContentTypes</key>
       <array>
-        <string>org.fxtcoin.paymentrequest</string>
+        <string>org.Veles.paymentrequest</string>
       </array>
       <key>LSHandlerRank</key>
       <string>Owner</string>

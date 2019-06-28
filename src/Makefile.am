@@ -85,23 +85,23 @@ TESTS =
 BENCHMARKS =
 
 if BUILD_BITCOIND
-  bin_PROGRAMS += fxtcd
+  bin_PROGRAMS += velesd
 endif
 
 if BUILD_BITCOIN_CLI
-  bin_PROGRAMS += fxtc-cli
+  bin_PROGRAMS += veles-cli
 endif
 if BUILD_BITCOIN_TX
-  bin_PROGRAMS += fxtc-tx
+  bin_PROGRAMS += veles-tx
 endif
 if ENABLE_WALLET
 if BUILD_BITCOIN_WALLET
-  bin_PROGRAMS += fxtc-wallet
+  bin_PROGRAMS += veles-wallet
 endif
 endif
 
 .PHONY: FORCE check-symbols check-security
-# fxtc core #
+# veles core #
 BITCOIN_CORE_H = \
   addrdb.h \
   addrman.h \
@@ -268,7 +268,7 @@ obj/build.h: FORCE
 	  "$(abs_top_srcdir)"
 libbitcoin_util_a-clientversion.$(OBJEXT): obj/build.h
 
-# server: shared between fxtcd and fxtc-qt
+# server: shared between velesd and veles-qt
 libbitcoin_server_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(MINIUPNPC_CPPFLAGS) $(EVENT_CFLAGS) $(EVENT_PTHREADS_CFLAGS)
 libbitcoin_server_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_server_a_SOURCES = \
@@ -362,7 +362,7 @@ libbitcoin_zmq_a_SOURCES = \
 endif
 
 
-# wallet: shared between fxtcd and fxtc-qt, but only linked
+# wallet: shared between velesd and veles-qt, but only linked
 # when wallet enabled
 libbitcoin_wallet_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 libbitcoin_wallet_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
@@ -536,7 +536,7 @@ libbitcoin_consensus_a_SOURCES = \
   util/strencodings.h \
   version.h
 
-# common: shared between fxtcd, and fxtc-qt and non-server tools
+# common: shared between velesd, and veles-qt and non-server tools
 libbitcoin_common_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 libbitcoin_common_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_common_a_SOURCES = \
@@ -596,7 +596,7 @@ libbitcoin_util_a_SOURCES += compat/glibc_compat.cpp
 AM_LDFLAGS += $(COMPAT_LDFLAGS)
 endif
 
-# cli: shared between fxtc-cli and fxtc-qt
+# cli: shared between veles-cli and veles-qt
 libbitcoin_cli_a_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
 libbitcoin_cli_a_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
 libbitcoin_cli_a_SOURCES = \
@@ -606,17 +606,17 @@ libbitcoin_cli_a_SOURCES = \
 nodist_libbitcoin_util_a_SOURCES = $(srcdir)/obj/build.h
 #
 
-# fxtcd binary #
-fxtcd_SOURCES = bitcoind.cpp
-fxtcd_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-fxtcd_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-fxtcd_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# velesd binary #
+velesd_SOURCES = bitcoind.cpp
+velesd_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+velesd_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+velesd_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-fxtcd_SOURCES += bitcoind-res.rc
+velesd_SOURCES += bitcoind-res.rc
 endif
 
-fxtcd_LDADD = \
+velesd_LDADD = \
   $(LIBBITCOIN_SERVER) \
   $(LIBBITCOIN_WALLET) \
   $(LIBBITCOIN_SERVER) \
@@ -631,38 +631,38 @@ fxtcd_LDADD = \
   $(LIBMEMENV) \
   $(LIBSECP256K1)
 
-fxtcd_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS)
+velesd_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS) $(ZMQ_LIBS)
 
-# fxtc-cli binary #
-fxtc_cli_SOURCES = bitcoin-cli.cpp
-fxtc_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
-fxtc_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-fxtc_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# veles-cli binary #
+veles_cli_SOURCES = bitcoin-cli.cpp
+veles_cli_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
+veles_cli_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+veles_cli_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-fxtc_cli_SOURCES += bitcoin-cli-res.rc
+veles_cli_SOURCES += bitcoin-cli-res.rc
 endif
 
-fxtc_cli_LDADD = \
+veles_cli_LDADD = \
   $(LIBBITCOIN_CLI) \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_UTIL) \
   $(LIBBITCOIN_CRYPTO)
 
-fxtc_cli_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
+veles_cli_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS) $(EVENT_LIBS)
 #
 
-# fxtc-tx binary #
-fxtc_tx_SOURCES = bitcoin-tx.cpp
-fxtc_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
-fxtc_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-fxtc_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# veles-tx binary #
+veles_tx_SOURCES = bitcoin-tx.cpp
+veles_tx_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES)
+veles_tx_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+veles_tx_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-fxtc_tx_SOURCES += bitcoin-tx-res.rc
+veles_tx_SOURCES += bitcoin-tx-res.rc
 endif
 
-fxtc_tx_LDADD = \
+veles_tx_LDADD = \
   $(LIBUNIVALUE) \
   $(LIBBITCOIN_COMMON) \
   $(LIBBITCOIN_UTIL) \
@@ -670,20 +670,20 @@ fxtc_tx_LDADD = \
   $(LIBBITCOIN_CRYPTO) \
   $(LIBSECP256K1)
 
-fxtc_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
+veles_tx_LDADD += $(BOOST_LIBS) $(CRYPTO_LIBS)
 #
 
-# fxtc-wallet binary #
-fxtc_wallet_SOURCES = bitcoin-wallet.cpp
-fxtc_wallet_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
-fxtc_wallet_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
-fxtc_wallet_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+# veles-wallet binary #
+veles_wallet_SOURCES = bitcoin-wallet.cpp
+veles_wallet_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(EVENT_CFLAGS)
+veles_wallet_CXXFLAGS = $(AM_CXXFLAGS) $(PIE_FLAGS)
+veles_wallet_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
 
 if TARGET_WINDOWS
-fxtc_wallet_SOURCES += bitcoin-wallet-res.rc
+veles_wallet_SOURCES += bitcoin-wallet-res.rc
 endif
 
-fxtc_wallet_LDADD = \
+veles_wallet_LDADD = \
   $(LIBBITCOIN_WALLET_TOOL) \
   $(LIBBITCOIN_SERVER) \
   $(LIBBITCOIN_WALLET) \
@@ -698,10 +698,10 @@ fxtc_wallet_LDADD = \
   $(LIBMEMENV) \
   $(LIBSECP256K1)
 
-fxtc_wallet_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS)
+veles_wallet_LDADD += $(BOOST_LIBS) $(BDB_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS)
 
 if ENABLE_ZMQ
-fxtc_wallet_LDADD += $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
+veles_wallet_LDADD += $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
 endif
 #
 

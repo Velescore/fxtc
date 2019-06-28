@@ -1,7 +1,7 @@
-FxTC Core integration/staging tree
+Veles Core integration/staging tree
 ==================================
 
-[![Build Status](https://travis-ci.org/fxtc/fxtc.svg?branch=0.18)](https://travis-ci.org/fxtc/fxtc)
+[![Build Status](https://travis-ci.org/Velescore/veles.svg?branch=0.18)](https://travis-ci.org/Velescore/veles)
 
 https://fixedtradecoin.org
 
@@ -34,11 +34,11 @@ Build
 ----------------------
 1.  Clone the source:
 
-        git clone https://github.com/fxtc/fxtc.git
+        git clone https://github.com/Velescore/veles.git
 
-2.  Build FxTC Core:
+2.  Build Veles Core:
 
-    Configure and build the headless FxTC Core binaries as well as the GUI (if Qt is found).
+    Configure and build the headless Veles Core binaries as well as the GUI (if Qt is found).
 
     You can disable the GUI build by passing `--without-gui` to configure.
         

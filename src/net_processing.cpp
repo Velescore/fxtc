@@ -48,7 +48,7 @@
 //
 
 #if defined(NDEBUG)
-# error "FxTC cannot be compiled without assertions."
+# error "Veles cannot be compiled without assertions."
 #endif
 
 /** Expiration time for orphan transactions in seconds */

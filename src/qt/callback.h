@@ -1,5 +1,5 @@
-#ifndef FXTC_QT_CALLBACK_H
-#define FXTC_QT_CALLBACK_H
+#ifndef VELES_QT_CALLBACK_H
+#define VELES_QT_CALLBACK_H
 
 #include <QObject>
 
@@ -27,4 +27,4 @@ FunctionCallback<F>* makeCallback(F f)
     return new FunctionCallback<F>(std::move(f));
 }
 
-#endif // FXTC_QT_CALLBACK_H
+#endif // VELES_QT_CALLBACK_H

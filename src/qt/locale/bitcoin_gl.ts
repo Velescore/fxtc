@@ -130,8 +130,8 @@
         <translation>Reindexando bloques no disco...</translation>
     </message>
     <message>
-        <source>Send coins to a FxTCoin address</source>
-        <translation>Enviar moedas a unha dirección FxTCoin</translation>
+        <source>Send coins to a Veles address</source>
+        <translation>Enviar moedas a unha dirección Veles</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -154,8 +154,8 @@
         <translation>&amp;Verificar mensaxe...</translation>
     </message>
     <message>
-        <source>FxTCoin</source>
-        <translation>FxTCoin</translation>
+        <source>Veles</source>
+        <translation>Veles</translation>
     </message>
     <message>
         <source>&amp;Send</source>
@@ -178,12 +178,12 @@
         <translation>Encriptar as claves privadas que pertencen ao teu moedeiro</translation>
     </message>
     <message>
-        <source>Sign messages with your FxTCoin addresses to prove you own them</source>
-        <translation>Asina mensaxes coas túas direccións FxTCoin para probar que te pertencen</translation>
+        <source>Sign messages with your Veles addresses to prove you own them</source>
+        <translation>Asina mensaxes coas túas direccións Veles para probar que te pertencen</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified FxTCoin addresses</source>
-        <translation>Verificar mensaxes para asegurar que foron asinados con direccións FxTCoin dadas.</translation>
+        <source>Verify messages to ensure they were signed with specified Veles addresses</source>
+        <translation>Verificar mensaxes para asegurar que foron asinados con direccións Veles dadas.</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -202,8 +202,8 @@
         <translation>Barra de ferramentas</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and fxtcoin: URIs)</source>
-        <translation>Solicitar pagos (xenera códigos QR e fxtcoin: URIs)</translation>
+        <source>Request payments (generates QR codes and Veles: URIs)</source>
+        <translation>Solicitar pagos (xenera códigos QR e Veles: URIs)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -214,8 +214,8 @@
         <translation>Amosar a listaxe de etiquetas e direccións para recibir empregadas</translation>
     </message>
     <message>
-        <source>Open a fxtcoin: URI or payment request</source>
-        <translation>Abrir un fxtcoin: URI ou solicitude de pago</translation>
+        <source>Open a Veles: URI or payment request</source>
+        <translation>Abrir un Veles: URI ou solicitude de pago</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -397,8 +397,8 @@
         <translation>Empregar un directorio de datos personalizado</translation>
     </message>
     <message>
-        <source>FxTCoin</source>
-        <translation>FxTCoin</translation>
+        <source>Veles</source>
+        <translation>Veles</translation>
     </message>
     <message>
         <source>Error</source>
@@ -462,8 +462,8 @@
         <translation>Moedeiro</translation>
     </message>
     <message>
-        <source>Automatically open the FxTCoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Abrir automáticamente o porto do cliente FxTCoin no router. Esto so funciona se o teu router soporta UPnP e está habilitado.</translation>
+        <source>Automatically open the Veles client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Abrir automáticamente o porto do cliente Veles no router. Esto so funciona se o teu router soporta UPnP e está habilitado.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -545,8 +545,8 @@
         <translation>Formulario</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the FxTCoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>A información amosada por estar desactualizada. O teu moedeiro sincronízase automáticamente coa rede FxTCoin despois de que se estableza unha conexión, pero este proceso non está todavía rematado.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Veles network after a connection is established, but this process has not completed yet.</source>
+        <translation>A información amosada por estar desactualizada. O teu moedeiro sincronízase automáticamente coa rede Veles despois de que se estableza unha conexión, pero este proceso non está todavía rematado.</translation>
     </message>
     <message>
         <source>Your current spendable balance</source>
@@ -919,8 +919,8 @@
         <translation>Copiar a sinatura actual ao portapapeis do sistema</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this FxTCoin address</source>
-        <translation>Asina a mensaxe para probar que posees esta dirección FxTCoin</translation>
+        <source>Sign the message to prove you own this Veles address</source>
+        <translation>Asina a mensaxe para probar que posees esta dirección Veles</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -939,8 +939,8 @@
         <translation>&amp;Verificar Mensaxe</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified FxTCoin address</source>
-        <translation>Verificar a mensaxe para asegurar que foi asinada coa dirección FxTCoin especificada</translation>
+        <source>Verify the message to ensure it was signed with the specified Veles address</source>
+        <translation>Verificar a mensaxe para asegurar que foi asinada coa dirección Veles especificada</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -999,8 +999,8 @@
 <context>
     <name>bitcoin-core</name>
     <message>
-        <source>FxTCoin Core</source>
-        <translation>Core de FxTCoin</translation>
+        <source>Veles Core</source>
+        <translation>Core de Veles</translation>
     </message>
     <message>
         <source>Corrupted block database detected</source>

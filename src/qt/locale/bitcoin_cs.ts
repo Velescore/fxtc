@@ -66,12 +66,12 @@
         <translation>Přijímací adresy</translation>
     </message>
     <message>
-        <source>These are your FxTCoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Tohle jsou tvé fxtcoinové adresy pro posílání plateb. Před odesláním mincí si vždy zkontroluj částku a cílovou adresu.</translation>
+        <source>These are your Veles addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Tohle jsou tvé Velesové adresy pro posílání plateb. Před odesláním mincí si vždy zkontroluj částku a cílovou adresu.</translation>
     </message>
     <message>
-        <source>These are your FxTCoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Tohle jsou tvé fxtcoinové adresy pro příjem plateb. Nezapomeň si pro každou transakci vždy vygenerovat novou adresu.</translation>
+        <source>These are your Veles addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Tohle jsou tvé Velesové adresy pro příjem plateb. Nezapomeň si pro každou transakci vždy vygenerovat novou adresu.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -188,8 +188,8 @@
         <translation>Peněženka je zašifrována</translation>
     </message>
     <message>
-        <source>Your wallet is now encrypted. Remember that encrypting your wallet cannot fully protect your fxtcoins from being stolen by malware infecting your computer.</source>
-        <translation>Vaše peněženka je nyní zašifrovaná. Pamatujte, že zašifrování peněženky nemůže plně ochránit vaše fxtcoiny před krádeží, pokud by byl váš počítač napadem malwarem.</translation>
+        <source>Your wallet is now encrypted. Remember that encrypting your wallet cannot fully protect your Veles from being stolen by malware infecting your computer.</source>
+        <translation>Vaše peněženka je nyní zašifrovaná. Pamatujte, že zašifrování peněženky nemůže plně ochránit vaše Velesy před krádeží, pokud by byl váš počítač napadem malwarem.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -342,8 +342,8 @@
         <translation>Proxy je &lt;b&gt;zapnutá&lt;/b&gt;: %1</translation>
     </message>
     <message>
-        <source>Send coins to a FxTCoin address</source>
-        <translation>Pošli mince na fxtcoinovou adresu</translation>
+        <source>Send coins to a Veles address</source>
+        <translation>Pošli mince na Velesovou adresu</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -366,8 +366,8 @@
         <translation>&amp;Ověř zprávu...</translation>
     </message>
     <message>
-        <source>FxTCoin</source>
-        <translation>FxTCoin</translation>
+        <source>Veles</source>
+        <translation>Veles</translation>
     </message>
     <message>
         <source>&amp;Send</source>
@@ -390,12 +390,12 @@
         <translation>Zašifruj soukromé klíče ve své peněžence</translation>
     </message>
     <message>
-        <source>Sign messages with your FxTCoin addresses to prove you own them</source>
-        <translation>Podepiš zprávy svými fxtcoinovými adresami, čímž prokážeš, že jsi jejich vlastníkem</translation>
+        <source>Sign messages with your Veles addresses to prove you own them</source>
+        <translation>Podepiš zprávy svými Velesovými adresami, čímž prokážeš, že jsi jejich vlastníkem</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified FxTCoin addresses</source>
-        <translation>Ověř zprávy, aby ses ujistil, že byly podepsány danými fxtcoinovými adresami</translation>
+        <source>Verify messages to ensure they were signed with specified Veles addresses</source>
+        <translation>Ověř zprávy, aby ses ujistil, že byly podepsány danými Velesovými adresami</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -414,8 +414,8 @@
         <translation>Panel s listy</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and fxtcoin: URIs)</source>
-        <translation>Požaduj platby (generuje QR kódy a fxtcoin: URI)</translation>
+        <source>Request payments (generates QR codes and Veles: URIs)</source>
+        <translation>Požaduj platby (generuje QR kódy a Veles: URI)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -426,16 +426,16 @@
         <translation>Ukaž seznam použitých přijímacích adres a jejich označení</translation>
     </message>
     <message>
-        <source>Open a fxtcoin: URI or payment request</source>
-        <translation>Načti fxtcoin: URI nebo platební požadavek</translation>
+        <source>Open a Veles: URI or payment request</source>
+        <translation>Načti Veles: URI nebo platební požadavek</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation>Ar&amp;gumenty příkazové řádky</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to FxTCoin network</source>
-        <translation><numerusform>%n aktivní spojení do fxtcoinové sítě</numerusform><numerusform>%n aktivní spojení do fxtcoinové sítě</numerusform><numerusform>%n aktivních spojení do fxtcoinové sítě</numerusform><numerusform>%n aktivních spojení do fxtcoinové sítě</numerusform></translation>
+        <source>%n active connection(s) to Veles network</source>
+        <translation><numerusform>%n aktivní spojení do Velesové sítě</numerusform><numerusform>%n aktivní spojení do Velesové sítě</numerusform><numerusform>%n aktivních spojení do Velesové sítě</numerusform><numerusform>%n aktivních spojení do Velesové sítě</numerusform></translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -502,8 +502,8 @@
         <translation>Zavřít peněženku</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible FxTCoin command-line options</source>
-        <translation>Seznam argumentů FxTCoinu pro příkazovou řádku získáš v nápovědě %1</translation>
+        <source>Show the %1 help message to get a list with possible Veles command-line options</source>
+        <translation>Seznam argumentů Velesu pro příkazovou řádku získáš v nápovědě %1</translation>
     </message>
     <message>
         <source>default wallet</source>
@@ -614,8 +614,8 @@
         <translation>Peněženka je &lt;b&gt;zašifrovaná&lt;/b&gt; a momentálně &lt;b&gt;zamčená&lt;/b&gt;</translation>
     </message>
     <message>
-        <source>A fatal error occurred. FxTCoin can no longer continue safely and will quit.</source>
-        <translation>Stala se fatální chyba. FxTCoin nemůže bezpečně pokračovat v činnosti, a proto skončí.</translation>
+        <source>A fatal error occurred. Veles can no longer continue safely and will quit.</source>
+        <translation>Stala se fatální chyba. Veles nemůže bezpečně pokračovat v činnosti, a proto skončí.</translation>
     </message>
 </context>
 <context>
@@ -804,8 +804,8 @@
         <translation>Uprav odesílací adresu</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid FxTCoin address.</source>
-        <translation>Zadaná adresa „%1“ není platná fxtcoinová adresa.</translation>
+        <source>The entered address "%1" is not a valid Veles address.</source>
+        <translation>Zadaná adresa „%1“ není platná Velesová adresa.</translation>
     </message>
     <message>
         <source>Address "%1" already exists as a receiving address with label "%2" and so cannot be added as a sending address.</source>
@@ -901,8 +901,8 @@
         <translation>Použij tento adresář pro data:</translation>
     </message>
     <message>
-        <source>FxTCoin</source>
-        <translation>FxTCoin</translation>
+        <source>Veles</source>
+        <translation>Veles</translation>
     </message>
     <message>
         <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
@@ -913,7 +913,7 @@
         <translation>Bude proto potřebovat do tohoto adresáře uložit přibližně %1 GB dat.</translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the FxTCoin block chain.</source>
+        <source>%1 will download and store a copy of the Veles block chain.</source>
         <translation>%1 bude stahovat kopii blockchainu.</translation>
     </message>
     <message>
@@ -944,12 +944,12 @@
         <translation>Formulář</translation>
     </message>
     <message>
-        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the fxtcoin network, as detailed below.</source>
-        <translation>Nedávné transakce ještě nemusí být vidět, takže stav tvého účtu nemusí být platný. Jakmile se však tvá peněženka dosynchronizuje s fxtcoinovou sítí (viz informace níže), tak už bude stav správně.</translation>
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the Veles network, as detailed below.</source>
+        <translation>Nedávné transakce ještě nemusí být vidět, takže stav tvého účtu nemusí být platný. Jakmile se však tvá peněženka dosynchronizuje s Velesovou sítí (viz informace níže), tak už bude stav správně.</translation>
     </message>
     <message>
-        <source>Attempting to spend fxtcoins that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
-        <translation>Utrácení fxtcoinů, které už utratily zatím nezobrazené transakce, nebude fxtcoinovou sítí umožněno.</translation>
+        <source>Attempting to spend Veles that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <translation>Utrácení Velesů, které už utratily zatím nezobrazené transakce, nebude Velesovou sítí umožněno.</translation>
     </message>
     <message>
         <source>Number of blocks left</source>
@@ -1130,7 +1130,7 @@
         <translation>&amp;Utrácet i ještě nepotvrzené drobné</translation>
     </message>
     <message>
-        <source>Automatically open the FxTCoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <source>Automatically open the Veles client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation>Automaticky otevře potřebný port na routeru. Tohle funguje jen za předpokladu, že tvůj router podporuje UPnP a že je UPnP povolené.</translation>
     </message>
     <message>
@@ -1146,8 +1146,8 @@
         <translation>Přijí&amp;mat příchozí spojení</translation>
     </message>
     <message>
-        <source>Connect to the FxTCoin network through a SOCKS5 proxy.</source>
-        <translation>Připojí se do fxtcoinové sítě přes SOCKS5 proxy.</translation>
+        <source>Connect to the Veles network through a SOCKS5 proxy.</source>
+        <translation>Připojí se do Velesové sítě přes SOCKS5 proxy.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1182,8 +1182,8 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the FxTCoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Připojí se do fxtcoinové sítě přes SOCKS5 proxy vyhrazenou pro skryté služby v Tor síti.</translation>
+        <source>Connect to the Veles network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Připojí se do Velesové sítě přes SOCKS5 proxy vyhrazenou pro skryté služby v Tor síti.</translation>
     </message>
     <message>
         <source>&amp;Window</source>
@@ -1293,8 +1293,8 @@
         <translation>Formulář</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the FxTCoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>Zobrazené informace nemusí být aktuální. Tvá peněženka se automaticky sesynchronizuje s fxtcoinovou sítí, jakmile se s ní spojí. Zatím ale ještě není synchronizace dokončena.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Veles network after a connection is established, but this process has not completed yet.</source>
+        <translation>Zobrazené informace nemusí být aktuální. Tvá peněženka se automaticky sesynchronizuje s Velesovou sítí, jakmile se s ní spojí. Zatím ale ještě není synchronizace dokončena.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1368,16 +1368,16 @@
         <translation>Chyba platebního požadavku</translation>
     </message>
     <message>
-        <source>Cannot start fxtcoin: click-to-pay handler</source>
-        <translation>Nemůžu spustit fxtcoin: obsluha click-to-pay</translation>
+        <source>Cannot start Veles: click-to-pay handler</source>
+        <translation>Nemůžu spustit Veles: obsluha click-to-pay</translation>
     </message>
     <message>
         <source>URI handling</source>
         <translation>Zpracování URI</translation>
     </message>
     <message>
-        <source>'fxtcoin://' is not a valid URI. Use 'fxtcoin:' instead.</source>
-        <translation>'fxtcoin://' není platné URI. Místo toho použij 'fxtcoin:'.</translation>
+        <source>'Veles://' is not a valid URI. Use 'Veles:' instead.</source>
+        <translation>'Veles://' není platné URI. Místo toho použij 'Veles:'.</translation>
     </message>
     <message>
         <source>You are using a BIP70 URL which will be unsupported in the future.</source>
@@ -1396,8 +1396,8 @@
         <translation>Neplatná platební adresa %1</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid FxTCoin address or malformed URI parameters.</source>
-        <translation>Nepodařilo se analyzovat URI! Důvodem může být neplatná fxtcoinová adresa nebo poškozené parametry URI.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid Veles address or malformed URI parameters.</source>
+        <translation>Nepodařilo se analyzovat URI! Důvodem může být neplatná Velesová adresa nebo poškozené parametry URI.</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -1498,8 +1498,8 @@
         <translation>Částka</translation>
     </message>
     <message>
-        <source>Enter a FxTCoin address (e.g. %1)</source>
-        <translation>Zadej fxtcoinovou adresu (např. %1)</translation>
+        <source>Enter a Veles address (e.g. %1)</source>
+        <translation>Zadej Velesovou adresu (např. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1954,8 +1954,8 @@
         <translation>&amp;Zpráva:</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the FxTCoin network.</source>
-        <translation>Volitelná zpráva, která se připojí k platebnímu požadavku a která se zobrazí, když se požadavek otevře. Poznámka: tahle zpráva se neposílá s platbou po fxtcoinové síti.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Veles network.</source>
+        <translation>Volitelná zpráva, která se připojí k platebnímu požadavku a která se zobrazí, když se požadavek otevře. Poznámka: tahle zpráva se neposílá s platbou po Velesové síti.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -2235,8 +2235,8 @@ Poznámka: Jelikož je poplatek počítaný za bajt, poplatek o hodnotě "100 sa
         <translation>Prach:</translation>
     </message>
     <message>
-        <source>When there is less transaction volume than space in the blocks, miners as well as relaying nodes may enforce a minimum fee. Paying only this minimum fee is just fine, but be aware that this can result in a never confirming transaction once there is more demand for fxtcoin transactions than the network can process.</source>
-        <translation>Když je zde měně transakcí než místa na bloky, mineři stejně tak relay-e mohou nasadit minimální poplatky. Zaplacením pouze minimálního poplatku je v pohodě, ale mějte na paměti že toto může mít za následek nikdy neověřenou transakci pokud zde bude více fxtcoinových transakcí než může síť zvládnout.</translation>
+        <source>When there is less transaction volume than space in the blocks, miners as well as relaying nodes may enforce a minimum fee. Paying only this minimum fee is just fine, but be aware that this can result in a never confirming transaction once there is more demand for Veles transactions than the network can process.</source>
+        <translation>Když je zde měně transakcí než místa na bloky, mineři stejně tak relay-e mohou nasadit minimální poplatky. Zaplacením pouze minimálního poplatku je v pohodě, ale mějte na paměti že toto může mít za následek nikdy neověřenou transakci pokud zde bude více Velesových transakcí než může síť zvládnout.</translation>
     </message>
     <message>
         <source>A too low fee might result in a never confirming transaction (read the tooltip)</source>
@@ -2383,8 +2383,8 @@ Poznámka: Jelikož je poplatek počítaný za bajt, poplatek o hodnotě "100 sa
         <translation><numerusform>Potvrzování by podle odhadu mělo začít během %n bloku.</numerusform><numerusform>Potvrzování by podle odhadu mělo začít během %n bloků.</numerusform><numerusform>Potvrzování by podle odhadu mělo začít během %n bloků.</numerusform><numerusform>Potvrzování by podle odhadu mělo začít během %n bloků.</numerusform></translation>
     </message>
     <message>
-        <source>Warning: Invalid FxTCoin address</source>
-        <translation>Upozornění: Neplatná fxtcoinová adresa</translation>
+        <source>Warning: Invalid Veles address</source>
+        <translation>Upozornění: Neplatná Velesová adresa</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -2426,8 +2426,8 @@ Poznámka: Jelikož je poplatek počítaný za bajt, poplatek o hodnotě "100 sa
         <translation>Tohle je normální platba.</translation>
     </message>
     <message>
-        <source>The FxTCoin address to send the payment to</source>
-        <translation>FxTCoinová adresa příjemce</translation>
+        <source>The Veles address to send the payment to</source>
+        <translation>Velesová adresa příjemce</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -2446,8 +2446,8 @@ Poznámka: Jelikož je poplatek počítaný za bajt, poplatek o hodnotě "100 sa
         <translation>Smaž tento záznam</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less fxtcoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation>Poplatek se odečte od posílané částky. Příjemce tak dostane méně fxtcoinů, než zadáš do pole Částka. Pokud vybereš více příjemců, tak se poplatek rovnoměrně rozloží.</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less Veles than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation>Poplatek se odečte od posílané částky. Příjemce tak dostane méně Velesů, než zadáš do pole Částka. Pokud vybereš více příjemců, tak se poplatek rovnoměrně rozloží.</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -2474,8 +2474,8 @@ Poznámka: Jelikož je poplatek počítaný za bajt, poplatek o hodnotě "100 sa
         <translation>Zadej označení této adresy; obojí se ti pak uloží do adresáře</translation>
     </message>
     <message>
-        <source>A message that was attached to the fxtcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the FxTCoin network.</source>
-        <translation>Zpráva, která byla připojena k fxtcoin: URI a která se ti pro přehled uloží k transakci. Poznámka: Tahle zpráva se neposílá s platbou po fxtcoinové síti.</translation>
+        <source>A message that was attached to the Veles: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Veles network.</source>
+        <translation>Zpráva, která byla připojena k Veles: URI a která se ti pro přehled uloží k transakci. Poznámka: Tahle zpráva se neposílá s platbou po Velesové síti.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -2519,12 +2519,12 @@ Poznámka: Jelikož je poplatek počítaný za bajt, poplatek o hodnotě "100 sa
         <translation>&amp;Podepiš zprávu</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive fxtcoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation>Podepsáním zprávy/smlouvy svými adresami můžeš prokázat, že jsi na ně schopen přijmout fxtcoiny. Buď opatrný a nepodepisuj nic vágního nebo náhodného; například při phishingových útocích můžeš být lákán, abys něco takového podepsal. Podepisuj pouze naprosto úplná a detailní prohlášení, se kterými souhlasíš.</translation>
+        <source>You can sign messages/agreements with your addresses to prove you can receive Veles sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <translation>Podepsáním zprávy/smlouvy svými adresami můžeš prokázat, že jsi na ně schopen přijmout Velesy. Buď opatrný a nepodepisuj nic vágního nebo náhodného; například při phishingových útocích můžeš být lákán, abys něco takového podepsal. Podepisuj pouze naprosto úplná a detailní prohlášení, se kterými souhlasíš.</translation>
     </message>
     <message>
-        <source>The FxTCoin address to sign the message with</source>
-        <translation>FxTCoinová adresa, kterou se zpráva podepíše</translation>
+        <source>The Veles address to sign the message with</source>
+        <translation>Velesová adresa, kterou se zpráva podepíše</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2555,8 +2555,8 @@ Poznámka: Jelikož je poplatek počítaný za bajt, poplatek o hodnotě "100 sa
         <translation>Zkopíruj tento podpis do schránky</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this FxTCoin address</source>
-        <translation>Podepiš zprávu, čímž prokážeš, že jsi vlastníkem této fxtcoinové adresy</translation>
+        <source>Sign the message to prove you own this Veles address</source>
+        <translation>Podepiš zprávu, čímž prokážeš, že jsi vlastníkem této Velesové adresy</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -2579,12 +2579,12 @@ Poznámka: Jelikož je poplatek počítaný za bajt, poplatek o hodnotě "100 sa
         <translation>K ověření podpisu zprávy zadej adresu příjemce, zprávu (ověř si, že správně kopíruješ zalomení řádků, mezery, tabulátory apod.) a podpis. Dávej pozor na to, abys nezkopíroval do podpisu víc, než co je v samotné podepsané zprávě, abys nebyl napálen man-in-the-middle útokem. Poznamenejme však, že takto lze pouze prokázat, že podepisující je schopný na dané adrese přijmout platbu, ale není možnéprokázat, že odeslal jakoukoli transakci!</translation>
     </message>
     <message>
-        <source>The FxTCoin address the message was signed with</source>
-        <translation>FxTCoinová adresa, kterou je zpráva podepsána</translation>
+        <source>The Veles address the message was signed with</source>
+        <translation>Velesová adresa, kterou je zpráva podepsána</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified FxTCoin address</source>
-        <translation>Ověř zprávu, aby ses ujistil, že byla podepsána danou fxtcoinovou adresou</translation>
+        <source>Verify the message to ensure it was signed with the specified Veles address</source>
+        <translation>Ověř zprávu, aby ses ujistil, že byla podepsána danou Velesovou adresou</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -3251,8 +3251,8 @@ Poznámka: Jelikož je poplatek počítaný za bajt, poplatek o hodnotě "100 sa
         <translation>Nemohu spustit HTTP server. Detaily viz v debug.log.</translation>
     </message>
     <message>
-        <source>FxTCoin Core</source>
-        <translation>FxTCoin Core</translation>
+        <source>Veles Core</source>
+        <translation>Veles Core</translation>
     </message>
     <message>
         <source>The %s developers</source>

@@ -66,12 +66,12 @@
         <translation>Адреса получения</translation>
     </message>
     <message>
-        <source>These are your FxTCoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Это ваши адреса FxTCoin для отправки платежей. Всегда проверяйте количество и адрес получателя перед отправкой перевода.</translation>
+        <source>These are your Veles addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Это ваши адреса Veles для отправки платежей. Всегда проверяйте количество и адрес получателя перед отправкой перевода.</translation>
     </message>
     <message>
-        <source>These are your FxTCoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Это ваши адреса FxTCoin для приёма платежей. Рекомендуется использовать новый адрес получения для каждой транзакции.</translation>
+        <source>These are your Veles addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Это ваши адреса Veles для приёма платежей. Рекомендуется использовать новый адрес получения для каждой транзакции.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -188,8 +188,8 @@
         <translation>Кошелёк зашифрован</translation>
     </message>
     <message>
-        <source>Your wallet is now encrypted. Remember that encrypting your wallet cannot fully protect your fxtcoins from being stolen by malware infecting your computer.</source>
-        <translation>Бумажник зашифрован. Помните, что шифрование не способно полностью защитить Ваши fxtcоины, которые могут быть украдены вредоносным ПО</translation>
+        <source>Your wallet is now encrypted. Remember that encrypting your wallet cannot fully protect your Veles from being stolen by malware infecting your computer.</source>
+        <translation>Бумажник зашифрован. Помните, что шифрование не способно полностью защитить Ваши Velesы, которые могут быть украдены вредоносным ПО</translation>
     </message>
     <message>
         <source>Wallet encryption failed</source>

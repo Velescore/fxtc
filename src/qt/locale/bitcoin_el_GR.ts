@@ -66,12 +66,12 @@
         <translation>Διευθύνσεις λήψης</translation>
     </message>
     <message>
-        <source>These are your FxTCoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Αυτές είναι οι FxTCoin διευθύνσεις σας για να στέλνετε πληρωμές. Να ελέγχετε πάντα το ποσό, καθώς και τη διεύθυνση παραλήπτη πριν στείλετε νομίσματα.</translation>
+        <source>These are your Veles addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Αυτές είναι οι Veles διευθύνσεις σας για να στέλνετε πληρωμές. Να ελέγχετε πάντα το ποσό, καθώς και τη διεύθυνση παραλήπτη πριν στείλετε νομίσματα.</translation>
     </message>
     <message>
-        <source>These are your FxTCoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Αυτές είναι οι FxTCoin διευθύνσεις σας για να λαμβάνετε πληρωμές. Προτείνετε να χρησιμοποιείτε μια νέα διεύθυνση παραλήπτη για κάθε συναλλαγή.</translation>
+        <source>These are your Veles addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Αυτές είναι οι Veles διευθύνσεις σας για να λαμβάνετε πληρωμές. Προτείνετε να χρησιμοποιείτε μια νέα διεύθυνση παραλήπτη για κάθε συναλλαγή.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -334,8 +334,8 @@
         <translation>Φόρτωση ευρετηρίου μπλοκ στον σκληρό δίσκο...</translation>
     </message>
     <message>
-        <source>Send coins to a FxTCoin address</source>
-        <translation>Στείλε νομίσματα σε μια διεύθυνση fxtcoin</translation>
+        <source>Send coins to a Veles address</source>
+        <translation>Στείλε νομίσματα σε μια διεύθυνση Veles</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -358,8 +358,8 @@
         <translation>&amp;Επιβεβαίωση μηνύματος</translation>
     </message>
     <message>
-        <source>FxTCoin</source>
-        <translation>FxTCoin</translation>
+        <source>Veles</source>
+        <translation>Veles</translation>
     </message>
     <message>
         <source>&amp;Send</source>
@@ -382,12 +382,12 @@
         <translation>Κρυπτογραφήστε τα ιδιωτικά κλειδιά που ανήκουν στο πορτοφόλι σας </translation>
     </message>
     <message>
-        <source>Sign messages with your FxTCoin addresses to prove you own them</source>
+        <source>Sign messages with your Veles addresses to prove you own them</source>
         <translation>Υπογράψτε ένα μήνυμα για να βεβαιώσετε πως είστε ο κάτοχος αυτής της διεύθυνσης</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified FxTCoin addresses</source>
-        <translation>Υπογράψτε ένα μήνυμα για ν' αποδείξετε πως ανήκει μια συγκεκριμένη διεύθυνση FxTCoin</translation>
+        <source>Verify messages to ensure they were signed with specified Veles addresses</source>
+        <translation>Υπογράψτε ένα μήνυμα για ν' αποδείξετε πως ανήκει μια συγκεκριμένη διεύθυνση Veles</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -406,8 +406,8 @@
         <translation>Εργαλειοθήκη καρτελών</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and fxtcoin: URIs)</source>
-        <translation>Αίτηση πληρωμών (δημιουργεί QR codes και διευθύνσεις fxtcoin: )</translation>
+        <source>Request payments (generates QR codes and Veles: URIs)</source>
+        <translation>Αίτηση πληρωμών (δημιουργεί QR codes και διευθύνσεις Veles: )</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -418,8 +418,8 @@
         <translation>Προβολή της λίστας των χρησιμοποιημένων διευθύνσεων και ετικετών λήψεως</translation>
     </message>
     <message>
-        <source>Open a fxtcoin: URI or payment request</source>
-        <translation>Άνοιγμα fxtcoin: URI αίτησης πληρωμής</translation>
+        <source>Open a Veles: URI or payment request</source>
+        <translation>Άνοιγμα Veles: URI αίτησης πληρωμής</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -676,8 +676,8 @@
         <translation> Επεξεργασία διεύθυνσης αποστολής</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid FxTCoin address.</source>
-        <translation>Η διεύθυνση "%1" δεν είναι έγκυρη FxTCoin διεύθυνση.</translation>
+        <source>The entered address "%1" is not a valid Veles address.</source>
+        <translation>Η διεύθυνση "%1" δεν είναι έγκυρη Veles διεύθυνση.</translation>
     </message>
     <message>
         <source>Address "%1" already exists as a receiving address with label "%2" and so cannot be added as a sending address.</source>
@@ -753,8 +753,8 @@
         <translation>Προσαρμογή του φακέλου δεδομένων: </translation>
     </message>
     <message>
-        <source>FxTCoin</source>
-        <translation>FxTCoin</translation>
+        <source>Veles</source>
+        <translation>Veles</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" cannot be created.</source>
@@ -886,16 +886,16 @@
         <translation>&amp;Ξόδεμα μη επικυρωμένων ρέστων</translation>
     </message>
     <message>
-        <source>Automatically open the FxTCoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Αυτόματο άνοιγμα των θυρών FxTCoin στον δρομολογητή. Λειτουργεί μόνο αν ο δρομολογητής σας υποστηρίζει τη λειτουργία UPnP.</translation>
+        <source>Automatically open the Veles client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Αυτόματο άνοιγμα των θυρών Veles στον δρομολογητή. Λειτουργεί μόνο αν ο δρομολογητής σας υποστηρίζει τη λειτουργία UPnP.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
         <translation>Απόδοση θυρών με χρήστη &amp;UPnP</translation>
     </message>
     <message>
-        <source>Connect to the FxTCoin network through a SOCKS5 proxy.</source>
-        <translation>Σύνδεση στο δίκτυο FxTCoin μέσω διαμεσολαβητή SOCKS5 (π.χ. για σύνδεση μέσω Tor)</translation>
+        <source>Connect to the Veles network through a SOCKS5 proxy.</source>
+        <translation>Σύνδεση στο δίκτυο Veles μέσω διαμεσολαβητή SOCKS5 (π.χ. για σύνδεση μέσω Tor)</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1005,8 +1005,8 @@
         <translation>Φόρμα</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the FxTCoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>Οι πληροφορίες που εμφανίζονται μπορεί να είναι ξεπερασμένες. Το πορτοφόλι σας συγχρονίζεται αυτόματα με το δίκτυο FxTCoin μετά από μια σύνδεση, αλλά αυτή η διαδικασία δεν έχει ακόμη ολοκληρωθεί. </translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Veles network after a connection is established, but this process has not completed yet.</source>
+        <translation>Οι πληροφορίες που εμφανίζονται μπορεί να είναι ξεπερασμένες. Το πορτοφόλι σας συγχρονίζεται αυτόματα με το δίκτυο Veles μετά από μια σύνδεση, αλλά αυτή η διαδικασία δεν έχει ακόμη ολοκληρωθεί. </translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1080,8 +1080,8 @@
         <translation>Σφάλμα αίτησης πληρωμής</translation>
     </message>
     <message>
-        <source>Cannot start fxtcoin: click-to-pay handler</source>
-        <translation>Δεν είναι δυνατή η εκκίνηση του fxtcoin: χειριστής click-to-pay</translation>
+        <source>Cannot start Veles: click-to-pay handler</source>
+        <translation>Δεν είναι δυνατή η εκκίνηση του Veles: χειριστής click-to-pay</translation>
     </message>
     <message>
         <source>URI handling</source>
@@ -1114,8 +1114,8 @@
         <translation>Ποσό</translation>
     </message>
     <message>
-        <source>Enter a FxTCoin address (e.g. %1)</source>
-        <translation>Εισάγετε μια διεύθυνση FxTCoin (π.χ. %1)</translation>
+        <source>Enter a Veles address (e.g. %1)</source>
+        <translation>Εισάγετε μια διεύθυνση Veles (π.χ. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1638,8 +1638,8 @@
         <translation>Αυτή είναι μια απλή πληρωμή.</translation>
     </message>
     <message>
-        <source>The FxTCoin address to send the payment to</source>
-        <translation>Η διεύθυνση FxTCoin που θα σταλεί η πληρωμή</translation>
+        <source>The Veles address to send the payment to</source>
+        <translation>Η διεύθυνση Veles που θα σταλεί η πληρωμή</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -1699,8 +1699,8 @@
         <translation>&amp;Υπογραφή Μηνύματος</translation>
     </message>
     <message>
-        <source>The FxTCoin address to sign the message with</source>
-        <translation>Διεύθυνση FxTCoin που θα σταλεί το μήνυμα</translation>
+        <source>The Veles address to sign the message with</source>
+        <translation>Διεύθυνση Veles που θα σταλεί το μήνυμα</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -1731,8 +1731,8 @@
         <translation>Αντιγραφή της επιλεγμένης υπογραφής στο πρόχειρο του συστήματος</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this FxTCoin address</source>
-        <translation>Υπογράψτε το μήνυμα για να αποδείξετε πως σας ανήκει η συγκεκριμένη διεύθυνση FxTCoin</translation>
+        <source>Sign the message to prove you own this Veles address</source>
+        <translation>Υπογράψτε το μήνυμα για να αποδείξετε πως σας ανήκει η συγκεκριμένη διεύθυνση Veles</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -1751,12 +1751,12 @@
         <translation>&amp;Επιβεβαίωση Mηνύματος</translation>
     </message>
     <message>
-        <source>The FxTCoin address the message was signed with</source>
-        <translation>Διεύθυνση FxTCoin με την οποία έχει υπογραφεί το μήνυμα</translation>
+        <source>The Veles address the message was signed with</source>
+        <translation>Διεύθυνση Veles με την οποία έχει υπογραφεί το μήνυμα</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified FxTCoin address</source>
-        <translation>Επαληθεύστε το μήνυμα για να αποδείξετε πως υπογράφθηκε από τη συγκεκριμένη διεύθυνση FxTCoin</translation>
+        <source>Verify the message to ensure it was signed with the specified Veles address</source>
+        <translation>Επαληθεύστε το μήνυμα για να αποδείξετε πως υπογράφθηκε από τη συγκεκριμένη διεύθυνση Veles</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -1967,8 +1967,8 @@
 <context>
     <name>bitcoin-core</name>
     <message>
-        <source>FxTCoin Core</source>
-        <translation>FxTCoin Core</translation>
+        <source>Veles Core</source>
+        <translation>Veles Core</translation>
     </message>
     <message>
         <source>Corrupted block database detected</source>

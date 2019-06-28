@@ -62,12 +62,12 @@
         <translation>Direcciones de recepción</translation>
     </message>
     <message>
-        <source>These are your FxTCoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Estas son tus direcciones FxTCoin para realizar pagos. Verifica siempre el monto y la dirección de recepción antes de enviar monedas. </translation>
+        <source>These are your Veles addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Estas son tus direcciones Veles para realizar pagos. Verifica siempre el monto y la dirección de recepción antes de enviar monedas. </translation>
     </message>
     <message>
-        <source>These are your FxTCoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Estas son tus direcciones FxTCoin para recibir pagos. Es recomendable usar una nueva dirección de recibo para cada transacción.</translation>
+        <source>These are your Veles addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Estas son tus direcciones Veles para recibir pagos. Es recomendable usar una nueva dirección de recibo para cada transacción.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -208,8 +208,8 @@
         <translation>Reindexando bloques en el disco...</translation>
     </message>
     <message>
-        <source>Send coins to a FxTCoin address</source>
-        <translation>Enviar monedas a una dirección FxTCoin</translation>
+        <source>Send coins to a Veles address</source>
+        <translation>Enviar monedas a una dirección Veles</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -224,8 +224,8 @@
         <translation>Abre la consola de depuración y diágnostico</translation>
     </message>
     <message>
-        <source>FxTCoin</source>
-        <translation>FxTCoin</translation>
+        <source>Veles</source>
+        <translation>Veles</translation>
     </message>
     <message>
         <source>&amp;Send</source>
@@ -248,12 +248,12 @@
         <translation>Encriptar las llaves privadas que pertenecen a tu billetera</translation>
     </message>
     <message>
-        <source>Sign messages with your FxTCoin addresses to prove you own them</source>
-        <translation>Firma mensajes con tus direcciones FxTCoin para probar que eres dueño de ellas</translation>
+        <source>Sign messages with your Veles addresses to prove you own them</source>
+        <translation>Firma mensajes con tus direcciones Veles para probar que eres dueño de ellas</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified FxTCoin addresses</source>
-        <translation>Verificar mensajes para asegurar que estaban firmados con direcciones FxTCoin especificas</translation>
+        <source>Verify messages to ensure they were signed with specified Veles addresses</source>
+        <translation>Verificar mensajes para asegurar que estaban firmados con direcciones Veles especificas</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -491,8 +491,8 @@
         <translation>Usa un directorio de datos personalizado:</translation>
     </message>
     <message>
-        <source>FxTCoin</source>
-        <translation>FxTCoin</translation>
+        <source>Veles</source>
+        <translation>Veles</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" cannot be created.</source>
@@ -777,8 +777,8 @@
 <context>
     <name>bitcoin-core</name>
     <message>
-        <source>FxTCoin Core</source>
-        <translation>FxTCoin Core</translation>
+        <source>Veles Core</source>
+        <translation>Veles Core</translation>
     </message>
     <message>
         <source>Information</source>

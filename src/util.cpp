@@ -307,7 +307,7 @@ public:
         std::pair<bool,std::string> found_result(false, std::string());
 
         // We pass "true" to GetArgHelper in order to return the last
-        // argument value seen from the command line (so "fxtcd -foo=bar
+        // argument value seen from the command line (so "velesd -foo=bar
         // -foo=baz" gives GetArg(am,"foo")=={true,"baz"}
         found_result = GetArgHelper(am.m_override_args, arg, true);
         if (found_result.first) {
@@ -1293,7 +1293,7 @@ std::string CopyrightHolders(const std::string& strPrefix)
     // the same copytight years as the're different for all contributors.
 
     std::string strCopyrightHolders = "Copyright (C) 2018-" + std::to_string(COPYRIGHT_YEAR) + " The Veles Core developers"
-        + "\nCopyright (C) 2018-" + std::to_string(FXTC_COPYRIGHT_YEAR) + " The FXTC developers"
+        + "\nCopyright (C) 2018-" + std::to_string(VELES_COPYRIGHT_YEAR) + " The FXTC developers"
         + "\nCopyright (C) 2014-" + std::to_string(DASH_COPYRIGHT_YEAR) + " The Dash Core developers"
         + "\nCopyright (C) 2009-" + std::to_string(BITCORE_COPYRIGHT_YEAR) + " The Bitcoin Core developers"
         + "\nCopyright (c) 2009-2010 Satoshi Nakamoto";

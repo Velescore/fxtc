@@ -66,12 +66,12 @@
         <translation>Адреса получения</translation>
     </message>
     <message>
-        <source>These are your FxTCoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Это ваши FxTCoin адреса для отправки платежа. Всегда проверяйте сумму и адрес получателя перед отправкой платежа.</translation>
+        <source>These are your Veles addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Это ваши Veles адреса для отправки платежа. Всегда проверяйте сумму и адрес получателя перед отправкой платежа.</translation>
     </message>
     <message>
-        <source>These are your FxTCoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Это ваши FxTCoin адреса для получения платежей. Настоятельно рекомендуем использовать новые адреса для получения каждой транзакции.</translation>
+        <source>These are your Veles addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Это ваши Veles адреса для получения платежей. Настоятельно рекомендуем использовать новые адреса для получения каждой транзакции.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -188,7 +188,7 @@
         <translation>Кошелек зашифрован</translation>
     </message>
     <message>
-        <source>Your wallet is now encrypted. Remember that encrypting your wallet cannot fully protect your fxtcoins from being stolen by malware infecting your computer.</source>
+        <source>Your wallet is now encrypted. Remember that encrypting your wallet cannot fully protect your Veles from being stolen by malware infecting your computer.</source>
         <translation>Ваш кошелек теперь зашифрован. Помните, что шифрование вашего кошелька не может полностью защитить ваши биткойны от кражи вредоносным ПО.</translation>
     </message>
     <message>
@@ -342,7 +342,7 @@
         <translation>Прокси &lt;b&gt;включен&lt;/b&gt;: %1</translation>
     </message>
     <message>
-        <source>Send coins to a FxTCoin address</source>
+        <source>Send coins to a Veles address</source>
         <translation>Послать средства на биткойн адрес</translation>
     </message>
     <message>
@@ -366,8 +366,8 @@
         <translation>&amp;Проверить сообщение...</translation>
     </message>
     <message>
-        <source>FxTCoin</source>
-        <translation>FxTCoin Core</translation>
+        <source>Veles</source>
+        <translation>Veles Core</translation>
     </message>
     <message>
         <source>&amp;Send</source>
@@ -390,12 +390,12 @@
         <translation>Зашифровать приватные ключи, принадлежащие вашему кошельку</translation>
     </message>
     <message>
-        <source>Sign messages with your FxTCoin addresses to prove you own them</source>
-        <translation>Подписывайте сообщения FxTCoin адресами чтобы подтвердить что это написали именно Вы</translation>
+        <source>Sign messages with your Veles addresses to prove you own them</source>
+        <translation>Подписывайте сообщения Veles адресами чтобы подтвердить что это написали именно Вы</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified FxTCoin addresses</source>
-        <translation>Проверяйте сообщения чтобы убедиться что они подписаны конкретными FxTCoin адресами</translation>
+        <source>Verify messages to ensure they were signed with specified Veles addresses</source>
+        <translation>Проверяйте сообщения чтобы убедиться что они подписаны конкретными Veles адресами</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -414,7 +414,7 @@
         <translation>Панель вкладок</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and fxtcoin: URIs)</source>
+        <source>Request payments (generates QR codes and Veles: URIs)</source>
         <translation>Запросить платеж</translation>
     </message>
     <message>
@@ -426,16 +426,16 @@
         <translation>Показать список использованных адресов и меток получателей</translation>
     </message>
     <message>
-        <source>Open a fxtcoin: URI or payment request</source>
-        <translation>Открыть FxTCойн: URI или запрос платежа</translation>
+        <source>Open a Veles: URI or payment request</source>
+        <translation>Открыть Veles: URI или запрос платежа</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation>Опции командной строки</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to FxTCoin network</source>
-        <translation><numerusform>%n активное подключение к сети FxTCoin</numerusform><numerusform>%n активных подключения к сети FxTCoin</numerusform><numerusform>%n активных подключений к сети FxTCoin</numerusform><numerusform>%n активных подключений к сети FxTCoin</numerusform></translation>
+        <source>%n active connection(s) to Veles network</source>
+        <translation><numerusform>%n активное подключение к сети Veles</numerusform><numerusform>%n активных подключения к сети Veles</numerusform><numerusform>%n активных подключений к сети Veles</numerusform><numerusform>%n активных подключений к сети Veles</numerusform></translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -502,7 +502,7 @@
         <translation>Закрыть кошелек</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible FxTCoin command-line options</source>
+        <source>Show the %1 help message to get a list with possible Veles command-line options</source>
         <translation>Показать помощь по %1, чтобы получить список доступных параметров командной строки</translation>
     </message>
     <message>
@@ -614,8 +614,8 @@
         <translation>Кошелек &lt;b&gt;зашифрован&lt;/b&gt; и сейчас &lt;b&gt;заблокирован&lt;/b&gt;</translation>
     </message>
     <message>
-        <source>A fatal error occurred. FxTCoin can no longer continue safely and will quit.</source>
-        <translation>Произошла критическая ошибка. FxTCoin больше не может продолжать безопасную работу и будет закрыт.</translation>
+        <source>A fatal error occurred. Veles can no longer continue safely and will quit.</source>
+        <translation>Произошла критическая ошибка. Veles больше не может продолжать безопасную работу и будет закрыт.</translation>
     </message>
 </context>
 <context>
@@ -804,8 +804,8 @@
         <translation>Изменить адрес отправки</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid FxTCoin address.</source>
-        <translation>Введенный адрес "%1" не является действительным адресом FxTCoin.</translation>
+        <source>The entered address "%1" is not a valid Veles address.</source>
+        <translation>Введенный адрес "%1" не является действительным адресом Veles.</translation>
     </message>
     <message>
         <source>Address "%1" already exists as a receiving address with label "%2" and so cannot be added as a sending address.</source>
@@ -901,8 +901,8 @@
         <translation>Использовать пользовательскую директорию данных</translation>
     </message>
     <message>
-        <source>FxTCoin</source>
-        <translation>FxTCoin Core</translation>
+        <source>Veles</source>
+        <translation>Veles Core</translation>
     </message>
     <message>
         <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
@@ -913,7 +913,7 @@
         <translation>Приблизительно %1 ГБ данных будет сохранено в эту директорию.</translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the FxTCoin block chain.</source>
+        <source>%1 will download and store a copy of the Veles block chain.</source>
         <translation>%1 скачает и сохранит копию цепи блоков.</translation>
     </message>
     <message>
@@ -944,11 +944,11 @@
         <translation>Форма</translation>
     </message>
     <message>
-        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the fxtcoin network, as detailed below.</source>
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the Veles network, as detailed below.</source>
         <translation>Последние транзакции пока могут быть не видны, поэтому вы можете видеть некорректный баланс ваших кошельков. Отображаемая информация будет верна после завершения синхронизации. Прогресс синхронизации вы можете видеть ниже.</translation>
     </message>
     <message>
-        <source>Attempting to spend fxtcoins that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <source>Attempting to spend Veles that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
         <translation>Попытка потратить средства, использованные в транзакциях, которые ещё не синхронизированы, будет отклонена сетью.</translation>
     </message>
     <message>
@@ -1130,8 +1130,8 @@
         <translation>&amp;Тратить неподтвержденную сдачу</translation>
     </message>
     <message>
-        <source>Automatically open the FxTCoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Автоматически открыть порт для FxTCoin-клиента на маршрутизаторе. Работает только если Ваш маршрутизатор поддерживает UPnP, и данная функция включена.</translation>
+        <source>Automatically open the Veles client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Автоматически открыть порт для Veles-клиента на маршрутизаторе. Работает только если Ваш маршрутизатор поддерживает UPnP, и данная функция включена.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -1146,8 +1146,8 @@
         <translation>Разрешить входящие соединения</translation>
     </message>
     <message>
-        <source>Connect to the FxTCoin network through a SOCKS5 proxy.</source>
-        <translation>Подключится к сети FxTCoin через SOCKS5 прокси.</translation>
+        <source>Connect to the Veles network through a SOCKS5 proxy.</source>
+        <translation>Подключится к сети Veles через SOCKS5 прокси.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1182,8 +1182,8 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the FxTCoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Соединяться к FxTCоин-сети через отдельные SOCKS5 прокси через Tor hidden services:</translation>
+        <source>Connect to the Veles network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Соединяться к Veles-сети через отдельные SOCKS5 прокси через Tor hidden services:</translation>
     </message>
     <message>
         <source>&amp;Window</source>
@@ -1293,8 +1293,8 @@
         <translation>Форма</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the FxTCoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>Отображаемая информация может быть устаревшей. Ваш бумажник автоматически синхронизируется с сетью FxTCoin после подключения, но этот процесс пока не завершён.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Veles network after a connection is established, but this process has not completed yet.</source>
+        <translation>Отображаемая информация может быть устаревшей. Ваш бумажник автоматически синхронизируется с сетью Veles после подключения, но этот процесс пока не завершён.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1368,16 +1368,16 @@
         <translation>Ошибка запроса платежа</translation>
     </message>
     <message>
-        <source>Cannot start fxtcoin: click-to-pay handler</source>
-        <translation>Не удаётся запустить fxtcoin: обработчик click-to-pay</translation>
+        <source>Cannot start Veles: click-to-pay handler</source>
+        <translation>Не удаётся запустить Veles: обработчик click-to-pay</translation>
     </message>
     <message>
         <source>URI handling</source>
         <translation>Обработка идентификатора</translation>
     </message>
     <message>
-        <source>'fxtcoin://' is not a valid URI. Use 'fxtcoin:' instead.</source>
-        <translation>'fxtcoin://' не верный URI. Используйте 'fxtcoin:' вместо этого.</translation>
+        <source>'Veles://' is not a valid URI. Use 'Veles:' instead.</source>
+        <translation>'Veles://' не верный URI. Используйте 'Veles:' вместо этого.</translation>
     </message>
     <message>
         <source>You are using a BIP70 URL which will be unsupported in the future.</source>
@@ -1396,8 +1396,8 @@
         <translation>Неверный адрес %1</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid FxTCoin address or malformed URI parameters.</source>
-        <translation>Не удалось обработать идентификатор! Это может быть связано с неверным FxTCoin-адресом или неправильными параметрами идентификатора.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid Veles address or malformed URI parameters.</source>
+        <translation>Не удалось обработать идентификатор! Это может быть связано с неверным Veles-адресом или неправильными параметрами идентификатора.</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -1498,8 +1498,8 @@
         <translation>Количество</translation>
     </message>
     <message>
-        <source>Enter a FxTCoin address (e.g. %1)</source>
-        <translation>Введите FxTCоин-адрес (напр. %1)</translation>
+        <source>Enter a Veles address (e.g. %1)</source>
+        <translation>Введите Veles-адрес (напр. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1950,8 +1950,8 @@
         <translation>&amp;Сообщение:</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the FxTCoin network.</source>
-        <translation>Необязательное сообщение для запроса платежа, которое будет показано при открытии запроса. Заметьте: сообщение не будет отправлено вместе с платежом через сеть FxTCoin.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Veles network.</source>
+        <translation>Необязательное сообщение для запроса платежа, которое будет показано при открытии запроса. Заметьте: сообщение не будет отправлено вместе с платежом через сеть Veles.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -2231,7 +2231,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>Пыль:</translation>
     </message>
     <message>
-        <source>When there is less transaction volume than space in the blocks, miners as well as relaying nodes may enforce a minimum fee. Paying only this minimum fee is just fine, but be aware that this can result in a never confirming transaction once there is more demand for fxtcoin transactions than the network can process.</source>
+        <source>When there is less transaction volume than space in the blocks, miners as well as relaying nodes may enforce a minimum fee. Paying only this minimum fee is just fine, but be aware that this can result in a never confirming transaction once there is more demand for Veles transactions than the network can process.</source>
         <translation>Когда объем транзакций меньше, чем пространство в блоках, майнеры, а также ретранслирующие узлы могут устанавливать минимальную плату. Платить только эту минимальную комиссию - это хорошо, но имейте в виду, что это может привести к тому, что транзакция никогда не будет подтверждена, если будет больше биткойн-транзакций, чем может обработать сеть.</translation>
     </message>
     <message>
@@ -2375,8 +2375,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>Истекло время ожидания запроса платежа</translation>
     </message>
     <message>
-        <source>Warning: Invalid FxTCoin address</source>
-        <translation>Предупреждение: Неверный FxTCoin адрес</translation>
+        <source>Warning: Invalid Veles address</source>
+        <translation>Предупреждение: Неверный Veles адрес</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -2418,8 +2418,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>Это нормальный платёж.</translation>
     </message>
     <message>
-        <source>The FxTCoin address to send the payment to</source>
-        <translation>FxTCoin-адрес, на который отправить платёж</translation>
+        <source>The Veles address to send the payment to</source>
+        <translation>Veles-адрес, на который отправить платёж</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -2438,8 +2438,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>Удалить эту запись</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less fxtcoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation>С отправляемой суммы будет удержана комиссия. Получателю придёт меньше fxtcоинов, чем вы вводите в поле количества. Если выбрано несколько получателей, комиссия распределяется поровну.</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less Veles than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation>С отправляемой суммы будет удержана комиссия. Получателю придёт меньше Velesов, чем вы вводите в поле количества. Если выбрано несколько получателей, комиссия распределяется поровну.</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -2466,8 +2466,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>Введите метку для этого адреса, чтобы добавить его в список используемых адресов</translation>
     </message>
     <message>
-        <source>A message that was attached to the fxtcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the FxTCoin network.</source>
-        <translation>Сообщение прикрепленное к fxtcoin идентификатору будет сохранено вместе с транзакцией для вашего сведения. Заметьте: сообщение не будет отправлено через сеть FxTCoin.</translation>
+        <source>A message that was attached to the Veles: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Veles network.</source>
+        <translation>Сообщение прикрепленное к Veles идентификатору будет сохранено вместе с транзакцией для вашего сведения. Заметьте: сообщение не будет отправлено через сеть Veles.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -2511,12 +2511,12 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>&amp;Подписать Сообщение</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive fxtcoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation>Вы можете подписывать сообщения/соглашения своими адресами, чтобы доказать свою возможность получать fxtcоины на них. Будьте осторожны, не подписывайте что-то неопределённое или случайное, так как фишинговые атаки могут обманным путём заставить вас подписать нежелательные сообщения. Подписывайте только те сообщения, с которыми вы согласны вплоть до мелочей.</translation>
+        <source>You can sign messages/agreements with your addresses to prove you can receive Veles sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <translation>Вы можете подписывать сообщения/соглашения своими адресами, чтобы доказать свою возможность получать Velesы на них. Будьте осторожны, не подписывайте что-то неопределённое или случайное, так как фишинговые атаки могут обманным путём заставить вас подписать нежелательные сообщения. Подписывайте только те сообщения, с которыми вы согласны вплоть до мелочей.</translation>
     </message>
     <message>
-        <source>The FxTCoin address to sign the message with</source>
-        <translation>FxTCoin-адрес, которым подписать сообщение</translation>
+        <source>The Veles address to sign the message with</source>
+        <translation>Veles-адрес, которым подписать сообщение</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2547,8 +2547,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>Скопировать текущую подпись в буфер обмена системы</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this FxTCoin address</source>
-        <translation>Подписать сообщение, чтобы доказать владение FxTCoin-адресом</translation>
+        <source>Sign the message to prove you own this Veles address</source>
+        <translation>Подписать сообщение, чтобы доказать владение Veles-адресом</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -2571,12 +2571,12 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>Введите ниже адрес получателя, сообщение (убедитесь, что переводы строк, пробелы, табы и т.п. в точности скопированы) и подпись, чтобы проверить сообщение. Убедитесь, что не скопировали лишнего в подпись, по сравнению с самим подписываемым сообщением, чтобы не стать жертвой атаки "man-in-the-middle". Заметьте, что эта операция удостоверяет лишь авторство подписавшего, но не может удостоверить отправителя транзакции.</translation>
     </message>
     <message>
-        <source>The FxTCoin address the message was signed with</source>
-        <translation>FxTCoin-адрес, которым было подписано сообщение</translation>
+        <source>The Veles address the message was signed with</source>
+        <translation>Veles-адрес, которым было подписано сообщение</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified FxTCoin address</source>
-        <translation>Проверить сообщение, чтобы убедиться, что оно было подписано указанным FxTCoin-адресом</translation>
+        <source>Verify the message to ensure it was signed with the specified Veles address</source>
+        <translation>Проверить сообщение, чтобы убедиться, что оно было подписано указанным Veles-адресом</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -3239,8 +3239,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>Невозможно запустить HTTP-сервер. Для получения более детальной информации необходимо обратиться к журналу отладки.</translation>
     </message>
     <message>
-        <source>FxTCoin Core</source>
-        <translation>FxTCoin Core</translation>
+        <source>Veles Core</source>
+        <translation>Veles Core</translation>
     </message>
     <message>
         <source>The %s developers</source>

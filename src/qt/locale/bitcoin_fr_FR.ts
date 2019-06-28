@@ -47,11 +47,11 @@
     </message>
     <message>
         <source>Choose the address to send coins to</source>
-        <translation>Choisissez une adresse où envoyer les fxtcoins</translation>
+        <translation>Choisissez une adresse où envoyer les Veles</translation>
     </message>
     <message>
         <source>Choose the address to receive coins with</source>
-        <translation>Choisissez une adresse où recevoir les fxtcoins</translation>
+        <translation>Choisissez une adresse où recevoir les Veles</translation>
     </message>
     <message>
         <source>C&amp;hoose</source>
@@ -66,12 +66,12 @@
         <translation>Adresses de réception</translation>
     </message>
     <message>
-        <source>These are your FxTCoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Ceci sont vos addresses FxTCoin pour envoyer vos paiements. Il faut toujours verifier les montants et l'addresse de reception avant de valider la transaction.</translation>
+        <source>These are your Veles addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Ceci sont vos addresses Veles pour envoyer vos paiements. Il faut toujours verifier les montants et l'addresse de reception avant de valider la transaction.</translation>
     </message>
     <message>
-        <source>These are your FxTCoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Ceci sont vos addresses FxTCoin pour recevoir vos paiements. Il est recommandé d'utiliser une nouvelle adresse de recepetion pour chaque transaction</translation>
+        <source>These are your Veles addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Ceci sont vos addresses Veles pour recevoir vos paiements. Il est recommandé d'utiliser une nouvelle adresse de recepetion pour chaque transaction</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -338,8 +338,8 @@
         <translation>Le proxy est &lt;b&gt;activé&lt;/b&gt; : %1</translation>
     </message>
     <message>
-        <source>Send coins to a FxTCoin address</source>
-        <translation>Envoyer des pièces à une adresse FxTCoin</translation>
+        <source>Send coins to a Veles address</source>
+        <translation>Envoyer des pièces à une adresse Veles</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -362,8 +362,8 @@
         <translation>&amp;Vérification du message</translation>
     </message>
     <message>
-        <source>FxTCoin</source>
-        <translation>FxTCoin</translation>
+        <source>Veles</source>
+        <translation>Veles</translation>
     </message>
     <message>
         <source>&amp;Send</source>
@@ -386,12 +386,12 @@
         <translation>Crypter les clé privées qui appartiennent votre portefeuille</translation>
     </message>
     <message>
-        <source>Sign messages with your FxTCoin addresses to prove you own them</source>
-        <translation>Signer vos messages avec vos adresses FxTCoin pour prouver que vous les détenez</translation>
+        <source>Sign messages with your Veles addresses to prove you own them</source>
+        <translation>Signer vos messages avec vos adresses Veles pour prouver que vous les détenez</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified FxTCoin addresses</source>
-        <translation>Vérifier les messages pour s'assurer qu'ils soient signés avec les adresses FxTCoin spécifiées</translation>
+        <source>Verify messages to ensure they were signed with specified Veles addresses</source>
+        <translation>Vérifier les messages pour s'assurer qu'ils soient signés avec les adresses Veles spécifiées</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -410,8 +410,8 @@
         <translation>Barre d'outils des onglets</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and fxtcoin: URIs)</source>
-        <translation>Demander des paiements (générer QR codes et fxtcoin: URIs)</translation>
+        <source>Request payments (generates QR codes and Veles: URIs)</source>
+        <translation>Demander des paiements (générer QR codes et Veles: URIs)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -422,16 +422,16 @@
         <translation>Afficher la liste des labels et adresses de réception utilisées</translation>
     </message>
     <message>
-        <source>Open a fxtcoin: URI or payment request</source>
-        <translation>Ouvrir un fxtcoin: URI ou demande de paiement</translation>
+        <source>Open a Veles: URI or payment request</source>
+        <translation>Ouvrir un Veles: URI ou demande de paiement</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation>&amp;Options de ligne de commande</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to FxTCoin network</source>
-        <translation><numerusform>%n connexion active avec le réseau FxTCoin</numerusform><numerusform>%n connexions actives avec le réseau FxTCoin</numerusform></translation>
+        <source>%n active connection(s) to Veles network</source>
+        <translation><numerusform>%n connexion active avec le réseau Veles</numerusform><numerusform>%n connexions actives avec le réseau Veles</numerusform></translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -470,8 +470,8 @@
         <translation>À jour</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible FxTCoin command-line options</source>
-        <translation>Afficher le %1 message d'aide pour récupérer une liste des options de ligne de commande FxTCoin</translation>
+        <source>Show the %1 help message to get a list with possible Veles command-line options</source>
+        <translation>Afficher le %1 message d'aide pour récupérer une liste des options de ligne de commande Veles</translation>
     </message>
     <message>
         <source>default wallet</source>
@@ -554,8 +554,8 @@
         <translation>Le porte-monnaie est &lt;b&gt;chiffré&lt;/b&gt; et est actuellement &lt;b&gt;verrouillé&lt;/b&gt;</translation>
     </message>
     <message>
-        <source>A fatal error occurred. FxTCoin can no longer continue safely and will quit.</source>
-        <translation>Une erreur fatale a eu lieu. FxTCoin ne peut plus continuer en toute sécurité et va s'éteindre</translation>
+        <source>A fatal error occurred. Veles can no longer continue safely and will quit.</source>
+        <translation>Une erreur fatale a eu lieu. Veles ne peut plus continuer en toute sécurité et va s'éteindre</translation>
     </message>
 </context>
 <context>
@@ -744,8 +744,8 @@
         <translation>Éditer l'adresse d'envoi</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid FxTCoin address.</source>
-        <translation>L'adresse entrée "%1" n'est pas une adresse FxTCoin valide.</translation>
+        <source>The entered address "%1" is not a valid Veles address.</source>
+        <translation>L'adresse entrée "%1" n'est pas une adresse Veles valide.</translation>
     </message>
     <message>
         <source>Could not unlock wallet.</source>
@@ -817,8 +817,8 @@
         <translation>Utiliser votre propre répertoire</translation>
     </message>
     <message>
-        <source>FxTCoin</source>
-        <translation>FxTCoin</translation>
+        <source>Veles</source>
+        <translation>Veles</translation>
     </message>
     <message>
         <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
@@ -910,8 +910,8 @@
         <translation>Expert</translation>
     </message>
     <message>
-        <source>Automatically open the FxTCoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Ouvrir le port du client FxTCoin automatiquement sur le routeur. Cela ne fonctionne que si votre routeur supporte l'UPnP et si la fonctionnalité est activée.</translation>
+        <source>Automatically open the Veles client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Ouvrir le port du client Veles automatiquement sur le routeur. Cela ne fonctionne que si votre routeur supporte l'UPnP et si la fonctionnalité est activée.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -1110,8 +1110,8 @@
         <translation>Montant</translation>
     </message>
     <message>
-        <source>Enter a FxTCoin address (e.g. %1)</source>
-        <translation>Entrer une adresse FxTCoin (e.g. %1)</translation>
+        <source>Enter a Veles address (e.g. %1)</source>
+        <translation>Entrer une adresse Veles (e.g. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1671,8 +1671,8 @@
         <translation>Demande de paiement expirée.</translation>
     </message>
     <message>
-        <source>Warning: Invalid FxTCoin address</source>
-        <translation>Attention: Adresse FxTCoin Invalide</translation>
+        <source>Warning: Invalid Veles address</source>
+        <translation>Attention: Adresse Veles Invalide</translation>
     </message>
     <message>
         <source>(no label)</source>
@@ -2235,8 +2235,8 @@
         <translation>Impossible de démarrer le serveur HTTP. Voir le journal de débogage pour plus de détails.</translation>
     </message>
     <message>
-        <source>FxTCoin Core</source>
-        <translation>FxTCoin Core</translation>
+        <source>Veles Core</source>
+        <translation>Veles Core</translation>
     </message>
     <message>
         <source>Importing...</source>

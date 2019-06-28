@@ -66,11 +66,11 @@
         <translation>آدرس‌های گیرنده</translation>
     </message>
     <message>
-        <source>These are your FxTCoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your Veles addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>اینها آدرس‌های شما برای ارسال وجوه هستند. همیشه قبل از ارسال، مقدار و آدرس گیرنده را بررسی کنید.</translation>
     </message>
     <message>
-        <source>These are your FxTCoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <source>These are your Veles addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
         <translation>اینها آدرس‌های بیتکوین شما برای دریافت وجوه هستند. توصیه می‌شود برای هر دریافت از یک آدرس جدید استفاده کنید.</translation>
     </message>
     <message>
@@ -334,7 +334,7 @@
         <translation>فهرست‌بندی نمایه بلاک‌ها…</translation>
     </message>
     <message>
-        <source>Send coins to a FxTCoin address</source>
+        <source>Send coins to a Veles address</source>
         <translation>ارسال کوین به آدرس بیت کوین</translation>
     </message>
     <message>
@@ -358,7 +358,7 @@
         <translation>تایید پیام</translation>
     </message>
     <message>
-        <source>FxTCoin</source>
+        <source>Veles</source>
         <translation>بیت کوین</translation>
     </message>
     <message>
@@ -382,11 +382,11 @@
         <translation>رمزنگاری کلیدهای شخصی متعلق به کیف‌پول</translation>
     </message>
     <message>
-        <source>Sign messages with your FxTCoin addresses to prove you own them</source>
+        <source>Sign messages with your Veles addresses to prove you own them</source>
         <translation>پیام‌ها را با آدرس بیت‌کوین خود امضا کنید تا مالکیت آن‌ها را اثبات کنید</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified FxTCoin addresses</source>
+        <source>Verify messages to ensure they were signed with specified Veles addresses</source>
         <translation>پیام‌ها را تائید کنید تا از امضاشدن آن‌ها با آدرس بیت‌کوین مطمئن شوید</translation>
     </message>
     <message>
@@ -406,7 +406,7 @@
         <translation>نوار ابزار</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and fxtcoin: URIs)</source>
+        <source>Request payments (generates QR codes and Veles: URIs)</source>
         <translation>درخواست پرداخت (ساخت کد QR و بیت‌کوین: URIs)</translation>
     </message>
     <message>
@@ -418,7 +418,7 @@
         <translation>نمایش لیست آدرس‌ها و لیبل‌های دریافتی استفاده شده</translation>
     </message>
     <message>
-        <source>Open a fxtcoin: URI or payment request</source>
+        <source>Open a Veles: URI or payment request</source>
         <translation>بازکردن بیت‌کوین: آدرس یا درخواست پرداخت</translation>
     </message>
     <message>
@@ -426,7 +426,7 @@
         <translation>گزینه های خط فرمان</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to FxTCoin network</source>
+        <source>%n active connection(s) to Veles network</source>
         <translation><numerusform>%n ارتباط فعال به شبکه بیت‌کوین</numerusform><numerusform>%n ارتباط فعال به شبکه بیت‌کوین</numerusform></translation>
     </message>
     <message>
@@ -538,7 +538,7 @@
         <translation>wallet رمزگذاری شد و در حال حاضر قفل است</translation>
     </message>
     <message>
-        <source>A fatal error occurred. FxTCoin can no longer continue safely and will quit.</source>
+        <source>A fatal error occurred. Veles can no longer continue safely and will quit.</source>
         <translation>خطای بحرانی رخ داده است. بیتکوین دیگر به صورت ایمن قادر به ادامه دادن نمی‌باشد و خارج خواهد شد.</translation>
     </message>
 </context>
@@ -696,7 +696,7 @@
         <translation>ویرایش آدرس ارسالی</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid FxTCoin address.</source>
+        <source>The entered address "%1" is not a valid Veles address.</source>
         <translation>آدرس وارد شده "%1" آدرس معتبر بیت کوین نیست.</translation>
     </message>
     <message>
@@ -753,7 +753,7 @@
         <translation>استفاده کردن از پوشه داده مخصوص:</translation>
     </message>
     <message>
-        <source>FxTCoin</source>
+        <source>Veles</source>
         <translation>بیت کوین</translation>
     </message>
     <message>
@@ -899,7 +899,7 @@
         <translation>شبکه Tor</translation>
     </message>
     <message>
-        <source>Connect to the FxTCoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <source>Connect to the Veles network through a separate SOCKS5 proxy for Tor hidden services.</source>
         <translation>اتصال به شبکه بیت کوین با استفاده از پراکسی SOCKS5 برای استفاده از سرویس مخفی تور</translation>
     </message>
     <message>
@@ -978,8 +978,8 @@
         <translation>فرم</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the FxTCoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>اطلاعات نمایش داده شده ممکن است روزآمد نباشد. wallet شما به صورت خودکار بعد از برقراری اتصال با شبکه fxtcoin به روز می شود اما این فرایند هنوز تکمیل نشده است.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Veles network after a connection is established, but this process has not completed yet.</source>
+        <translation>اطلاعات نمایش داده شده ممکن است روزآمد نباشد. wallet شما به صورت خودکار بعد از برقراری اتصال با شبکه Veles به روز می شود اما این فرایند هنوز تکمیل نشده است.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1692,7 +1692,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>درخواست پرداخت منقضی شد یا تاریخ آن گذشت.</translation>
     </message>
     <message>
-        <source>Warning: Invalid FxTCoin address</source>
+        <source>Warning: Invalid Veles address</source>
         <translation>هشدار: آدرس بیت کوین نامعتبر</translation>
     </message>
     <message>
@@ -1735,7 +1735,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>این پرداحت,عادی هست.</translation>
     </message>
     <message>
-        <source>The FxTCoin address to send the payment to</source>
+        <source>The Veles address to send the payment to</source>
         <translation>آدرس بیت کوین برای ارسال پرداحت به آن</translation>
     </message>
     <message>
@@ -2260,7 +2260,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
 <context>
     <name>bitcoin-core</name>
     <message>
-        <source>FxTCoin Core</source>
+        <source>Veles Core</source>
         <translation>هسته بیت کوین</translation>
     </message>
     <message>

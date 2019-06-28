@@ -1554,7 +1554,7 @@ static void ThreadMapPort()
             }
         }
 
-        std::string strDesc = "FxTC " + FormatFullVersion();
+        std::string strDesc = "Veles " + FormatFullVersion();
 
         do {
 #ifndef UPNPDISCOVER_SUCCESS

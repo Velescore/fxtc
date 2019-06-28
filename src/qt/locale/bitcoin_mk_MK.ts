@@ -126,7 +126,7 @@
         <translation>Повторно индексирање на блокови од дискот...</translation>
     </message>
     <message>
-        <source>Send coins to a FxTCoin address</source>
+        <source>Send coins to a Veles address</source>
         <translation>Испрати биткоини на Биткоин адреса</translation>
     </message>
     <message>
@@ -134,7 +134,7 @@
         <translation>&amp;Потврди порака...</translation>
     </message>
     <message>
-        <source>FxTCoin</source>
+        <source>Veles</source>
         <translation>Биткоин</translation>
     </message>
     <message>
@@ -287,7 +287,7 @@
 <context>
     <name>Intro</name>
     <message>
-        <source>FxTCoin</source>
+        <source>Veles</source>
         <translation>Биткоин</translation>
     </message>
     <message>
@@ -577,8 +577,8 @@
 <context>
     <name>bitcoin-core</name>
     <message>
-        <source>FxTCoin Core</source>
-        <translation>FxTCоин Core</translation>
+        <source>Veles Core</source>
+        <translation>Veles Core</translation>
     </message>
     <message>
         <source>Warning</source>

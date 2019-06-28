@@ -18,6 +18,7 @@ HEADER_ID_PREFIX_PIVX="PIVX_"
 HEADER_ID_PREFIX_RNRT="RNRT_"
 HEADER_ID_PREFIX_ZCOIN="ZCOIN_"
 HEADER_ID_PREFIX_FXTC="FXTC_"
+HEADER_ID_PREFIX_VELES="VELES_"
 HEADER_ID_SUFFIX="_H"
 ## FXTC END
 
@@ -41,6 +42,7 @@ do
     HEADER_ID_RNRT="${HEADER_ID_PREFIX_RNRT}${HEADER_ID_BASE}${HEADER_ID_SUFFIX}"
     HEADER_ID_ZCOIN="${HEADER_ID_PREFIX_ZCOIN}${HEADER_ID_BASE}${HEADER_ID_SUFFIX}"
     HEADER_ID_FXTC="${HEADER_ID_PREFIX_FXTC}${HEADER_ID_BASE}${HEADER_ID_SUFFIX}"
+    HEADER_ID_VELES="${HEADER_ID_PREFIX_VELES}${HEADER_ID_BASE}${HEADER_ID_SUFFIX}"
     if [[ $(grep -cE "^#(ifndef|define) ${HEADER_ID}" "${HEADER_FILE}") != 2 ]] &&
        [[ $(grep -cE "^#(ifndef|define) ${HEADER_ID_LITECOIN}" "${HEADER_FILE}") != 2 ]] &&
        [[ $(grep -cE "^#(ifndef|define) ${HEADER_ID_TALKCOIN}" "${HEADER_FILE}") != 2 ]] &&
@@ -49,7 +51,8 @@ do
        [[ $(grep -cE "^#(ifndef|define) ${HEADER_ID_PIVX}" "${HEADER_FILE}") != 2 ]] &&
        [[ $(grep -cE "^#(ifndef|define) ${HEADER_ID_RNRT}" "${HEADER_FILE}") != 2 ]] &&
        [[ $(grep -cE "^#(ifndef|define) ${HEADER_ID_ZCOIN}" "${HEADER_FILE}") != 2 ]] &&
-       [[ $(grep -cE "^#(ifndef|define) ${HEADER_ID_FXTC}" "${HEADER_FILE}") != 2 ]]; then
+       [[ $(grep -cE "^#(ifndef|define) ${HEADER_ID_FXTC}" "${HEADER_FILE}") != 2 ]] &&
+       [[ $(grep -cE "^#(ifndef|define) ${HEADER_ID_VELES}" "${HEADER_FILE}") != 2 ]]; then
     ## FXTC END
         echo "${HEADER_FILE} seems to be missing the expected include guard:"
         echo "  #ifndef ${HEADER_ID}"

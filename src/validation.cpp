@@ -56,7 +56,7 @@
 #include <boost/thread.hpp>
 
 #if defined(NDEBUG)
-# error "FxTC cannot be compiled without assertions."
+# error "Veles cannot be compiled without assertions."
 #endif
 
 #define MICRO 0.000001
@@ -274,7 +274,7 @@ map<uint256, int64_t> mapRejectedBlocks GUARDED_BY(cs_main);
 /** Constant stuff for coinbase transactions we create: */
 CScript COINBASE_FLAGS;
 
-const std::string strMessageMagic = "FxTC Signed Message:\n";
+const std::string strMessageMagic = "Veles Signed Message:\n";
 
 // Internal stuff
 namespace {
@@ -1801,7 +1801,7 @@ static bool WriteUndoDataForBlock(const CBlockUndo& blockundo, CValidationState&
 static CCheckQueue<CScriptCheck> scriptcheckqueue(128);
 
 void ThreadScriptCheck() {
-    RenameThread("fxtc-scriptch");
+    RenameThread("veles-scriptch");
     scriptcheckqueue.Thread();
 }
 

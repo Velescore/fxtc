@@ -98,9 +98,9 @@ static int AppInitRawTx(int argc, char* argv[])
 
     if (argc < 2 || HelpRequested(gArgs)) {
         // First part of help message is specific to this utility
-        std::string strUsage = PACKAGE_NAME " fxtc-tx utility version " + FormatFullVersion() + "\n\n" +
-            "Usage:  fxtc-tx [options] <hex-tx> [commands]  Update hex-encoded bitcoin transaction\n" +
-            "or:     fxtc-tx [options] -create [commands]   Create hex-encoded bitcoin transaction\n" +
+        std::string strUsage = PACKAGE_NAME " veles-tx utility version " + FormatFullVersion() + "\n\n" +
+            "Usage:  veles-tx [options] <hex-tx> [commands]  Update hex-encoded bitcoin transaction\n" +
+            "or:     veles-tx [options] -create [commands]   Create hex-encoded bitcoin transaction\n" +
             "\n";
         strUsage += gArgs.GetHelpMessage();
 

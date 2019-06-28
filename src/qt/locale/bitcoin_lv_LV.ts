@@ -43,11 +43,11 @@
     </message>
     <message>
         <source>Choose the address to send coins to</source>
-        <translation>Izvēlies adresi uz kuru sūtīt fxtcoins</translation>
+        <translation>Izvēlies adresi uz kuru sūtīt Veles</translation>
     </message>
     <message>
         <source>Choose the address to receive coins with</source>
-        <translation>Izvēlies adresi ar kuru saņemt fxtcoins</translation>
+        <translation>Izvēlies adresi ar kuru saņemt Veles</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -202,8 +202,8 @@
         <translation>Bloku reindeksēšana no diska...</translation>
     </message>
     <message>
-        <source>Send coins to a FxTCoin address</source>
-        <translation>Nosūtīt bitkoinus uz FxTCoin adresi</translation>
+        <source>Send coins to a Veles address</source>
+        <translation>Nosūtīt bitkoinus uz Veles adresi</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -226,8 +226,8 @@
         <translation>&amp;Pārbaudīt ziņojumu...</translation>
     </message>
     <message>
-        <source>FxTCoin</source>
-        <translation>FxTCoin</translation>
+        <source>Veles</source>
+        <translation>Veles</translation>
     </message>
     <message>
         <source>&amp;Send</source>
@@ -250,12 +250,12 @@
         <translation>Šifrēt privātās atslēgas kuras pieder tavam maciņam</translation>
     </message>
     <message>
-        <source>Sign messages with your FxTCoin addresses to prove you own them</source>
-        <translation>Parakstīt ziņojumus ar savām FxTCoin adresēm lai pierādītu ka tās pieder tev</translation>
+        <source>Sign messages with your Veles addresses to prove you own them</source>
+        <translation>Parakstīt ziņojumus ar savām Veles adresēm lai pierādītu ka tās pieder tev</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified FxTCoin addresses</source>
-        <translation>Pārbaudīt ziņojumus lai pārliecinātos, ka tie tika parakstīti ar norādītajām FxTCoin adresēm</translation>
+        <source>Verify messages to ensure they were signed with specified Veles addresses</source>
+        <translation>Pārbaudīt ziņojumus lai pārliecinātos, ka tie tika parakstīti ar norādītajām Veles adresēm</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -274,12 +274,12 @@
         <translation>Ciļņu rīkjosla</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and fxtcoin: URIs)</source>
-        <translation>Pieprasīt maksājumus (izveido QR kodu un fxtcoin: URIs)</translation>
+        <source>Request payments (generates QR codes and Veles: URIs)</source>
+        <translation>Pieprasīt maksājumus (izveido QR kodu un Veles: URIs)</translation>
     </message>
     <message>
-        <source>Open a fxtcoin: URI or payment request</source>
-        <translation>Atvērt fxtcoin URI vai maksājuma pieprasījumu</translation>
+        <source>Open a Veles: URI or payment request</source>
+        <translation>Atvērt Veles URI vai maksājuma pieprasījumu</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -457,8 +457,8 @@
         <translation>Izmantot pielāgotu datu mapi:</translation>
     </message>
     <message>
-        <source>FxTCoin</source>
-        <translation>FxTCoin</translation>
+        <source>Veles</source>
+        <translation>Veles</translation>
     </message>
     <message>
         <source>Error</source>
@@ -543,15 +543,15 @@
     </message>
     <message>
         <source>Enable coin &amp;control features</source>
-        <translation>Ieslēgt fxtcoin &amp;kontroles funkcijas</translation>
+        <translation>Ieslēgt Veles &amp;kontroles funkcijas</translation>
     </message>
     <message>
         <source>&amp;Spend unconfirmed change</source>
         <translation>&amp;Tērēt neapstiprinātu atlikumu</translation>
     </message>
     <message>
-        <source>Automatically open the FxTCoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Uz rūtera automātiski atvērt FxTCoin klienta portu. Tas strādā tikai tad, ja rūteris atbalsta UPnP un tas ir ieslēgts.</translation>
+        <source>Automatically open the Veles client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Uz rūtera automātiski atvērt Veles klienta portu. Tas strādā tikai tad, ja rūteris atbalsta UPnP un tas ir ieslēgts.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -603,7 +603,7 @@
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
-        <translation>Vai rādīt FxTCoin kontroles funkcijas vai nē.</translation>
+        <translation>Vai rādīt Veles kontroles funkcijas vai nē.</translation>
     </message>
     <message>
         <source>&amp;OK</source>
@@ -641,8 +641,8 @@
         <translation>Forma</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the FxTCoin network after a connection is established, but this process has not completed yet.</source>
-        <translation>Attēlotā informācija var būt novecojusi. Jūsu maciņš pēc savienojuma izveides automātiski sinhronizējas ar FxTCoin tīklu, taču šis process vēl nav beidzies.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Veles network after a connection is established, but this process has not completed yet.</source>
+        <translation>Attēlotā informācija var būt novecojusi. Jūsu maciņš pēc savienojuma izveides automātiski sinhronizējas ar Veles tīklu, taču šis process vēl nav beidzies.</translation>
     </message>
     <message>
         <source>Available:</source>
@@ -908,7 +908,7 @@
     </message>
     <message>
         <source>Coin Control Features</source>
-        <translation>FxTCoin Kontroles Funkcijas</translation>
+        <translation>Veles Kontroles Funkcijas</translation>
     </message>
     <message>
         <source>Inputs...</source>
@@ -1091,8 +1091,8 @@
         <translation>Kopēt parakstu uz sistēmas starpliktuvi</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this FxTCoin address</source>
-        <translation>Parakstīt ziņojumu lai pierādītu, ka esi šīs FxTCoin adreses īpašnieks.</translation>
+        <source>Sign the message to prove you own this Veles address</source>
+        <translation>Parakstīt ziņojumu lai pierādītu, ka esi šīs Veles adreses īpašnieks.</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -1187,8 +1187,8 @@
 <context>
     <name>bitcoin-core</name>
     <message>
-        <source>FxTCoin Core</source>
-        <translation>FxTCoin Core</translation>
+        <source>Veles Core</source>
+        <translation>Veles Core</translation>
     </message>
     <message>
         <source>Error loading block database</source>

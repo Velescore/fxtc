@@ -47,11 +47,11 @@ static const int MAX_URI_LENGTH = 255;
 /* Number of frames in spinner animation */
 #define SPINNER_FRAMES 36
 
-#define QAPP_ORG_NAME "FxTC"
+#define QAPP_ORG_NAME "Veles"
 #define QAPP_ORG_DOMAIN "fixedtradecoin.org"
-#define QAPP_APP_NAME_DEFAULT "FxTCoin-Qt"
-#define QAPP_APP_NAME_TESTNET "FxTCoin-Qt-testnet"
-#define QAPP_APP_NAME_REGTEST "FxTCoin-Qt-regtest"
+#define QAPP_APP_NAME_DEFAULT "Veles-Qt"
+#define QAPP_APP_NAME_TESTNET "Veles-Qt-testnet"
+#define QAPP_APP_NAME_REGTEST "Veles-Qt-regtest"
 
 /* One gigabyte (GB) in bytes */
 static constexpr uint64_t GB_BYTES{1000000000};
