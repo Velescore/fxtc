@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FXTC_QT_ADDRESSBOOKPAGE_H
-#define FXTC_QT_ADDRESSBOOKPAGE_H
+#ifndef BITCOIN_QT_ADDRESSBOOKPAGE_H
+#define BITCOIN_QT_ADDRESSBOOKPAGE_H
 
 #include <QDialog>
 
@@ -38,7 +38,7 @@ public:
         ForEditing  /**< Open address book for editing */
     };
 
-    explicit AddressBookPage(const PlatformStyle *platformStyle, Mode mode, Tabs tab, QWidget *parent = 0);
+    explicit AddressBookPage(const PlatformStyle *platformStyle, Mode mode, Tabs tab, QWidget *parent = nullptr);
     ~AddressBookPage();
 
     void setModel(AddressTableModel *model);
@@ -83,4 +83,4 @@ Q_SIGNALS:
     void sendCoins(QString addr);
 };
 
-#endif // FXTC_QT_ADDRESSBOOKPAGE_H
+#endif // BITCOIN_QT_ADDRESSBOOKPAGE_H

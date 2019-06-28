@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 #
 # Copyright (c) 2018 The Bitcoin Core developers
+# Copyright (c) 2018-2019 FXTC developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 #
@@ -47,17 +48,13 @@ fi
 
 EXPECTED_BOOST_INCLUDES=(
     boost/algorithm/string.hpp
-    boost/algorithm/string/case_conv.hpp
     boost/algorithm/string/classification.hpp
     boost/algorithm/string/replace.hpp
     boost/algorithm/string/split.hpp
-    boost/bind.hpp
     boost/chrono/chrono.hpp
     boost/date_time/posix_time/posix_time.hpp
     boost/filesystem.hpp
-    boost/filesystem/detail/utf8_codecvt_facet.hpp
     boost/filesystem/fstream.hpp
-    boost/interprocess/sync/file_lock.hpp
     boost/multi_index/hashed_index.hpp
     boost/multi_index/ordered_index.hpp
     boost/multi_index/sequenced_index.hpp
@@ -65,7 +62,6 @@ EXPECTED_BOOST_INCLUDES=(
     boost/optional.hpp
     boost/preprocessor/cat.hpp
     boost/preprocessor/stringize.hpp
-    boost/scoped_array.hpp
     boost/signals2/connection.hpp
     boost/signals2/last_value.hpp
     boost/signals2/signal.hpp
@@ -83,6 +79,7 @@ EXPECTED_BOOST_INCLUDES=(
     boost/filesystem/path.hpp
     boost/lexical_cast.hpp
     boost/shared_ptr.hpp
+    #
 )
 
 for BOOST_INCLUDE in $(git grep '^#include <boost/' -- "*.cpp" "*.h" | cut -f2 -d: | cut -f2 -d'<' | cut -f1 -d'>' | sort -u); do

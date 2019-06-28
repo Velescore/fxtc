@@ -130,12 +130,8 @@
         <translation>Kõvakettal olevate plokkide reindekseerimine...</translation>
     </message>
     <message>
-        <source>Veles</source>
-        <translation>Veles</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>Rahakott</translation>
+        <source>FxTCoin</source>
+        <translation>FxTCoin</translation>
     </message>
     <message>
         <source>&amp;Send</source>
@@ -265,8 +261,8 @@
         <translation>Tere tulemast</translation>
     </message>
     <message>
-        <source>Veles</source>
-        <translation>Veles</translation>
+        <source>FxTCoin</source>
+        <translation>FxTCoin</translation>
     </message>
     <message>
         <source>Error</source>
@@ -284,10 +280,6 @@
     <message>
         <source>Options</source>
         <translation>Valikud</translation>
-    </message>
-    <message>
-        <source>MB</source>
-        <translation>MB</translation>
     </message>
     <message>
         <source>&amp;Network</source>
@@ -737,6 +729,9 @@
     <name>UnitDisplayStatusBarControl</name>
     </context>
 <context>
+    <name>WalletController</name>
+    </context>
+<context>
     <name>WalletFrame</name>
     </context>
 <context>
@@ -760,8 +755,8 @@
 <context>
     <name>bitcoin-core</name>
     <message>
-        <source>Veles Core</source>
-        <translation>Veles Core</translation>
+        <source>FxTCoin Core</source>
+        <translation>FxTCoin Core</translation>
     </message>
     <message>
         <source>Information</source>

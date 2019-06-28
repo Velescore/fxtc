@@ -11,13 +11,13 @@
   </array>
 
   <key>CFBundleIconFile</key>
-  <string>veles.icns</string>
+  <string>fxtc.icns</string>
 
   <key>CFBundlePackageType</key>
   <string>APPL</string>
 
   <key>CFBundleGetInfoString</key>
-  <string>@CLIENT_VERSION_MAJOR@.@CLIENT_VERSION_MINOR@.@CLIENT_VERSION_REVISION@, Copyright © 2009-@COPYRIGHT_YEAR@ @COPYRIGHT_HOLDERS_FINAL@</string>
+  <string>@CLIENT_VERSION_MAJOR@.@CLIENT_VERSION_MINOR@.@CLIENT_VERSION_REVISION@.@CLIENT_VERSION_BUILD@, Copyright © 2009-@COPYRIGHT_YEAR@ @COPYRIGHT_HOLDERS_FINAL@</string>
 
   <key>CFBundleShortVersionString</key>
   <string>@CLIENT_VERSION_MAJOR@.@CLIENT_VERSION_MINOR@.@CLIENT_VERSION_REVISION@</string>
@@ -29,16 +29,16 @@
   <string>????</string>
 
   <key>CFBundleExecutable</key>
-  <string>Veles-Qt</string>
+  <string>FxTC-Qt</string>
   
   <key>CFBundleName</key>
-  <string>Veles-Qt</string>
+  <string>FxTC-Qt</string>
 
   <key>LSHasLocalizedDisplayName</key>
   <true/>
 
   <key>CFBundleIdentifier</key>
-  <string>org.Velesfoundation.Veles-Qt</string>
+  <string>org.fxtcoinfoundation.FxTC-Qt</string>
 
   <key>CFBundleURLTypes</key>
   <array>
@@ -46,10 +46,10 @@
       <key>CFBundleTypeRole</key>
       <string>Editor</string>
       <key>CFBundleURLName</key>
-      <string>org.Veles.VelesPayment</string>
+      <string>org.fxtcoin.FxTCoinPayment</string>
       <key>CFBundleURLSchemes</key>
       <array>
-        <string>Veles</string>
+        <string>fxtcoin</string>
       </array>
     </dict>
   </array>
@@ -58,9 +58,9 @@
   <array>
     <dict>
       <key>UTTypeIdentifier</key>
-      <string>org.Veles.paymentrequest</string>
+      <string>org.fxtcoin.paymentrequest</string>
       <key>UTTypeDescription</key>
-      <string>Veles payment request</string>
+      <string>FxTCoin payment request</string>
       <key>UTTypeConformsTo</key>
       <array>
         <string>public.data</string>
@@ -68,10 +68,10 @@
       <key>UTTypeTagSpecification</key>
       <dict>
         <key>public.mime-type</key>
-        <string>application/x-Veles-payment-request</string>
+        <string>application/x-fxtcoin-payment-request</string>
         <key>public.filename-extension</key>
         <array>
-          <string>Velespaymentrequest</string>
+          <string>fxtcoinpaymentrequest</string>
         </array>
       </dict>
     </dict>
@@ -84,7 +84,7 @@
       <string>Editor</string>
       <key>LSItemContentTypes</key>
       <array>
-        <string>org.Veles.paymentrequest</string>
+        <string>org.fxtcoin.paymentrequest</string>
       </array>
       <key>LSHandlerRank</key>
       <string>Owner</string>
@@ -95,9 +95,6 @@
     <string>NSApplication</string>
 
   <key>NSHighResolutionCapable</key>
-    <string>True</string>
-
-  <key>LSAppNapIsDisabled</key>
     <string>True</string>
 
   <key>NSRequiresAquaSystemAppearance</key>

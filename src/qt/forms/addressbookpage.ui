@@ -39,8 +39,8 @@
      <property name="tabKeyNavigation">
       <bool>false</bool>
      </property>
-     <property name="alternatingRowColors"> <!-- Turning off color rows -->
-      <bool>false</bool>
+     <property name="alternatingRowColors">
+      <bool>true</bool>
      </property>
      <property name="selectionMode">
       <enum>QAbstractItemView::SingleSelection</enum>

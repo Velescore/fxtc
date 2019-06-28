@@ -1,4 +1,5 @@
 // Copyright (c) 2012-2018 The Bitcoin Core developers
+// Copyright (c) 2019 FXTC developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -7,8 +8,8 @@
 #include <key_io.h>
 #include <script/script.h>
 #include <uint256.h>
-#include <util.h>
-#include <utilstrencodings.h>
+#include <util/system.h>
+#include <util/strencodings.h>
 #include <test/test_bitcoin.h>
 
 #include <string>
@@ -16,13 +17,13 @@
 
 #include <boost/test/unit_test.hpp>
 
-static const std::string strSecret1 = "XderGmMnzJGtq8V3FidvoXVsBrFaTSzKtUsiVLzNMtsBUdKVfETx";
-static const std::string strSecret2 = "Xj6eHKbK4ZKAjP42iFYs7FVbjNy2m9C9WqpWCLCwzxHRQgbzwUSG";
-static const std::string strSecret1C = "7wXKsF8RvJxiCMj9fgLhHS31Vjst5dhdTAVFqZd7CXnMVv6dEy6";
-static const std::string strSecret2C = "71uGU9vvDNMY3UsrJubh7TDxwMtEPASTxCnFcNttwbSj1N9uoR";
-static const std::string addr1 = "fbucQ8CFQXCZMNY8dP6LMVV3eStqhNP6W6";
-static const std::string addr2 = "fRY2ZcHiTLYkgTQkfGXzLFqRUHvm5FYNZC";
-static const std::string addr1C = "fdN9NfnaXDaijZYTdRXrP7j9Zep4fU6s5Z";
+static const std::string strSecret1 = "7wXKsF8RvJxiCMj9fgLhHS31Vjst5dhdTAVFqZd7CXnMVv6dEy6";
+static const std::string strSecret2 = "7xksb4Jk4XRxg4BezqA2qYNtNPCLRxKqbraRHccnYFnrwQTC1A9";
+static const std::string strSecret1C = "XderGmMnzJGtq8V3FidvoXVsBrFaTSzKtUsiVLzNMtsBUdKVfETx";
+static const std::string strSecret2C = "Xj6eHKbK4ZKAjP42iFYs7FVbjNy2m9C9WqpWCLCwzxHRQgbzwUSG";
+static const std::string addr1 = "fdN9NfnaXDaijZYTdRXrP7j9Zep4fU6s5Z";
+static const std::string addr2 = "fUCGcYPcok6ngoZ7W1LcePVnqBhZpkxFU1";
+static const std::string addr1C = "fbucQ8CFQXCZMNY8dP6LMVV3eStqhNP6W6";
 static const std::string addr2C = "fRY2ZcHiTLYkgTQkfGXzLFqRUHvm5FYNZC";
 
 static const std::string strAddressBad = "1HV9Lc3sNHZxwj4Zk6fB38tEmBryq2cBiF";
@@ -32,7 +33,7 @@ BOOST_FIXTURE_TEST_SUITE(key_tests, BasicTestingSetup)
 
 BOOST_AUTO_TEST_CASE(key_test1)
 {
-/*    CKey key1  = DecodeSecret(strSecret1);
+    CKey key1  = DecodeSecret(strSecret1);
     BOOST_CHECK(key1.IsValid() && !key1.IsCompressed());
     CKey key2  = DecodeSecret(strSecret2);
     BOOST_CHECK(key2.IsValid() && !key2.IsCompressed());
@@ -149,12 +150,12 @@ BOOST_AUTO_TEST_CASE(key_test1)
     BOOST_CHECK(key2.SignCompact(hashMsg, detsig));
     BOOST_CHECK(key2C.SignCompact(hashMsg, detsigc));
     BOOST_CHECK(detsig == ParseHex("1c52d8a32079c11e79db95af63bb9600c5b04f21a9ca33dc129c2bfa8ac9dc1cd561d8ae5e0f6c1a16bde3719c64c2fd70e404b6428ab9a69566962e8771b5944d"));
-    BOOST_CHECK(detsigc == ParseHex("2052d8a32079c11e79db95af63bb9600c5b04f21a9ca33dc129c2bfa8ac9dc1cd561d8ae5e0f6c1a16bde3719c64c2fd70e404b6428ab9a69566962e8771b5944d"));*/
+    BOOST_CHECK(detsigc == ParseHex("2052d8a32079c11e79db95af63bb9600c5b04f21a9ca33dc129c2bfa8ac9dc1cd561d8ae5e0f6c1a16bde3719c64c2fd70e404b6428ab9a69566962e8771b5944d"));
 }
 
 BOOST_AUTO_TEST_CASE(key_signature_tests)
 {
-/*    // When entropy is specified, we should see at least one high R signature within 20 signatures
+    // When entropy is specified, we should see at least one high R signature within 20 signatures
     CKey key = DecodeSecret(strSecret1);
     std::string msg = "A message to be signed";
     uint256 msg_hash = Hash(msg.begin(), msg.end());
@@ -163,7 +164,7 @@ BOOST_AUTO_TEST_CASE(key_signature_tests)
 
     for (int i = 1; i <=20; ++i) {
         sig.clear();
-        key.Sign(msg_hash, sig, false, i);
+        BOOST_CHECK(key.Sign(msg_hash, sig, false, i));
         found = sig[3] == 0x21 && sig[4] == 0x00;
         if (found) {
             break;
@@ -179,13 +180,13 @@ BOOST_AUTO_TEST_CASE(key_signature_tests)
         sig.clear();
         std::string msg = "A message to be signed" + std::to_string(i);
         msg_hash = Hash(msg.begin(), msg.end());
-        key.Sign(msg_hash, sig);
+        BOOST_CHECK(key.Sign(msg_hash, sig));
         found = sig[3] == 0x20;
         BOOST_CHECK(sig.size() <= 70);
         found_small |= sig.size() < 70;
     }
     BOOST_CHECK(found);
-    BOOST_CHECK(found_small);*/
+    BOOST_CHECK(found_small);
 }
 
 BOOST_AUTO_TEST_SUITE_END()

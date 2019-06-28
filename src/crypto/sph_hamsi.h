@@ -1,3 +1,4 @@
+// Copyright (c) 2018-2019 FXTC developers
 /* $Id: sph_hamsi.h 216 2010-06-08 09:46:57Z tp $ */
 /**
  * Hamsi interface. This code implements Hamsi with the recommended
@@ -32,8 +33,8 @@
  * @author   Thomas Pornin <thomas.pornin@cryptolog.com>
  */
 
-#ifndef FXTC_CRYPTO_SPH_HAMSI_H
-#define FXTC_CRYPTO_SPH_HAMSI_H
+#ifndef RNRT_CRYPTO_SPH_HAMSI_H
+#define RNRT_CRYPTO_SPH_HAMSI_H
 
 #include <stddef.h>
 #include <crypto/sph_types.h>
@@ -318,4 +319,4 @@ void sph_hamsi512_addbits_and_close(
 }
 #endif
 
-#endif // FXTC_CRYPTO_SPH_HAMSI_H
+#endif // RNRT_CRYPTO_SPH_HAMSI_H

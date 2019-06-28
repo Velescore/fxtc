@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FXTC_QT_OPTIONSDIALOG_H
-#define FXTC_QT_OPTIONSDIALOG_H
+#ifndef BITCOIN_QT_OPTIONSDIALOG_H
+#define BITCOIN_QT_OPTIONSDIALOG_H
 
 #include <QDialog>
 #include <QValidator>
@@ -40,8 +40,14 @@ public:
     explicit OptionsDialog(QWidget *parent, bool enableWallet);
     ~OptionsDialog();
 
+    enum Tab {
+        TAB_MAIN,
+        TAB_NETWORK,
+    };
+
     void setModel(OptionsModel *model);
     void setMapper();
+    void setCurrentTab(OptionsDialog::Tab tab);
 
 private Q_SLOTS:
     /* set OK button state (enabled / disabled) */
@@ -69,4 +75,4 @@ private:
     QDataWidgetMapper *mapper;
 };
 
-#endif // FXTC_QT_OPTIONSDIALOG_H
+#endif // BITCOIN_QT_OPTIONSDIALOG_H

@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FXTC_QT_OVERVIEWPAGE_H
-#define FXTC_QT_OVERVIEWPAGE_H
+#ifndef BITCOIN_QT_OVERVIEWPAGE_H
+#define BITCOIN_QT_OVERVIEWPAGE_H
 
 #include <interfaces/wallet.h>
 
@@ -30,7 +30,7 @@ class OverviewPage : public QWidget
     Q_OBJECT
 
 public:
-    explicit OverviewPage(const PlatformStyle *platformStyle, QWidget *parent = 0);
+    explicit OverviewPage(const PlatformStyle *platformStyle, QWidget *parent = nullptr);
     ~OverviewPage();
 
     void setClientModel(ClientModel *clientModel);
@@ -61,4 +61,4 @@ private Q_SLOTS:
     void handleOutOfSyncWarningClicks();
 };
 
-#endif // FXTC_QT_OVERVIEWPAGE_H
+#endif // BITCOIN_QT_OVERVIEWPAGE_H

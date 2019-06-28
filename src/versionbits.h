@@ -4,8 +4,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FXTC_VERSIONBITS_H
-#define FXTC_VERSIONBITS_H
+#ifndef BITCOIN_VERSIONBITS_H
+#define BITCOIN_VERSIONBITS_H
 
 #include <chain.h>
 #include <map>
@@ -32,17 +32,6 @@ enum class ThresholdState {
 // will either be nullptr or a block with (height + 1) % Period() == 0.
 typedef std::map<const CBlockIndex*, ThresholdState> ThresholdConditionCache;
 
-struct VBDeploymentInfo {
-    /** Deployment name */
-    const char *name;
-    /** Whether GBT clients can safely ignore this rule in simplified usage */
-    bool gbt_force;
-    // Dash
-    /** Whether to check current MN protocol or not */
-    bool check_mn_protocol;
-    //
-};
-
 struct BIP9Stats {
     int period;
     int threshold;
@@ -50,8 +39,6 @@ struct BIP9Stats {
     int count;
     bool possible;
 };
-
-extern const struct VBDeploymentInfo VersionBitsDeploymentInfo[];
 
 /**
  * Abstract class that implements BIP9-style threshold logic, and caches results.
@@ -83,4 +70,4 @@ BIP9Stats VersionBitsStatistics(const CBlockIndex* pindexPrev, const Consensus::
 int VersionBitsStateSinceHeight(const CBlockIndex* pindexPrev, const Consensus::Params& params, Consensus::DeploymentPos pos, VersionBitsCache& cache);
 uint32_t VersionBitsMask(const Consensus::Params& params, Consensus::DeploymentPos pos);
 
-#endif // FXTC_VERSIONBITS_H
+#endif // BITCOIN_VERSIONBITS_H

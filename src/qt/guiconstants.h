@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FXTC_QT_GUICONSTANTS_H
-#define FXTC_QT_GUICONSTANTS_H
+#ifndef BITCOIN_QT_GUICONSTANTS_H
+#define BITCOIN_QT_GUICONSTANTS_H
 
 /* Milliseconds between model updates */
 static const int MODEL_UPDATE_DELAY = 250;
@@ -47,9 +47,13 @@ static const int MAX_URI_LENGTH = 255;
 /* Number of frames in spinner animation */
 #define SPINNER_FRAMES 36
 
-#define QAPP_ORG_NAME "Veles"
+#define QAPP_ORG_NAME "FxTC"
 #define QAPP_ORG_DOMAIN "fixedtradecoin.org"
-#define QAPP_APP_NAME_DEFAULT "Veles-Qt"
-#define QAPP_APP_NAME_TESTNET "Veles-Qt-testnet"
+#define QAPP_APP_NAME_DEFAULT "FxTCoin-Qt"
+#define QAPP_APP_NAME_TESTNET "FxTCoin-Qt-testnet"
+#define QAPP_APP_NAME_REGTEST "FxTCoin-Qt-regtest"
 
-#endif // FXTC_QT_GUICONSTANTS_H
+/* One gigabyte (GB) in bytes */
+static constexpr uint64_t GB_BYTES{1000000000};
+
+#endif // BITCOIN_QT_GUICONSTANTS_H

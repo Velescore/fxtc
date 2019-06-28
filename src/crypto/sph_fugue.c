@@ -1,3 +1,5 @@
+// Copyright (c) 2018-2019 FXTC developers
+
 #include <stddef.h>
 #include <string.h>
 

@@ -12,21 +12,23 @@
 #include <clientversion.h>
 #include <compat.h>
 #include <fs.h>
+#include <interfaces/chain.h>
 #include <rpc/server.h>
 #include <init.h>
 #include <noui.h>
 #include <shutdown.h>
-#include <util.h>
+#include <util/system.h>
 #include <httpserver.h>
 #include <httprpc.h>
-#include <utilstrencodings.h>
+#include <util/strencodings.h>
 #include <walletinitinterface.h>
 
 #include <stdio.h>
 // VELES BEGIN
 #include <masternodeconfig.h>
-#include <veleslogo.h>
 // VELES END
+
+const std::function<std::string(const char*)> G_TRANSLATION_FUN = nullptr;
 
 /* Introduction text for doxygen: */
 
@@ -61,6 +63,9 @@ static void WaitForShutdown()
 //
 static bool AppInit(int argc, char* argv[])
 {
+    InitInterfaces interfaces;
+    interfaces.chain = interfaces::MakeChain();
+
     bool fRet = false;
 
     //
@@ -76,19 +81,15 @@ static bool AppInit(int argc, char* argv[])
 
     // Process help and version before taking care about datadir
     if (HelpRequested(gArgs) || gArgs.IsArgSet("-version")) {
-        //std::string strUsage = PACKAGE_NAME " Daemon version " + FormatFullVersion() + "\n";
-        // VELES BEGIN
-        std::string strUsage = PACKAGE_NAME " Daemon version " + FormatFullVersion() + 
-            " \"" + CLIENT_VERSION_CODENAME + "\"\n" + strVelesCoreLogoAscii + "\n";
-        // VELES END
+        std::string strUsage = PACKAGE_NAME " Daemon version " + FormatFullVersion() + "\n";
 
         if (gArgs.IsArgSet("-version"))
         {
-            strUsage += FormatParagraph(LicenseInfo());
+            strUsage += FormatParagraph(LicenseInfo()) + "\n";
         }
         else
         {
-            strUsage += "\nUsage:  velesd [options]                     Start " PACKAGE_NAME " Daemon\n";
+            strUsage += "\nUsage:  fxtcd [options]                     Start " PACKAGE_NAME " Daemon\n";
             strUsage += "\n" + gArgs.GetHelpMessage();
         }
 
@@ -123,12 +124,13 @@ static bool AppInit(int argc, char* argv[])
             fprintf(stderr,"Error reading masternode configuration file: %s\n", strErr.c_str());
             return false;
         }
+        //
         // VELES END
 
         // Error out when loose non-argument tokens are encountered on command line
         for (int i = 1; i < argc; i++) {
             if (!IsSwitchChar(argv[i][0])) {
-                fprintf(stderr, "Error: Command line contains unexpected token '%s', see velesd -h for a list of options.\n", argv[i]);
+                fprintf(stderr, "Error: Command line contains unexpected token '%s', see fxtcd -h for a list of options.\n", argv[i]);
                 return false;
             }
         }
@@ -137,9 +139,6 @@ static bool AppInit(int argc, char* argv[])
         gArgs.SoftSetBoolArg("-server", true);
         // Set this early so that parameter interactions go to console
         InitLogging();
-        // VELES BEGIN
-        DisplayBootLogo();
-        // VELES END
         InitParameterInteraction();
         if (!AppInitBasicSetup())
         {
@@ -163,7 +162,7 @@ static bool AppInit(int argc, char* argv[])
 #pragma GCC diagnostic push
 #pragma GCC diagnostic ignored "-Wdeprecated-declarations"
 #endif
-            fprintf(stdout, "Veles server starting\n");
+            fprintf(stdout, "FxTCoin server starting\n");
 
             // Daemonize
             if (daemon(1, 0)) { // don't chdir (1), do close FDs (0)
@@ -184,7 +183,7 @@ static bool AppInit(int argc, char* argv[])
             // If locking the data directory failed, exit immediately
             return false;
         }
-        fRet = AppInitMain();
+        fRet = AppInitMain(interfaces);
     }
     catch (const std::exception& e) {
         PrintExceptionContinue(&e, "AppInit()");
@@ -198,13 +197,17 @@ static bool AppInit(int argc, char* argv[])
     } else {
         WaitForShutdown();
     }
-    Shutdown();
+    Shutdown(interfaces);
 
     return fRet;
 }
 
 int main(int argc, char* argv[])
 {
+#ifdef WIN32
+    util::WinCmdLineArgs winArgs;
+    std::tie(argc, argv) = winArgs.get();
+#endif
     SetupEnvironment();
 
     // Connect bitcoind signal handlers

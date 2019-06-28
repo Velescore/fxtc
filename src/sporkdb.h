@@ -1,15 +1,19 @@
 // Copyright (c) 2017 The PIVX developers
+// Copyright (c) 2019 FXTC developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FXTC_SPORKDB_H
-#define FXTC_SPORKDB_H
+#ifndef PIVX_SPORKDB_H
+#define PIVX_SPORKDB_H
 
 #include <boost/filesystem/path.hpp>
-#include <leveldbwrapper.h>
+// FXTC BEGIN
+//#include <leveldbwrapper.h>
+#include <dbwrapper.h>
+// FXTC END
 #include <spork.h>
 
-class CSporkDB : public CLevelDBWrapper
+class CSporkDB : public CDBWrapper
 {
 public:
     CSporkDB(size_t nCacheSize, bool fMemory = false, bool fWipe = false);
@@ -25,4 +29,4 @@ public:
 };
 
 
-#endif // FXTC_SPORKDB_H
+#endif //PIVX_SPORKDB_H

@@ -1,3 +1,4 @@
+// Copyright (c) 2018-2019 FXTC developers
 /* $Id: sph_whirlpool.h 216 2010-06-08 09:46:57Z tp $ */
 /**
  * WHIRLPOOL interface.
@@ -45,8 +46,8 @@
  * @author   Thomas Pornin <thomas.pornin@cryptolog.com>
  */
 
-#ifndef FXTC_CRYPTO_SPH_WHIRLPOOL_H
-#define FXTC_CRYPTO_SPH_WHIRLPOOL_H
+#ifndef RNRT_CRYPTO_SPH_WHIRLPOOL_H
+#define RNRT_CRYPTO_SPH_WHIRLPOOL_H
 
 #include <stddef.h>
 #include <crypto/sph_types.h>
@@ -215,4 +216,4 @@ void sph_whirlpool1_close(void *cc, void *dst);
 #ifdef __cplusplus
 }
 
-#endif // FXTC_CRYPTO_SPH_WHIRLPOOL_H
+#endif // RNRT_CRYPTO_SPH_WHIRLPOOL_H

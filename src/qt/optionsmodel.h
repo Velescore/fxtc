@@ -4,8 +4,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FXTC_QT_OPTIONSMODEL_H
-#define FXTC_QT_OPTIONSMODEL_H
+#ifndef BITCOIN_QT_OPTIONSMODEL_H
+#define BITCOIN_QT_OPTIONSMODEL_H
 
 #include <amount.h>
 
@@ -33,7 +33,7 @@ class OptionsModel : public QAbstractListModel
     Q_OBJECT
 
 public:
-    explicit OptionsModel(interfaces::Node& node, QObject *parent = 0, bool resetSettings = false);
+    explicit OptionsModel(interfaces::Node& node, QObject *parent = nullptr, bool resetSettings = false);
 
     enum OptionID {
         StartAtStartup,         // bool
@@ -50,8 +50,6 @@ public:
         DisplayUnit,            // BitcoinUnits::Unit
         ThirdPartyTxUrls,       // QString
         Language,               // QString
-        // Digits,                 // QString
-        Theme,                  // QString
         CoinControlFeatures,    // bool
         ThreadsScriptVerif,     // int
         Prune,                  // bool
@@ -114,4 +112,4 @@ Q_SIGNALS:
     void hideTrayIconChanged(bool);
 };
 
-#endif // FXTC_QT_OPTIONSMODEL_H
+#endif // BITCOIN_QT_OPTIONSMODEL_H

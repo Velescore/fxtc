@@ -1,10 +1,10 @@
 // Copyright (c) 2014-2017 The Dash Core developers
-// Copyright (c) 2018 FXTC developers
+// Copyright (c) 2018-2019 FXTC developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FXTC_PRIVATESEND_UTIL_H
-#define FXTC_PRIVATESEND_UTIL_H
+#ifndef DASH_PRIVATESEND_UTIL_H
+#define DASH_PRIVATESEND_UTIL_H
 
 #include <wallet/wallet.h>
 
@@ -37,4 +37,4 @@ public:
 
 };
 
-#endif // FXTC_PRIVATESEND_UTIL_H
+#endif // DASH_PRIVATESEND_UTIL_H

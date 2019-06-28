@@ -1,5 +1,5 @@
 // Copyright (c) 2014-2017 The Dash Core developers
-// Copyright (c) 2018 FXTC developers
+// Copyright (c) 2018-2019 FXTC developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -12,7 +12,7 @@
 #include <masternode-sync.h>
 #include <masternodeman.h>
 #include <messagesigner.h>
-#include <util.h>
+#include <util/system.h>
 
 #include <univalue.h>
 
@@ -513,7 +513,7 @@ bool CGovernanceObject::IsCollateralValid(std::string& strError, bool& fMissingC
 
     // RETRIEVE TRANSACTION IN QUESTION
 
-    if(!GetTransaction(nCollateralHash, txCollateral, Params().GetConsensus(), nBlockHash, true)){
+    if(!GetTransaction(nCollateralHash, txCollateral, Params().GetConsensus(), nBlockHash)){
         strError = strprintf("Can't find collateral tx %s", txCollateral->ToString());
         LogPrintf("CGovernanceObject::IsCollateralValid -- %s\n", strError);
         return false;

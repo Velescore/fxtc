@@ -9,8 +9,8 @@
 #error This header can only be compiled as C++.
 #endif
 
-#ifndef FXTC_PROTOCOL_H
-#define FXTC_PROTOCOL_H
+#ifndef BITCOIN_PROTOCOL_H
+#define BITCOIN_PROTOCOL_H
 
 #include <netaddress.h>
 #include <serialize.h>
@@ -445,10 +445,9 @@ public:
     std::string GetCommand() const;
     std::string ToString() const;
 
-    // TODO: make private (improves encapsulation)
 public:
     int type;
     uint256 hash;
 };
 
-#endif // FXTC_PROTOCOL_H
+#endif // BITCOIN_PROTOCOL_H

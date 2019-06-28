@@ -62,12 +62,12 @@
         <translation>Adresa na koju se prima</translation>
     </message>
     <message>
-        <source>These are your Veles addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Ovo su Vaše Veles adrese na koju se vrše uplate. Uvek proverite iznos i prijemnu adresu pre slanja novčića.</translation>
+        <source>These are your FxTCoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Ovo su Vaše FxTCoin adrese na koju se vrše uplate. Uvek proverite iznos i prijemnu adresu pre slanja novčića.</translation>
     </message>
     <message>
-        <source>These are your Veles addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Ovo su Vaše Veles adrese za primanje uplata. Preporučuje se upotreba nove adrese za svaku transakciju.</translation>
+        <source>These are your FxTCoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Ovo su Vaše FxTCoin adrese za primanje uplata. Preporučuje se upotreba nove adrese za svaku transakciju.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -168,7 +168,7 @@
         <translation>Potvrdite šifrovanje novčanika</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR VELESS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR FXTCOINS&lt;/b&gt;!</source>
         <translation>Upozorenje: Ako šifrujete svoj novčanik, i potom izgubite svoju pristupnu frazu &lt;b&gt;IZGUBIĆETE SVE SVOJE BITKOINE&lt;/b&gt;!</translation>
     </message>
     <message>
@@ -178,10 +178,6 @@
     <message>
         <source>Wallet encrypted</source>
         <translation>Novčanik je šifrovan</translation>
-    </message>
-    <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your Veless from being stolen by malware infecting your computer.</source>
-        <translation>%1 će se ugasiti da bi dovršio proces enkriptovanja. Imajte u vidu da enkripcija novčanika ne garantuje potpunu zaštitu Velesa od krađe od strane nekog virusa koji bi zarazio vaš kompjuter.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -246,10 +242,6 @@
         <translation>&amp;Pregled</translation>
     </message>
     <message>
-        <source>Node</source>
-        <translation>Čvor</translation>
-    </message>
-    <message>
         <source>Show general overview of wallet</source>
         <translation>Prikaži opšti pregled novčanika</translation>
     </message>
@@ -306,14 +298,6 @@
         <translation>&amp;Izmeni pristupnu frazu...</translation>
     </message>
     <message>
-        <source>&amp;Sending addresses...</source>
-        <translation>&amp;Slanje adresa...</translation>
-    </message>
-    <message>
-        <source>&amp;Receiving addresses...</source>
-        <translation>&amp;Primanje adresa...</translation>
-    </message>
-    <message>
         <source>Open &amp;URI...</source>
         <translation>Otvori &amp;URI...</translation>
     </message>
@@ -338,8 +322,8 @@
         <translation>Ponovo obeležavam blokove na disku...</translation>
     </message>
     <message>
-        <source>Send coins to a Veles address</source>
-        <translation>Pošalji novčiće na Veles adresu</translation>
+        <source>Send coins to a FxTCoin address</source>
+        <translation>Pošalji novčiće na FxTCoin adresu</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -362,12 +346,8 @@
         <translation>&amp;Proveri poruku...</translation>
     </message>
     <message>
-        <source>Veles</source>
-        <translation>Veles</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>Novčanik</translation>
+        <source>FxTCoin</source>
+        <translation>FxTCoin</translation>
     </message>
     <message>
         <source>&amp;Send</source>
@@ -390,12 +370,12 @@
         <translation>Enkriptuj privatne ključeve novčanika</translation>
     </message>
     <message>
-        <source>Sign messages with your Veles addresses to prove you own them</source>
-        <translation>Potpišite poruke sa svojim Veles adresama da biste dokazali njihovo vlasništvo</translation>
+        <source>Sign messages with your FxTCoin addresses to prove you own them</source>
+        <translation>Potpišite poruke sa svojim FxTCoin adresama da biste dokazali njihovo vlasništvo</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Veles addresses</source>
-        <translation>Proverite poruke da biste utvrdili sa kojim Veles adresama su potpisane</translation>
+        <source>Verify messages to ensure they were signed with specified FxTCoin addresses</source>
+        <translation>Proverite poruke da biste utvrdili sa kojim FxTCoin adresama su potpisane</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -414,8 +394,8 @@
         <translation>Alatke za tabove</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and Veles: URIs)</source>
-        <translation>Zatražite plaćanje (generiše QR kodove i Veles: URI-e)</translation>
+        <source>Request payments (generates QR codes and fxtcoin: URIs)</source>
+        <translation>Zatražite plaćanje (generiše QR kodove i fxtcoin: URI-e)</translation>
     </message>
     <message>
         <source>Error</source>
@@ -519,8 +499,8 @@
 <context>
     <name>Intro</name>
     <message>
-        <source>Veles</source>
-        <translation>Veles</translation>
+        <source>FxTCoin</source>
+        <translation>FxTCoin</translation>
     </message>
     <message>
         <source>Error</source>
@@ -683,6 +663,9 @@
     <name>UnitDisplayStatusBarControl</name>
     </context>
 <context>
+    <name>WalletController</name>
+    </context>
+<context>
     <name>WalletFrame</name>
     </context>
 <context>
@@ -694,8 +677,8 @@
 <context>
     <name>bitcoin-core</name>
     <message>
-        <source>Veles Core</source>
-        <translation>Veles Core</translation>
+        <source>FxTCoin Core</source>
+        <translation>FxTCoin Core</translation>
     </message>
     <message>
         <source>Information</source>

@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FXTC_QT_OPENURIDIALOG_H
-#define FXTC_QT_OPENURIDIALOG_H
+#ifndef BITCOIN_QT_OPENURIDIALOG_H
+#define BITCOIN_QT_OPENURIDIALOG_H
 
 #include <QDialog>
 
@@ -31,4 +31,4 @@ private:
     Ui::OpenURIDialog *ui;
 };
 
-#endif // FXTC_QT_OPENURIDIALOG_H
+#endif // BITCOIN_QT_OPENURIDIALOG_H

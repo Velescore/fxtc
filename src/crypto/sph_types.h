@@ -1,3 +1,4 @@
+// Copyright (c) 2018-2019 FXTC developers
 /* $Id: sph_types.h 260 2011-07-21 01:02:38Z tp $ */
 /**
  * Basic type definitions.
@@ -44,8 +45,8 @@
  * @author   Thomas Pornin <thomas.pornin@cryptolog.com>
  */
 
-#ifndef FXTC_CRYPTO_SPH_TYPES_H
-#define FXTC_CRYPTO_SPH_TYPES_H
+#ifndef RNRT_CRYPTO_SPH_TYPES_H
+#define RNRT_CRYPTO_SPH_TYPES_H
 
 #include <limits.h>
 
@@ -1973,4 +1974,4 @@ sph_dec64le_aligned(const void *src)
 
 #endif /* Doxygen excluded block */
 
-#endif // FXTC_CRYPTO_SPH_TYPES_H
+#endif // RNRT_CRYPTO_SPH_TYPES_H

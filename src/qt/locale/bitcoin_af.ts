@@ -62,12 +62,12 @@
         <translation>Ontvanger adresse</translation>
     </message>
     <message>
-        <source>These are your Veles addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Hierdie is die adresse vanwaar u Veles betalings stuur. U moet altyd die bedrag en die adres van die ontvanger nagaan voordat u enige munte stuur.</translation>
+        <source>These are your FxTCoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Hierdie is die adresse vanwaar u FxTCoin betalings stuur. U moet altyd die bedrag en die adres van die ontvanger nagaan voordat u enige munte stuur.</translation>
     </message>
     <message>
-        <source>These are your Veles addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Hierdie is die adresse waar u Veless sal ontvang. Ons beveel aan dat u 'n nuwe adres kies vir elke transaksie</translation>
+        <source>These are your FxTCoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Hierdie is die adresse waar u FxTCoins sal ontvang. Ons beveel aan dat u 'n nuwe adres kies vir elke transaksie</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -172,8 +172,8 @@
         <translation>Bevestig dat die beursie gekodifiseer is</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR VELESS&lt;/b&gt;!</source>
-        <translation>Waarskuwing: Indien u die beursie kodifiseer en u vergeet u wagwoord &lt;b&gt;VERLOOR U AL U VELESS&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR FXTCOINS&lt;/b&gt;!</source>
+        <translation>Waarskuwing: Indien u die beursie kodifiseer en u vergeet u wagwoord &lt;b&gt;VERLOOR U AL U FXTCOINS&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -246,10 +246,6 @@
         <translation>&amp;Oorsig</translation>
     </message>
     <message>
-        <source>Node</source>
-        <translation>Node</translation>
-    </message>
-    <message>
         <source>Show general overview of wallet</source>
         <translation>Vertoon 'n algemene oorsig van die beursie</translation>
     </message>
@@ -306,14 +302,6 @@
         <translation>&amp;Verander Wagwoord</translation>
     </message>
     <message>
-        <source>&amp;Sending addresses...</source>
-        <translation>&amp;Versending adresse...</translation>
-    </message>
-    <message>
-        <source>&amp;Receiving addresses...</source>
-        <translation>&amp;Ontvanger adresse</translation>
-    </message>
-    <message>
         <source>Open &amp;URI...</source>
         <translation>Oop &amp; URI...</translation>
     </message>
@@ -334,8 +322,8 @@
         <translation>Besig met herindeksering van blokke op hardeskyf...</translation>
     </message>
     <message>
-        <source>Send coins to a Veles address</source>
-        <translation>Stuur munte na 'n Veles adres</translation>
+        <source>Send coins to a FxTCoin address</source>
+        <translation>Stuur munte na 'n FxTCoin adres</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -358,12 +346,8 @@
         <translation>&amp;Verifieer boodskap...</translation>
     </message>
     <message>
-        <source>Veles</source>
-        <translation>Veles</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>Beursie</translation>
+        <source>FxTCoin</source>
+        <translation>FxTCoin</translation>
     </message>
     <message>
         <source>&amp;Send</source>
@@ -386,12 +370,12 @@
         <translation>Kodifiseer die private sleutes wat aan jou beursie gekoppel is.</translation>
     </message>
     <message>
-        <source>Sign messages with your Veles addresses to prove you own them</source>
-        <translation>Onderteken boodskappe met u Veles adresse om u eienaarskap te bewys</translation>
+        <source>Sign messages with your FxTCoin addresses to prove you own them</source>
+        <translation>Onderteken boodskappe met u FxTCoin adresse om u eienaarskap te bewys</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Veles addresses</source>
-        <translation>Verifieër boodskappe om seker te maak dat dit met die gespesifiseerde Veles adresse</translation>
+        <source>Verify messages to ensure they were signed with specified FxTCoin addresses</source>
+        <translation>Verifieër boodskappe om seker te maak dat dit met die gespesifiseerde FxTCoin adresse</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -410,8 +394,8 @@
         <translation>Orebalk</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and Veles: URIs)</source>
-        <translation>Versoek betalings (genereer QR-kodes en Veles: URI's)</translation>
+        <source>Request payments (generates QR codes and fxtcoin: URIs)</source>
+        <translation>Versoek betalings (genereer QR-kodes en fxtcoin: URI's)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -422,8 +406,8 @@
         <translation>Vertoon die lys van gebruikte ontvangers-adresse en etikette</translation>
     </message>
     <message>
-        <source>Open a Veles: URI or payment request</source>
-        <translation>Skep 'n Veles: URI of betalingsversoek</translation>
+        <source>Open a fxtcoin: URI or payment request</source>
+        <translation>Skep 'n fxtcoin: URI of betalingsversoek</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -464,6 +448,10 @@
     <message>
         <source>Up to date</source>
         <translation>Op datum</translation>
+    </message>
+    <message>
+        <source>&amp;Window</source>
+        <translation>&amp;Venster</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -516,8 +504,8 @@
         <translation>Inkomende transaksie</translation>
     </message>
     <message>
-        <source>A fatal error occurred. Veles can no longer continue safely and will quit.</source>
-        <translation>'N fatale fout het voorgekom. Veles kan nie meer veilig voortgaan nie en sal nou toemaak.</translation>
+        <source>A fatal error occurred. FxTCoin can no longer continue safely and will quit.</source>
+        <translation>'N fatale fout het voorgekom. FxTCoin kan nie meer veilig voortgaan nie en sal nou toemaak.</translation>
     </message>
 </context>
 <context>
@@ -706,8 +694,8 @@
         <translation>Wysig stuur adres</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Veles address.</source>
-        <translation>Die ingevoerde adres "%1" is nie 'n geldige Veles adres nie.</translation>
+        <source>The entered address "%1" is not a valid FxTCoin address.</source>
+        <translation>Die ingevoerde adres "%1" is nie 'n geldige FxTCoin adres nie.</translation>
     </message>
     <message>
         <source>Could not unlock wallet.</source>
@@ -779,8 +767,8 @@
         <translation>Gebruik 'n persoonlike data gids:</translation>
     </message>
     <message>
-        <source>Veles</source>
-        <translation>Veles</translation>
+        <source>FxTCoin</source>
+        <translation>FxTCoin</translation>
     </message>
     <message>
         <source>The wallet will also be stored in this directory.</source>
@@ -833,11 +821,7 @@
         <source>Hide</source>
         <translation>Versteek</translation>
     </message>
-    <message>
-        <source>Unknown. Syncing Headers (%1)...</source>
-        <translation>Onbekend. Besig Met Sinchroniseer Van Hoofde (%1)...</translation>
-    </message>
-</context>
+    </context>
 <context>
     <name>OpenURIDialog</name>
     <message>
@@ -884,16 +868,8 @@
         <translation>Grootte van &amp;databasis kas</translation>
     </message>
     <message>
-        <source>MB</source>
-        <translation>MG</translation>
-    </message>
-    <message>
         <source>Number of script &amp;verification threads</source>
         <translation>Aantal skrip &amp;verifikasie drade</translation>
-    </message>
-    <message>
-        <source>Active command-line options that override above options:</source>
-        <translation>Aktiewe opdrag lyn opsies wat die boonste opsies ignoreer:</translation>
     </message>
     <message>
         <source>Open the %1 configuration file from the working directory.</source>
@@ -1144,8 +1120,8 @@
         <translation>Bedrag</translation>
     </message>
     <message>
-        <source>Enter a Veles address (e.g. %1)</source>
-        <translation>Voer in 'n Veles adres (bv. %1)</translation>
+        <source>Enter a FxTCoin address (e.g. %1)</source>
+        <translation>Voer in 'n FxTCoin adres (bv. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1205,6 +1181,10 @@
 </context>
 <context>
     <name>QRImageWidget</name>
+    <message>
+        <source>&amp;Save Image...</source>
+        <translation>&amp;Stoor beeld</translation>
+    </message>
     </context>
 <context>
     <name>RPCConsole</name>
@@ -1364,6 +1344,10 @@
         <translation>&amp;Boodslap:</translation>
     </message>
     <message>
+        <source>Clear all fields of the form.</source>
+        <translation>Vee alle velde op die vorm skoon</translation>
+    </message>
+    <message>
         <source>Clear</source>
         <translation>Skoonmaak</translation>
     </message>
@@ -1399,8 +1383,16 @@
         <translation>QR Kode</translation>
     </message>
     <message>
+        <source>Copy &amp;URI</source>
+        <translation>Kopieer &amp;URI</translation>
+    </message>
+    <message>
         <source>Copy &amp;Address</source>
         <translation>Kopieer &amp;Address</translation>
+    </message>
+    <message>
+        <source>&amp;Save Image...</source>
+        <translation>&amp;Stoor beeld</translation>
     </message>
     <message>
         <source>Request payment to %1</source>
@@ -1434,7 +1426,15 @@
         <source>Wallet</source>
         <translation>Beursie</translation>
     </message>
-    </context>
+    <message>
+        <source>Resulting URI too long, try to reduce the text for label / message.</source>
+        <translation>Gevolglike URI te lank, probeer teks verkort vir etiket/boodskap</translation>
+    </message>
+    <message>
+        <source>Error encoding URI into QR Code.</source>
+        <translation>Fout met enkodering van URI na QR kode</translation>
+    </message>
+</context>
 <context>
     <name>RecentRequestsTableModel</name>
     <message>
@@ -1521,6 +1521,20 @@
         <translation>Kies...</translation>
     </message>
     <message>
+        <source>Using the fallbackfee can result in sending a transaction that will take several hours or days (or never) to confirm. Consider choosing your fee manually or wait until you have validated the complete chain.</source>
+        <translation>Die verstekfooi kan veroorsaak dat 'n transaksie gestuur word wat
+etlike ure of dae (of nooit) sal neem om te bevestig. Oorweeg om 
+'n fooi met die hand te kies, of wag tot jy die hele ketting bevestig het.</translation>
+    </message>
+    <message>
+        <source>Warning: Fee estimation is currently not possible.</source>
+        <translation>Waarskuwing: fooiskatting is tans onbeskikbaar</translation>
+    </message>
+    <message>
+        <source>collapse fee-settings</source>
+        <translation>Vou fooi-nistellings in</translation>
+    </message>
+    <message>
         <source>per kilobyte</source>
         <translation>per kilogreep</translation>
     </message>
@@ -1537,20 +1551,50 @@
         <translation>Aangepaste:</translation>
     </message>
     <message>
+        <source>(Smart fee not initialized yet. This usually takes a few blocks...)</source>
+        <translation>(Slimfooi nog nie opgestel nie. Dit neem gewoonlik 'n paar blokke...)</translation>
+    </message>
+    <message>
+        <source>Send to multiple recipients at once</source>
+        <translation>Stuur aan veelvuldige ontvangers tegelyk</translation>
+    </message>
+    <message>
         <source>Add &amp;Recipient</source>
         <translation>Voeg by &amp;Ontvanger</translation>
+    </message>
+    <message>
+        <source>Clear all fields of the form.</source>
+        <translation>Vee alle velde op die vorm skoon</translation>
     </message>
     <message>
         <source>Dust:</source>
         <translation>Stof:</translation>
     </message>
     <message>
+        <source>Confirmation time target:</source>
+        <translation>Bevestigingstyd teiken:</translation>
+    </message>
+    <message>
+        <source>Enable Replace-By-Fee</source>
+        <translation>Bemoontlik vervang-deur-fooi</translation>
+    </message>
+    <message>
+        <source>With Replace-By-Fee (BIP-125) you can increase a transaction's fee after it is sent. Without this, a higher fee may be recommended to compensate for increased transaction delay risk.</source>
+        <translation>Met Vervang-Met-Fooi (BIP-125) kan jy 'n transaskiefooi verhoog nadat dit gestuur is.
+Daarsonder mag 'n hoër fooi dalk aanbeveel word om te kompenseer vir 'n verhoogde
+transaksievertragingsrisiko.</translation>
+    </message>
+    <message>
         <source>Clear &amp;All</source>
-        <translation>Maak skoon &amp;Alles</translation>
+        <translation>Vee &amp;Alles skoon</translation>
     </message>
     <message>
         <source>Balance:</source>
-        <translation>Balans:</translation>
+        <translation>Saldo:</translation>
+    </message>
+    <message>
+        <source>Confirm the send action</source>
+        <translation>Bevestig stuuraksie</translation>
     </message>
     <message>
         <source>S&amp;end</source>
@@ -1593,12 +1637,74 @@
         <translation>%1 tot %2</translation>
     </message>
     <message>
+        <source>Are you sure you want to send?</source>
+        <translation>Is u seker u wil verstuur?</translation>
+    </message>
+    <message>
+        <source>or</source>
+        <translation>of</translation>
+    </message>
+    <message>
+        <source>You can increase the fee later (signals Replace-By-Fee, BIP-125).</source>
+        <translation>U kan die fooi later verhoog (sein Vervang-met-Fooi, BIP-125)</translation>
+    </message>
+    <message>
         <source>Transaction fee</source>
         <translation>Transaksie fooi</translation>
     </message>
     <message>
+        <source>Not signalling Replace-By-Fee, BIP-125.</source>
+        <translation>Sein nie Vervang-Met-Fooi nie, BIP-25</translation>
+    </message>
+    <message>
+        <source>Confirm send coins</source>
+        <translation>Bevestig versending van munte</translation>
+    </message>
+    <message>
+        <source>The recipient address is not valid. Please recheck.</source>
+        <translation>Die ontvangeradres is ongeldig. Kyk asseblief weer mooi.</translation>
+    </message>
+    <message>
+        <source>The amount to pay must be larger than 0.</source>
+        <translation>Bedrag moet groter as nul wees</translation>
+    </message>
+    <message>
+        <source>The amount exceeds your balance.</source>
+        <translation>Die bedrag oorskry jou saldo</translation>
+    </message>
+    <message>
+        <source>The total exceeds your balance when the %1 transaction fee is included.</source>
+        <translation>Die somtotaal oorskry jou saldo as die %1 transaksiefooi ingereken word</translation>
+    </message>
+    <message>
+        <source>Duplicate address found: addresses should only be used once each.</source>
+        <translation>Duplikaatadres: adresse behoort slegs eenkeer gebruik te word</translation>
+    </message>
+    <message>
+        <source>Transaction creation failed!</source>
+        <translation>Transaksieopstelling het gefaal</translation>
+    </message>
+    <message>
+        <source>The transaction was rejected with the following reason: %1</source>
+        <translation>Die transaksie is afgekeur met die volgende rede: %1</translation>
+    </message>
+    <message>
+        <source>A fee higher than %1 is considered an absurdly high fee.</source>
+        <translation>'n Fooi hoër as %1 word as buitensporig beskou</translation>
+    </message>
+    <message>
         <source>Payment request expired.</source>
         <translation>Betalings versoek verstryk.</translation>
+    </message>
+    <message>
+        <source>Warning: Invalid FxTCoin address</source>
+        <translation>Waarskuwing: Ongeldige FxTCoinadres</translation>
+    </message>
+    <message>
+        <source>The address you selected for change is not part of this wallet. Any or all funds in your wallet may be sent to this address. Are you sure?</source>
+        <translation>Die adres wat u gekies het vir verandering is nie deel van hierdie
+beursie nie. Enige of alle fondse mag dalk daarheen gestuur word.
+Is u seker?</translation>
     </message>
     <message>
         <source>(no label)</source>
@@ -1616,12 +1722,56 @@
         <translation>&amp;Etiket:</translation>
     </message>
     <message>
+        <source>Choose previously used address</source>
+        <translation>Kies voorheen gebruikte adres</translation>
+    </message>
+    <message>
+        <source>This is a normal payment.</source>
+        <translation>Hierdie is 'n gewone betaling</translation>
+    </message>
+    <message>
+        <source>The FxTCoin address to send the payment to</source>
+        <translation>Die FxTCoinadres waarheen die betaling gestuur word</translation>
+    </message>
+    <message>
         <source>Alt+A</source>
         <translation>Alt+A</translation>
     </message>
     <message>
+        <source>Paste address from clipboard</source>
+        <translation>Plak adres van aanknipbord af</translation>
+    </message>
+    <message>
+        <source>Remove this entry</source>
+        <translation>Verwyder hierdie inskrywing</translation>
+    </message>
+    <message>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less fxtcoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation>De fooi word afgetrek van die gestuurde bedrag.
+Die ontvanger sal minder ontvang as wat u in die 
+bedrag opgee. As daar meer as een ontvanger is,
+word die fooi eweredig verdeel.</translation>
+    </message>
+    <message>
+        <source>S&amp;ubtract fee from amount</source>
+        <translation>Bedrag &amp;Sonder fooi </translation>
+    </message>
+    <message>
+        <source>Use available balance</source>
+        <translation>Gebruik beskikbare saldo</translation>
+    </message>
+    <message>
         <source>Message:</source>
         <translation>Boodskap:</translation>
+    </message>
+    <message>
+        <source>This is an unauthenticated payment request.</source>
+        <translation>Hierdie is 'n ongemagtigde uitbetalingsversoek</translation>
+    </message>
+    <message>
+        <source>This is an authenticated payment request.</source>
+        <translation>Hierdie is 'n gemagtigde uitbetalingsversoek
+</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -1645,8 +1795,16 @@
         <translation>&amp;Teken Boodskap</translation>
     </message>
     <message>
+        <source>Choose previously used address</source>
+        <translation>Kies voorheen gebruikte adres</translation>
+    </message>
+    <message>
         <source>Alt+A</source>
         <translation>Alt+A</translation>
+    </message>
+    <message>
+        <source>Paste address from clipboard</source>
+        <translation>Plak adres van aanknipbord af</translation>
     </message>
     <message>
         <source>Signature</source>
@@ -1654,7 +1812,7 @@
     </message>
     <message>
         <source>Clear &amp;All</source>
-        <translation>Maak skoon &amp;Alles</translation>
+        <translation>Vee &amp;Alles skoon</translation>
     </message>
     <message>
         <source>&amp;Verify Message</source>
@@ -1851,6 +2009,9 @@
     <name>UnitDisplayStatusBarControl</name>
     </context>
 <context>
+    <name>WalletController</name>
+    </context>
+<context>
     <name>WalletFrame</name>
     </context>
 <context>
@@ -1878,8 +2039,8 @@
 <context>
     <name>bitcoin-core</name>
     <message>
-        <source>Veles Core</source>
-        <translation>Veles Kern</translation>
+        <source>FxTCoin Core</source>
+        <translation>FxTCoin Kern</translation>
     </message>
     <message>
         <source>Error loading %s</source>

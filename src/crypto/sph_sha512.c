@@ -1,3 +1,4 @@
+// Copyright (c) 2018-2019 FXTC developers
 /* $Id: sha2big.c 216 2010-06-08 09:46:57Z tp $ */
 /*
  * SHA-384 / SHA-512 implementation.

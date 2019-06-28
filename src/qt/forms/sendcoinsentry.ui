@@ -36,19 +36,6 @@
     <property name="verticalSpacing">
      <number>8</number>
     </property>
-    <item row="2" column="0">
-     <widget class="QLabel" name="amountLabel">
-      <property name="text">
-       <string>A&amp;mount:</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-      </property>
-      <property name="buddy">
-       <cstring>payAmount</cstring>
-      </property>
-     </widget>
-    </item>
     <item row="0" column="0">
      <widget class="QLabel" name="payToLabel">
       <property name="text">
@@ -62,23 +49,6 @@
       </property>
      </widget>
     </item>
-    <item row="3" column="1">
-     <widget class="QLabel" name="messageTextLabel">
-      <property name="toolTip">
-       <string>A message that was attached to the Veles: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Veles network.</string>
-      </property>
-      <property name="textFormat">
-       <enum>Qt::PlainText</enum>
-      </property>
-     </widget>
-    </item>
-    <item row="1" column="1">
-     <widget class="QLineEdit" name="addAsLabel">
-      <property name="toolTip">
-       <string>Enter a label for this address to add it to the list of used addresses</string>
-      </property>
-     </widget>
-    </item>
     <item row="0" column="1">
      <layout class="QHBoxLayout" name="payToLayout">
       <property name="spacing">
@@ -87,7 +57,7 @@
       <item>
        <widget class="QValidatedLineEdit" name="payTo">
         <property name="toolTip">
-         <string>The Veles address to send the payment to</string>
+         <string>The FxTCoin address to send the payment to</string>
         </property>
        </widget>
       </item>
@@ -96,14 +66,11 @@
         <property name="toolTip">
          <string>Choose previously used address</string>
         </property>
-        <property name="styleSheet">
-         <string notr="true"/>
-        </property>
         <property name="text">
          <string/>
         </property>
         <property name="icon">
-         <iconset>
+         <iconset resource="../bitcoin.qrc">
           <normaloff>:/icons/address-book</normaloff>:/icons/address-book</iconset>
         </property>
         <property name="iconSize">
@@ -126,7 +93,7 @@
          <string/>
         </property>
         <property name="icon">
-         <iconset>
+         <iconset resource="../bitcoin.qrc">
           <normaloff>:/icons/editpaste</normaloff>:/icons/editpaste</iconset>
         </property>
         <property name="iconSize">
@@ -149,7 +116,7 @@
          <string/>
         </property>
         <property name="icon">
-         <iconset>
+         <iconset resource="../bitcoin.qrc">
           <normaloff>:/icons/remove</normaloff>:/icons/remove</iconset>
         </property>
         <property name="iconSize">
@@ -157,30 +124,6 @@
           <width>22</width>
           <height>22</height>
          </size>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </item>
-    <item row="2" column="1">
-     <layout class="QHBoxLayout" name="horizontalLayoutAmount" stretch="0,1,0">
-      <item>
-       <widget class="BitcoinAmountField" name="payAmount"/>
-      </item>
-      <item>
-       <widget class="QCheckBox" name="checkboxSubtractFeeFromAmount">
-        <property name="toolTip">
-         <string>The fee will be deducted from the amount being sent. The recipient will receive less Veless than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</string>
-        </property>
-        <property name="text">
-         <string>S&amp;ubtract fee from amount</string>
-        </property>
-       </widget>
-      </item>
-      <item>
-       <widget class="QPushButton" name="useAvailableBalanceButton">
-        <property name="text">
-         <string>Use available balance</string>
         </property>
        </widget>
       </item>
@@ -199,6 +142,50 @@
       </property>
      </widget>
     </item>
+    <item row="1" column="1">
+     <widget class="QLineEdit" name="addAsLabel">
+      <property name="toolTip">
+       <string>Enter a label for this address to add it to the list of used addresses</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="amountLabel">
+      <property name="text">
+       <string>A&amp;mount:</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+      <property name="buddy">
+       <cstring>payAmount</cstring>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <layout class="QHBoxLayout" name="horizontalLayoutAmount" stretch="0,1,0">
+      <item>
+       <widget class="BitcoinAmountField" name="payAmount"/>
+      </item>
+      <item>
+       <widget class="QCheckBox" name="checkboxSubtractFeeFromAmount">
+        <property name="toolTip">
+         <string>The fee will be deducted from the amount being sent. The recipient will receive less fxtcoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</string>
+        </property>
+        <property name="text">
+         <string>S&amp;ubtract fee from amount</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="useAvailableBalanceButton">
+        <property name="text">
+         <string>Use available balance</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
     <item row="3" column="0">
      <widget class="QLabel" name="messageLabel">
       <property name="text">
@@ -209,26 +196,18 @@
       </property>
      </widget>
     </item>
+    <item row="3" column="1">
+     <widget class="QLabel" name="messageTextLabel">
+      <property name="toolTip">
+       <string>A message that was attached to the fxtcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the FxTCoin network.</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::PlainText</enum>
+      </property>
+     </widget>
+    </item>
     <item row="4" column="0" colspan="2">
      <widget class="Line" name="line">
-      <property name="minimumSize">
-       <size>
-        <width>0</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="sizeIncrement">
-       <size>
-        <width>0</width>
-        <height>0</height>
-       </size>
-      </property>
-      <property name="frameShadow">
-       <enum>QFrame::Sunken</enum>
-      </property>
-      <property name="lineWidth">
-       <number>1</number>
-      </property>
       <property name="orientation">
        <enum>Qt::Horizontal</enum>
       </property>
@@ -692,7 +671,7 @@
          <string/>
         </property>
         <property name="icon">
-         <iconset>
+         <iconset resource="../bitcoin.qrc">
           <normaloff>:/icons/remove</normaloff>:/icons/remove</iconset>
         </property>
        </widget>
@@ -1225,7 +1204,7 @@
          <string/>
         </property>
         <property name="icon">
-         <iconset>
+         <iconset resource="../bitcoin.qrc">
           <normaloff>:/icons/remove</normaloff>:/icons/remove</iconset>
         </property>
        </widget>
@@ -1274,15 +1253,14 @@
  </widget>
  <customwidgets>
   <customwidget>
-   <class>BitcoinAmountField</class>
-   <extends>QLineEdit</extends>
-   <header>qt/bitcoinamountfield.h</header>
-   <container>1</container>
-  </customwidget>
-  <customwidget>
    <class>QValidatedLineEdit</class>
    <extends>QLineEdit</extends>
    <header>qt/qvalidatedlineedit.h</header>
+  </customwidget>
+  <customwidget>
+   <class>BitcoinAmountField</class>
+   <extends>QLineEdit</extends>
+   <header>qt/bitcoinamountfield.h</header>
   </customwidget>
  </customwidgets>
  <tabstops>

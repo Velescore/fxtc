@@ -1,3 +1,4 @@
+// Copyright (c) 2018-2019 FXTC developers
 /* $Id: shabal.c 175 2010-05-07 16:03:20Z tp $ */
 /*
  * Shabal implementation.

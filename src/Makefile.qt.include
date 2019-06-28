@@ -1,11 +1,10 @@
 # Copyright (c) 2013-2016 The Bitcoin Core developers
 # Copyright (c) 2014-2017 The Dash Core developers
 # Copyright (c) 2018 FXTC developers
-# Copyright (c) 2018-2019 The Veles Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-bin_PROGRAMS += qt/veles-qt
+bin_PROGRAMS += qt/fxtc-qt
 EXTRA_LIBRARIES += qt/libbitcoinqt.a
 
 # bitcoin qt core #
@@ -128,9 +127,9 @@ QT_MOC_CPP = \
   qt/moc_bantablemodel.cpp \
   qt/moc_bitcoinaddressvalidator.cpp \
   qt/moc_bitcoinamountfield.cpp \
+  qt/moc_bitcoin.cpp \
   qt/moc_bitcoingui.cpp \
   qt/moc_bitcoinunits.cpp \
-  qt/moc_callback.cpp \
   qt/moc_clientmodel.cpp \
   qt/moc_coincontroldialog.cpp \
   qt/moc_coincontroltreewidget.cpp \
@@ -165,6 +164,7 @@ QT_MOC_CPP = \
   qt/moc_transactiontablemodel.cpp \
   qt/moc_transactionview.cpp \
   qt/moc_utilitydialog.cpp \
+  qt/moc_walletcontroller.cpp \
   qt/moc_walletframe.cpp \
   qt/moc_walletmodel.cpp \
   qt/moc_walletview.cpp
@@ -176,12 +176,11 @@ QT_MOC_CPP += \
 
 BITCOIN_MM = \
   qt/macdockiconhandler.mm \
-  qt/macnotificationhandler.mm
+  qt/macnotificationhandler.mm \
+  qt/macos_appnap.mm
 
 QT_MOC = \
-  qt/bitcoin.moc \
   qt/bitcoinamountfield.moc \
-  qt/callback.moc \
   qt/intro.moc \
   qt/overviewpage.moc \
   qt/rpcconsole.moc
@@ -191,9 +190,15 @@ QT_QRC = qt/bitcoin.qrc
 QT_QRC_LOCALE_CPP = qt/qrc_bitcoin_locale.cpp
 QT_QRC_LOCALE = qt/bitcoin_locale.qrc
 
+if ENABLE_BIP70
 PROTOBUF_CC = qt/paymentrequest.pb.cc
 PROTOBUF_H = qt/paymentrequest.pb.h
 PROTOBUF_PROTO = qt/paymentrequest.proto
+else
+PROTOBUF_CC =
+PROTOBUF_H =
+PROTOBUF_PROTO =
+endif
 
 BITCOIN_QT_H = \
   qt/addressbookpage.h \
@@ -202,9 +207,9 @@ BITCOIN_QT_H = \
   qt/bantablemodel.h \
   qt/bitcoinaddressvalidator.h \
   qt/bitcoinamountfield.h \
+  qt/bitcoin.h \
   qt/bitcoingui.h \
   qt/bitcoinunits.h \
-  qt/callback.h \
   qt/clientmodel.h \
   qt/coincontroldialog.h \
   qt/coincontroltreewidget.h \
@@ -215,6 +220,7 @@ BITCOIN_QT_H = \
   qt/intro.h \
   qt/macdockiconhandler.h \
   qt/macnotificationhandler.h \
+  qt/macos_appnap.h \
   qt/modaloverlay.h \
   qt/networkstyle.h \
   qt/notificator.h \
@@ -244,6 +250,7 @@ BITCOIN_QT_H = \
   qt/transactiontablemodel.h \
   qt/transactionview.h \
   qt/utilitydialog.h \
+  qt/walletcontroller.h \
   qt/walletframe.h \
   qt/walletmodel.h \
   qt/walletmodeltransaction.h \
@@ -256,226 +263,75 @@ BITCOIN_QT_H += \
 #
 
 RES_ICONS = \
-  qt/res/icons/veles.ico \
-  qt/res/icons/veles_testnet.ico \
-  qt/res/icons/veles.png \
+  qt/res/icons/add.png \
+  qt/res/icons/address-book.png \
+  qt/res/icons/about.png \
+  qt/res/icons/about_fxtc.png \
+  qt/res/icons/about_qt.png \
+  qt/res/icons/bitcoin.ico \
+  qt/res/icons/bitcoin_testnet.ico \
+  qt/res/icons/bitcoin.png \
   qt/res/icons/chevron.png \
+  qt/res/icons/clock1.png \
+  qt/res/icons/clock2.png \
+  qt/res/icons/clock3.png \
+  qt/res/icons/clock4.png \
+  qt/res/icons/clock5.png \
+  qt/res/icons/configure.png \
+  qt/res/icons/connect0.png \
+  qt/res/icons/connect1.png \
+  qt/res/icons/connect2.png \
+  qt/res/icons/connect3.png \
+  qt/res/icons/connect4.png \
+  qt/res/icons/debugwindow.png \
+  qt/res/icons/edit.png \
+  qt/res/icons/editcopy.png \
+  qt/res/icons/editpaste.png \
+  qt/res/icons/export.png \
+  qt/res/icons/eye.png \
+  qt/res/icons/eye_minus.png \
+  qt/res/icons/eye_plus.png \
+  qt/res/icons/filesave.png \
+  qt/res/icons/fontbigger.png \
+  qt/res/icons/fontsmaller.png \
+  qt/res/icons/fxtc.ico \
+  qt/res/icons/fxtc_testnet.ico \
+  qt/res/icons/fxtc.png \
+  qt/res/icons/hd_disabled.png \
+  qt/res/icons/hd_enabled.png \
+  qt/res/icons/history.png \
+  qt/res/icons/info.png \
+  qt/res/icons/key.png \
+  qt/res/icons/lock_closed.png \
+  qt/res/icons/lock_open.png \
+  qt/res/icons/network_disabled.png \
+  qt/res/icons/open.png \
+  qt/res/icons/overview.png \
+  qt/res/icons/proxy.png \
+  qt/res/icons/quit.png \
+  qt/res/icons/receive.png \
+  qt/res/icons/remove.png \
+  qt/res/icons/send.png \
+  qt/res/icons/synced.png \
+  qt/res/icons/transaction0.png \
+  qt/res/icons/transaction2.png \
+  qt/res/icons/transaction_abandoned.png \
+  qt/res/icons/transaction_conflicted.png \
+  qt/res/icons/tx_inout.png \
+  qt/res/icons/tx_input.png \
+  qt/res/icons/tx_output.png \
+  qt/res/icons/tx_mined.png \
   qt/res/icons/warning.png \
-  qt/res/icons/bitcoinTheme/add.png \
-  qt/res/icons/bitcoinTheme/address-book.png \
-  qt/res/icons/bitcoinTheme/about_veles.png \
-  qt/res/icons/bitcoinTheme/about_qt.png \
-  qt/res/icons/bitcoinTheme/clock1.png \
-  qt/res/icons/bitcoinTheme/clock2.png \
-  qt/res/icons/bitcoinTheme/clock3.png \
-  qt/res/icons/bitcoinTheme/clock4.png \
-  qt/res/icons/bitcoinTheme/clock5.png \
-  qt/res/icons/bitcoinTheme/configure.png \
-  qt/res/icons/bitcoinTheme/connect0.png \
-  qt/res/icons/bitcoinTheme/connect1.png \
-  qt/res/icons/bitcoinTheme/connect2.png \
-  qt/res/icons/bitcoinTheme/connect3.png \
-  qt/res/icons/bitcoinTheme/connect4.png \
-  qt/res/icons/bitcoinTheme/debugwindow.png \
-  qt/res/icons/bitcoinTheme/edit.png \
-  qt/res/icons/bitcoinTheme/editcopy.png \
-  qt/res/icons/bitcoinTheme/editpaste.png \
-  qt/res/icons/bitcoinTheme/export.png \
-  qt/res/icons/bitcoinTheme/eye.png \
-  qt/res/icons/bitcoinTheme/eye_minus.png \
-  qt/res/icons/bitcoinTheme/eye_plus.png \
-  qt/res/icons/bitcoinTheme/filesave.png \
-  qt/res/icons/bitcoinTheme/fontbigger.png \
-  qt/res/icons/bitcoinTheme/fontsmaller.png \
-  qt/res/icons/bitcoinTheme/hd_disabled.png \
-  qt/res/icons/bitcoinTheme/hd_enabled.png \
-  qt/res/icons/bitcoinTheme/history.png \
-  qt/res/icons/bitcoinTheme/info.png \
-  qt/res/icons/bitcoinTheme/key.png \
-  qt/res/icons/bitcoinTheme/lock_closed.png \
-  qt/res/icons/bitcoinTheme/lock_open.png \
-  qt/res/icons/bitcoinTheme/network_disabled.png \
-  qt/res/icons/bitcoinTheme/open.png \
-  qt/res/icons/bitcoinTheme/overview.png \
-  qt/res/icons/bitcoinTheme/proxy.png \
-  qt/res/icons/bitcoinTheme/quit.png \
-  qt/res/icons/bitcoinTheme/receive.png \
-  qt/res/icons/bitcoinTheme/remove.png \
-  qt/res/icons/bitcoinTheme/send.png \
-  qt/res/icons/bitcoinTheme/synced.png \
-  qt/res/icons/bitcoinTheme/transaction0.png \
-  qt/res/icons/bitcoinTheme/transaction2.png \
-  qt/res/icons/bitcoinTheme/transaction_abandoned.png \
-  qt/res/icons/bitcoinTheme/transaction_conflicted.png \
-  qt/res/icons/bitcoinTheme/tx_inout.png \
-  qt/res/icons/bitcoinTheme/tx_input.png \
-  qt/res/icons/bitcoinTheme/tx_output.png \
-  qt/res/icons/bitcoinTheme/tx_mined.png \
-  qt/res/icons/bitcoinTheme/verify.png \
-  qt/res/icons/lightTheme/add.png \
-  qt/res/icons/lightTheme/address-book.png \
-  qt/res/icons/lightTheme/about_veles.png \
-  qt/res/icons/lightTheme/about_qt.png \
-  qt/res/icons/lightTheme/clock1.png \
-  qt/res/icons/lightTheme/clock2.png \
-  qt/res/icons/lightTheme/clock3.png \
-  qt/res/icons/lightTheme/clock4.png \
-  qt/res/icons/lightTheme/clock5.png \
-  qt/res/icons/lightTheme/configure.png \
-  qt/res/icons/lightTheme/connect0.png \
-  qt/res/icons/lightTheme/connect1.png \
-  qt/res/icons/lightTheme/connect2.png \
-  qt/res/icons/lightTheme/connect3.png \
-  qt/res/icons/lightTheme/connect4.png \
-  qt/res/icons/lightTheme/debugwindow.png \
-  qt/res/icons/lightTheme/edit.png \
-  qt/res/icons/lightTheme/editcopy.png \
-  qt/res/icons/lightTheme/editpaste.png \
-  qt/res/icons/lightTheme/export.png \
-  qt/res/icons/lightTheme/eye.png \
-  qt/res/icons/lightTheme/eye_minus.png \
-  qt/res/icons/lightTheme/eye_plus.png \
-  qt/res/icons/lightTheme/filesave.png \
-  qt/res/icons/lightTheme/fontbigger.png \
-  qt/res/icons/lightTheme/fontsmaller.png \
-  qt/res/icons/lightTheme/hd_disabled.png \
-  qt/res/icons/lightTheme/hd_enabled.png \
-  qt/res/icons/lightTheme/history.png \
-  qt/res/icons/lightTheme/info.png \
-  qt/res/icons/lightTheme/key.png \
-  qt/res/icons/lightTheme/lock_closed.png \
-  qt/res/icons/lightTheme/lock_open.png \
-  qt/res/icons/lightTheme/network_disabled.png \
-  qt/res/icons/lightTheme/open.png \
-  qt/res/icons/lightTheme/overview.png \
-  qt/res/icons/lightTheme/proxy.png \
-  qt/res/icons/lightTheme/quit.png \
-  qt/res/icons/lightTheme/receive.png \
-  qt/res/icons/lightTheme/remove.png \
-  qt/res/icons/lightTheme/send.png \
-  qt/res/icons/lightTheme/synced.png \
-  qt/res/icons/lightTheme/transaction0.png \
-  qt/res/icons/lightTheme/transaction2.png \
-  qt/res/icons/lightTheme/transaction_abandoned.png \
-  qt/res/icons/lightTheme/transaction_conflicted.png \
-  qt/res/icons/lightTheme/tx_inout.png \
-  qt/res/icons/lightTheme/tx_input.png \
-  qt/res/icons/lightTheme/tx_output.png \
-  qt/res/icons/lightTheme/tx_mined.png \
-  qt/res/icons/lightTheme/verify.png \
-  qt/res/icons/velesTheme/add.png \
-  qt/res/icons/velesTheme/address-book.png \
-  qt/res/icons/velesTheme/about_veles.png \
-  qt/res/icons/velesTheme/about_qt.png \
-  qt/res/icons/velesTheme/clock1.png \
-  qt/res/icons/velesTheme/clock2.png \
-  qt/res/icons/velesTheme/clock3.png \
-  qt/res/icons/velesTheme/clock4.png \
-  qt/res/icons/velesTheme/clock5.png \
-  qt/res/icons/velesTheme/configure.png \
-  qt/res/icons/velesTheme/connect0.png \
-  qt/res/icons/velesTheme/connect1.png \
-  qt/res/icons/velesTheme/connect2.png \
-  qt/res/icons/velesTheme/connect3.png \
-  qt/res/icons/velesTheme/connect4.png \
-  qt/res/icons/velesTheme/debugwindow.png \
-  qt/res/icons/velesTheme/edit.png \
-  qt/res/icons/velesTheme/editcopy.png \
-  qt/res/icons/velesTheme/editpaste.png \
-  qt/res/icons/velesTheme/export.png \
-  qt/res/icons/velesTheme/eye.png \
-  qt/res/icons/velesTheme/eye_minus.png \
-  qt/res/icons/velesTheme/eye_plus.png \
-  qt/res/icons/velesTheme/filesave.png \
-  qt/res/icons/velesTheme/fontbigger.png \
-  qt/res/icons/velesTheme/fontsmaller.png \
-  qt/res/icons/velesTheme/hd_disabled.png \
-  qt/res/icons/velesTheme/hd_enabled.png \
-  qt/res/icons/velesTheme/history.png \
-  qt/res/icons/velesTheme/info.png \
-  qt/res/icons/velesTheme/key.png \
-  qt/res/icons/velesTheme/lock_closed.png \
-  qt/res/icons/velesTheme/lock_open.png \
-  qt/res/icons/velesTheme/network_disabled.png \
-  qt/res/icons/velesTheme/open.png \
-  qt/res/icons/velesTheme/overview.png \
-  qt/res/icons/velesTheme/proxy.png \
-  qt/res/icons/velesTheme/quit.png \
-  qt/res/icons/velesTheme/receive.png \
-  qt/res/icons/velesTheme/remove.png \
-  qt/res/icons/velesTheme/send.png \
-  qt/res/icons/velesTheme/synced.png \
-  qt/res/icons/velesTheme/transaction0.png \
-  qt/res/icons/velesTheme/transaction2.png \
-  qt/res/icons/velesTheme/transaction_abandoned.png \
-  qt/res/icons/velesTheme/transaction_conflicted.png \
-  qt/res/icons/velesTheme/tx_inout.png \
-  qt/res/icons/velesTheme/tx_input.png \
-  qt/res/icons/velesTheme/tx_output.png \
-  qt/res/icons/velesTheme/tx_mined.png \
-  qt/res/icons/velesTheme/verify.png \
-  qt/res/icons/darkTheme/add.png \
-  qt/res/icons/darkTheme/address-book.png \
-  qt/res/icons/darkTheme/about_veles.png \
-  qt/res/icons/darkTheme/about_qt.png \
-  qt/res/icons/darkTheme/clock1.png \
-  qt/res/icons/darkTheme/clock2.png \
-  qt/res/icons/darkTheme/clock3.png \
-  qt/res/icons/darkTheme/clock4.png \
-  qt/res/icons/darkTheme/clock5.png \
-  qt/res/icons/darkTheme/configure.png \
-  qt/res/icons/darkTheme/connect0.png \
-  qt/res/icons/darkTheme/connect1.png \
-  qt/res/icons/darkTheme/connect2.png \
-  qt/res/icons/darkTheme/connect3.png \
-  qt/res/icons/darkTheme/connect4.png \
-  qt/res/icons/darkTheme/debugwindow.png \
-  qt/res/icons/darkTheme/edit.png \
-  qt/res/icons/darkTheme/editcopy.png \
-  qt/res/icons/darkTheme/editpaste.png \
-  qt/res/icons/darkTheme/export.png \
-  qt/res/icons/darkTheme/eye.png \
-  qt/res/icons/darkTheme/eye_minus.png \
-  qt/res/icons/darkTheme/eye_plus.png \
-  qt/res/icons/darkTheme/filesave.png \
-  qt/res/icons/darkTheme/fontbigger.png \
-  qt/res/icons/darkTheme/fontsmaller.png \
-  qt/res/icons/darkTheme/hd_disabled.png \
-  qt/res/icons/darkTheme/hd_enabled.png \
-  qt/res/icons/darkTheme/history.png \
-  qt/res/icons/darkTheme/info.png \
-  qt/res/icons/darkTheme/key.png \
-  qt/res/icons/darkTheme/lock_closed.png \
-  qt/res/icons/darkTheme/lock_open.png \
-  qt/res/icons/darkTheme/network_disabled.png \
-  qt/res/icons/darkTheme/open.png \
-  qt/res/icons/darkTheme/overview.png \
-  qt/res/icons/darkTheme/proxy.png \
-  qt/res/icons/darkTheme/quit.png \
-  qt/res/icons/darkTheme/receive.png \
-  qt/res/icons/darkTheme/remove.png \
-  qt/res/icons/darkTheme/send.png \
-  qt/res/icons/darkTheme/synced.png \
-  qt/res/icons/darkTheme/transaction0.png \
-  qt/res/icons/darkTheme/transaction2.png \
-  qt/res/icons/darkTheme/transaction_abandoned.png \
-  qt/res/icons/darkTheme/transaction_conflicted.png \
-  qt/res/icons/darkTheme/tx_inout.png \
-  qt/res/icons/darkTheme/tx_input.png \
-  qt/res/icons/darkTheme/tx_output.png \
-  qt/res/icons/darkTheme/tx_mined.png \
-  qt/res/icons/darkTheme/verify.png
+  qt/res/icons/verify.png
 
 # Dash
 RES_ICONS += \
-  qt/res/icons/bitcoinTheme/masternodes.png \
-  qt/res/icons/lightTheme/masternodes.png \
-  qt/res/icons/darkTheme/masternodes.png \
-  qt/res/icons/velesTheme/masternodes.png
+  qt/res/icons/masternodes.png
 #
 
 BITCOIN_QT_BASE_CPP = \
   qt/bantablemodel.cpp \
+  qt/bitcoin.cpp \
   qt/bitcoinaddressvalidator.cpp \
   qt/bitcoinamountfield.cpp \
   qt/bitcoingui.cpp \
@@ -509,7 +365,6 @@ BITCOIN_QT_WALLET_CPP = \
   qt/editaddressdialog.cpp \
   qt/openuridialog.cpp \
   qt/overviewpage.cpp \
-  qt/paymentrequestplus.cpp \
   qt/paymentserver.cpp \
   qt/receivecoinsdialog.cpp \
   qt/receiverequestdialog.cpp \
@@ -523,6 +378,7 @@ BITCOIN_QT_WALLET_CPP = \
   qt/transactionrecord.cpp \
   qt/transactiontablemodel.cpp \
   qt/transactionview.cpp \
+  qt/walletcontroller.cpp \
   qt/walletframe.cpp \
   qt/walletmodel.cpp \
   qt/walletmodeltransaction.cpp \
@@ -533,37 +389,21 @@ BITCOIN_QT_WALLET_CPP += \
   qt/masternodelist.cpp
 #
 
+BITCOIN_QT_WALLET_BIP70_CPP = \
+  qt/paymentrequestplus.cpp
+
 BITCOIN_QT_CPP = $(BITCOIN_QT_BASE_CPP)
 if TARGET_WINDOWS
 BITCOIN_QT_CPP += $(BITCOIN_QT_WINDOWS_CPP)
 endif
 if ENABLE_WALLET
 BITCOIN_QT_CPP += $(BITCOIN_QT_WALLET_CPP)
-endif
+if ENABLE_BIP70
+BITCOIN_QT_CPP += $(BITCOIN_QT_WALLET_BIP70_CPP)
+endif # ENABLE_BIP70
+endif # ENABLE_WALLET
 
-# VELES BEGIN
-RES_IMAGES = \
-  qt/res/images/bitcoinTheme/splash.png \
-  qt/res/images/bitcoinTheme/splash_testnet.png \
-  qt/res/images/bitcoinTheme/splash_prerelease.png \
-  qt/res/images/darkTheme/splash.png \
-  qt/res/images/darkTheme/splash_testnet.png \
-  qt/res/images/darkTheme/splash_prerelease.png \
-  qt/res/images/lightTheme/splash.png \
-  qt/res/images/lightTheme/splash_testnet.png \
-  qt/res/images/lightTheme/splash_prerelease.png \
-  qt/res/images/lightTheme/header_bg.png \
-  qt/res/images/velesTheme/splash.png \
-  qt/res/images/velesTheme/splash_testnet.png \
-  qt/res/images/velesTheme/splash_prerelease.png \
-  qt/res/images/velesTheme/bg-pattern.png
-
-RES_CSS = \
-  qt/res/css/bitcoinTheme.css \
-  qt/res/css/darkTheme.css \
-  qt/res/css/velesTheme.css \
-  qt/res/css/lightTheme.css
-# VELES END
+RES_IMAGES =
 
 RES_MOVIES = $(wildcard $(srcdir)/qt/res/movies/spinner-*.png)
 
@@ -577,7 +417,10 @@ qt_libbitcoinqt_a_CXXFLAGS = $(AM_CXXFLAGS) $(QT_PIE_FLAGS)
 qt_libbitcoinqt_a_OBJCXXFLAGS = $(AM_OBJCXXFLAGS) $(QT_PIE_FLAGS)
 
 qt_libbitcoinqt_a_SOURCES = $(BITCOIN_QT_CPP) $(BITCOIN_QT_H) $(QT_FORMS_UI) \
-  $(QT_QRC) $(QT_QRC_LOCALE) $(QT_TS) $(PROTOBUF_PROTO) $(RES_ICONS) $(RES_IMAGES) $(RES_CSS) $(RES_MOVIES)
+  $(QT_QRC) $(QT_QRC_LOCALE) $(QT_TS) $(PROTOBUF_PROTO) $(RES_ICONS) $(RES_IMAGES) $(RES_MOVIES)
+if TARGET_DARWIN
+  qt_libbitcoinqt_a_SOURCES += $(BITCOIN_MM)
+endif
 
 nodist_qt_libbitcoinqt_a_SOURCES = $(QT_MOC_CPP) $(QT_MOC) $(PROTOBUF_CC) \
   $(PROTOBUF_H) $(QT_QRC_CPP) $(QT_QRC_LOCALE_CPP)
@@ -596,29 +439,34 @@ $(QT_MOC): $(PROTOBUF_H)
 $(QT_MOC_CPP): $(PROTOBUF_H)
 
 # bitcoin-qt binary #
-qt_veles_qt_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(BITCOIN_QT_INCLUDES) \
+qt_fxtc_qt_CPPFLAGS = $(AM_CPPFLAGS) $(BITCOIN_INCLUDES) $(BITCOIN_QT_INCLUDES) \
   $(QT_INCLUDES) $(PROTOBUF_CFLAGS) $(QR_CFLAGS)
-qt_veles_qt_CXXFLAGS = $(AM_CXXFLAGS) $(QT_PIE_FLAGS)
+qt_fxtc_qt_CXXFLAGS = $(AM_CXXFLAGS) $(QT_PIE_FLAGS)
 
-qt_veles_qt_SOURCES = qt/bitcoin.cpp
-if TARGET_DARWIN
-  qt_veles_qt_SOURCES += $(BITCOIN_MM)
-endif
+qt_fxtc_qt_SOURCES = qt/main.cpp
 if TARGET_WINDOWS
-  qt_veles_qt_SOURCES += $(BITCOIN_RC)
+  qt_fxtc_qt_SOURCES += $(BITCOIN_RC)
 endif
-qt_veles_qt_LDADD = qt/libbitcoinqt.a $(LIBBITCOIN_SERVER)
+qt_fxtc_qt_LDADD = qt/libbitcoinqt.a $(LIBBITCOIN_SERVER)
 if ENABLE_WALLET
-qt_veles_qt_LDADD += $(LIBBITCOIN_UTIL) $(LIBBITCOIN_WALLET)
+qt_fxtc_qt_LDADD += $(LIBBITCOIN_UTIL) $(LIBBITCOIN_WALLET)
 endif
 if ENABLE_ZMQ
-qt_veles_qt_LDADD += $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
+qt_fxtc_qt_LDADD += $(LIBBITCOIN_ZMQ) $(ZMQ_LIBS)
 endif
-qt_veles_qt_LDADD += $(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) $(LIBBITCOIN_UTIL) $(LIBBITCOIN_CONSENSUS) $(LIBBITCOIN_CRYPTO) $(LIBUNIVALUE) $(LIBLEVELDB) $(LIBLEVELDB_SSE42) $(LIBMEMENV) \
-  $(BOOST_LIBS) $(QT_LIBS) $(QT_DBUS_LIBS) $(QR_LIBS) $(PROTOBUF_LIBS) $(BDB_LIBS) $(SSL_LIBS) $(CRYPTO_LIBS) $(MINIUPNPC_LIBS) $(LIBSECP256K1) \
+qt_fxtc_qt_LDADD += $(LIBBITCOIN_CLI) $(LIBBITCOIN_COMMON) $(LIBBITCOIN_UTIL) $(LIBBITCOIN_CONSENSUS) $(LIBBITCOIN_CRYPTO) $(LIBUNIVALUE) $(LIBLEVELDB) $(LIBLEVELDB_SSE42) $(LIBMEMENV) \
+  $(BOOST_LIBS) $(QT_LIBS) $(QT_DBUS_LIBS) $(QR_LIBS) $(PROTOBUF_LIBS) $(BDB_LIBS) $(MINIUPNPC_LIBS) $(LIBSECP256K1) \
   $(EVENT_PTHREADS_LIBS) $(EVENT_LIBS)
-qt_veles_qt_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(QT_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
-qt_veles_qt_LIBTOOLFLAGS = $(AM_LIBTOOLFLAGS) --tag CXX
+if ENABLE_BIP70
+qt_fxtc_qt_LDADD += $(SSL_LIBS)
+else
+if TARGET_WINDOWS
+qt_fxtc_qt_LDADD += $(SSL_LIBS)
+endif
+endif
+qt_fxtc_qt_LDADD += $(CRYPTO_LIBS)
+qt_fxtc_qt_LDFLAGS = $(RELDFLAGS) $(AM_LDFLAGS) $(QT_LDFLAGS) $(LIBTOOL_APP_LDFLAGS)
+qt_fxtc_qt_LIBTOOLFLAGS = $(AM_LIBTOOLFLAGS) --tag CXX
 
 #locale/foo.ts -> locale/foo.qm
 QT_QM=$(QT_TS:.ts=.qm)
@@ -640,7 +488,7 @@ $(QT_QRC_LOCALE_CPP): $(QT_QRC_LOCALE) $(QT_QM)
 	  $(SED) -e '/^\*\*.*Created:/d' -e '/^\*\*.*by:/d' > $@
 	@rm $(@D)/temp_$(<F)
 
-$(QT_QRC_CPP): $(QT_QRC) $(QT_FORMS_H) $(RES_ICONS) $(RES_IMAGES) $(RES_CSS) $(RES_MOVIES) $(PROTOBUF_H)
+$(QT_QRC_CPP): $(QT_QRC) $(QT_FORMS_H) $(RES_ICONS) $(RES_IMAGES) $(RES_MOVIES) $(PROTOBUF_H)
 	@test -f $(RCC)
 	$(AM_V_GEN) QT_SELECT=$(QT_SELECT) $(RCC) -name bitcoin $< | \
 	  $(SED) -e '/^\*\*.*Created:/d' -e '/^\*\*.*by:/d' > $@
@@ -650,9 +498,9 @@ CLEAN_QT = $(nodist_qt_libbitcoinqt_a_SOURCES) $(QT_QM) $(QT_FORMS_H) qt/*.gcda 
 CLEANFILES += $(CLEAN_QT)
 
 bitcoin_qt_clean: FORCE
-	rm -f $(CLEAN_QT) $(qt_libbitcoinqt_a_OBJECTS) $(qt_veles_qt_OBJECTS) qt/veles-qt$(EXEEXT) $(LIBBITCOINQT)
+	rm -f $(CLEAN_QT) $(qt_libbitcoinqt_a_OBJECTS) $(qt_fxtc_qt_OBJECTS) qt/fxtc-qt$(EXEEXT) $(LIBBITCOINQT)
 
-bitcoin_qt : qt/veles-qt$(EXEEXT)
+bitcoin_qt : qt/fxtc-qt$(EXEEXT)
 
 ui_%.h: %.ui
 	@test -f $(UIC)

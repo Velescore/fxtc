@@ -38,10 +38,6 @@ void CDSNotificationInterface::UpdatedBlockTip(const CBlockIndex *pindexNew, con
 
     masternodeSync.UpdatedBlockTip(pindexNew, fInitialDownload, connman);
 
-    // FXTC TODO:
-    // Update global DIP0001 activation status
-    //fDIP0001ActiveAtTip = (VersionBitsState(pindexNew, Params().GetConsensus(), Consensus::DEPLOYMENT_DIP0001, versionbitscache) == ThresholdState::ACTIVE);
-
     if (fInitialDownload)
         return;
 

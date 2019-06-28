@@ -1,10 +1,10 @@
 // Copyright (c) 2014-2017 The Dash Core developers
-// Copyright (c) 2018 FXTC developers
+// Copyright (c) 2018-2019 FXTC developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FXTC_ACTIVEMASTERNODE_H
-#define FXTC_ACTIVEMASTERNODE_H
+#ifndef DASH_ACTIVEMASTERNODE_H
+#define DASH_ACTIVEMASTERNODE_H
 
 #include <chainparams.h>
 #include <key.h>
@@ -82,4 +82,4 @@ private:
     void ManageStateRemote();
 };
 
-#endif // FXTC_ACTIVEMASTERNODE_H
+#endif // DASH_ACTIVEMASTERNODE_H

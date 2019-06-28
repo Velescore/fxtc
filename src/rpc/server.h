@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FXTC_RPC_SERVER_H
-#define FXTC_RPC_SERVER_H
+#ifndef BITCOIN_RPC_SERVER_H
+#define BITCOIN_RPC_SERVER_H
 
 #include <amount.h>
 #include <rpc/protocol.h>
@@ -110,7 +110,7 @@ public:
      * This is needed to cope with the case in which there is no HTTP server, but
      * only GUI RPC console, and to break the dependency of pcserver on httprpc.
      */
-    virtual RPCTimerBase* NewTimer(std::function<void(void)>& func, int64_t millis) = 0;
+    virtual RPCTimerBase* NewTimer(std::function<void()>& func, int64_t millis) = 0;
 };
 
 /** Set the factory function for timers */
@@ -124,7 +124,7 @@ void RPCUnsetTimerInterface(RPCTimerInterface *iface);
  * Run func nSeconds from now.
  * Overrides previous timer <name> (if any).
  */
-void RPCRunLater(const std::string& name, std::function<void(void)> func, int64_t nSeconds);
+void RPCRunLater(const std::string& name, std::function<void()> func, int64_t nSeconds);
 
 typedef UniValue(*rpcfn_type)(const JSONRPCRequest& jsonRequest);
 
@@ -206,4 +206,4 @@ std::string JSONRPCExecBatch(const JSONRPCRequest& jreq, const UniValue& vReq);
 // Retrieves any serialization flags requested in command line argument
 int RPCSerializationFlags();
 
-#endif // FXTC_RPC_SERVER_H
+#endif // BITCOIN_RPC_SERVER_H

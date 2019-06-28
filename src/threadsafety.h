@@ -3,14 +3,14 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FXTC_THREADSAFETY_H
-#define FXTC_THREADSAFETY_H
+#ifndef BITCOIN_THREADSAFETY_H
+#define BITCOIN_THREADSAFETY_H
 
 #ifdef __clang__
 // TL;DR Add GUARDED_BY(mutex) to member variables. The others are
 // rarely necessary. Ex: int nFoo GUARDED_BY(cs_foo);
 //
-// See http://clang.llvm.org/docs/LanguageExtensions.html#threadsafety
+// See https://clang.llvm.org/docs/ThreadSafetyAnalysis.html
 // for documentation.  The clang compiler can do advanced static analysis
 // of locking when given the -Wthread-safety option.
 #define LOCKABLE __attribute__((lockable))
@@ -54,4 +54,15 @@
 #define ASSERT_EXCLUSIVE_LOCK(...)
 #endif // __GNUC__
 
-#endif // FXTC_THREADSAFETY_H
+// Utility class for indicating to compiler thread analysis that a mutex is
+// locked (when it couldn't be determined otherwise).
+struct SCOPED_LOCKABLE LockAnnotation
+{
+    template <typename Mutex>
+    explicit LockAnnotation(Mutex& mutex) EXCLUSIVE_LOCK_FUNCTION(mutex)
+    {
+    }
+    ~LockAnnotation() UNLOCK_FUNCTION() {}
+};
+
+#endif // BITCOIN_THREADSAFETY_H

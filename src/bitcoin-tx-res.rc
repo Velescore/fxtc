@@ -16,14 +16,14 @@ BEGIN
     BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
-            VALUE "CompanyName",        "Veles"
-            VALUE "FileDescription",    "veles-tx (CLI Veles transaction editor utility)"
+            VALUE "CompanyName",        "FxTC"
+            VALUE "FileDescription",    "fxtc-tx (CLI FxTC transaction editor utility)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
-            VALUE "InternalName",       "veles-tx"
+            VALUE "InternalName",       "fxtc-tx"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
-            VALUE "OriginalFilename",   "veles-tx.exe"
-            VALUE "ProductName",        "veles-tx"
+            VALUE "OriginalFilename",   "fxtc-tx.exe"
+            VALUE "ProductName",        "fxtc-tx"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END
     END

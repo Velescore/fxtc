@@ -23,7 +23,7 @@ static const struct {
     {"macosx", false, false, true},
     {"windows", true, false, false},
     /* Other: linux, unix, ... */
-    {"other", true, false, false}    // VELES edit: No special icon colors
+    {"other", true, true, false}
 };
 static const unsigned platform_styles_count = sizeof(platform_styles)/sizeof(*platform_styles);
 
@@ -139,6 +139,6 @@ const PlatformStyle *PlatformStyle::instantiate(const QString &platformId)
                     platform_styles[x].useExtraSpacing);
         }
     }
-    return 0;
+    return nullptr;
 }
 

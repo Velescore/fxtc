@@ -54,12 +54,12 @@
         <translation>Duke marr adresen</translation>
     </message>
     <message>
-        <source>These are your Veles addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Këto janë Veles adresat e juaja për të dërguar pagesa. Gjithmon kontrolloni shumën dhe adresën pranuese para se të dërgoni monedha.</translation>
+        <source>These are your FxTCoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Këto janë FxTCoin adresat e juaja për të dërguar pagesa. Gjithmon kontrolloni shumën dhe adresën pranuese para se të dërgoni monedha.</translation>
     </message>
     <message>
-        <source>These are your Veles addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Këto janë Veles adresat e juaja për të pranuar pagesa. Rekomandohet që gjithmon të përdorni një adresë të re për çdo transaksion.</translation>
+        <source>These are your FxTCoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Këto janë FxTCoin adresat e juaja për të pranuar pagesa. Rekomandohet që gjithmon të përdorni një adresë të re për çdo transaksion.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -222,20 +222,12 @@
         <translation>&amp;Opsione</translation>
     </message>
     <message>
-        <source>&amp;Receiving addresses...</source>
-        <translation>Duke marr adresen</translation>
-    </message>
-    <message>
         <source>Change the passphrase used for wallet encryption</source>
         <translation>Ndrysho frazkalimin e përdorur per enkriptimin e portofolit</translation>
     </message>
     <message>
-        <source>Veles</source>
-        <translation>Veles</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>Portofol</translation>
+        <source>FxTCoin</source>
+        <translation>FxTCoin</translation>
     </message>
     <message>
         <source>&amp;Send</source>
@@ -393,8 +385,8 @@
         <translation>Miresevini</translation>
     </message>
     <message>
-        <source>Veles</source>
-        <translation>Veles</translation>
+        <source>FxTCoin</source>
+        <translation>FxTCoin</translation>
     </message>
     <message>
         <source>Error</source>
@@ -773,6 +765,9 @@
     <name>UnitDisplayStatusBarControl</name>
     </context>
 <context>
+    <name>WalletController</name>
+    </context>
+<context>
     <name>WalletFrame</name>
     </context>
 <context>
@@ -792,8 +787,8 @@
 <context>
     <name>bitcoin-core</name>
     <message>
-        <source>Veles Core</source>
-        <translation>Berthama Veles</translation>
+        <source>FxTCoin Core</source>
+        <translation>Berthama FxTCoin</translation>
     </message>
     <message>
         <source>Information</source>

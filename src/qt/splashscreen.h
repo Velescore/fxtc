@@ -2,11 +2,10 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FXTC_QT_SPLASHSCREEN_H
-#define FXTC_QT_SPLASHSCREEN_H
+#ifndef BITCOIN_QT_SPLASHSCREEN_H
+#define BITCOIN_QT_SPLASHSCREEN_H
 
-#include <functional>
-#include <QSplashScreen>
+#include <QWidget>
 
 #include <memory>
 
@@ -37,8 +36,8 @@ protected:
     void closeEvent(QCloseEvent *event);
 
 public Q_SLOTS:
-    /** Slot to call finish() method as it's not defined as slot */
-    void slotFinish(QWidget *mainWin);
+    /** Hide the splash screen window and schedule the splash screen object for deletion */
+    void finish();
 
     /** Show message and progress */
     void showMessage(const QString &message, int alignment, const QColor &color);
@@ -67,4 +66,4 @@ private:
     std::list<std::unique_ptr<interfaces::Handler>> m_connected_wallet_handlers;
 };
 
-#endif // FXTC_QT_SPLASHSCREEN_H
+#endif // BITCOIN_QT_SPLASHSCREEN_H

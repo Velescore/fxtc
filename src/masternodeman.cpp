@@ -16,12 +16,11 @@
 #include <privatesend-client.h>
 #endif // ENABLE_WALLET
 #include <script/standard.h>
-#include <util.h>
-// VELES BEGIN
-#if defined(ENABLE_WALLET) && defined(ENABLE_MN_HELPER)
-#include <masternodeconfig.h>
-#endif // defined(ENABLE_WALLET) && defined(ENABLE_MN_HELPER)
-// VELES END
+#include <util/system.h>
+
+// FXTC BEGIN
+extern void Misbehaving(NodeId nodeid, int howmuch, const std::string& message="");
+// FXTC END
 
 /** Masternode manager */
 CMasternodeMan mnodeman;
@@ -350,45 +349,6 @@ void CMasternodeMan::CheckAndRemove(CConnman& connman)
         NotifyMasternodeUpdates(connman);
     }
 }
-
-// VELES BEGIN
-#if defined(ENABLE_WALLET) && defined(ENABLE_MN_HELPER)
-void CMasternodeMan::CheckRemoteActivation(CConnman& connman)
-{
-    LogPrintf("CMasternodeMan::CheckRemoteActivation\n");
-
-    for (CMasternodeConfig::CMasternodeEntry mne : masternodeConfig.getEntries()) {
-        COutPoint outpoint = COutPoint(uint256S(mne.getTxHash()), uint32_t(atoi(mne.getOutputIndex().c_str())));
-        CMasternode mn;
-        bool fFound = Get(outpoint, mn);
-        std::string strStatus = fFound ? mn.GetStatus() : "MISSING";
-
-        if (!fFound) {
-            LogPrint(BCLog::MASTERNODE, "CMasternodeMan::CheckRemoteActivation -- Skipping entry not found in the masternode list - alias=%s\n", mne.getAlias());
-            continue;
-        }
-
-        if (strStatus != "ENABLED") {
-            std::string strError;
-            CMasternodeBroadcast mnb;
-
-            bool fResult = CMasternodeBroadcast::Create(mne.getIp(), mne.getPrivKey(), mne.getTxHash(), mne.getOutputIndex(), strError, mnb);
-
-            if(fResult) {
-                LogPrint(BCLog::MASTERNODE, "CMasternodeMan::CheckRemoteActivation -- Rebroadcasting of activation message for not ENABLED masternode: SUCCESS - alias=%s\n", mne.getAlias());
-                UpdateMasternodeList(mnb, connman);
-                mnb.Relay(connman);
-            } else {
-                LogPrint(BCLog::MASTERNODE, "CMasternodeMan::CheckRemoteActivation -- Rebroadcasting of activation message for not ENABLED masternode: FAIL - alias=%s, error=%s\n", mne.getAlias(), strError);
-            }
-            NotifyMasternodeUpdates(connman);
-        } else {
-            LogPrint(BCLog::MASTERNODE, "CMasternodeMan::CheckRemoteActivation -- Skipping entry in ENABLED state - alias=%s, status=%s\n", mne.getAlias(), strStatus);
-        }
-    }
-}
-// VELES END
-#endif // defined(ENABLE_WALLET) && defined(ENABLE_MN_HELPER)
 
 void CMasternodeMan::Clear()
 {
@@ -850,8 +810,11 @@ void CMasternodeMan::ProcessMessage(CNode* pfrom, const std::string& strCommand,
             UpdateWatchdogVoteTime(mnp.vin.prevout, mnp.sigTime);
 
         // too late, new MNANNOUNCE is required
-        // allow ping processing after NSR to recover node automatically if not totally expired
+        // FXTC BEGIN
+        // allow resync after wallet restart or resumed from standby
+        //if(pmn && pmn->IsNewStartRequired()) return;
         if(pmn && pmn->IsExpired()) return;
+        // FXTC END
 
         int nDos = 0;
         if(mnp.CheckAndUpdate(pmn, false, nDos, connman)) return;

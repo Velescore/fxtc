@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FXTC_QT_TRANSACTIONTABLEMODEL_H
-#define FXTC_QT_TRANSACTIONTABLEMODEL_H
+#ifndef BITCOIN_QT_TRANSACTIONTABLEMODEL_H
+#define BITCOIN_QT_TRANSACTIONTABLEMODEL_H
 
 #include <qt/bitcoinunits.h>
 
@@ -28,7 +28,7 @@ class TransactionTableModel : public QAbstractTableModel
     Q_OBJECT
 
 public:
-    explicit TransactionTableModel(const PlatformStyle *platformStyle, WalletModel *parent = 0);
+    explicit TransactionTableModel(const PlatformStyle *platformStyle, WalletModel *parent = nullptr);
     ~TransactionTableModel();
 
     enum ColumnIndex {
@@ -120,4 +120,4 @@ public Q_SLOTS:
     friend class TransactionTablePriv;
 };
 
-#endif // FXTC_QT_TRANSACTIONTABLEMODEL_H
+#endif // BITCOIN_QT_TRANSACTIONTABLEMODEL_H

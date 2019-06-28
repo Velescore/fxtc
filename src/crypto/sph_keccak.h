@@ -1,3 +1,4 @@
+// Copyright (c) 2018-2019 FXTC developers
 /* $Id: sph_keccak.h 216 2010-06-08 09:46:57Z tp $ */
 /**
  * Keccak interface. This is the interface for Keccak with the
@@ -33,8 +34,8 @@
  * @author   Thomas Pornin <thomas.pornin@cryptolog.com>
  */
 
-#ifndef FXTC_CRYPTO_SPH_KECCAK_H
-#define FXTC_CRYPTO_SPH_KECCAK_H
+#ifndef RNRT_CRYPTO_SPH_KECCAK_H
+#define RNRT_CRYPTO_SPH_KECCAK_H
 
 #ifdef __cplusplus
 extern "C"{
@@ -290,4 +291,4 @@ void sph_keccak512_addbits_and_close(
 }
 #endif
 
-#endif // FXTC_CRYPTO_SPH_KECCAK_H
+#endif // RNRT_CRYPTO_SPH_KECCAK_H

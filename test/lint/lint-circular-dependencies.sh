@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 #
 # Copyright (c) 2018 The Bitcoin Core developers
+# Copyright (c) 2018-2019 FXTC developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 #
@@ -8,13 +9,8 @@
 
 export LC_ALL=C
 
-# VELES BEGIN
-# Temporary disabled
-exit 0
-# VELES END
-
 EXPECTED_CIRCULAR_DEPENDENCIES=(
-    "chainparamsbase -> util -> chainparamsbase"
+    "chainparamsbase -> util/system -> chainparamsbase"
     "checkpoints -> validation -> checkpoints"
     "index/txindex -> validation -> index/txindex"
     "policy/fees -> txmempool -> policy/fees"
@@ -30,12 +26,10 @@ EXPECTED_CIRCULAR_DEPENDENCIES=(
     "qt/sendcoinsdialog -> qt/walletmodel -> qt/sendcoinsdialog"
     "qt/transactiontablemodel -> qt/walletmodel -> qt/transactiontablemodel"
     "qt/walletmodel -> qt/walletmodeltransaction -> qt/walletmodel"
-    "rpc/rawtransaction -> wallet/rpcwallet -> rpc/rawtransaction"
     "txmempool -> validation -> txmempool"
     "validation -> validationinterface -> validation"
     "wallet/coincontrol -> wallet/wallet -> wallet/coincontrol"
     "wallet/fees -> wallet/wallet -> wallet/fees"
-    "wallet/rpcwallet -> wallet/wallet -> wallet/rpcwallet"
     "wallet/wallet -> wallet/walletdb -> wallet/wallet"
     "policy/fees -> policy/policy -> validation -> policy/fees"
     "policy/rbf -> txmempool -> validation -> policy/rbf"
@@ -46,6 +40,7 @@ EXPECTED_CIRCULAR_DEPENDENCIES=(
     "qt/addressbookpage -> qt/bitcoingui -> qt/walletview -> qt/signverifymessagedialog -> qt/addressbookpage"
     "qt/guiutil -> qt/walletmodel -> qt/optionsmodel -> qt/intro -> qt/guiutil"
     "qt/addressbookpage -> qt/bitcoingui -> qt/walletview -> qt/sendcoinsdialog -> qt/sendcoinsentry -> qt/addressbookpage"
+
 
     # Dash
     "activemasternode -> masternode -> activemasternode"
@@ -97,6 +92,7 @@ EXPECTED_CIRCULAR_DEPENDENCIES=(
     "pow -> spork -> validation -> txdb -> pow"
     "activemasternode -> masternode -> masternode-payments -> net_processing -> instantx -> activemasternode"
     "activemasternode -> masternode -> masternode-payments -> net_processing -> privatesend-server -> activemasternode"
+    #
 )
 
 EXIT_CODE=0

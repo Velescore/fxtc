@@ -23,7 +23,7 @@
     </message>
     <message>
         <source>C&amp;lose</source>
-        <translation>Închide</translation>
+        <translation>Î&amp;nchide</translation>
     </message>
     <message>
         <source>Delete the currently selected address from the list</source>
@@ -66,12 +66,12 @@
         <translation>Adresa de primire</translation>
     </message>
     <message>
-        <source>These are your Veles addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Acestea sunt adresele tale Veles pentru efectuarea platilor. Intotdeauna verifica atent suma de plata si adresa beneficiarului inainte de a trimite monede.</translation>
+        <source>These are your FxTCoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Acestea sunt adresele tale FxTCoin pentru efectuarea platilor. Intotdeauna verifica atent suma de plata si adresa beneficiarului inainte de a trimite monede.</translation>
     </message>
     <message>
-        <source>These are your Veles addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Acestea sunt adresele tale Veles pentru receptionarea platilor. Este recomandat sa folosesti mereu o adresa noua pentru primirea platilor.</translation>
+        <source>These are your FxTCoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Acestea sunt adresele tale FxTCoin pentru receptionarea platilor. Este recomandat sa folosesti mereu o adresa noua pentru primirea platilor.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -176,8 +176,8 @@
         <translation>Confirmaţi criptarea portofelului</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR VELESS&lt;/b&gt;!</source>
-        <translation>Atenţie: Dacă va criptati portofelul si ulterior pierdeti parola, &lt;b&gt;VEŢI PIERDE TOTI VELESII&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR FXTCOINS&lt;/b&gt;!</source>
+        <translation>Atenţie: Dacă va criptati portofelul si ulterior pierdeti parola, &lt;b&gt;VEŢI PIERDE TOTI FXTCOINII&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -186,10 +186,6 @@
     <message>
         <source>Wallet encrypted</source>
         <translation>Portofel criptat</translation>
-    </message>
-    <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your Veless from being stolen by malware infecting your computer.</source>
-        <translation>%1 se va închide acum pentru a termina procesul de criptare. Ţineţi minte că criptarea portofelului nu vă poate proteja în totalitate de furtul monedelor de către programe malware care vă infectează calculatorul.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -221,7 +217,7 @@
     </message>
     <message>
         <source>Wallet passphrase was successfully changed.</source>
-        <translation>Parola portofelului a fost schimveles.</translation>
+        <translation>Parola portofelului a fost schimbata.</translation>
     </message>
     <message>
         <source>Warning: The Caps Lock key is on!</source>
@@ -252,10 +248,6 @@
     <message>
         <source>&amp;Overview</source>
         <translation>&amp;Imagine de ansamblu</translation>
-    </message>
-    <message>
-        <source>Node</source>
-        <translation>Nod</translation>
     </message>
     <message>
         <source>Show general overview of wallet</source>
@@ -314,24 +306,12 @@
         <translation>S&amp;chimbă parola...</translation>
     </message>
     <message>
-        <source>&amp;Sending addresses...</source>
-        <translation>Adrese de trimitere...</translation>
-    </message>
-    <message>
-        <source>&amp;Receiving addresses...</source>
-        <translation>Adrese de p&amp;rimire...</translation>
-    </message>
-    <message>
         <source>Open &amp;URI...</source>
         <translation>Deschide &amp;URI...</translation>
     </message>
     <message>
         <source>Wallet:</source>
         <translation>Portofel:</translation>
-    </message>
-    <message>
-        <source>default wallet</source>
-        <translation>portofel implicit</translation>
     </message>
     <message>
         <source>Click to disable network activity.</source>
@@ -358,8 +338,8 @@
         <translation>Proxy este&lt;b&gt;activat&lt;/b&gt;:%1</translation>
     </message>
     <message>
-        <source>Send coins to a Veles address</source>
-        <translation>Trimite monede către o adresă Veles</translation>
+        <source>Send coins to a FxTCoin address</source>
+        <translation>Trimite monede către o adresă FxTCoin</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -382,12 +362,8 @@
         <translation>&amp;Verifică mesaj...</translation>
     </message>
     <message>
-        <source>Veles</source>
-        <translation>Veles</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>Portofel</translation>
+        <source>FxTCoin</source>
+        <translation>FxTCoin</translation>
     </message>
     <message>
         <source>&amp;Send</source>
@@ -410,12 +386,12 @@
         <translation>Criptează cheile private ale portofelului dvs.</translation>
     </message>
     <message>
-        <source>Sign messages with your Veles addresses to prove you own them</source>
-        <translation>Semnaţi mesaje cu adresa dvs. Veles pentru a dovedi că vă aparţin</translation>
+        <source>Sign messages with your FxTCoin addresses to prove you own them</source>
+        <translation>Semnaţi mesaje cu adresa dvs. FxTCoin pentru a dovedi că vă aparţin</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Veles addresses</source>
-        <translation>Verificaţi mesaje pentru a vă asigura că au fost semnate cu adresa Veles specificată</translation>
+        <source>Verify messages to ensure they were signed with specified FxTCoin addresses</source>
+        <translation>Verificaţi mesaje pentru a vă asigura că au fost semnate cu adresa FxTCoin specificată</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -434,8 +410,8 @@
         <translation>Bara de unelte</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and Veles: URIs)</source>
-        <translation>Cereţi plăţi (generează coduri QR şi Veles-uri: URls)</translation>
+        <source>Request payments (generates QR codes and fxtcoin: URIs)</source>
+        <translation>Cereţi plăţi (generează coduri QR şi fxtcoin-uri: URls)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -446,16 +422,16 @@
         <translation>Arată lista de adrese pentru primire şi etichetele</translation>
     </message>
     <message>
-        <source>Open a Veles: URI or payment request</source>
-        <translation>Deschidere Veles: o adresa URI sau o cerere de plată</translation>
+        <source>Open a fxtcoin: URI or payment request</source>
+        <translation>Deschidere fxtcoin: o adresa URI sau o cerere de plată</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation>Opţiuni linie de &amp;comandă</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Veles network</source>
-        <translation><numerusform>%n conexiune activă către reţeaua Veles</numerusform><numerusform>%n conexiuni active către reţeaua Veles</numerusform><numerusform>%n de conexiuni active către reţeaua Veles</numerusform></translation>
+        <source>%n active connection(s) to FxTCoin network</source>
+        <translation><numerusform>%n conexiune activă către reţeaua FxTCoin</numerusform><numerusform>%n conexiuni active către reţeaua FxTCoin</numerusform><numerusform>%n de conexiuni active către reţeaua FxTCoin</numerusform></translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -498,8 +474,20 @@
         <translation>Actualizat</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Veles command-line options</source>
-        <translation>Arată mesajul de ajutor %1 pentru a obţine o listă cu opţiunile posibile de linii de comandă Veles</translation>
+        <source>Show the %1 help message to get a list with possible FxTCoin command-line options</source>
+        <translation>Arată mesajul de ajutor %1 pentru a obţine o listă cu opţiunile posibile de linii de comandă FxTCoin</translation>
+    </message>
+    <message>
+        <source>default wallet</source>
+        <translation>portofel implicit</translation>
+    </message>
+    <message>
+        <source>&amp;Window</source>
+        <translation>&amp;Fereastră</translation>
+    </message>
+    <message>
+        <source>Minimize</source>
+        <translation>Minimizare</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -574,8 +562,8 @@
         <translation>Portofelul este &lt;b&gt;criptat&lt;/b&gt; iar în momentul de faţă este &lt;b&gt;blocat&lt;/b&gt;</translation>
     </message>
     <message>
-        <source>A fatal error occurred. Veles can no longer continue safely and will quit.</source>
-        <translation>A survenit o eroare fatală. Veles nu mai poate continua în siguranţă şi se va opri.</translation>
+        <source>A fatal error occurred. FxTCoin can no longer continue safely and will quit.</source>
+        <translation>A survenit o eroare fatală. FxTCoin nu mai poate continua în siguranţă şi se va opri.</translation>
     </message>
 </context>
 <context>
@@ -760,8 +748,8 @@
         <translation>Editează adresa de trimitere</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Veles address.</source>
-        <translation>Adresa introdusă "%1" nu este o adresă Veles validă.</translation>
+        <source>The entered address "%1" is not a valid FxTCoin address.</source>
+        <translation>Adresa introdusă "%1" nu este o adresă FxTCoin validă.</translation>
     </message>
     <message>
         <source>Address "%1" already exists as a receiving address with label "%2" and so cannot be added as a sending address.</source>
@@ -857,8 +845,8 @@
         <translation>Foloseşte un dosar de date personalizat:</translation>
     </message>
     <message>
-        <source>Veles</source>
-        <translation>Veles</translation>
+        <source>FxTCoin</source>
+        <translation>FxTCoin</translation>
     </message>
     <message>
         <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
@@ -869,8 +857,8 @@
         <translation>Aproximativ %1 GB de date vor fi stocate in acest director.</translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the Veles block chain.</source>
-        <translation>%1 va descarca si stoca o copie a blockchainului Veles</translation>
+        <source>%1 will download and store a copy of the FxTCoin block chain.</source>
+        <translation>%1 va descarca si stoca o copie a blockchainului FxTCoin</translation>
     </message>
     <message>
         <source>The wallet will also be stored in this directory.</source>
@@ -900,12 +888,12 @@
         <translation>Form</translation>
     </message>
     <message>
-        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the Veles network, as detailed below.</source>
-        <translation>Tranzactiile recente pot sa nu fie inca vizibile, de aceea balanta portofelului poate fi incorecta. Aceasta informatie va fi corecta de indata ce portofelul va fi complet sincronizat cu reteaua Veles, asa cum este detaliat mai jos.</translation>
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the fxtcoin network, as detailed below.</source>
+        <translation>Tranzactiile recente pot sa nu fie inca vizibile, de aceea balanta portofelului poate fi incorecta. Aceasta informatie va fi corecta de indata ce portofelul va fi complet sincronizat cu reteaua FxTCoin, asa cum este detaliat mai jos.</translation>
     </message>
     <message>
-        <source>Attempting to spend Veless that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
-        <translation>Incercarea de a cheltui Velesi care sunt afectati de tranzactii ce inca nu sunt afisate nu va fi acceptata de retea.</translation>
+        <source>Attempting to spend fxtcoins that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <translation>Incercarea de a cheltui fxtcoini care sunt afectati de tranzactii ce inca nu sunt afisate nu va fi acceptata de retea.</translation>
     </message>
     <message>
         <source>Number of blocks left</source>
@@ -939,11 +927,7 @@
         <source>Hide</source>
         <translation>Ascunde</translation>
     </message>
-    <message>
-        <source>Unknown. Syncing Headers (%1)...</source>
-        <translation>Necunoscut. Se sincronizeaza headerele (%1)...</translation>
-    </message>
-</context>
+    </context>
 <context>
     <name>OpenURIDialog</name>
     <message>
@@ -990,10 +974,6 @@
         <translation>Mărimea bazei de &amp;date cache</translation>
     </message>
     <message>
-        <source>MB</source>
-        <translation>MB</translation>
-    </message>
-    <message>
         <source>Number of script &amp;verification threads</source>
         <translation>Numărul de thread-uri de &amp;verificare</translation>
     </message>
@@ -1026,10 +1006,6 @@
         <translation>URL-uri terţe părţi (de exemplu, un explorator de bloc), care apar în tab-ul tranzacţiilor ca elemente de meniu contextual. %s în URL este înlocuit cu hash de tranzacţie. URL-urile multiple sînt separate prin bară verticală |.</translation>
     </message>
     <message>
-        <source>Active command-line options that override above options:</source>
-        <translation>Opţiuni linie de comandă active care oprimă opţiunile de mai sus:</translation>
-    </message>
-    <message>
         <source>Open the %1 configuration file from the working directory.</source>
         <translation>Deschide fisierul de configurare %1 din directorul curent.</translation>
     </message>
@@ -1048,6 +1024,22 @@
     <message>
         <source>&amp;Network</source>
         <translation>Reţea</translation>
+    </message>
+    <message>
+        <source>Disables some advanced features but all blocks will still be fully validated. Reverting this setting requires re-downloading the entire blockchain. Actual disk usage may be somewhat higher.</source>
+        <translation>Dezactiveaza unele caracteristici avansate insa toate blocurile vor fi validate pe deplin. Inversarea acestei setari necesita re-descarcarea intregului blockchain. Utilizarea reala a discului poate fi ceva mai mare.</translation>
+    </message>
+    <message>
+        <source>Prune &amp;block storage to</source>
+        <translation>Reductie &amp;block storage la  </translation>
+    </message>
+    <message>
+        <source>GB</source>
+        <translation>GB</translation>
+    </message>
+    <message>
+        <source>Reverting this setting requires re-downloading the entire blockchain.</source>
+        <translation> Inversarea acestei setari necesita re-descarcarea intregului blockchain.</translation>
     </message>
     <message>
         <source>(0 = auto, &lt;0 = leave that many cores free)</source>
@@ -1074,8 +1066,8 @@
         <translation>Cheltuire rest neconfirmat</translation>
     </message>
     <message>
-        <source>Automatically open the Veles client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Deschide automat în router portul aferent clientului Veles. Funcţionează doar dacă routerul duportă UPnP şi e activat.</translation>
+        <source>Automatically open the FxTCoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Deschide automat în router portul aferent clientului FxTCoin. Funcţionează doar dacă routerul duportă UPnP şi e activat.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -1090,8 +1082,8 @@
         <translation>Permite conexiuni de intrar&amp;e</translation>
     </message>
     <message>
-        <source>Connect to the Veles network through a SOCKS5 proxy.</source>
-        <translation>Conectare la reţeaua Veles printr-un proxy SOCKS.</translation>
+        <source>Connect to the FxTCoin network through a SOCKS5 proxy.</source>
+        <translation>Conectare la reţeaua FxTCoin printr-un proxy SOCKS.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1126,8 +1118,8 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the Veles network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Conectare la reteaua Veles printr-un proxy SOCKS5 separat pentru serviciile TOR ascunse.</translation>
+        <source>Connect to the FxTCoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Conectare la reteaua FxTCoin printr-un proxy SOCKS5 separat pentru serviciile TOR ascunse.</translation>
     </message>
     <message>
         <source>&amp;Window</source>
@@ -1163,7 +1155,7 @@
     </message>
     <message>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Alegeţi subdiviziunea folosită la afişarea interfeţei şi la trimiterea de Veles.</translation>
+        <translation>Alegeţi subdiviziunea folosită la afişarea interfeţei şi la trimiterea de fxtcoin.</translation>
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
@@ -1223,7 +1215,7 @@
     </message>
     <message>
         <source>The supplied proxy address is invalid.</source>
-        <translation>Adresa Veles pe care aţi specificat-o nu este validă.</translation>
+        <translation>Adresa fxtcoin pe care aţi specificat-o nu este validă.</translation>
     </message>
 </context>
 <context>
@@ -1233,8 +1225,8 @@
         <translation>Form</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Veles network after a connection is established, but this process has not completed yet.</source>
-        <translation>Informaţiile afişate pot fi neactualizate. Portofelul dvs. se sincronizează automat cu reţeaua Veles după ce o conexiune este stabilită, dar acest proces nu a fost finalizat încă.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the FxTCoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>Informaţiile afişate pot fi neactualizate. Portofelul dvs. se sincronizează automat cu reţeaua FxTCoin după ce o conexiune este stabilită, dar acest proces nu a fost finalizat încă.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1308,12 +1300,16 @@
         <translation>Eroare la cererea de plată</translation>
     </message>
     <message>
-        <source>Cannot start Veles: click-to-pay handler</source>
-        <translation>Veles nu poate porni: click-to-pay handler</translation>
+        <source>Cannot start fxtcoin: click-to-pay handler</source>
+        <translation>FxTCoin nu poate porni: click-to-pay handler</translation>
     </message>
     <message>
         <source>URI handling</source>
         <translation>Gestionare URI</translation>
+    </message>
+    <message>
+        <source>'fxtcoin://' is not a valid URI. Use 'fxtcoin:' instead.</source>
+        <translation>'fxtcoin://' nu este un URI valid. Folositi 'fxtcoin:' in loc.</translation>
     </message>
     <message>
         <source>Payment request fetch URL is invalid: %1</source>
@@ -1324,8 +1320,8 @@
         <translation>Adresă pentru plată invalidă %1</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid Veles address or malformed URI parameters.</source>
-        <translation>URI nu poate fi analizat! Acest lucru poate fi cauzat de o adresă Veles invalidă sau parametri URI deformaţi.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid FxTCoin address or malformed URI parameters.</source>
+        <translation>URI nu poate fi analizat! Acest lucru poate fi cauzat de o adresă FxTCoin invalidă sau parametri URI deformaţi.</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -1426,8 +1422,8 @@
         <translation>Cantitate</translation>
     </message>
     <message>
-        <source>Enter a Veles address (e.g. %1)</source>
-        <translation>Introduceţi o adresă Veles (de exemplu %1)</translation>
+        <source>Enter a FxTCoin address (e.g. %1)</source>
+        <translation>Introduceţi o adresă FxTCoin (de exemplu %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1513,8 +1509,16 @@
 <context>
     <name>QObject::QObject</name>
     <message>
+        <source>Error parsing command line arguments: %1.</source>
+        <translation>Eroare la analiza argumentelor linie de comanda: %1</translation>
+    </message>
+    <message>
         <source>Error: Specified data directory "%1" does not exist.</source>
         <translation>Eroare: Directorul de date specificat "%1" nu există.</translation>
+    </message>
+    <message>
+        <source>Error: Cannot parse configuration file: %1.</source>
+        <translation>Eroare: Nu se poate analiza fişierul de configuraţie: %1.</translation>
     </message>
     <message>
         <source>Error: %1</source>
@@ -1605,6 +1609,14 @@
     <message>
         <source>Memory usage</source>
         <translation>Memorie folosită</translation>
+    </message>
+    <message>
+        <source>Wallet: </source>
+        <translation>Portofel:</translation>
+    </message>
+    <message>
+        <source>(none)</source>
+        <translation>(nimic)</translation>
     </message>
     <message>
         <source>&amp;Reset</source>
@@ -1775,10 +1787,6 @@
         <translation>&amp;Unban</translation>
     </message>
     <message>
-        <source>default wallet</source>
-        <translation>portofel implicit</translation>
-    </message>
-    <message>
         <source>Welcome to the %1 RPC console.</source>
         <translation>Bun venit la consola %1 RPC.</translation>
     </message>
@@ -1801,6 +1809,14 @@
     <message>
         <source>Network activity disabled</source>
         <translation>Activitatea retelei a fost oprita.</translation>
+    </message>
+    <message>
+        <source>Executing command without any wallet</source>
+        <translation>Executarea comenzii fara nici un portofel.</translation>
+    </message>
+    <message>
+        <source>Executing command using "%1" wallet</source>
+        <translation>Executarea comenzii folosind portofelul "%1"</translation>
     </message>
     <message>
         <source>(node id: %1)</source>
@@ -1850,8 +1866,8 @@
         <translation>&amp;Mesaj:</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Veles network.</source>
-        <translation>Un mesaj opţional de ataşat la cererea de plată, care va fi afişat cînd cererea este deschisă. Notă: Acest mesaj nu va fi trimis cu plata către reţeaua Veles.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the FxTCoin network.</source>
+        <translation>Un mesaj opţional de ataşat la cererea de plată, care va fi afişat cînd cererea este deschisă. Notă: Acest mesaj nu va fi trimis cu plata către reţeaua FxTCoin.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -2087,20 +2103,20 @@
         <translation>inchide setarile de taxare</translation>
     </message>
     <message>
+        <source>Specify a custom fee per kB (1,000 bytes) of the transaction's virtual size.
+
+Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis per kB" for a transaction size of 500 bytes (half of 1 kB) would ultimately yield a fee of only 50 satoshis.</source>
+        <translation>Specificati o taxa anume pe kB (1000 byte) din marimea virtuala a tranzactiei. 
+
+Nota: Cum taxa este calculata per byte, o taxa de "100 satoshi per kB" pentru o tranzactie de 500 byte (jumatate de kB) va produce o taxa de doar 50 satoshi.</translation>
+    </message>
+    <message>
         <source>per kilobyte</source>
         <translation>per kilooctet</translation>
     </message>
     <message>
         <source>Hide</source>
         <translation>Ascunde</translation>
-    </message>
-    <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for Veles transactions than the network can process.</source>
-        <translation>Plata unei taxe minime de tranzactie este in regula atata timp cat exista mai mult spatiu in blocuri dacat sunt tranzactii. Insa trebuie sa fiti constienti ca acest lucru poate conduce la tranzactii care nu vor fi niciodata confirmate in cazul in care exista cerere de tranzactii mai mare decat poate procesa reteaua.</translation>
-    </message>
-    <message>
-        <source>(read the tooltip)</source>
-        <translation>(citeste tooltip)</translation>
     </message>
     <message>
         <source>Recommended:</source>
@@ -2207,12 +2223,24 @@
         <translation>Puteti creste taxa mai tarziu (semnaleaza Replace-By-Fee, BIP-125).</translation>
     </message>
     <message>
+        <source>from wallet %1</source>
+        <translation>de la portofelul %1</translation>
+    </message>
+    <message>
+        <source>Please, review your transaction.</source>
+        <translation>Va rugam sa revizuiti tranzactia.</translation>
+    </message>
+    <message>
         <source>Transaction fee</source>
         <translation>Taxă tranzacţie</translation>
     </message>
     <message>
         <source>Not signalling Replace-By-Fee, BIP-125.</source>
         <translation>Nu se semnalizeaza Replace-By-Fee, BIP-125</translation>
+    </message>
+    <message>
+        <source>Total Amount</source>
+        <translation>Suma totală</translation>
     </message>
     <message>
         <source>Confirm send coins</source>
@@ -2254,17 +2282,13 @@
         <source>Payment request expired.</source>
         <translation>Cerere de plată expirata</translation>
     </message>
-    <message>
-        <source>Pay only the required fee of %1</source>
-        <translation>Plăteşte doar taxa solicitata de %1</translation>
-    </message>
     <message numerus="yes">
         <source>Estimated to begin confirmation within %n block(s).</source>
         <translation><numerusform>Se estimeaza inceperea confirmarii in %n bloc.</numerusform><numerusform>Se estimeaza inceperea confirmarii in %n blocuri.</numerusform><numerusform>Se estimeaza inceperea confirmarii in %n blocuri.</numerusform></translation>
     </message>
     <message>
-        <source>Warning: Invalid Veles address</source>
-        <translation>Atenţie: Adresa Veles nevalidă!</translation>
+        <source>Warning: Invalid FxTCoin address</source>
+        <translation>Atenţie: Adresa fxtcoin nevalidă!</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -2306,8 +2330,8 @@
         <translation>Aceasta este o tranzacţie normală.</translation>
     </message>
     <message>
-        <source>The Veles address to send the payment to</source>
-        <translation>Adresa Veles către care se face plata</translation>
+        <source>The FxTCoin address to send the payment to</source>
+        <translation>Adresa fxtcoin către care se face plata</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -2326,8 +2350,8 @@
         <translation>Înlătură această intrare</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less Veless than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation>Taxa va fi scazuta in suma trimisa. Destinatarul va primi mai putini Veles decat ati specificat in campul sumei trimise. Daca au fost selectati mai multi destinatari, taxa se va imparti in mod egal.</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less fxtcoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation>Taxa va fi scazuta in suma trimisa. Destinatarul va primi mai putini fxtcoin decat ati specificat in campul sumei trimise. Daca au fost selectati mai multi destinatari, taxa se va imparti in mod egal.</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -2354,8 +2378,8 @@
         <translation>Introduceţi eticheta pentru ca această adresa să fie introdusă în lista de adrese folosite</translation>
     </message>
     <message>
-        <source>A message that was attached to the Veles: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Veles network.</source>
-        <translation>un mesaj a fost ataşat la Veles: URI care va fi stocat cu tranzacţia pentru referinţa dvs. Notă: Acest mesaj nu va fi trimis către reţeaua Veles.</translation>
+        <source>A message that was attached to the fxtcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the FxTCoin network.</source>
+        <translation>un mesaj a fost ataşat la fxtcoin: URI care va fi stocat cu tranzacţia pentru referinţa dvs. Notă: Acest mesaj nu va fi trimis către reţeaua fxtcoin.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -2399,11 +2423,11 @@
         <translation>&amp;Semnează mesaj</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive Veless sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation>Puteţi semna mesaje/contracte cu adresele dvs. pentru a demostra ca puteti primi Velesi trimisi la ele. Aveţi grijă să nu semnaţi nimic vag sau aleator, deoarece atacurile de tip phishing vă pot păcăli să le transferaţi identitatea. Semnaţi numai declaraţiile detaliate cu care sînteti de acord.</translation>
+        <source>You can sign messages/agreements with your addresses to prove you can receive fxtcoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <translation>Puteţi semna mesaje/contracte cu adresele dvs. pentru a demostra ca puteti primi fxtcoini trimisi la ele. Aveţi grijă să nu semnaţi nimic vag sau aleator, deoarece atacurile de tip phishing vă pot păcăli să le transferaţi identitatea. Semnaţi numai declaraţiile detaliate cu care sînteti de acord.</translation>
     </message>
     <message>
-        <source>The Veles address to sign the message with</source>
+        <source>The FxTCoin address to sign the message with</source>
         <translation>Adresa cu care semnaţi mesajul</translation>
     </message>
     <message>
@@ -2435,8 +2459,8 @@
         <translation>Copiază semnatura curentă în clipboard-ul sistemului</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Veles address</source>
-        <translation>Semnează mesajul pentru a dovedi ca deţineţi acestă adresă Veles</translation>
+        <source>Sign the message to prove you own this FxTCoin address</source>
+        <translation>Semnează mesajul pentru a dovedi ca deţineţi acestă adresă FxTCoin</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -2459,12 +2483,12 @@
         <translation>Introduceţi adresa de semnatură, mesajul (asiguraţi-vă că aţi copiat spaţiile, taburile etc. exact) şi semnatura dedesubt pentru a verifica mesajul. Aveţi grijă să nu citiţi mai mult în semnatură decît mesajul în sine, pentru a evita să fiţi păcăliţi de un atac de tip man-in-the-middle. De notat ca aceasta dovedeste doar ca semnatarul primeste odata cu adresa, nu dovedesta insa trimiterea vreunei tranzactii.</translation>
     </message>
     <message>
-        <source>The Veles address the message was signed with</source>
-        <translation>Introduceţi o adresă Veles</translation>
+        <source>The FxTCoin address the message was signed with</source>
+        <translation>Introduceţi o adresă FxTCoin</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Veles address</source>
-        <translation>Verificaţi mesajul pentru a vă asigura că a fost semnat cu adresa Veles specificată</translation>
+        <source>Verify the message to ensure it was signed with the specified FxTCoin address</source>
+        <translation>Verificaţi mesajul pentru a vă asigura că a fost semnat cu adresa FxTCoin specificată</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -2666,6 +2690,10 @@
     <message>
         <source>Transaction total size</source>
         <translation>Dimensiune totala tranzacţie</translation>
+    </message>
+    <message>
+        <source>Transaction virtual size</source>
+        <translation>Dimensiune virtuala a tranzactiei</translation>
     </message>
     <message>
         <source>Output index</source>
@@ -2985,6 +3013,9 @@
     </message>
 </context>
 <context>
+    <name>WalletController</name>
+    </context>
+<context>
     <name>WalletFrame</name>
     <message>
         <source>No wallet has been loaded.</source>
@@ -3033,6 +3064,10 @@
         <source>Could not commit transaction</source>
         <translation>Tranzactia nu a putut fi consemnata.</translation>
     </message>
+    <message>
+        <source>default wallet</source>
+        <translation>portofel implicit</translation>
+    </message>
 </context>
 <context>
     <name>WalletView</name>
@@ -3068,7 +3103,11 @@
         <source>The wallet data was successfully saved to %1.</source>
         <translation>Datele portofelului s-au salvat cu succes la %1.</translation>
     </message>
-    </context>
+    <message>
+        <source>Cancel</source>
+        <translation>Anulare</translation>
+    </message>
+</context>
 <context>
     <name>bitcoin-core</name>
     <message>
@@ -3100,8 +3139,8 @@
         <translation>Imposibil de pornit serverul HTTP. Pentru detalii vezi logul de depanare.</translation>
     </message>
     <message>
-        <source>Veles Core</source>
-        <translation>Nucleul Veles</translation>
+        <source>FxTCoin Core</source>
+        <translation>Nucleul FxTCoin</translation>
     </message>
     <message>
         <source>The %s developers</source>
@@ -3188,10 +3227,6 @@
         <translation>Doriţi să reconstruiţi baza de date blocuri acum?</translation>
     </message>
     <message>
-        <source>Error creating %s: You can't create non-HD wallets with this version.</source>
-        <translation>Eroare la crearea %s: Nu se pot crea portofele non-HD cu aceasta versiune.</translation>
-    </message>
-    <message>
         <source>Error initializing block database</source>
         <translation>Eroare la iniţializarea bazei de date de blocuri</translation>
     </message>
@@ -3202,6 +3237,10 @@
     <message>
         <source>Error loading %s</source>
         <translation>Eroare la încărcarea %s</translation>
+    </message>
+    <message>
+        <source>Error loading %s: Private keys can only be disabled during creation</source>
+        <translation>Eroare la incarcarea %s: Cheile private pot fi dezactivate doar in momentul crearii</translation>
     </message>
     <message>
         <source>Error loading %s: Wallet corrupted</source>
@@ -3256,6 +3295,14 @@
         <translation>Suma nevalidă pentru -fallbackfee=&lt;amount&gt;: '%s'</translation>
     </message>
     <message>
+        <source>Specified blocks directory "%s" does not exist.</source>
+        <translation>Directorul de blocuri "%s" specificat nu exista.</translation>
+    </message>
+    <message>
+        <source>Upgrading txindex database</source>
+        <translation>Actualizarea bazei de date txindex</translation>
+    </message>
+    <message>
         <source>Loading P2P addresses...</source>
         <translation>Încărcare adrese P2P...</translation>
     </message>
@@ -3296,16 +3343,8 @@
         <translation>Nu se poate efectua legatura la %s pe acest computer. %s probabil ruleaza deja.</translation>
     </message>
     <message>
-        <source>Unsupported argument -benchmark ignored, use -debug=bench.</source>
-        <translation>Argumentul nesuportat -benchmark este ignorat, folositi debug=bench.</translation>
-    </message>
-    <message>
-        <source>Unsupported argument -debugnet ignored, use -debug=net.</source>
-        <translation>Argument nesuportat -debugnet ignorat, folosiţi -debug=net.</translation>
-    </message>
-    <message>
-        <source>Unsupported argument -tor found, use -onion.</source>
-        <translation>Argument nesuportat -tor găsit, folosiţi -onion.</translation>
+        <source>Unable to generate keys</source>
+        <translation>Nu s-au putut genera cheile</translation>
     </message>
     <message>
         <source>Unsupported logging category %s=%s.</source>
@@ -3338,10 +3377,6 @@
     <message>
         <source>You need to rebuild the database using -reindex to go back to unpruned mode.  This will redownload the entire blockchain</source>
         <translation>Trebuie reconstruita intreaga baza de date folosind -reindex pentru a va intoarce la modul non-redus. Aceasta va determina descarcarea din nou a intregului blockchain</translation>
-    </message>
-    <message>
-        <source>Error loading %s: You can't disable HD on an already existing HD wallet</source>
-        <translation>Eroare la incarcarea %s: Nu se poate dezactiva HD la un portofel care este deja HD.</translation>
     </message>
     <message>
         <source>Error reading from database, shutting down.</source>
@@ -3444,10 +3479,6 @@
         <translation>-maxtxfee este setata foarte sus! Se pot plati taxe de aceasta marime pe o singura tranzactie.</translation>
     </message>
     <message>
-        <source>Error loading %s: You can't enable HD on an already existing non-HD wallet</source>
-        <translation>Eroare la incarcarea %s: Nu se poate activa HD la un portofel care este deja non-HD.</translation>
-    </message>
-    <message>
         <source>This is the transaction fee you may pay when fee estimates are not available.</source>
         <translation>Aceasta este taxa de tranzactie pe care este posibil sa o platiti daca estimarile de taxe nu sunt disponibile.</translation>
     </message>
@@ -3458,18 +3489,6 @@
     <message>
         <source>Total length of network version string (%i) exceeds maximum length (%i). Reduce the number or size of uacomments.</source>
         <translation>Lungimea totala a sirului versiunii retelei (%i) depaseste lungimea maxima (%i). Reduceti numarul sa dimensiunea uacomments. </translation>
-    </message>
-    <message>
-        <source>Unsupported argument -socks found. Setting SOCKS version isn't possible anymore, only SOCKS5 proxies are supported.</source>
-        <translation>S-a gasit un argument -socks nesuportat. Setarea versiunii SOCKS nu mai este posibila, sunt suportate doar proxiurile SOCKS5.</translation>
-    </message>
-    <message>
-        <source>Unsupported argument -whitelistalwaysrelay ignored, use -whitelistrelay and/or -whitelistforcerelay.</source>
-        <translation>Se ignora argumentul nesuportat -whitelistalwaysrelay, folositi -whitelistrelay si/sau -whitelistforcerelay.</translation>
-    </message>
-    <message>
-        <source>Warning: Unknown block versions being mined! It's possible unknown rules are in effect</source>
-        <translation>Atentie: se mineaza blocuri cu versiune necunoscuta! Este posibil sa fie in vigoare reguli necunoscute.</translation>
     </message>
     <message>
         <source>Warning: Wallet file corrupt, data salvaged! Original %s saved as %s in %s; if your balance or transactions are incorrect you should restore from a backup.</source>
@@ -3522,6 +3541,18 @@
     <message>
         <source>Insufficient funds</source>
         <translation>Fonduri insuficiente</translation>
+    </message>
+    <message>
+        <source>Fee estimation failed. Fallbackfee is disabled. Wait a few blocks or enable -fallbackfee.</source>
+        <translation>Estimarea taxei a esuat. Taxa implicita este dezactivata. Asteptati cateva blocuri, sau activati -fallbackfee.</translation>
+    </message>
+    <message>
+        <source>Warning: Private keys detected in wallet {%s} with disabled private keys</source>
+        <translation>Atentie: S-au detectat chei private in portofelul {%s} cu cheile private dezactivate</translation>
+    </message>
+    <message>
+        <source>Cannot write to data directory '%s'; check permissions.</source>
+        <translation>Nu se poate scrie in directorul de date '%s"; verificati permisiunile.</translation>
     </message>
     <message>
         <source>Loading block index...</source>

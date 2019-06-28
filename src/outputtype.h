@@ -3,9 +3,10 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FXTC_OUTPUTTYPE_H
-#define FXTC_OUTPUTTYPE_H
+#ifndef BITCOIN_OUTPUTTYPE_H
+#define BITCOIN_OUTPUTTYPE_H
 
+#include <attributes.h>
 #include <keystore.h>
 #include <script/standard.h>
 
@@ -26,7 +27,7 @@ enum class OutputType {
     CHANGE_AUTO,
 };
 
-bool ParseOutputType(const std::string& str, OutputType& output_type);
+NODISCARD bool ParseOutputType(const std::string& str, OutputType& output_type);
 const std::string& FormatOutputType(OutputType type);
 
 /**
@@ -45,5 +46,5 @@ std::vector<CTxDestination> GetAllDestinationsForKey(const CPubKey& key);
  */
 CTxDestination AddAndGetDestinationForScript(CKeyStore& keystore, const CScript& script, OutputType);
 
-#endif // FXTC_OUTPUTTYPE_H
+#endif // BITCOIN_OUTPUTTYPE_H
 

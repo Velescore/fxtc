@@ -1,3 +1,4 @@
+// Copyright (c) 2018-2019 FXTC developers
 /* $Id: sph_echo.h 216 2010-06-08 09:46:57Z tp $ */
 /**
  * ECHO interface. ECHO is a family of functions which differ by
@@ -33,8 +34,8 @@
  * @author   Thomas Pornin <thomas.pornin@cryptolog.com>
  */
 
-#ifndef FXTC_CRYPTO_SPH_ECHO_H
-#define FXTC_CRYPTO_SPH_ECHO_H
+#ifndef RNRT_CRYPTO_SPH_ECHO_H
+#define RNRT_CRYPTO_SPH_ECHO_H
 
 #ifdef __cplusplus
 extern "C"{
@@ -312,9 +313,9 @@ void sph_echo512_close(void *cc, void *dst);
  */
 void sph_echo512_addbits_and_close(
 	void *cc, unsigned ub, unsigned n, void *dst);
-	
+
 #ifdef __cplusplus
 }
 #endif
 
-#endif // FXTC_CRYPTO_SPH_ECHO_H
+#endif // RNRT_CRYPTO_SPH_ECHO_H

@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FXTC_CHAIN_H
-#define FXTC_CHAIN_H
+#ifndef BITCOIN_CHAIN_H
+#define BITCOIN_CHAIN_H
 
 #include <arith_uint256.h>
 #include <consensus/params.h>
@@ -18,7 +18,7 @@
  * Maximum amount of time that a block timestamp is allowed to exceed the
  * current network-adjusted time before the block will be accepted.
  */
-static const int64_t MAX_FUTURE_BLOCK_TIME = 2 * 60 * 60;
+static constexpr int64_t MAX_FUTURE_BLOCK_TIME = 2 * 60 * 60;
 
 /**
  * Timestamp window used as a grace period by code that compares external
@@ -26,7 +26,15 @@ static const int64_t MAX_FUTURE_BLOCK_TIME = 2 * 60 * 60;
  * to block timestamps. This should be set at least as high as
  * MAX_FUTURE_BLOCK_TIME.
  */
-static const int64_t TIMESTAMP_WINDOW = MAX_FUTURE_BLOCK_TIME;
+static constexpr int64_t TIMESTAMP_WINDOW = MAX_FUTURE_BLOCK_TIME;
+
+/**
+ * Maximum gap between node time and block time used
+ * for the "Catching up..." mode in GUI.
+ *
+ * Ref: https://github.com/bitcoin/bitcoin/pull/1026
+ */
+static constexpr int64_t MAX_BLOCK_TIME_GAP = 90 * 60;
 
 class CBlockFileInfo
 {
@@ -117,7 +125,7 @@ struct CDiskBlockPos
 
     std::string ToString() const
     {
-        return strprintf("CBlockDiskPos(nFile=%i, nPos=%i)", nFile, nPos);
+        return strprintf("CDiskBlockPos(nFile=%i, nPos=%i)", nFile, nPos);
     }
 
 };
@@ -312,10 +320,21 @@ public:
         return *phashBlock;
     }
 
+    // FXTC BEGIN
     uint256 GetBlockPoWHash() const
     {
         return GetBlockHeader().GetPoWHash();
     }
+    // FXTC END
+
+    /**
+     * Check whether this block's and all previous blocks' transactions have been
+     * downloaded (and stored to disk) at some point.
+     *
+     * Does not imply the transactions are consensus-valid (ConnectTip might fail)
+     * Does not imply the transactions are still stored on disk. (IsBlockPruned might return true)
+     */
+    bool HaveTxsDownloaded() const { return nChainTx != 0; }
 
     int64_t GetBlockTime() const
     {
@@ -518,4 +537,4 @@ public:
     CBlockIndex* FindEarliestAtLeast(int64_t nTime) const;
 };
 
-#endif // FXTC_CHAIN_H
+#endif // BITCOIN_CHAIN_H

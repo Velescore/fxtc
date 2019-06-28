@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FXTC_QT_TRANSACTIONRECORD_H
-#define FXTC_QT_TRANSACTIONRECORD_H
+#ifndef BITCOIN_QT_TRANSACTIONRECORD_H
+#define BITCOIN_QT_TRANSACTIONRECORD_H
 
 #include <amount.h>
 #include <uint256.h>
@@ -138,11 +138,11 @@ public:
 
     /** Update status from core wallet tx.
      */
-    void updateStatus(const interfaces::WalletTxStatus& wtx, int numBlocks, int64_t adjustedTime);
+    void updateStatus(const interfaces::WalletTxStatus& wtx, int numBlocks, int64_t block_time);
 
     /** Return whether a status update is needed.
      */
     bool statusUpdateNeeded(int numBlocks) const;
 };
 
-#endif // FXTC_QT_TRANSACTIONRECORD_H
+#endif // BITCOIN_QT_TRANSACTIONRECORD_H

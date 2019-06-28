@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FXTC_QT_RECENTREQUESTSTABLEMODEL_H
-#define FXTC_QT_RECENTREQUESTSTABLEMODEL_H
+#ifndef BITCOIN_QT_RECENTREQUESTSTABLEMODEL_H
+#define BITCOIN_QT_RECENTREQUESTSTABLEMODEL_H
 
 #include <qt/walletmodel.h>
 
@@ -94,7 +94,7 @@ private:
     WalletModel *walletModel;
     QStringList columns;
     QList<RecentRequestEntry> list;
-    int64_t nReceiveRequestsMaxId;
+    int64_t nReceiveRequestsMaxId{0};
 
     /** Updates the column title to "Amount (DisplayUnit)" and emits headerDataChanged() signal for table headers to react. */
     void updateAmountColumnTitle();
@@ -102,4 +102,4 @@ private:
     QString getAmountTitle();
 };
 
-#endif // FXTC_QT_RECENTREQUESTSTABLEMODEL_H
+#endif // BITCOIN_QT_RECENTREQUESTSTABLEMODEL_H

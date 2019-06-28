@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FXTC_CHECKPOINTS_H
-#define FXTC_CHECKPOINTS_H
+#ifndef BITCOIN_CHECKPOINTS_H
+#define BITCOIN_CHECKPOINTS_H
 
 #include <uint256.h>
 
@@ -27,4 +27,4 @@ bool IsExpectedCheckpoint(const CCheckpointData& data, int nHeight, const uint25
 
 } //namespace Checkpoints
 
-#endif // FXTC_CHECKPOINTS_H
+#endif // BITCOIN_CHECKPOINTS_H

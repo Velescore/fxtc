@@ -22,33 +22,21 @@
 SignVerifyMessageDialog::SignVerifyMessageDialog(const PlatformStyle *_platformStyle, QWidget *parent) :
     QDialog(parent),
     ui(new Ui::SignVerifyMessageDialog),
-    model(0),
+    model(nullptr),
     platformStyle(_platformStyle)
 {
     ui->setupUi(this);
 
+    ui->addressBookButton_SM->setIcon(platformStyle->SingleColorIcon(":/icons/address-book"));
+    ui->pasteButton_SM->setIcon(platformStyle->SingleColorIcon(":/icons/editpaste"));
+    ui->copySignatureButton_SM->setIcon(platformStyle->SingleColorIcon(":/icons/editcopy"));
+    ui->signMessageButton_SM->setIcon(platformStyle->SingleColorIcon(":/icons/edit"));
+    ui->clearButton_SM->setIcon(platformStyle->SingleColorIcon(":/icons/remove"));
+    ui->addressBookButton_VM->setIcon(platformStyle->SingleColorIcon(":/icons/address-book"));
+    ui->verifyMessageButton_VM->setIcon(platformStyle->SingleColorIcon(":/icons/transaction_0"));
+    ui->clearButton_VM->setIcon(platformStyle->SingleColorIcon(":/icons/remove"));
+
     ui->signatureOut_SM->setPlaceholderText(tr("Click \"Sign Message\" to generate signature"));
-
-    QString theme = GUIUtil::getThemeName();
-
-#ifdef Q_OS_MAC // Icons on push buttons are very uncommon on Mac
-    ui->signMessageButton_SM->setIcon(QIcon());
-    ui->clearButton_SM->setIcon(QIcon());
-    ui->verifyMessageButton_VM->setIcon(QIcon());
-    ui->clearButton_VM->setIcon(QIcon());
-#else
-    ui->signMessageButton_SM->setIcon(QIcon(":/icons/" + theme + "/edit"));
-    ui->clearButton_SM->setIcon(QIcon(":/icons/" + theme + "/remove"));
-    ui->verifyMessageButton_VM->setIcon(QIcon(":/icons/" + theme + "/transaction_0"));
-    ui->clearButton_VM->setIcon(QIcon(":/icons/" + theme + "/remove"));
-#endif
-
-    // These icons are needed on Mac also
-    ui->addressBookButton_SM->setIcon(QIcon(":/icons/" + theme + "/address-book"));
-    ui->pasteButton_SM->setIcon(QIcon(":/icons/" + theme + "/editpaste"));
-    ui->copySignatureButton_SM->setIcon(QIcon(":/icons/" + theme + "/editcopy"));
-    ui->addressBookButton_VM->setIcon(QIcon(":/icons/" + theme + "/address-book"));
-
 
     GUIUtil::setupAddressWidget(ui->addressIn_SM, this);
     GUIUtil::setupAddressWidget(ui->addressIn_VM, this);

@@ -1,3 +1,4 @@
+// Copyright (c) 2018-2019 FXTC developers
 /* $Id: sph_shabal.h 175 2010-05-07 16:03:20Z tp $ */
 /**
  * Shabal interface. Shabal is a family of functions which differ by
@@ -33,8 +34,8 @@
  * @author   Thomas Pornin <thomas.pornin@cryptolog.com>
  */
 
-#ifndef FXTC_CRYPTO_SPH_SHABAL_H
-#define FXTC_CRYPTO_SPH_SHABAL_H
+#ifndef RNRT_CRYPTO_SPH_SHABAL_H
+#define RNRT_CRYPTO_SPH_SHABAL_H
 
 #include <stddef.h>
 #include <crypto/sph_types.h>
@@ -340,4 +341,4 @@ void sph_shabal512_addbits_and_close(
 }
 #endif
 
-#endif // FXTC_CRYPTO_SPH_SHABAL_H
+#endif // RNRT_CRYPTO_SPH_SHABAL_H

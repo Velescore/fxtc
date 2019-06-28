@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FXTC_INTERFACES_WALLET_H
-#define FXTC_INTERFACES_WALLET_H
+#ifndef BITCOIN_INTERFACES_WALLET_H
+#define BITCOIN_INTERFACES_WALLET_H
 
 #include <amount.h>                    // For CAmount
 #include <pubkey.h>                    // For CKeyID and CScriptID (definitions needed in CTxDestination instantiation)
@@ -11,12 +11,17 @@
 #include <script/standard.h>           // For CTxDestination
 #include <support/allocators/secure.h> // For SecureString
 #include <ui_interface.h>              // For ChangeType
-// VELES BEGIN
-// Othervise build fails with NO_WALLET=1
+// Dash
 #ifdef ENABLE_WALLET
 #include <wallet/wallet.h>
-#endif
-// VELES END
+#else  // ENABLE_WALLET
+// FXTC TODO:
+enum AvailableCoinsType
+{
+    ALL_COINS
+};
+#endif // ENABLE_WALLET
+//
 
 #include <functional>
 #include <map>
@@ -146,21 +151,6 @@ public:
     //! List locked coins.
     virtual void listLockedCoins(std::vector<COutPoint>& outputs) = 0;
 
-    // VELES BEGIN
-#ifndef ENABLE_WALLET
-    // Dash, from wallet/wallet.h
-    enum AvailableCoinsType
-    {
-        ALL_COINS,
-        ONLY_DENOMINATED,
-        ONLY_NONDENOMINATED,
-        ONLY_MASTERNODE_COLLATERAL, // find masternode outputs including locked ones (use with caution)
-        ONLY_PRIVATESEND_COLLATERAL
-    };
-    //
-    // VELES END
-#endif
-
     //! Create transaction.
     virtual std::unique_ptr<PendingWalletTx> createTransaction(const std::vector<CRecipient>& recipients,
         const CCoinControl& coin_control,
@@ -211,15 +201,14 @@ public:
     virtual bool tryGetTxStatus(const uint256& txid,
         WalletTxStatus& tx_status,
         int& num_blocks,
-        int64_t& adjusted_time) = 0;
+        int64_t& block_time) = 0;
 
     //! Get transaction details.
     virtual WalletTx getWalletTxDetails(const uint256& txid,
         WalletTxStatus& tx_status,
         WalletOrderForm& order_form,
         bool& in_mempool,
-        int& num_blocks,
-        int64_t& adjusted_time) = 0;
+        int& num_blocks) = 0;
 
     //! Get balances.
     virtual WalletBalances getBalances() = 0;
@@ -268,6 +257,9 @@ public:
     // Return whether HD enabled.
     virtual bool hdEnabled() = 0;
 
+    // Return whether the wallet is blank.
+    virtual bool canGetAddresses() = 0;
+
     // check if a certain wallet flag is set.
     virtual bool IsWalletFlagSet(uint64_t flag) = 0;
 
@@ -276,6 +268,9 @@ public:
 
     // Get default change type.
     virtual OutputType getDefaultChangeType() = 0;
+
+    // Remove wallet.
+    virtual void remove() = 0;
 
     //! Register handler for unload message.
     using UnloadFn = std::function<void()>;
@@ -305,6 +300,10 @@ public:
     using WatchOnlyChangedFn = std::function<void(bool have_watch_only)>;
     virtual std::unique_ptr<Handler> handleWatchOnlyChanged(WatchOnlyChangedFn fn) = 0;
 
+    //! Register handler for keypool changed messages.
+    using CanGetAddressesChangedFn = std::function<void()>;
+    virtual std::unique_ptr<Handler> handleCanGetAddressesChanged(CanGetAddressesChangedFn fn) = 0;
+
     // Dash
     //! Register handler for additional sync data progress messages.
     using NotifyAdditionalDataSyncProgressChangedFn = std::function<void(double nSyncProgress)>;
@@ -327,7 +326,6 @@ public:
     //! Send pending transaction and commit to wallet.
     virtual bool commit(WalletValueMap value_map,
         WalletOrderForm order_form,
-        std::string from_account,
         std::string& reject_reason) = 0;
 };
 
@@ -405,10 +403,10 @@ struct WalletTxOut
     bool is_spent = false;
 };
 
-//! Return implementation of Wallet interface. This function will be undefined
-//! in builds where ENABLE_WALLET is false.
+//! Return implementation of Wallet interface. This function is defined in
+//! dummywallet.cpp and throws if the wallet component is not compiled.
 std::unique_ptr<Wallet> MakeWallet(const std::shared_ptr<CWallet>& wallet);
 
 } // namespace interfaces
 
-#endif // FXTC_INTERFACES_WALLET_H
+#endif // BITCOIN_INTERFACES_WALLET_H

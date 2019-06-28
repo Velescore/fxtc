@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FXTC_QT_TEST_PAYMENTSERVERTESTS_H
-#define FXTC_QT_TEST_PAYMENTSERVERTESTS_H
+#ifndef BITCOIN_QT_TEST_PAYMENTSERVERTESTS_H
+#define BITCOIN_QT_TEST_PAYMENTSERVERTESTS_H
 
 #include <qt/paymentserver.h>
 
@@ -32,4 +32,4 @@ public:
     SendCoinsRecipient recipient;
 };
 
-#endif // FXTC_QT_TEST_PAYMENTSERVERTESTS_H
+#endif // BITCOIN_QT_TEST_PAYMENTSERVERTESTS_H

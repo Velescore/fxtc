@@ -1,12 +1,12 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2012 Bitcoin Developers
 // Copyright (c) 2014 Talkcoin Developers
-// Copyright (c) 2018 FXTC developers
+// Copyright (c) 2018-2019 FXTC developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FXTC_CRYPTO_X16R_H
-#define FXTC_CRYPTO_X16R_H
+#ifndef TALKCOIN_CRYPTO_X16R_H
+#define TALKCOIN_CRYPTO_X16R_H
 
 #include <uint256.h>
 
@@ -170,4 +170,4 @@ inline uint256 HashX16R(const T1 pbegin, const T1 pend, const uint256 PrevBlockH
     return hash[15].trim256();
 }
 
-#endif // FXTC_CRYPTO_X16R_H
+#endif // TALKCOIN_CRYPTO_X16R_H

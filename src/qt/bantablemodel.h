@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FXTC_QT_BANTABLEMODEL_H
-#define FXTC_QT_BANTABLEMODEL_H
+#ifndef BITCOIN_QT_BANTABLEMODEL_H
+#define BITCOIN_QT_BANTABLEMODEL_H
 
 #include <net.h>
 
@@ -45,7 +45,7 @@ class BanTableModel : public QAbstractTableModel
     Q_OBJECT
 
 public:
-    explicit BanTableModel(interfaces::Node& node, ClientModel *parent = 0);
+    explicit BanTableModel(interfaces::Node& node, ClientModel *parent = nullptr);
     ~BanTableModel();
     void startAutoRefresh();
     void stopAutoRefresh();
@@ -77,4 +77,4 @@ private:
     std::unique_ptr<BanTablePriv> priv;
 };
 
-#endif // FXTC_QT_BANTABLEMODEL_H
+#endif // BITCOIN_QT_BANTABLEMODEL_H

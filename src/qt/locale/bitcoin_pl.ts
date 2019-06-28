@@ -66,12 +66,12 @@
         <translation>Adresy odbioru</translation>
     </message>
     <message>
-        <source>These are your Veles addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Tutaj znajdują się adresy Veles na które wysyłasz płatności. Zawsze sprawdzaj ilość i adres odbiorcy przed wysyłką monet.</translation>
+        <source>These are your FxTCoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Tutaj znajdują się adresy FxTCoin na które wysyłasz płatności. Zawsze sprawdzaj ilość i adres odbiorcy przed wysyłką monet.</translation>
     </message>
     <message>
-        <source>These are your Veles addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>To są twoje adresy Veles do odbierania płatności. Zaleca się używanie nowych adresów odbiorczych dla każdej transakcji.</translation>
+        <source>These are your FxTCoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>To są twoje adresy FxTCoin do odbierania płatności. Zaleca się używanie nowych adresów odbiorczych dla każdej transakcji.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -176,8 +176,8 @@
         <translation>Potwierdź szyfrowanie portfela</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR VELESS&lt;/b&gt;!</source>
-        <translation>Uwaga: jeśli zaszyfrujesz swój portfel i zgubisz hasło &lt;b&gt;STRACISZ WSZYSTKIE SWOJE VELESY&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR FXTCOINS&lt;/b&gt;!</source>
+        <translation>Uwaga: jeśli zaszyfrujesz swój portfel i zgubisz hasło &lt;b&gt;STRACISZ WSZYSTKIE SWOJE FXTCOINY&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -188,8 +188,8 @@
         <translation>Portfel zaszyfrowany</translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your Veless from being stolen by malware infecting your computer.</source>
-        <translation>%1 zamknie się aby dokończyć proces szyfrowania. Pamiętaj, że szyfrowanie portfela nie zabezpiecza w pełni Twoich Velesów przed kradzieżą przez wirusy lub trojany mogące zainfekować Twój komputer.</translation>
+        <source>Your wallet is now encrypted. Remember that encrypting your wallet cannot fully protect your fxtcoins from being stolen by malware infecting your computer.</source>
+        <translation>Twój portfel został zaszyfrowany. Pamiętaj, że szyfrowanie nie chroni przed kradzieżą w wyniku działania złośliwego oprogramowania infekującego twój komputer.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -254,10 +254,6 @@
         <translation>P&amp;odsumowanie</translation>
     </message>
     <message>
-        <source>Node</source>
-        <translation>Węzeł</translation>
-    </message>
-    <message>
         <source>Show general overview of wallet</source>
         <translation>Pokazuje ogólny widok portfela</translation>
     </message>
@@ -314,24 +310,12 @@
         <translation>&amp;Zmień hasło...</translation>
     </message>
     <message>
-        <source>&amp;Sending addresses...</source>
-        <translation>Adresy wysyłania...</translation>
-    </message>
-    <message>
-        <source>&amp;Receiving addresses...</source>
-        <translation>Adresy odbioru...</translation>
-    </message>
-    <message>
         <source>Open &amp;URI...</source>
         <translation>Otwórz URI...</translation>
     </message>
     <message>
         <source>Wallet:</source>
         <translation>Portfel:</translation>
-    </message>
-    <message>
-        <source>default wallet</source>
-        <translation>domyślny portfel</translation>
     </message>
     <message>
         <source>Click to disable network activity.</source>
@@ -358,8 +342,8 @@
         <translation>Proxy jest &lt;b&gt;włączone&lt;/b&gt;: %1</translation>
     </message>
     <message>
-        <source>Send coins to a Veles address</source>
-        <translation>Wyślij monety na adres Velesowy</translation>
+        <source>Send coins to a FxTCoin address</source>
+        <translation>Wyślij monety na adres fxtcoinowy</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -382,12 +366,8 @@
         <translation>&amp;Zweryfikuj wiadomość...</translation>
     </message>
     <message>
-        <source>Veles</source>
-        <translation>Veles</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>Portfel</translation>
+        <source>FxTCoin</source>
+        <translation>FxTCoin</translation>
     </message>
     <message>
         <source>&amp;Send</source>
@@ -410,12 +390,12 @@
         <translation>Szyfruj klucze prywatne, które są w twoim portfelu</translation>
     </message>
     <message>
-        <source>Sign messages with your Veles addresses to prove you own them</source>
+        <source>Sign messages with your FxTCoin addresses to prove you own them</source>
         <translation>Podpisz wiadomości swoim adresem aby udowodnić jego posiadanie</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Veles addresses</source>
-        <translation>Zweryfikuj wiadomość,  aby upewnić się, że została podpisana podanym adresem Velesowym.</translation>
+        <source>Verify messages to ensure they were signed with specified FxTCoin addresses</source>
+        <translation>Zweryfikuj wiadomość,  aby upewnić się, że została podpisana podanym adresem fxtcoinowym.</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -434,8 +414,8 @@
         <translation>Pasek zakładek</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and Veles: URIs)</source>
-        <translation>Żądaj płatności (generuje kod QR oraz Velesowe URI)</translation>
+        <source>Request payments (generates QR codes and fxtcoin: URIs)</source>
+        <translation>Żądaj płatności (generuje kod QR oraz fxtcoinowe URI)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -446,16 +426,16 @@
         <translation>Pokaż listę adresów i etykiet użytych do odbierania</translation>
     </message>
     <message>
-        <source>Open a Veles: URI or payment request</source>
-        <translation>Otwórz URI Veles: lub żądanie zapłaty</translation>
+        <source>Open a fxtcoin: URI or payment request</source>
+        <translation>Otwórz URI fxtcoin: lub żądanie zapłaty</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation>&amp;Opcje linii komend</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Veles network</source>
-        <translation><numerusform>%n aktywnych połączeń do sieci Veles</numerusform><numerusform>%n aktywnych połączeń do sieci Veles</numerusform><numerusform>%n aktywnych połączeń do sieci Veles</numerusform><numerusform>%n aktywnych połączeń do sieci Veles</numerusform></translation>
+        <source>%n active connection(s) to FxTCoin network</source>
+        <translation><numerusform>%n aktywnych połączeń do sieci FxTCoin</numerusform><numerusform>%n aktywnych połączeń do sieci FxTCoin</numerusform><numerusform>%n aktywnych połączeń do sieci FxTCoin</numerusform><numerusform>%n aktywnych połączeń do sieci FxTCoin</numerusform></translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -498,8 +478,40 @@
         <translation>Aktualny</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Veles command-line options</source>
+        <source>Open Wallet</source>
+        <translation>Otwórz Portfel</translation>
+    </message>
+    <message>
+        <source>Close Wallet...</source>
+        <translation>Zamknij Portfel...</translation>
+    </message>
+    <message>
+        <source>Show the %1 help message to get a list with possible FxTCoin command-line options</source>
         <translation>Pokaż pomoc %1 aby zobaczyć listę wszystkich opcji lnii poleceń.</translation>
+    </message>
+    <message>
+        <source>default wallet</source>
+        <translation>domyślny portfel</translation>
+    </message>
+    <message>
+        <source>Opening Wallet &lt;b&gt;%1&lt;/b&gt;...</source>
+        <translation>Otwieranie portfela &lt;b&gt;%1&lt;/b&gt;...</translation>
+    </message>
+    <message>
+        <source>&amp;Window</source>
+        <translation>&amp;Okno</translation>
+    </message>
+    <message>
+        <source>Minimize</source>
+        <translation>Minimalizuj</translation>
+    </message>
+    <message>
+        <source>Restore</source>
+        <translation>Przywróć</translation>
+    </message>
+    <message>
+        <source>Main Window</source>
+        <translation>Okno główne</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -566,6 +578,10 @@
         <translation>Generowanie kluczy HD jest &lt;b&gt;wyłączone&lt;/b&gt;</translation>
     </message>
     <message>
+        <source>Private key &lt;b&gt;disabled&lt;/b&gt;</source>
+        <translation>Klucz prywatny&lt;b&gt;dezaktywowany&lt;/b&gt;</translation>
+    </message>
+    <message>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
         <translation>Portfel jest &lt;b&gt;zaszyfrowany&lt;/b&gt; i obecnie &lt;b&gt;odblokowany&lt;/b&gt;</translation>
     </message>
@@ -574,8 +590,8 @@
         <translation>Portfel jest &lt;b&gt;zaszyfrowany&lt;/b&gt; i obecnie &lt;b&gt;zablokowany&lt;/b&gt;</translation>
     </message>
     <message>
-        <source>A fatal error occurred. Veles can no longer continue safely and will quit.</source>
-        <translation>Wystąpił krytyczny błąd. Veles nie jest w stanie kontynuować bezpiecznie i zostanie zamknięty.</translation>
+        <source>A fatal error occurred. FxTCoin can no longer continue safely and will quit.</source>
+        <translation>Wystąpił krytyczny błąd. FxTCoin nie jest w stanie kontynuować bezpiecznie i zostanie zamknięty.</translation>
     </message>
 </context>
 <context>
@@ -764,8 +780,8 @@
         <translation>Zmień adres wysyłania</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Veles address.</source>
-        <translation>Wprowadzony adres "%1" nie jest prawidłowym adresem Veles.</translation>
+        <source>The entered address "%1" is not a valid FxTCoin address.</source>
+        <translation>Wprowadzony adres "%1" nie jest prawidłowym adresem FxTCoin.</translation>
     </message>
     <message>
         <source>Address "%1" already exists as a receiving address with label "%2" and so cannot be added as a sending address.</source>
@@ -861,8 +877,8 @@
         <translation>Użyj wybranego folderu dla danych</translation>
     </message>
     <message>
-        <source>Veles</source>
-        <translation>Veles</translation>
+        <source>FxTCoin</source>
+        <translation>FxTCoin</translation>
     </message>
     <message>
         <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
@@ -873,8 +889,8 @@
         <translation>Około %1 GB danych zostanie zapisane w tym katalogu.</translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the Veles block chain.</source>
-        <translation>%1 pobierze i zapisze lokalnie kopię łańcucha bloków Veles.</translation>
+        <source>%1 will download and store a copy of the FxTCoin block chain.</source>
+        <translation>%1 pobierze i zapisze lokalnie kopię łańcucha bloków FxTCoin.</translation>
     </message>
     <message>
         <source>The wallet will also be stored in this directory.</source>
@@ -904,12 +920,12 @@
         <translation>Formularz</translation>
     </message>
     <message>
-        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the Veles network, as detailed below.</source>
-        <translation>Świeże transakcje mogą nie być jeszcze widoczne, a zatem saldo portfela może być nieprawidłowe. Te detale będą poprawne, gdy portfel zakończy synchronizację z siecią Veles, zgodnie z poniższym opisem.</translation>
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the fxtcoin network, as detailed below.</source>
+        <translation>Świeże transakcje mogą nie być jeszcze widoczne, a zatem saldo portfela może być nieprawidłowe. Te detale będą poprawne, gdy portfel zakończy synchronizację z siecią fxtcoin, zgodnie z poniższym opisem.</translation>
     </message>
     <message>
-        <source>Attempting to spend Veless that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
-        <translation>Próba wydania Velesów które nie są jeszcze wyświetlone jako transakcja zostanie odrzucona przez sieć. </translation>
+        <source>Attempting to spend fxtcoins that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <translation>Próba wydania fxtcoinów które nie są jeszcze wyświetlone jako transakcja zostanie odrzucona przez sieć. </translation>
     </message>
     <message>
         <source>Number of blocks left</source>
@@ -943,11 +959,7 @@
         <source>Hide</source>
         <translation>Ukryj</translation>
     </message>
-    <message>
-        <source>Unknown. Syncing Headers (%1)...</source>
-        <translation>Nieznane. Synchronizowanie nagłówków (%1)...</translation>
-    </message>
-</context>
+    </context>
 <context>
     <name>OpenURIDialog</name>
     <message>
@@ -994,10 +1006,6 @@
         <translation>Wielkość bufora bazy &amp;danych</translation>
     </message>
     <message>
-        <source>MB</source>
-        <translation>MB</translation>
-    </message>
-    <message>
         <source>Number of script &amp;verification threads</source>
         <translation>Liczba wątków &amp;weryfikacji skryptu</translation>
     </message>
@@ -1028,10 +1036,6 @@
     <message>
         <source>Third party URLs (e.g. a block explorer) that appear in the transactions tab as context menu items. %s in the URL is replaced by transaction hash. Multiple URLs are separated by vertical bar |.</source>
         <translation>Zewnętrzne URL podglądu transakcji (np. eksplorator bloków), które będą wyświetlały się w menu kontekstowym, w zakładce transakcji. %s będzie zamieniany w adresie na hash transakcji. Oddziel wiele adresów pionową kreską |.</translation>
-    </message>
-    <message>
-        <source>Active command-line options that override above options:</source>
-        <translation>Aktywne opcje linii komend, które nadpisują powyższe opcje:</translation>
     </message>
     <message>
         <source>Open the %1 configuration file from the working directory.</source>
@@ -1094,8 +1098,8 @@
         <translation>Wydaj niepotwierdzoną re&amp;sztę</translation>
     </message>
     <message>
-        <source>Automatically open the Veles client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Automatycznie otwiera port klienta Veles na routerze. Ta opcja dzieła tylko jeśli twój router wspiera UPnP i jest ono włączone.</translation>
+        <source>Automatically open the FxTCoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Automatycznie otwiera port klienta FxTCoin na routerze. Ta opcja dzieła tylko jeśli twój router wspiera UPnP i jest ono włączone.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -1110,8 +1114,8 @@
         <translation>Zezwól na &amp;połączenia przychodzące</translation>
     </message>
     <message>
-        <source>Connect to the Veles network through a SOCKS5 proxy.</source>
-        <translation>Połącz się z siecią Veles poprzez proxy SOCKS5.</translation>
+        <source>Connect to the FxTCoin network through a SOCKS5 proxy.</source>
+        <translation>Połącz się z siecią FxTCoin poprzez proxy SOCKS5.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1146,8 +1150,8 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the Veles network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Połącz się z siecią Veles przy pomocy oddzielnego SOCKS5 proxy dla sieci TOR</translation>
+        <source>Connect to the FxTCoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Połącz się z siecią FxTCoin przy pomocy oddzielnego SOCKS5 proxy dla sieci TOR</translation>
     </message>
     <message>
         <source>&amp;Window</source>
@@ -1253,8 +1257,8 @@
         <translation>Formularz</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Veles network after a connection is established, but this process has not completed yet.</source>
-        <translation>Wyświetlana informacja może być nieaktualna. Twój portfel synchronizuje się automatycznie z siecią Veles, zaraz po tym jak uzyskano połączenie, ale proces ten nie został jeszcze ukończony.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the FxTCoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>Wyświetlana informacja może być nieaktualna. Twój portfel synchronizuje się automatycznie z siecią fxtcoin, zaraz po tym jak uzyskano połączenie, ale proces ten nie został jeszcze ukończony.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1328,16 +1332,16 @@
         <translation>Błąd żądania płatności</translation>
     </message>
     <message>
-        <source>Cannot start Veles: click-to-pay handler</source>
-        <translation>Nie można uruchomić protokołu Veles: kliknij-by-zapłacić</translation>
+        <source>Cannot start fxtcoin: click-to-pay handler</source>
+        <translation>Nie można uruchomić protokołu fxtcoin: kliknij-by-zapłacić</translation>
     </message>
     <message>
         <source>URI handling</source>
         <translation>Obsługa URI</translation>
     </message>
     <message>
-        <source>'Veles://' is not a valid URI. Use 'Veles:' instead.</source>
-        <translation>'Veles://' nie jest poprawnym URI. Użyj 'Veles:'.</translation>
+        <source>'fxtcoin://' is not a valid URI. Use 'fxtcoin:' instead.</source>
+        <translation>'fxtcoin://' nie jest poprawnym URI. Użyj 'fxtcoin:'.</translation>
     </message>
     <message>
         <source>Payment request fetch URL is invalid: %1</source>
@@ -1348,8 +1352,8 @@
         <translation>błędny adres płatności %1</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid Veles address or malformed URI parameters.</source>
-        <translation>Nie można przeanalizować identyfikatora URI! Może to być spowodowane nieważnym adresem Veles lub nieprawidłowymi parametrami URI.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid FxTCoin address or malformed URI parameters.</source>
+        <translation>Nie można przeanalizować identyfikatora URI! Może to być spowodowane nieważnym adresem FxTCoin lub nieprawidłowymi parametrami URI.</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -1450,8 +1454,8 @@
         <translation>Kwota</translation>
     </message>
     <message>
-        <source>Enter a Veles address (e.g. %1)</source>
-        <translation>Wprowadź adres Velesowy (np. %1)</translation>
+        <source>Enter a FxTCoin address (e.g. %1)</source>
+        <translation>Wprowadź adres fxtcoinowy (np. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1815,10 +1819,6 @@
         <translation>&amp;Odblokuj</translation>
     </message>
     <message>
-        <source>default wallet</source>
-        <translation>domyślny portfel</translation>
-    </message>
-    <message>
         <source>Welcome to the %1 RPC console.</source>
         <translation>Witaj w konsoli %1 RPC.</translation>
     </message>
@@ -1898,8 +1898,8 @@
         <translation>&amp;Wiadomość:</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Veles network.</source>
-        <translation>Opcjonalna wiadomość do dołączenia do żądania płatności, która będzie wyświetlana, gdy żądanie zostanie otwarte. Uwaga: wiadomość ta nie zostanie wysłana wraz z płatnością w sieci Veles.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the FxTCoin network.</source>
+        <translation>Opcjonalna wiadomość do dołączenia do żądania płatności, która będzie wyświetlana, gdy żądanie zostanie otwarte. Uwaga: wiadomość ta nie zostanie wysłana wraz z płatnością w sieci FxTCoin.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -2152,14 +2152,6 @@ Uwaga: Ponieważ opłata jest naliczana za każdy bajt, opłata "100 satoshi za 
         <translation>Ukryj</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for Veles transactions than the network can process.</source>
-        <translation>Zapłacenie tylko minimalnej opłaty jest nadal wystarczające, dopóki jest mniejszy wolumen transakcji niż miejsca w blokach. Należy jednak mieć świadomość, że może skończyć się to niezatwierdzeniem nigdy transakcji, gdy jest większe zapotrzebowanie na transakcje Velesa niż sieć może przetworzyć.</translation>
-    </message>
-    <message>
-        <source>(read the tooltip)</source>
-        <translation>(przeczytaj podpowiedź)</translation>
-    </message>
-    <message>
         <source>Recommended:</source>
         <translation>Zalecane:</translation>
     </message>
@@ -2323,17 +2315,13 @@ Uwaga: Ponieważ opłata jest naliczana za każdy bajt, opłata "100 satoshi za 
         <source>Payment request expired.</source>
         <translation>Żądanie płatności upłynęło.</translation>
     </message>
-    <message>
-        <source>Pay only the required fee of %1</source>
-        <translation>Zapłać tylko wymaganą opłatę w wysokości %1</translation>
-    </message>
     <message numerus="yes">
         <source>Estimated to begin confirmation within %n block(s).</source>
         <translation><numerusform>Przybliżony czas rozpoczęcia zatwierdzenia: %n blok.</numerusform><numerusform>Przybliżony czas rozpoczęcia zatwierdzenia: %n bloki.</numerusform><numerusform>Przybliżony czas rozpoczęcia zatwierdzenia: %n bloków.</numerusform><numerusform>Przybliżony czas rozpoczęcia zatwierdzenia: %n bloków.</numerusform></translation>
     </message>
     <message>
-        <source>Warning: Invalid Veles address</source>
-        <translation>Ostrzeżenie: nieprawidłowy adres Veles</translation>
+        <source>Warning: Invalid FxTCoin address</source>
+        <translation>Ostrzeżenie: nieprawidłowy adres FxTCoin</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -2375,8 +2363,8 @@ Uwaga: Ponieważ opłata jest naliczana za każdy bajt, opłata "100 satoshi za 
         <translation>To jest standardowa płatność</translation>
     </message>
     <message>
-        <source>The Veles address to send the payment to</source>
-        <translation>Adres Veles gdzie wysłać płatność</translation>
+        <source>The FxTCoin address to send the payment to</source>
+        <translation>Adres FxTCoin gdzie wysłać płatność</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -2395,8 +2383,8 @@ Uwaga: Ponieważ opłata jest naliczana za każdy bajt, opłata "100 satoshi za 
         <translation>Usuń ten wpis</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less Veless than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation>Opłata zostanie odjęta od kwoty wysyłane.Odbiorca otrzyma mniej niż Veless wpisz w polu kwoty. Jeśli wybrano kilku odbiorców, opłata jest podzielona równo.</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less fxtcoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation>Opłata zostanie odjęta od kwoty wysyłane.Odbiorca otrzyma mniej niż fxtcoins wpisz w polu kwoty. Jeśli wybrano kilku odbiorców, opłata jest podzielona równo.</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -2423,8 +2411,8 @@ Uwaga: Ponieważ opłata jest naliczana za każdy bajt, opłata "100 satoshi za 
         <translation>Wprowadź etykietę dla tego adresu by dodać go do listy użytych adresów</translation>
     </message>
     <message>
-        <source>A message that was attached to the Veles: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Veles network.</source>
-        <translation>Wiadomość, która została dołączona do URI Veles:, która będzie przechowywana wraz z transakcją w celach informacyjnych. Uwaga: Ta wiadomość nie będzie rozsyłana w sieci Veles.</translation>
+        <source>A message that was attached to the fxtcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the FxTCoin network.</source>
+        <translation>Wiadomość, która została dołączona do URI fxtcoin:, która będzie przechowywana wraz z transakcją w celach informacyjnych. Uwaga: Ta wiadomość nie będzie rozsyłana w sieci FxTCoin.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -2468,12 +2456,12 @@ Uwaga: Ponieważ opłata jest naliczana za każdy bajt, opłata "100 satoshi za 
         <translation>Podpi&amp;sz Wiadomość</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive Veless sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <source>You can sign messages/agreements with your addresses to prove you can receive fxtcoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
         <translation>Możesz podpisywać wiadomości swoimi adresami aby udowodnić, że jesteś ich właścicielem. Uważaj, aby nie podpisywać niczego co wzbudza Twoje podejrzenia, ponieważ ktoś może stosować phishing próbując nakłonić Cię do ich podpisania. Akceptuj i podpisuj tylko w pełni zrozumiałe komunikaty i wiadomości.</translation>
     </message>
     <message>
-        <source>The Veles address to sign the message with</source>
-        <translation>Adres Veles, za pomocą którego podpisać wiadomość</translation>
+        <source>The FxTCoin address to sign the message with</source>
+        <translation>Adres FxTCoin, za pomocą którego podpisać wiadomość</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2504,7 +2492,7 @@ Uwaga: Ponieważ opłata jest naliczana za każdy bajt, opłata "100 satoshi za 
         <translation>Kopiuje aktualny podpis do schowka systemowego</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Veles address</source>
+        <source>Sign the message to prove you own this FxTCoin address</source>
         <translation>Podpisz wiadomość aby dowieść, że ten adres jest twój</translation>
     </message>
     <message>
@@ -2529,12 +2517,12 @@ Uwaga: Ponieważ opłata jest naliczana za każdy bajt, opłata "100 satoshi za 
 Zwróć uwagę, że poprawnie zweryfikowana wiadomość potwierdza to, że nadawca posiada klucz do adresu, natomiast nie potwierdza to, że poprawne wysłanie jakiejkolwiek transakcji! </translation>
     </message>
     <message>
-        <source>The Veles address the message was signed with</source>
-        <translation>Adres Veles, którym została podpisana wiadomość</translation>
+        <source>The FxTCoin address the message was signed with</source>
+        <translation>Adres FxTCoin, którym została podpisana wiadomość</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Veles address</source>
-        <translation>Zweryfikuj wiadomość,  aby upewnić się, że została podpisana odpowiednim adresem Veles.</translation>
+        <source>Verify the message to ensure it was signed with the specified FxTCoin address</source>
+        <translation>Zweryfikuj wiadomość,  aby upewnić się, że została podpisana odpowiednim adresem FxTCoin.</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -3063,6 +3051,9 @@ Zwróć uwagę, że poprawnie zweryfikowana wiadomość potwierdza to, że nadaw
     </message>
 </context>
 <context>
+    <name>WalletController</name>
+    </context>
+<context>
     <name>WalletFrame</name>
     <message>
         <source>No wallet has been loaded.</source>
@@ -3110,6 +3101,10 @@ Zwróć uwagę, że poprawnie zweryfikowana wiadomość potwierdza to, że nadaw
     <message>
         <source>Could not commit transaction</source>
         <translation>Nie można zatwierdzić transakcji</translation>
+    </message>
+    <message>
+        <source>default wallet</source>
+        <translation>domyślny portfel</translation>
     </message>
 </context>
 <context>
@@ -3182,8 +3177,8 @@ Zwróć uwagę, że poprawnie zweryfikowana wiadomość potwierdza to, że nadaw
         <translation>Uruchomienie serwera HTTP nie powiodło się. Zobacz dziennik debugowania, aby uzyskać więcej szczegółów.</translation>
     </message>
     <message>
-        <source>Veles Core</source>
-        <translation>Veles Core</translation>
+        <source>FxTCoin Core</source>
+        <translation>FxTCoin Core</translation>
     </message>
     <message>
         <source>The %s developers</source>
@@ -3270,10 +3265,6 @@ Zwróć uwagę, że poprawnie zweryfikowana wiadomość potwierdza to, że nadaw
         <translation>Czy chcesz teraz przebudować bazę bloków?</translation>
     </message>
     <message>
-        <source>Error creating %s: You can't create non-HD wallets with this version.</source>
-        <translation>Błąd podczas tworzenia %s: nie można założyć portfela nie-HD tą wersją.</translation>
-    </message>
-    <message>
         <source>Error initializing block database</source>
         <translation>Błąd inicjowania bazy danych bloków</translation>
     </message>
@@ -3342,6 +3333,11 @@ Zwróć uwagę, że poprawnie zweryfikowana wiadomość potwierdza to, że nadaw
         <translation>Nieprawidłowa kwota dla -fallbackfee=&lt;amount&gt;: '%s'</translation>
     </message>
     <message>
+        <source>Specified blocks directory "%s" does not exist.</source>
+        <translation>Podany folder bloków "%s" nie istnieje.
+</translation>
+    </message>
+    <message>
         <source>Upgrading txindex database</source>
         <translation>Aktualizowanie bazy txindex</translation>
     </message>
@@ -3390,18 +3386,6 @@ Zwróć uwagę, że poprawnie zweryfikowana wiadomość potwierdza to, że nadaw
         <translation>Nie można wygenerować kluczy</translation>
     </message>
     <message>
-        <source>Unsupported argument -benchmark ignored, use -debug=bench.</source>
-        <translation>Niewspierany argument -benchmark zignorowany, użyj -debug=bench.</translation>
-    </message>
-    <message>
-        <source>Unsupported argument -debugnet ignored, use -debug=net.</source>
-        <translation>Niewspierany argument -debugnet zignorowany, użyj -debug=net.</translation>
-    </message>
-    <message>
-        <source>Unsupported argument -tor found, use -onion.</source>
-        <translation>Znaleziono nieprawidłowy argument -tor, użyj -onion.</translation>
-    </message>
-    <message>
         <source>Unsupported logging category %s=%s.</source>
         <translation>Nieobsługiwana kategoria rejestrowania %s=%s.</translation>
     </message>
@@ -3436,10 +3420,6 @@ Zwróć uwagę, że poprawnie zweryfikowana wiadomość potwierdza to, że nadaw
     <message>
         <source>You need to rebuild the database using -reindex to go back to unpruned mode.  This will redownload the entire blockchain</source>
         <translation>Musisz przebudować bazę używając parametru -reindex aby wrócić do trybu pełnego. To spowoduje ponowne pobranie całego łańcucha bloków</translation>
-    </message>
-    <message>
-        <source>Error loading %s: You can't disable HD on an already existing HD wallet</source>
-        <translation>Błąd podczas ładowania %s: Nie można wyłączyć HD w już istniejącym portfelu HD</translation>
     </message>
     <message>
         <source>Error reading from database, shutting down.</source>
@@ -3478,6 +3458,10 @@ Zwróć uwagę, że poprawnie zweryfikowana wiadomość potwierdza to, że nadaw
         <translation>Zmniejszanie -maxconnections z %d do %d z powodu ograniczeń systemu.</translation>
     </message>
     <message>
+        <source>Section [%s] is not recognized.</source>
+        <translation>Sekcja [%s] jest nieznana.</translation>
+    </message>
+    <message>
         <source>Signing transaction failed</source>
         <translation>Podpisywanie transakcji nie powiodło się</translation>
     </message>
@@ -3492,6 +3476,12 @@ Zwróć uwagę, że poprawnie zweryfikowana wiadomość potwierdza to, że nadaw
     <message>
         <source>Specified -walletdir "%s" is not a directory</source>
         <translation>Podany -walletdir "%s" nie jest katalogiem</translation>
+    </message>
+    <message>
+        <source>The specified config file %s does not exist
+</source>
+        <translation>Podany plik konfiguracyjny %s nie istnieje
+</translation>
     </message>
     <message>
         <source>The transaction amount is too small to pay the fee</source>
@@ -3546,10 +3536,6 @@ Zwróć uwagę, że poprawnie zweryfikowana wiadomość potwierdza to, że nadaw
         <translation>-maxtxfee ma ustawioną badzo dużą wartość! Tak wysokie opłaty mogą być zapłacone w jednej transakcji.</translation>
     </message>
     <message>
-        <source>Error loading %s: You can't enable HD on an already existing non-HD wallet</source>
-        <translation>Błąd podczas ładowania %s: Nie można włączyć HD w już istniejącym portfelu nie-HD</translation>
-    </message>
-    <message>
         <source>This is the transaction fee you may pay when fee estimates are not available.</source>
         <translation>To jest opłata transakcyjna którą zapłacisz, gdy mechanizmy estymacji opłaty nie są dostępne.</translation>
     </message>
@@ -3560,18 +3546,6 @@ Zwróć uwagę, że poprawnie zweryfikowana wiadomość potwierdza to, że nadaw
     <message>
         <source>Total length of network version string (%i) exceeds maximum length (%i). Reduce the number or size of uacomments.</source>
         <translation>Całkowita długość łańcucha wersji (%i) przekracza maksymalną dopuszczalną długość (%i). Zmniejsz ilość lub rozmiar parametru uacomment.</translation>
-    </message>
-    <message>
-        <source>Unsupported argument -socks found. Setting SOCKS version isn't possible anymore, only SOCKS5 proxies are supported.</source>
-        <translation>Znaleziono niewspierany argument -socks. Wybieranie wersji SOCKS nie jest już możliwe, wsparcie programu obejmuje tylko proxy SOCKS5</translation>
-    </message>
-    <message>
-        <source>Unsupported argument -whitelistalwaysrelay ignored, use -whitelistrelay and/or -whitelistforcerelay.</source>
-        <translation>Niewspierany argument -whitelistalwaysrelay zignorowany, użyj -whitelistrelay i/lub -whitelistforcerelay.</translation>
-    </message>
-    <message>
-        <source>Warning: Unknown block versions being mined! It's possible unknown rules are in effect</source>
-        <translation>Ostrzeżenie: wydobywane są nieznane wersje bloków! Możliwe, że obowiązują nieznane reguły.</translation>
     </message>
     <message>
         <source>Warning: Wallet file corrupt, data salvaged! Original %s saved as %s in %s; if your balance or transactions are incorrect you should restore from a backup.</source>
@@ -3624,10 +3598,6 @@ Zwróć uwagę, że poprawnie zweryfikowana wiadomość potwierdza to, że nadaw
     <message>
         <source>Insufficient funds</source>
         <translation>Niewystarczające środki</translation>
-    </message>
-    <message>
-        <source>Can't generate a change-address key. Private keys are disabled for this wallet.</source>
-        <translation>Nie można wygenerować adresu reszty. Klucze prywatne są wyłączone w tym portfelu.</translation>
     </message>
     <message>
         <source>Cannot upgrade a non HD split wallet without upgrading to support pre split keypool. Please use -upgradewallet=169900 or -upgradewallet with no version specified.</source>

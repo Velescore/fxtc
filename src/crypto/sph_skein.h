@@ -1,3 +1,4 @@
+// Copyright (c) 2018-2019 FXTC developers
 /* $Id: sph_skein.h 253 2011-06-07 18:33:10Z tp $ */
 /**
  * Skein interface. The Skein specification defines three main
@@ -38,8 +39,8 @@
  * @author   Thomas Pornin <thomas.pornin@cryptolog.com>
  */
 
-#ifndef FXTC_CRYPTO_SPH_SKEIN_H
-#define FXTC_CRYPTO_SPH_SKEIN_H
+#ifndef RNRT_CRYPTO_SPH_SKEIN_H
+#define RNRT_CRYPTO_SPH_SKEIN_H
 
 #ifdef __cplusplus
 extern "C"{
@@ -295,4 +296,4 @@ void sph_skein512_addbits_and_close(
 }
 #endif
 
-#endif // FXTC_CRYPTO_SPH_SKEIN_H
+#endif // RNRT_CRYPTO_SPH_SKEIN_H

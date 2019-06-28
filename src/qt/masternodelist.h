@@ -1,15 +1,15 @@
 // Copyright (c) 2014-2017 The Dash Core developers
-// Copyright (c) 2018 FXTC developers
+// Copyright (c) 2018-2019 FXTC developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FXTC_QT_MASTERNODELIST_H
-#define FXTC_QT_MASTERNODELIST_H
+#ifndef DASH_QT_MASTERNODELIST_H
+#define DASH_QT_MASTERNODELIST_H
 
 #include <primitives/transaction.h>
 #include <qt/platformstyle.h>
 #include <sync.h>
-#include <util.h>
+#include <util/system.h>
 
 #include <QMenu>
 #include <QTimer>
@@ -80,4 +80,4 @@ private Q_SLOTS:
     void on_UpdateButton_clicked();
 };
 
-#endif // FXTC_QT_MASTERNODELIST_H
+#endif // DASH_QT_MASTERNODELIST_H

@@ -1,3 +1,4 @@
+// Copyright (c) 2018-2019 FXTC developers
 /* $Id: sph_sha2.h 216 2010-06-08 09:46:57Z tp $ */
 /**
  * SHA-224, SHA-256, SHA-384 and SHA-512 interface.
@@ -37,8 +38,8 @@
  * @author   Thomas Pornin <thomas.pornin@cryptolog.com>
  */
 
-#ifndef FXTC_CRYPTO_SPH_SHA2_H
-#define FXTC_CRYPTO_SPH_SHA2_H
+#ifndef RNRT_CRYPTO_SPH_SHA2_H
+#define RNRT_CRYPTO_SPH_SHA2_H
 
 #include <stddef.h>
 #include <crypto/sph_types.h>
@@ -375,4 +376,4 @@ void sph_sha512_comp(const sph_u64 msg[16], sph_u64 val[8]);
 #ifdef __cplusplus
 }
 
-#endif // FXTC_CRYPTO_SPH_SHA2_H
+#endif // RNRT_CRYPTO_SPH_SHA2_H

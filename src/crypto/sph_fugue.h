@@ -1,5 +1,7 @@
-#ifndef FXTC_CRYPTO_SPH_FUGUE_H
-#define FXTC_CRYPTO_SPH_FUGUE_H
+// Copyright (c) 2018-2019 FXTC developers
+
+#ifndef RNRT_CRYPTO_SPH_FUGUE_H
+#define RNRT_CRYPTO_SPH_FUGUE_H
 
 #include <stddef.h>
 #include <crypto/sph_types.h>
@@ -78,4 +80,4 @@ void sph_fugue512_addbits_and_close(
 }
 #endif
 
-#endif // FXTC_CRYPTO_SPH_FUGUE_H
+#endif // RNRT_CRYPTO_SPH_FUGUE_H

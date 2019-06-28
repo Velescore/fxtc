@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1000</width>
-    <height>495</height>
+    <height>500</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -312,7 +312,7 @@
       </size>
      </property>
      <property name="frameShape">
-      <enum>QFrame::NoFrame</enum>
+      <enum>QFrame::StyledPanel</enum>
      </property>
      <property name="frameShadow">
       <enum>QFrame::Sunken</enum>
@@ -408,7 +408,7 @@
       <bool>true</bool>
      </attribute>
      <attribute name="headerStretchLastSection">
-      <bool>true</bool>
+      <bool>false</bool>
      </attribute>
      <column>
       <property name="text">
@@ -441,6 +441,26 @@
       </property>
       <property name="toolTip">
        <string>Confirmed</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string/>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string/>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string/>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string/>
       </property>
      </column>
     </widget>

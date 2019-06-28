@@ -1,3 +1,4 @@
+// Copyright (c) 2018-2019 FXTC developers
 /* $Id: sph_blake.h 252 2011-06-07 17:55:14Z tp $ */
 /**
  * BLAKE interface. BLAKE is a family of functions which differ by their
@@ -34,8 +35,8 @@
  * @author   Thomas Pornin <thomas.pornin@cryptolog.com>
  */
 
-#ifndef FXTC_CRYPTO_SPH_BLAKE_H
-#define FXTC_CRYPTO_SPH_BLAKE_H
+#ifndef RNRT_CRYPTO_SPH_BLAKE_H
+#define RNRT_CRYPTO_SPH_BLAKE_H
 
 #ifdef __cplusplus
 extern "C"{
@@ -324,4 +325,4 @@ void sph_blake512_addbits_and_close(
 }
 #endif
 
-#endif // FXTC_CRYPTO_SPH_BLAKE_H
+#endif // RNRT_CRYPTO_SPH_BLAKE_H

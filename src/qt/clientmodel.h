@@ -4,8 +4,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FXTC_QT_CLIENTMODEL_H
-#define FXTC_QT_CLIENTMODEL_H
+#ifndef BITCOIN_QT_CLIENTMODEL_H
+#define BITCOIN_QT_CLIENTMODEL_H
 
 #include <QObject>
 #include <QDateTime>
@@ -48,7 +48,7 @@ class ClientModel : public QObject
     Q_OBJECT
 
 public:
-    explicit ClientModel(interfaces::Node& node, OptionsModel *optionsModel, QObject *parent = 0);
+    explicit ClientModel(interfaces::Node& node, OptionsModel *optionsModel, QObject *parent = nullptr);
     ~ClientModel();
 
     interfaces::Node& node() const { return m_node; }
@@ -74,6 +74,7 @@ public:
     bool isReleaseVersion() const;
     QString formatClientStartupTime() const;
     QString dataDir() const;
+    QString blocksDir() const;
 
     bool getProxyInfo(std::string& ip_port) const;
 
@@ -104,9 +105,7 @@ private:
     // Dash
     QTimer *pollMnTimer;
     //
-    // VELES BEGIN
-    QString appendQtWarnings(QString warnings) const;
-    // VELES END
+
     void subscribeToCoreSignals();
     void unsubscribeFromCoreSignals();
 
@@ -139,4 +138,4 @@ public Q_SLOTS:
     void updateBanlist();
 };
 
-#endif // FXTC_QT_CLIENTMODEL_H
+#endif // BITCOIN_QT_CLIENTMODEL_H

@@ -2,11 +2,13 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FXTC_WALLET_TEST_WALLET_TEST_FIXTURE_H
-#define FXTC_WALLET_TEST_WALLET_TEST_FIXTURE_H
+#ifndef BITCOIN_WALLET_TEST_WALLET_TEST_FIXTURE_H
+#define BITCOIN_WALLET_TEST_WALLET_TEST_FIXTURE_H
 
 #include <test/test_bitcoin.h>
 
+#include <interfaces/chain.h>
+#include <interfaces/wallet.h>
 #include <wallet/wallet.h>
 
 #include <memory>
@@ -17,7 +19,8 @@ struct WalletTestingSetup: public TestingSetup {
     explicit WalletTestingSetup(const std::string& chainName = CBaseChainParams::MAIN);
     ~WalletTestingSetup();
 
+    std::unique_ptr<interfaces::Chain> m_chain = interfaces::MakeChain();
     CWallet m_wallet;
 };
 
-#endif // FXTC_WALLET_TEST_WALLET_TEST_FIXTURE_H
+#endif // BITCOIN_WALLET_TEST_WALLET_TEST_FIXTURE_H

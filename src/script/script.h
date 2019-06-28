@@ -5,8 +5,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FXTC_SCRIPT_SCRIPT_H
-#define FXTC_SCRIPT_SCRIPT_H
+#ifndef BITCOIN_SCRIPT_SCRIPT_H
+#define BITCOIN_SCRIPT_SCRIPT_H
 
 #include <crypto/common.h>
 #include <prevector.h>
@@ -39,6 +39,12 @@ static const int MAX_STACK_SIZE = 1000;
 // Threshold for nLockTime: below this value it is interpreted as block number,
 // otherwise as UNIX timestamp.
 static const unsigned int LOCKTIME_THRESHOLD = 500000000; // Tue Nov  5 00:53:20 1985 UTC
+
+// Maximum nLockTime. Since a lock time indicates the last invalid timestamp, a
+// transaction with this lock time will never be valid unless lock time
+// checking is disabled (by setting all input sequence numbers to
+// SEQUENCE_FINAL).
+static const uint32_t LOCKTIME_MAX = 0xFFFFFFFFU;
 
 template <typename T>
 std::vector<unsigned char> ToByteVector(const T& in)
@@ -588,4 +594,4 @@ public:
     virtual ~CReserveScript() {}
 };
 
-#endif // FXTC_SCRIPT_SCRIPT_H
+#endif // BITCOIN_SCRIPT_SCRIPT_H

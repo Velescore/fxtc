@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FXTC_WALLET_FEEBUMPER_H
-#define FXTC_WALLET_FEEBUMPER_H
+#ifndef BITCOIN_WALLET_FEEBUMPER_H
+#define BITCOIN_WALLET_FEEBUMPER_H
 
 #include <primitives/transaction.h>
 
@@ -55,4 +55,4 @@ Result CommitTransaction(CWallet* wallet,
 
 } // namespace feebumper
 
-#endif // FXTC_WALLET_FEEBUMPER_H
+#endif // BITCOIN_WALLET_FEEBUMPER_H

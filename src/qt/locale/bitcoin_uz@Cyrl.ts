@@ -86,10 +86,6 @@
         <translation>&amp;Кўриб чиқиш</translation>
     </message>
     <message>
-        <source>Node</source>
-        <translation>Улам</translation>
-    </message>
-    <message>
         <source>Show general overview of wallet</source>
         <translation>Ҳамённинг умумий кўринишини кўрсатиш</translation>
     </message>
@@ -134,14 +130,6 @@
         <translation>Махфий сўзни &amp;ўзгартириш...</translation>
     </message>
     <message>
-        <source>&amp;Sending addresses...</source>
-        <translation>&amp;Жўнатилувчи манзиллар...</translation>
-    </message>
-    <message>
-        <source>&amp;Receiving addresses...</source>
-        <translation>&amp;Қабул қилувчи манзиллар...</translation>
-    </message>
-    <message>
         <source>Open &amp;URI...</source>
         <translation>Интернет манзилни очиш</translation>
     </message>
@@ -150,8 +138,8 @@
         <translation>Дискдаги блоклар қайта индексланмоқда...</translation>
     </message>
     <message>
-        <source>Send coins to a Veles address</source>
-        <translation>Тангаларни Veles манзилига жўнатиш</translation>
+        <source>Send coins to a FxTCoin address</source>
+        <translation>Тангаларни FxTCoin манзилига жўнатиш</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -174,12 +162,8 @@
         <translation>Хабарни &amp;тасдиқлаш...</translation>
     </message>
     <message>
-        <source>Veles</source>
-        <translation>Veles</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>Ҳамён</translation>
+        <source>FxTCoin</source>
+        <translation>FxTCoin</translation>
     </message>
     <message>
         <source>&amp;Send</source>
@@ -202,12 +186,12 @@
         <translation>Ҳамёнингизга тегишли махфий калитларни кодлаш</translation>
     </message>
     <message>
-        <source>Sign messages with your Veles addresses to prove you own them</source>
-        <translation>Veles манзилидан унинг эгаси эканлигингизни исботлаш учун хабарлар ёзинг</translation>
+        <source>Sign messages with your FxTCoin addresses to prove you own them</source>
+        <translation>FxTCoin манзилидан унинг эгаси эканлигингизни исботлаш учун хабарлар ёзинг</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Veles addresses</source>
-        <translation>Хабарларни махсус Veles манзилларингиз билан ёзилганлигига ишонч ҳосил қилиш учун уларни тасдиқланг</translation>
+        <source>Verify messages to ensure they were signed with specified FxTCoin addresses</source>
+        <translation>Хабарларни махсус FxTCoin манзилларингиз билан ёзилганлигига ишонч ҳосил қилиш учун уларни тасдиқланг</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -226,8 +210,8 @@
         <translation>Ички ойналар асбоблар панели</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and Veles: URIs)</source>
-        <translation>Тўловлар (QR кодлари ва Veles ёрдамида яратишлар: URI’лар) сўраш</translation>
+        <source>Request payments (generates QR codes and fxtcoin: URIs)</source>
+        <translation>Тўловлар (QR кодлари ва fxtcoin ёрдамида яратишлар: URI’лар) сўраш</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -238,16 +222,16 @@
         <translation>Фойдаланилган қабул қилинган манзиллар ва ёрлиқлар рўйхатини кўрсатиш</translation>
     </message>
     <message>
-        <source>Open a Veles: URI or payment request</source>
-        <translation>Veles’ни очиш: URI ёки тўлов сўрови</translation>
+        <source>Open a fxtcoin: URI or payment request</source>
+        <translation>FxTCoin’ни очиш: URI ёки тўлов сўрови</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation>&amp;Буйруқлар сатри мосламалари</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Veles network</source>
-        <translation><numerusform>%n та Veles тармоғига фаол уланиш мавжуд</numerusform></translation>
+        <source>%n active connection(s) to FxTCoin network</source>
+        <translation><numerusform>%n та FxTCoin тармоғига фаол уланиш мавжуд</numerusform></translation>
     </message>
     <message>
         <source>%1 behind</source>
@@ -276,6 +260,14 @@
     <message>
         <source>Up to date</source>
         <translation>Янгиланган</translation>
+    </message>
+    <message>
+        <source>&amp;Window</source>
+        <translation>&amp;Ойна</translation>
+    </message>
+    <message>
+        <source>Minimize</source>
+        <translation>Камайтириш</translation>
     </message>
     <message>
         <source>Catching up...</source>
@@ -433,8 +425,8 @@
         <translation>Бошқа маълумотлар директориясида фойдаланинг:</translation>
     </message>
     <message>
-        <source>Veles</source>
-        <translation>Veles</translation>
+        <source>FxTCoin</source>
+        <translation>FxTCoin</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" cannot be created.</source>
@@ -488,10 +480,6 @@
     <message>
         <source>Size of &amp;database cache</source>
         <translation>&amp;Маълумотлар базаси кеши</translation>
-    </message>
-    <message>
-        <source>MB</source>
-        <translation>МБ</translation>
     </message>
     <message>
         <source>Number of script &amp;verification threads</source>
@@ -593,8 +581,8 @@
         <translation>Шакл</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Veles network after a connection is established, but this process has not completed yet.</source>
-        <translation>Кўрсатилган маълумот эскирган бўлиши мумкин. Ҳамёнингиз алоқа ўрнатилгандан сўнг Veles тармоқ билан автоматик тарзда синхронланади, аммо жараён ҳалигача тугалланмади.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the FxTCoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>Кўрсатилган маълумот эскирган бўлиши мумкин. Ҳамёнингиз алоқа ўрнатилгандан сўнг FxTCoin тармоқ билан автоматик тарзда синхронланади, аммо жараён ҳалигача тугалланмади.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -674,8 +662,8 @@
         <translation>Миқдори</translation>
     </message>
     <message>
-        <source>Enter a Veles address (e.g. %1)</source>
-        <translation>Veles манзилини киритинг (масалан.  %1)</translation>
+        <source>Enter a FxTCoin address (e.g. %1)</source>
+        <translation>FxTCoin манзилини киритинг (масалан.  %1)</translation>
     </message>
     <message>
         <source>%1 m</source>
@@ -1161,6 +1149,9 @@
     <name>UnitDisplayStatusBarControl</name>
     </context>
 <context>
+    <name>WalletController</name>
+    </context>
+<context>
     <name>WalletFrame</name>
     </context>
 <context>
@@ -1172,8 +1163,8 @@
 <context>
     <name>bitcoin-core</name>
     <message>
-        <source>Veles Core</source>
-        <translation>Veles Core</translation>
+        <source>FxTCoin Core</source>
+        <translation>FxTCoin Core</translation>
     </message>
     <message>
         <source>Information</source>

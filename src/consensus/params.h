@@ -5,10 +5,12 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FXTC_CONSENSUS_PARAMS_H
-#define FXTC_CONSENSUS_PARAMS_H
+#ifndef BITCOIN_CONSENSUS_PARAMS_H
+#define BITCOIN_CONSENSUS_PARAMS_H
 
+// FXTC BEGIN
 #include <amount.h>
+// FXTC END
 #include <uint256.h>
 #include <limits>
 #include <map>
@@ -21,12 +23,6 @@ enum DeploymentPos
     DEPLOYMENT_TESTDUMMY,
     DEPLOYMENT_CSV, // Deployment of BIP68, BIP112, and BIP113.
     DEPLOYMENT_SEGWIT, // Deployment of BIP141, BIP143, and BIP147.
-
-    // Dash
-    // FXTC TODO:
-    //DEPLOYMENT_DIP0001, // Deployment of DIP0001 and lower transaction fees.
-    //
-
     // NOTE: Also add new deployments to VersionBitsDeploymentInfo in versionbits.cpp
     MAX_VERSION_BITS_DEPLOYMENTS
 };
@@ -66,21 +62,18 @@ struct Params {
     uint256 hashGenesisBlock;
     int nSubsidyHalvingInterval;
 
+    // FXTC BEGIN
+    CAmount nMinimumSubsidy;
+    // FXTC END
+
+    // Dash
     int nMasternodeMinimumConfirmations;
     int nMasternodePaymentsStartBlock;
-//  int nMasternodePaymentsIncreaseBlock;
+    int nMasternodePaymentsIncreaseBlock;
     int nMasternodePaymentsIncreasePeriod; // in blocks
     int nMasternodeCollateralMinimum; // in coins
     int nMasternodeCollateralMaximum; // in coins
-    // VELES BEGIN
-    int nMasternodePaymentsStartPercent;
-    int nMasternodePaymentsFinalPercent;
-    int nMasternodePaymentsLegacyPercent;
-    int nDevFundPaymentsDecreasePeriod;
-    int nDevFundPaymentsStartPercent;
-    int nDevFundPaymentsFinalPercent;
-    int nDevFundPaymentsLegacyPercent;
-    // VELES END
+
     int nInstantSendKeepLock; // in blocks
 
     int nBudgetPaymentsStartBlock;
@@ -93,8 +86,8 @@ struct Params {
 
     int nGovernanceMinQuorum; // Min absolute vote count to trigger an action
     int nGovernanceFilterElements;
+    //
 
-    CAmount nMinimumSubsidy;
     /* Block hash that is excepted from BIP16 enforcement */
     uint256 BIP16Exception;
     /** Block height and hash at which BIP34 becomes active */
@@ -124,12 +117,7 @@ struct Params {
     // FXTC BEGIN
     int nlastValidPowHashHeight;
     // FXTC EMD
-    
-    // VELES BEGIN
-    // Veles hard fork to enable Alpha block reward upgrade 
-    int nVlsRewardsAlphaMultiplier;
-    // VELES END
 };
 } // namespace Consensus
 
-#endif // FXTC_CONSENSUS_PARAMS_H
+#endif // BITCOIN_CONSENSUS_PARAMS_H

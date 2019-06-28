@@ -16,8 +16,8 @@
 #include <script/script.h>
 #include <script/standard.h>
 
-#include <util.h>
-#include <utilstrencodings.h>
+#include <util/system.h>
+#include <util/strencodings.h>
 
 #include <event2/event.h>
 #include <event2/http.h>
@@ -125,7 +125,7 @@ void CKeePassIntegrator::init()
 
 void CKeePassIntegrator::CKeePassRequest::addStrParameter(std::string strName, std::string strValue)
 {
-    requestObj.push_back(Pair(strName, strValue));
+    requestObj.pushKV(strName, strValue);
 }
 
 void CKeePassIntegrator::CKeePassRequest::addStrParameter(std::string strName, SecureString sValue)

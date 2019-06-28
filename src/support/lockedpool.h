@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FXTC_SUPPORT_LOCKEDPOOL_H
-#define FXTC_SUPPORT_LOCKEDPOOL_H
+#ifndef BITCOIN_SUPPORT_LOCKEDPOOL_H
+#define BITCOIN_SUPPORT_LOCKEDPOOL_H
 
 #include <stdint.h>
 #include <list>
@@ -22,7 +22,7 @@ public:
     virtual ~LockedPageAllocator() {}
     /** Allocate and lock memory pages.
      * If len is not a multiple of the system page size, it is rounded up.
-     * Returns 0 in case of allocation failure.
+     * Returns nullptr in case of allocation failure.
      *
      * If locking the memory pages could not be accomplished it will still
      * return the memory, however the lockingSuccess flag will be false.
@@ -237,4 +237,4 @@ private:
     static std::once_flag init_flag;
 };
 
-#endif // FXTC_SUPPORT_LOCKEDPOOL_H
+#endif // BITCOIN_SUPPORT_LOCKEDPOOL_H

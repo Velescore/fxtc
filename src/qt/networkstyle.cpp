@@ -7,8 +7,6 @@
 
 #include <qt/guiconstants.h>
 
-#include <qt/guiutil.h>
-
 #include <QApplication>
 
 static const struct {
@@ -20,7 +18,7 @@ static const struct {
 } network_styles[] = {
     {"main", QAPP_APP_NAME_DEFAULT, 0, 0, ""},
     {"test", QAPP_APP_NAME_TESTNET, 70, 30, QT_TRANSLATE_NOOP("SplashScreen", "[testnet]")},
-    {"regtest", QAPP_APP_NAME_TESTNET, 160, 30, "[regtest]"}
+    {"regtest", QAPP_APP_NAME_REGTEST, 160, 30, "[regtest]"}
 };
 static const unsigned network_styles_count = sizeof(network_styles)/sizeof(*network_styles);
 
@@ -29,11 +27,8 @@ NetworkStyle::NetworkStyle(const QString &_appName, const int iconColorHueShift,
     appName(_appName),
     titleAddText(qApp->translate("SplashScreen", _titleAddText))
 {
-    // Grab theme from settings
-    QString theme = GUIUtil::getThemeName();
     // load pixmap
     QPixmap pixmap(":/icons/bitcoin");
-    QPixmap img(":/images/" + theme + "/splash");
 
     if(iconColorHueShift != 0 && iconColorSaturationReduction != 0)
     {
@@ -94,5 +89,5 @@ const NetworkStyle *NetworkStyle::instantiate(const QString &networkId)
                     network_styles[x].titleAddText);
         }
     }
-    return 0;
+    return nullptr;
 }

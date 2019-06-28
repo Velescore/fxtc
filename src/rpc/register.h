@@ -4,8 +4,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FXTC_RPC_REGISTER_H
-#define FXTC_RPC_REGISTER_H
+#ifndef BITCOIN_RPC_REGISTER_H
+#define BITCOIN_RPC_REGISTER_H
 
 /** These are in one header file to avoid creating tons of single-function
  * headers for everything under src/rpc/ */
@@ -29,11 +29,6 @@ void RegisterDashMasternodeRPCCommands(CRPCTable &tableRPC);
 void RegisterDashGovernanceRPCCommands(CRPCTable &tableRPC);
 //
 
-// Veles
-/** Register dVPN management commands **/
-void RegisterVpnRPCCommands(CRPCTable &t);
-// 
-
 static inline void RegisterAllCoreRPCCommands(CRPCTable &t)
 {
     RegisterBlockchainRPCCommands(t);
@@ -43,7 +38,6 @@ static inline void RegisterAllCoreRPCCommands(CRPCTable &t)
     RegisterRawTransactionRPCCommands(t);
     RegisterDashMasternodeRPCCommands(t);
     RegisterDashGovernanceRPCCommands(t);
-    RegisterVpnRPCCommands(t);
 }
 
-#endif // FXTC_RPC_REGISTER_H
+#endif // BITCOIN_RPC_REGISTER_H

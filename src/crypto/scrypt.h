@@ -1,5 +1,5 @@
-#ifndef FXTC_CRYPTO_SCRYPT_H
-#define FXTC_CRYPTO_SCRYPT_H
+#ifndef LITECOIN_CRYPTO_SCRYPT_H
+#define LITECOIN_CRYPTO_SCRYPT_H
 
 #include <stdlib.h>
 #include <stdint.h>
@@ -47,4 +47,4 @@ static inline void le32enc(void *pp, uint32_t x)
 }
 #endif
 
-#endif // FXTC_CRYPTO_SCRYPT_H
+#endif // LITECOIN_CRYPTO_SCRYPT_H

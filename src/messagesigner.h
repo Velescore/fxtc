@@ -1,10 +1,10 @@
 // Copyright (c) 2014-2017 The Dash Core developers
-// Copyright (c) 2018 FXTC developers
+// Copyright (c) 2018-2019 FXTC developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FXTC_MESSAGESIGNER_H
-#define FXTC_MESSAGESIGNER_H
+#ifndef DASH_MESSAGESIGNER_H
+#define DASH_MESSAGESIGNER_H
 
 #include <key.h>
 
@@ -32,4 +32,4 @@ public:
     static bool VerifyHash(const uint256& hash, const CPubKey pubkey, const std::vector<unsigned char>& vchSig, std::string& strErrorRet);
 };
 
-#endif // FXTC_MESSAGESIGNER_H
+#endif // DASH_MESSAGESIGNER_H

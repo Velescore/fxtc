@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FXTC_QT_TRANSACTIONVIEW_H
-#define FXTC_QT_TRANSACTIONVIEW_H
+#ifndef BITCOIN_QT_TRANSACTIONVIEW_H
+#define BITCOIN_QT_TRANSACTIONVIEW_H
 
 #include <qt/guiutil.h>
 
@@ -35,7 +35,7 @@ class TransactionView : public QWidget
     Q_OBJECT
 
 public:
-    explicit TransactionView(const PlatformStyle *platformStyle, QWidget *parent = 0);
+    explicit TransactionView(const PlatformStyle *platformStyle, QWidget *parent = nullptr);
 
     void setModel(WalletModel *model);
 
@@ -110,6 +110,8 @@ Q_SIGNALS:
     /**  Fired when a message should be reported to the user */
     void message(const QString &title, const QString &message, unsigned int style);
 
+    void bumpedFee(const uint256& txid);
+
 public Q_SLOTS:
     void chooseDate(int idx);
     void chooseType(int idx);
@@ -121,4 +123,4 @@ public Q_SLOTS:
     void focusTransaction(const uint256& txid);
 };
 
-#endif // FXTC_QT_TRANSACTIONVIEW_H
+#endif // BITCOIN_QT_TRANSACTIONVIEW_H

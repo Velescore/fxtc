@@ -4,8 +4,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FXTC_KEY_H
-#define FXTC_KEY_H
+#ifndef BITCOIN_KEY_H
+#define BITCOIN_KEY_H
 
 #include <pubkey.h>
 #include <serialize.h>
@@ -181,12 +181,12 @@ struct CExtKey {
 };
 
 /** Initialize the elliptic curve support. May not be called twice without calling ECC_Stop first. */
-void ECC_Start(void);
+void ECC_Start();
 
 /** Deinitialize the elliptic curve support. No-op if ECC_Start wasn't called first. */
-void ECC_Stop(void);
+void ECC_Stop();
 
 /** Check that required EC support is available at runtime. */
-bool ECC_InitSanityCheck(void);
+bool ECC_InitSanityCheck();
 
-#endif // FXTC_KEY_H
+#endif // BITCOIN_KEY_H

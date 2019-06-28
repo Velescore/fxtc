@@ -2,15 +2,15 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FXTC_DBWRAPPER_H
-#define FXTC_DBWRAPPER_H
+#ifndef BITCOIN_DBWRAPPER_H
+#define BITCOIN_DBWRAPPER_H
 
 #include <clientversion.h>
 #include <fs.h>
 #include <serialize.h>
 #include <streams.h>
-#include <util.h>
-#include <utilstrencodings.h>
+#include <util/system.h>
+#include <util/strencodings.h>
 #include <version.h>
 
 #include <leveldb/db.h>
@@ -349,4 +349,4 @@ public:
 
 };
 
-#endif // FXTC_DBWRAPPER_H
+#endif // BITCOIN_DBWRAPPER_H

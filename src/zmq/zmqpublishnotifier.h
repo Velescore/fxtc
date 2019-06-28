@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FXTC_ZMQ_ZMQPUBLISHNOTIFIER_H
-#define FXTC_ZMQ_ZMQPUBLISHNOTIFIER_H
+#ifndef BITCOIN_ZMQ_ZMQPUBLISHNOTIFIER_H
+#define BITCOIN_ZMQ_ZMQPUBLISHNOTIFIER_H
 
 #include <zmq/zmqabstractnotifier.h>
 
@@ -12,7 +12,7 @@ class CBlockIndex;
 class CZMQAbstractPublishNotifier : public CZMQAbstractNotifier
 {
 private:
-    uint32_t nSequence; //!< upcounting per message sequence number
+    uint32_t nSequence {0U}; //!< upcounting per message sequence number
 
 public:
 
@@ -52,4 +52,4 @@ public:
     bool NotifyTransaction(const CTransaction &transaction) override;
 };
 
-#endif // FXTC_ZMQ_ZMQPUBLISHNOTIFIER_H
+#endif // BITCOIN_ZMQ_ZMQPUBLISHNOTIFIER_H

@@ -1,3 +1,4 @@
+// Copyright (c) 2018-2019 FXTC developers
 /* $Id: sph_jh.h 216 2010-06-08 09:46:57Z tp $ */
 /**
  * JH interface. JH is a family of functions which differ by
@@ -33,8 +34,8 @@
  * @author   Thomas Pornin <thomas.pornin@cryptolog.com>
  */
 
-#ifndef FXTC_CRYPTO_SPH_JH_H
-#define FXTC_CRYPTO_SPH_JH_H
+#ifndef RNRT_CRYPTO_SPH_JH_H
+#define RNRT_CRYPTO_SPH_JH_H
 
 #ifdef __cplusplus
 extern "C"{
@@ -295,4 +296,4 @@ void sph_jh512_addbits_and_close(
 }
 #endif
 
-#endif // FXTC_CRYPTO_SPH_JH_H
+#endif // RNRT_CRYPTO_SPH_JH_H

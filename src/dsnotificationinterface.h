@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FXTC_DSNOTIFICATIONINTERFACE_H
-#define FXTC_DSNOTIFICATIONINTERFACE_H
+#ifndef BITCOIN_DSNOTIFICATIONINTERFACE_H
+#define BITCOIN_DSNOTIFICATIONINTERFACE_H
 
 #include <validationinterface.h>
 
@@ -28,4 +28,4 @@ private:
     CConnman& connman;
 };
 
-#endif // FXTC_DSNOTIFICATIONINTERFACE_H
+#endif // BITCOIN_DSNOTIFICATIONINTERFACE_H

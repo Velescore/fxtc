@@ -1,10 +1,10 @@
 // Copyright (c) 2014-2017 The Dash Core developers
-// Copyright (c) 2018 FXTC developers
+// Copyright (c) 2018-2019 FXTC developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FXTC_INSTANTX_H
-#define FXTC_INSTANTX_H
+#ifndef DASH_INSTANTX_H
+#define DASH_INSTANTX_H
 
 #include <chain.h>
 #include <net.h>
@@ -262,4 +262,4 @@ public:
     void Relay(CConnman& connman) const;
 };
 
-#endif // FXTC_INSTANTX_H
+#endif // DASH_INSTANTX_H

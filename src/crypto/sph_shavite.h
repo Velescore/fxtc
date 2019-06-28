@@ -1,3 +1,4 @@
+// Copyright (c) 2018-2019 FXTC developers
 /* $Id: sph_shavite.h 208 2010-06-02 20:33:00Z tp $ */
 /**
  * SHAvite-3 interface. This code implements SHAvite-3 with the
@@ -35,8 +36,8 @@
  * @author   Thomas Pornin <thomas.pornin@cryptolog.com>
  */
 
-#ifndef FXTC_CRYPTO_SPH_SHAVITE_H
-#define FXTC_CRYPTO_SPH_SHAVITE_H
+#ifndef RNRT_CRYPTO_SPH_SHAVITE_H
+#define RNRT_CRYPTO_SPH_SHAVITE_H
 
 #include <stddef.h>
 #include <crypto/sph_types.h>
@@ -311,4 +312,4 @@ void sph_shavite512_addbits_and_close(
 }
 #endif
 
-#endif // FXTC_CRYPTO_SPH_SHAVITE_H
+#endif // RNRT_CRYPTO_SPH_SHAVITE_H

@@ -50,6 +50,10 @@
         <translation>Elige la dirección para recibir monedas</translation>
     </message>
     <message>
+        <source>C&amp;hoose</source>
+        <translation>Escoger</translation>
+    </message>
+    <message>
         <source>Sending addresses</source>
         <translation>Envío de direcciones</translation>
     </message>
@@ -58,12 +62,16 @@
         <translation>Direcciones de recepción</translation>
     </message>
     <message>
-        <source>These are your Veles addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Estas son tus direcciones Veles para realizar pagos. Verifica siempre el monto y la dirección de recepción antes de enviar monedas. </translation>
+        <source>These are your FxTCoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Estas son tus direcciones FxTCoin para realizar pagos. Verifica siempre el monto y la dirección de recepción antes de enviar monedas. </translation>
     </message>
     <message>
-        <source>These are your Veles addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Estas son tus direcciones Veles para recibir pagos. Es recomendable usar una nueva dirección de recibo para cada transacción.</translation>
+        <source>These are your FxTCoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Estas son tus direcciones FxTCoin para recibir pagos. Es recomendable usar una nueva dirección de recibo para cada transacción.</translation>
+    </message>
+    <message>
+        <source>&amp;Copy Address</source>
+        <translation>Copiar dirección</translation>
     </message>
     <message>
         <source>Copy &amp;Label</source>
@@ -77,9 +85,29 @@
         <source>Export Address List</source>
         <translation>Exportar lista de direcciones</translation>
     </message>
-    </context>
+    <message>
+        <source>Comma separated file (*.csv)</source>
+        <translation>Separar los archivos con comas (*.csv)</translation>
+    </message>
+    <message>
+        <source>Exporting Failed</source>
+        <translation>Error al exportar</translation>
+    </message>
+    <message>
+        <source>There was an error trying to save the address list to %1. Please try again.</source>
+        <translation>Tuvimos un problema al guardar la dirección en la lista %1. Intenta de Nuevo.</translation>
+    </message>
+</context>
 <context>
     <name>AddressTableModel</name>
+    <message>
+        <source>Label</source>
+        <translation>Nombre</translation>
+    </message>
+    <message>
+        <source>Address</source>
+        <translation>Direccion</translation>
+    </message>
     <message>
         <source>(no label)</source>
         <translation>(sin etiqueta)</translation>
@@ -103,6 +131,40 @@
         <source>Repeat new passphrase</source>
         <translation>Repetir nueva frase de contraseña</translation>
     </message>
+    <message>
+        <source>Show password</source>
+        <translation>Mostrar contraseña</translation>
+    </message>
+    <message>
+        <source>Encrypt wallet</source>
+        <translation>Cifrar monedero</translation>
+    </message>
+    <message>
+        <source>This operation needs your wallet passphrase to unlock the wallet.</source>
+        <translation>Esta operación necesita su frase de contraseña de la billetera para desbloquearla.
+</translation>
+    </message>
+    <message>
+        <source>Unlock wallet</source>
+        <translation>Desbloquear monedero</translation>
+    </message>
+    <message>
+        <source>This operation needs your wallet passphrase to decrypt the wallet.</source>
+        <translation>Esta operación necesita su frase de contraseña de la billetera para descifrar la billetera.
+</translation>
+    </message>
+    <message>
+        <source>Decrypt wallet</source>
+        <translation>Descifrar monedero</translation>
+    </message>
+    <message>
+        <source>Change passphrase</source>
+        <translation>Cambiar frase secreta</translation>
+    </message>
+    <message>
+        <source>Confirm wallet encryption</source>
+        <translation>Confirmar cifrado de billetera</translation>
+    </message>
     </context>
 <context>
     <name>BanTableModel</name>
@@ -116,10 +178,6 @@
     <message>
         <source>Synchronizing with network...</source>
         <translation>Sincronizando con la red...</translation>
-    </message>
-    <message>
-        <source>Node</source>
-        <translation>Nodo</translation>
     </message>
     <message>
         <source>Show general overview of wallet</source>
@@ -146,16 +204,12 @@
         <translation>&amp;Opciones...</translation>
     </message>
     <message>
-        <source>&amp;Receiving addresses...</source>
-        <translation>Recepción de direcciones</translation>
-    </message>
-    <message>
         <source>Reindexing blocks on disk...</source>
         <translation>Reindexando bloques en el disco...</translation>
     </message>
     <message>
-        <source>Send coins to a Veles address</source>
-        <translation>Enviar monedas a una dirección Veles</translation>
+        <source>Send coins to a FxTCoin address</source>
+        <translation>Enviar monedas a una dirección FxTCoin</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -170,12 +224,8 @@
         <translation>Abre la consola de depuración y diágnostico</translation>
     </message>
     <message>
-        <source>Veles</source>
-        <translation>Veles</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>Billetera</translation>
+        <source>FxTCoin</source>
+        <translation>FxTCoin</translation>
     </message>
     <message>
         <source>&amp;Send</source>
@@ -198,12 +248,12 @@
         <translation>Encriptar las llaves privadas que pertenecen a tu billetera</translation>
     </message>
     <message>
-        <source>Sign messages with your Veles addresses to prove you own them</source>
-        <translation>Firma mensajes con tus direcciones Veles para probar que eres dueño de ellas</translation>
+        <source>Sign messages with your FxTCoin addresses to prove you own them</source>
+        <translation>Firma mensajes con tus direcciones FxTCoin para probar que eres dueño de ellas</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Veles addresses</source>
-        <translation>Verificar mensajes para asegurar que estaban firmados con direcciones Veles especificas</translation>
+        <source>Verify messages to ensure they were signed with specified FxTCoin addresses</source>
+        <translation>Verificar mensajes para asegurar que estaban firmados con direcciones FxTCoin especificas</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -441,8 +491,8 @@
         <translation>Usa un directorio de datos personalizado:</translation>
     </message>
     <message>
-        <source>Veles</source>
-        <translation>Veles</translation>
+        <source>FxTCoin</source>
+        <translation>FxTCoin</translation>
     </message>
     <message>
         <source>Error: Specified data directory "%1" cannot be created.</source>
@@ -577,12 +627,24 @@
         <translation>&amp;Copiar Dirección</translation>
     </message>
     <message>
+        <source>Address</source>
+        <translation>Direccion</translation>
+    </message>
+    <message>
+        <source>Label</source>
+        <translation>Nombre</translation>
+    </message>
+    <message>
         <source>Wallet</source>
         <translation>Billetera</translation>
     </message>
     </context>
 <context>
     <name>RecentRequestsTableModel</name>
+    <message>
+        <source>Label</source>
+        <translation>Nombre</translation>
+    </message>
     <message>
         <source>(no label)</source>
         <translation>(sin etiqueta)</translation>
@@ -670,15 +732,38 @@
 <context>
     <name>TransactionTableModel</name>
     <message>
+        <source>Label</source>
+        <translation>Nombre</translation>
+    </message>
+    <message>
         <source>(no label)</source>
         <translation>(sin etiqueta)</translation>
     </message>
     </context>
 <context>
     <name>TransactionView</name>
+    <message>
+        <source>Comma separated file (*.csv)</source>
+        <translation>Separar los archivos con comas (*.csv)</translation>
+    </message>
+    <message>
+        <source>Label</source>
+        <translation>Nombre</translation>
+    </message>
+    <message>
+        <source>Address</source>
+        <translation>Direccion</translation>
+    </message>
+    <message>
+        <source>Exporting Failed</source>
+        <translation>Error al exportar</translation>
+    </message>
     </context>
 <context>
     <name>UnitDisplayStatusBarControl</name>
+    </context>
+<context>
+    <name>WalletController</name>
     </context>
 <context>
     <name>WalletFrame</name>
@@ -692,8 +777,8 @@
 <context>
     <name>bitcoin-core</name>
     <message>
-        <source>Veles Core</source>
-        <translation>Veles Core</translation>
+        <source>FxTCoin Core</source>
+        <translation>FxTCoin Core</translation>
     </message>
     <message>
         <source>Information</source>

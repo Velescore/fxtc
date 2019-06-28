@@ -1,3 +1,4 @@
+// Copyright (c) 2018-2019 FXTC developers
 /* $Id: sph_cubehash.h 180 2010-05-08 02:29:25Z tp $ */
 /**
  * CubeHash interface. CubeHash is a family of functions which differ by
@@ -34,8 +35,8 @@
  * @author   Thomas Pornin <thomas.pornin@cryptolog.com>
  */
 
-#ifndef FXTC_CRYPTO_SPH_CUBEHASH_H
-#define FXTC_CRYPTO_SPH_CUBEHASH_H
+#ifndef RNRT_CRYPTO_SPH_CUBEHASH_H
+#define RNRT_CRYPTO_SPH_CUBEHASH_H
 
 #ifdef __cplusplus
 extern "C"{
@@ -289,4 +290,4 @@ void sph_cubehash512_addbits_and_close(
 }
 #endif
 
-#endif // FXTC_CRYPTO_SPH_CUBEHASH_H
+#endif // RNRT_CRYPTO_SPH_CUBEHASH_H

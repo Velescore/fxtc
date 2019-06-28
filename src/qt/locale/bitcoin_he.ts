@@ -3,7 +3,7 @@
     <name>AddressBookPage</name>
     <message>
         <source>Right-click to edit address or label</source>
-        <translation>יש ללחוץ על הכפתור הימני כדי לערוך כתובת או תווית</translation>
+        <translation>לחץ על הכפתור הימני בעכבר כדי לערוך את הכתובת או התווית</translation>
     </message>
     <message>
         <source>Create a new address</source>
@@ -66,11 +66,11 @@
         <translation>כתובות לקבלה</translation>
     </message>
     <message>
-        <source>These are your Veles addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your FxTCoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>אלו הן כתובות הביטקוין שלך לשליחת תשלומים. חשוב לבדוק את הסכום ואת הכתובת המקבלת לפני שליחת מטבעות.</translation>
     </message>
     <message>
-        <source>These are your Veles addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <source>These are your FxTCoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
         <translation>אלו הן כתובות הביטקוין שלך לקבלת תשלומים. מומלץ להשתמש בכתובת חדשה לכל העברה.</translation>
     </message>
     <message>
@@ -176,7 +176,7 @@
         <translation>אימות הצפנת הארנק</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR VELESS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR FXTCOINS&lt;/b&gt;!</source>
         <translation>אזהרה: איבוד מילת הצופן לאחר הצפנת הארנק עשויה לגרום לכך &lt;b&gt;שכל הביטקוינים שלך יאבדו&lt;/b&gt;!</translation>
     </message>
     <message>
@@ -186,10 +186,6 @@
     <message>
         <source>Wallet encrypted</source>
         <translation>הארנק מוצפן</translation>
-    </message>
-    <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your Veless from being stolen by malware infecting your computer.</source>
-        <translation>%1 ייסגר כעת כדי לסיים את תהליך ההצפנה. נא לשים לב כי הצפנת הארנק שלך לא יכול להגן על הביטקוינים שלך מפני גניבה או נוזקה שתוקפת את מחשבך.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -254,10 +250,6 @@
         <translation>&amp;סקירה</translation>
     </message>
     <message>
-        <source>Node</source>
-        <translation>מפרק</translation>
-    </message>
-    <message>
         <source>Show general overview of wallet</source>
         <translation>הצגת סקירה כללית של הארנק</translation>
     </message>
@@ -279,19 +271,19 @@
     </message>
     <message>
         <source>&amp;About %1</source>
-        <translation>על &amp;אודות %1</translation>
+        <translation>&amp;אודות %1</translation>
     </message>
     <message>
         <source>Show information about %1</source>
-        <translation>הצגת מידע על %1</translation>
+        <translation>הצג מידע על %1</translation>
     </message>
     <message>
         <source>About &amp;Qt</source>
-        <translation>על אודות Qt</translation>
+        <translation>אודות &amp;Qt</translation>
     </message>
     <message>
         <source>Show information about Qt</source>
-        <translation>הצגת מידע על Qt</translation>
+        <translation>הצג מידע על Qt</translation>
     </message>
     <message>
         <source>&amp;Options...</source>
@@ -314,24 +306,12 @@
         <translation>ה&amp;חלפת מילת הצופן…</translation>
     </message>
     <message>
-        <source>&amp;Sending addresses...</source>
-        <translation>כתובת ה&amp;שליחה…</translation>
-    </message>
-    <message>
-        <source>&amp;Receiving addresses...</source>
-        <translation>כתובות ה&amp;קבלה…</translation>
-    </message>
-    <message>
         <source>Open &amp;URI...</source>
         <translation>פתיחת &amp;כתובת משאב…</translation>
     </message>
     <message>
         <source>Wallet:</source>
         <translation>ארנק:</translation>
-    </message>
-    <message>
-        <source>default wallet</source>
-        <translation>ארנק בררת מחדל</translation>
     </message>
     <message>
         <source>Click to disable network activity.</source>
@@ -358,7 +338,7 @@
         <translation>שרת הפרוקסי &lt;b&gt;פעיל&lt;/b&gt;: %1</translation>
     </message>
     <message>
-        <source>Send coins to a Veles address</source>
+        <source>Send coins to a FxTCoin address</source>
         <translation>שליחת מטבעות לכתובת ביטקוין</translation>
     </message>
     <message>
@@ -382,12 +362,8 @@
         <translation>&amp;אימות הודעה…</translation>
     </message>
     <message>
-        <source>Veles</source>
+        <source>FxTCoin</source>
         <translation>ביטקוין</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>ארנק</translation>
     </message>
     <message>
         <source>&amp;Send</source>
@@ -410,11 +386,11 @@
         <translation>הצפנת המפתחות הפרטיים ששייכים לארנק שלך</translation>
     </message>
     <message>
-        <source>Sign messages with your Veles addresses to prove you own them</source>
+        <source>Sign messages with your FxTCoin addresses to prove you own them</source>
         <translation>חתום על הודעות עם כתובות הביטקוין שלך כדי להוכיח שהן בבעלותך</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Veles addresses</source>
+        <source>Verify messages to ensure they were signed with specified FxTCoin addresses</source>
         <translation>אמת הודעות כדי להבטיח שהן נחתמו עם כתובת ביטקוין מסוימות</translation>
     </message>
     <message>
@@ -434,8 +410,8 @@
         <translation>סרגל כלים לשוניות</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and Veles: URIs)</source>
-        <translation>בקשת תשלומים (יצירה של קודים מסוג QR וסכימות כתובות משאב של :Veles)</translation>
+        <source>Request payments (generates QR codes and fxtcoin: URIs)</source>
+        <translation>בקשת תשלומים (יצירה של קודים מסוג QR וסכימות כתובות משאב של :fxtcoin)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -446,7 +422,7 @@
         <translation>הצגת רשימת הכתובות והתוויות הנמצאות בשימוש</translation>
     </message>
     <message>
-        <source>Open a Veles: URI or payment request</source>
+        <source>Open a fxtcoin: URI or payment request</source>
         <translation>פתיחת ביטקוין: כתובת משאב או בקשת תשלום</translation>
     </message>
     <message>
@@ -454,7 +430,7 @@
         <translation>אפשרויות &amp;שורת הפקודה</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Veles network</source>
+        <source>%n active connection(s) to FxTCoin network</source>
         <translation><numerusform>חיבור אחד פעיל לרשת ביטקוין</numerusform><numerusform>%n חיבורים פעילים לרשת ביטקוין</numerusform><numerusform>%n חיבורים פעילים לרשת ביטקוין</numerusform><numerusform>%n חיבורים פעילים לרשת ביטקוין</numerusform></translation>
     </message>
     <message>
@@ -494,8 +470,16 @@
         <translation>עדכני</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Veles command-line options</source>
+        <source>Show the %1 help message to get a list with possible FxTCoin command-line options</source>
         <translation>יש להציג את הודעת העזרה של %1 כדי להציג רשימה עם אפשרויות שורת פקודה לביטקוין</translation>
+    </message>
+    <message>
+        <source>default wallet</source>
+        <translation>ארנק בררת מחדל</translation>
+    </message>
+    <message>
+        <source>&amp;Window</source>
+        <translation>&amp;חלון</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -570,7 +554,7 @@
         <translation>הארנק &lt;b&gt;מוצפן&lt;/b&gt; ו&lt;b&gt;נעול&lt;/b&gt; כרגע</translation>
     </message>
     <message>
-        <source>A fatal error occurred. Veles can no longer continue safely and will quit.</source>
+        <source>A fatal error occurred. FxTCoin can no longer continue safely and will quit.</source>
         <translation>אירעה שגיאה חמורה. אין אפשרות להשתמש עוד בביטקוין באופן מאובטח והיישום ייסגר.</translation>
     </message>
 </context>
@@ -760,7 +744,7 @@
         <translation>עריכת כתובת השליחה</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Veles address.</source>
+        <source>The entered address "%1" is not a valid FxTCoin address.</source>
         <translation>הכתובת שהוקלדה „%1” היא אינה כתובת ביטקוין תקנית.</translation>
     </message>
     <message>
@@ -815,7 +799,7 @@
     </message>
     <message>
         <source>About %1</source>
-        <translation>על אודות %1</translation>
+        <translation>אודות %1</translation>
     </message>
     <message>
         <source>Command-line options</source>
@@ -857,7 +841,7 @@
         <translation>שימוש בתיקיית נתונים מותאמת אישית:</translation>
     </message>
     <message>
-        <source>Veles</source>
+        <source>FxTCoin</source>
         <translation>ביטקוין</translation>
     </message>
     <message>
@@ -869,7 +853,7 @@
         <translation>מידע בנפח של כ-%1 ג׳יגה-בייט יאוחסן בתיקייה זו.</translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the Veles block chain.</source>
+        <source>%1 will download and store a copy of the FxTCoin block chain.</source>
         <translation>%1 תוריד ותאחסן עותק של שרשרת הבלוקים של ביטקוין.</translation>
     </message>
     <message>
@@ -900,11 +884,11 @@
         <translation>טופס</translation>
     </message>
     <message>
-        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the Veles network, as detailed below.</source>
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the fxtcoin network, as detailed below.</source>
         <translation>ייתכן שהעברות שבוצעו לאחרונה לא יופיעו עדיין, ולכן המאזן בארנק שלך יהיה שגוי. המידע הנכון יוצג במלואו כאשר הארנק שלך יסיים להסתנכרן עם רשת הביטקוין, כמפורט למטה.</translation>
     </message>
     <message>
-        <source>Attempting to spend Veless that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <source>Attempting to spend fxtcoins that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
         <translation>הרשת תסרב לקבל הוצאת ביטקוינים במידה והם כבר נמצאים בהעברות אשר לא מוצגות עדיין.</translation>
     </message>
     <message>
@@ -939,11 +923,7 @@
         <source>Hide</source>
         <translation>הסתר</translation>
     </message>
-    <message>
-        <source>Unknown. Syncing Headers (%1)...</source>
-        <translation>לא ידוע. הכותרות מתעדכנות (%1)…</translation>
-    </message>
-</context>
+    </context>
 <context>
     <name>OpenURIDialog</name>
     <message>
@@ -990,16 +970,20 @@
         <translation>גודל מ&amp;טמון מסד הנתונים</translation>
     </message>
     <message>
-        <source>MB</source>
-        <translation>מ״ב</translation>
-    </message>
-    <message>
         <source>Number of script &amp;verification threads</source>
         <translation>מספר תהליכי ה&amp;אימות של הסקריפט</translation>
     </message>
     <message>
         <source>IP address of the proxy (e.g. IPv4: 127.0.0.1 / IPv6: ::1)</source>
         <translation>כתובת ה־IP של המתווך (לדוגמה IPv4: 127.0.0.1‏ / IPv6: ::1)</translation>
+    </message>
+    <message>
+        <source>Shows if the supplied default SOCKS5 proxy is used to reach peers via this network type.</source>
+        <translation>מראה אם פרוקסי SOCKS5 המסופק כבררת מחדל משמש להתקשרות עם עמיתים באמצעות סוג רשת זה.</translation>
+    </message>
+    <message>
+        <source>Use separate SOCKS&amp;5 proxy to reach peers via Tor hidden services:</source>
+        <translation>השתמשו בפרוקסי SOCKS&amp;5 נפרד כדי להתקשר עם עמיתים באמצעות שירותים חבויים ברשת Tor:</translation>
     </message>
     <message>
         <source>Hide the icon from the system tray.</source>
@@ -1012,10 +996,6 @@
     <message>
         <source>Third party URLs (e.g. a block explorer) that appear in the transactions tab as context menu items. %s in the URL is replaced by transaction hash. Multiple URLs are separated by vertical bar |.</source>
         <translation>כתובות צד־שלישי (כגון: סייר מקטעים) שמופיעים בלשונית ההעברות בתור פריטים בתפריט ההקשר. %s בכתובת מוחלף בגיבוב ההעברה. מספר כתובות יופרדו בפס אנכי |.</translation>
-    </message>
-    <message>
-        <source>Active command-line options that override above options:</source>
-        <translation>אפשרויות פעילות בשורת הפקודה שדורסות את האפשרויות שלהלן:</translation>
     </message>
     <message>
         <source>Open the %1 configuration file from the working directory.</source>
@@ -1074,7 +1054,7 @@
         <translation>עודף &amp;בלתי מאושר מההשקעה</translation>
     </message>
     <message>
-        <source>Automatically open the Veles client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <source>Automatically open the FxTCoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation>פתיחת הפתחה של ביטקוין בנתב באופן אוטומטי. עובד רק אם UPnP מופעל ונתמך בנתב.</translation>
     </message>
     <message>
@@ -1090,7 +1070,7 @@
         <translation>לאפשר חיבורים &amp;נכנסים</translation>
     </message>
     <message>
-        <source>Connect to the Veles network through a SOCKS5 proxy.</source>
+        <source>Connect to the FxTCoin network through a SOCKS5 proxy.</source>
         <translation>התחבר לרשת הביטקוין דרך פרוקסי SOCKS5.</translation>
     </message>
     <message>
@@ -1126,7 +1106,7 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the Veles network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <source>Connect to the FxTCoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
         <translation>התחברות לרשת ביטקוין דרך מתווך SOCKS5 נפרד לשירותי Tor נסתרים.</translation>
     </message>
     <message>
@@ -1229,7 +1209,7 @@
         <translation>טופס</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Veles network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the FxTCoin network after a connection is established, but this process has not completed yet.</source>
         <translation>המידע המוצג עשוי להיות מיושן. הארנק שלך מסתנכרן באופן אוטומטי עם רשת הביטקוין לאחר יצירת החיבור, אך התהליך טרם הסתיים.</translation>
     </message>
     <message>
@@ -1304,16 +1284,16 @@
         <translation>שגיאת בקשת תשלום</translation>
     </message>
     <message>
-        <source>Cannot start Veles: click-to-pay handler</source>
-        <translation>לא ניתן להפעיל את המקשר Veles: click-to-pay</translation>
+        <source>Cannot start fxtcoin: click-to-pay handler</source>
+        <translation>לא ניתן להפעיל את המקשר fxtcoin: click-to-pay</translation>
     </message>
     <message>
         <source>URI handling</source>
         <translation>טיפול בכתובות</translation>
     </message>
     <message>
-        <source>'Veles://' is not a valid URI. Use 'Veles:' instead.</source>
-        <translation>'//:Veles' אינה כתובת URI תקינה. השתמשו במקום ב ':Veles'.</translation>
+        <source>'fxtcoin://' is not a valid URI. Use 'fxtcoin:' instead.</source>
+        <translation>'//:fxtcoin' אינה כתובת URI תקינה. השתמשו במקום ב ':fxtcoin'.</translation>
     </message>
     <message>
         <source>Payment request fetch URL is invalid: %1</source>
@@ -1324,7 +1304,7 @@
         <translation>כתובת תשלום שגויה %1</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid Veles address or malformed URI parameters.</source>
+        <source>URI cannot be parsed! This can be caused by an invalid FxTCoin address or malformed URI parameters.</source>
         <translation>לא ניתן לנתח את כתובת המשאב! מצב זה יכול לקרות עקב כתובת ביטקוין שגויה או פרמטרים שגויים בכתובת המשאב.</translation>
     </message>
     <message>
@@ -1426,7 +1406,7 @@
         <translation>כמות</translation>
     </message>
     <message>
-        <source>Enter a Veles address (e.g. %1)</source>
+        <source>Enter a FxTCoin address (e.g. %1)</source>
         <translation>נא להזין כתובת ביטקוין (למשל: %1)</translation>
     </message>
     <message>
@@ -1556,7 +1536,7 @@
     </message>
     <message>
         <source>Client version</source>
-        <translation>גרסת מנשק</translation>
+        <translation>גרסה</translation>
     </message>
     <message>
         <source>&amp;Information</source>
@@ -1572,7 +1552,7 @@
     </message>
     <message>
         <source>Using BerkeleyDB version</source>
-        <translation>שימוש ב־BerkeleyDB גרסה</translation>
+        <translation>גרסת BerkeleyDB</translation>
     </message>
     <message>
         <source>Datadir</source>
@@ -1673,6 +1653,10 @@
     <message>
         <source>User Agent</source>
         <translation>סוכן משתמש</translation>
+    </message>
+    <message>
+        <source>Open the %1 debug log file from the current data directory. This can take a few seconds for large log files.</source>
+        <translation>פתחו את לוג ניפוי השגיאות ה%1 מתיקיית הנתונים הנוכחית. עבור קבצי לוג גדולים ייתכן זמן המתנה של מספר שניות.</translation>
     </message>
     <message>
         <source>Decrease font size</source>
@@ -1783,10 +1767,6 @@
         <translation>&amp;שחרור חסימה</translation>
     </message>
     <message>
-        <source>default wallet</source>
-        <translation>ארנק בררת מחדל</translation>
-    </message>
-    <message>
         <source>Welcome to the %1 RPC console.</source>
         <translation>ברוך בואך למסוף ה־RPC של %1.</translation>
     </message>
@@ -1862,7 +1842,7 @@
         <translation>הו&amp;דעה:</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Veles network.</source>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the FxTCoin network.</source>
         <translation>הודעת רשות לצירוף לבקשת התשלום שתוצג בעת פתיחת הבקשה. לתשומת לבך: ההודעה לא תישלח עם התשלום ברשת ביטקוין.</translation>
     </message>
     <message>
@@ -2115,10 +2095,6 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>הסתר</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for Veles transactions than the network can process.</source>
-        <translation>זה בסדר לשלם את העמלה המינימלית כל עוד נפח הטרנזקציות קטן מנפח הבלוקים. אבל יש להיזהר כיוון שבמידה והעומס ברשת גדל, העיסקה עלולה לא להיות מאושרת לעולם.</translation>
-    </message>
-    <message>
         <source>Recommended:</source>
         <translation>מומלץ:</translation>
     </message>
@@ -2203,6 +2179,10 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>העתקת השינוי</translation>
     </message>
     <message>
+        <source>%1 (%2 blocks)</source>
+        <translation>%1 (%2 בלוקים)</translation>
+    </message>
+    <message>
         <source>Are you sure you want to send?</source>
         <translation>לשלוח?</translation>
     </message>
@@ -2267,11 +2247,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>בקשת התשלום פגה.</translation>
     </message>
     <message>
-        <source>Pay only the required fee of %1</source>
-        <translation>תשלום של העמלה הנדרשת בלבד על סך %1</translation>
-    </message>
-    <message>
-        <source>Warning: Invalid Veles address</source>
+        <source>Warning: Invalid FxTCoin address</source>
         <translation>אזהרה: כתובת ביטקיון שגויה</translation>
     </message>
     <message>
@@ -2314,7 +2290,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>זהו תשלום רגיל.</translation>
     </message>
     <message>
-        <source>The Veles address to send the payment to</source>
+        <source>The FxTCoin address to send the payment to</source>
         <translation>כתובת הביטקוין של המוטב</translation>
     </message>
     <message>
@@ -2334,7 +2310,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>הסרת רשומה זו</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less Veless than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less fxtcoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
         <translation>העמלה תנוכה מהסכום שנשלח. הנמען יקבל פחות ביטקוינים ממה שהזנת בשדה הסכום. אם נבחרו מספר נמענים, העמלה תחולק באופן שווה.</translation>
     </message>
     <message>
@@ -2362,7 +2338,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>יש להזין תווית עבור כתובת זו כדי להוסיף אותה לרשימת הכתובות בשימוש</translation>
     </message>
     <message>
-        <source>A message that was attached to the Veles: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Veles network.</source>
+        <source>A message that was attached to the fxtcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the FxTCoin network.</source>
         <translation>הודעה שצורפה לביטקוין: כתובת שתאוחסן בהעברה לצורך מעקב מצדך. לתשומת לבך: הודעה זו לא תישלח ברשת הביטקוין.</translation>
     </message>
     <message>
@@ -2407,11 +2383,11 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>חתימה על הו&amp;דעה</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive Veless sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <source>You can sign messages/agreements with your addresses to prove you can receive fxtcoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
         <translation>באפשרותך לחתום על הודעות/הסכמים באמצעות הכתובות שלך, כדי להוכיח שאתה יכול לקבל את הביטקוינים הנשלחים אליהן. היזהר לא לחתום על תוכן עמום או אקראי, מכיוון שתקיפות פישינג עשויות לנסות לגנוב את הזהות שלך. חתום רק על הצהרות מפורטות שאתה מסכים להן.</translation>
     </message>
     <message>
-        <source>The Veles address to sign the message with</source>
+        <source>The FxTCoin address to sign the message with</source>
         <translation>כתובת הביטקוין אתה לחתום אתה את ההודעה</translation>
     </message>
     <message>
@@ -2443,7 +2419,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>העתקת החתימה הנוכחית ללוח הגזירים</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Veles address</source>
+        <source>Sign the message to prove you own this FxTCoin address</source>
         <translation>ניתן לחתום על ההודעה כדי להוכיח שכתובת הביטקוין הזו בבעלותך.</translation>
     </message>
     <message>
@@ -2463,11 +2439,11 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>&amp;אימות הודעה</translation>
     </message>
     <message>
-        <source>The Veles address the message was signed with</source>
+        <source>The FxTCoin address the message was signed with</source>
         <translation>כתובת הביטקוין שאתה נחתמה ההודעה</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Veles address</source>
+        <source>Verify the message to ensure it was signed with the specified FxTCoin address</source>
         <translation>ניתן לאמת את ההודעה כדי להבטיח שהיא נחתמה עם כתובת הביטקוין הנתונה</translation>
     </message>
     <message>
@@ -2981,6 +2957,9 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
     </message>
 </context>
 <context>
+    <name>WalletController</name>
+    </context>
+<context>
     <name>WalletFrame</name>
     <message>
         <source>No wallet has been loaded.</source>
@@ -3021,7 +3000,11 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <source>Can't sign transaction.</source>
         <translation>אי אפשר לחתום על ההעברה.</translation>
     </message>
-    </context>
+    <message>
+        <source>default wallet</source>
+        <translation>ארנק בררת מחדל</translation>
+    </message>
+</context>
 <context>
     <name>WalletView</name>
     <message>
@@ -3072,7 +3055,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>שרת ה HTTP לא עלה. ראו את ה debug לוג לפרטים.</translation>
     </message>
     <message>
-        <source>Veles Core</source>
+        <source>FxTCoin Core</source>
         <translation>ליבת ביטקוין</translation>
     </message>
     <message>
@@ -3126,10 +3109,6 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
     <message>
         <source>Do you want to rebuild the block database now?</source>
         <translation>האם לבנות מחדש את מסד נתוני המקטעים?</translation>
-    </message>
-    <message>
-        <source>Error creating %s: You can't create non-HD wallets with this version.</source>
-        <translation>שגיאה ביצירת %s: אין אפשרות ליצור ארנקים שאינם HD בגרסה זו.</translation>
     </message>
     <message>
         <source>Error initializing block database</source>
@@ -3270,10 +3249,6 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
     <message>
         <source>Warning</source>
         <translation>אזהרה</translation>
-    </message>
-    <message>
-        <source>Unsupported argument -socks found. Setting SOCKS version isn't possible anymore, only SOCKS5 proxies are supported.</source>
-        <translation>המשתנה ‎-socks נמצא אך אין בו תמיכה עוד. הגדרת גרסת SOCKS אינה אפשרית עוד, קיימת תמיכה רק ב־SOCKS5.</translation>
     </message>
     <message>
         <source>Starting network threads...</source>

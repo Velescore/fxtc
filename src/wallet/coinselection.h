@@ -2,15 +2,15 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FXTC_WALLET_COINSELECTION_H
-#define FXTC_WALLET_COINSELECTION_H
+#ifndef BITCOIN_WALLET_COINSELECTION_H
+#define BITCOIN_WALLET_COINSELECTION_H
 
 #include <amount.h>
 #include <primitives/transaction.h>
 #include <random.h>
 
 //! target minimum change amount
-static const CAmount MIN_CHANGE = CENT;
+static constexpr CAmount MIN_CHANGE{COIN / 100};
 //! final minimum change amount after paying for fees
 static const CAmount MIN_FINAL_CHANGE = MIN_CHANGE/2;
 
@@ -101,4 +101,4 @@ bool SelectCoinsBnB(std::vector<OutputGroup>& utxo_pool, const CAmount& target_v
 bool KnapsackSolver(const CAmount& nTargetValue, std::vector<OutputGroup>& groups, std::set<CInputCoin>& setCoinsRet, CAmount& nValueRet, bool fUseInstantSend);
 //
 
-#endif // FXTC_WALLET_COINSELECTION_H
+#endif // BITCOIN_WALLET_COINSELECTION_H

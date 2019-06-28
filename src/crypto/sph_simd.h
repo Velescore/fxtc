@@ -1,3 +1,4 @@
+// Copyright (c) 2018-2019 FXTC developers
 /* $Id: sph_simd.h 154 2010-04-26 17:00:24Z tp $ */
 /**
  * SIMD interface. SIMD is a family of functions which differ by
@@ -33,8 +34,8 @@
  * @author   Thomas Pornin <thomas.pornin@cryptolog.com>
  */
 
-#ifndef FXTC_CRYPTO_SPH_SIMD_H
-#define FXTC_CRYPTO_SPH_SIMD_H
+#ifndef RNRT_CRYPTO_SPH_SIMD_H
+#define RNRT_CRYPTO_SPH_SIMD_H
 
 #ifdef __cplusplus
 extern "C"{
@@ -306,4 +307,4 @@ void sph_simd512_addbits_and_close(
 }
 #endif
 
-#endif // FXTC_CRYPTO_SPH_SIMD_H
+#endif // RNRT_CRYPTO_SPH_SIMD_H

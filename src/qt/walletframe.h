@@ -1,11 +1,11 @@
-// Copyright (c) 2011-2017 The Bitcoin Core developers
+// Copyright (c) 2011-2019 The Bitcoin Core developers
 // Copyright (c) 2014-2017 The Dash Core developers
 // Copyright (c) 2018 FXTC developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FXTC_QT_WALLETFRAME_H
-#define FXTC_QT_WALLETFRAME_H
+#ifndef BITCOIN_QT_WALLETFRAME_H
+#define BITCOIN_QT_WALLETFRAME_H
 
 #include <QFrame>
 #include <QMap>
@@ -33,14 +33,14 @@ class WalletFrame : public QFrame
     Q_OBJECT
 
 public:
-    explicit WalletFrame(const PlatformStyle *platformStyle, BitcoinGUI *_gui = 0);
+    explicit WalletFrame(const PlatformStyle *platformStyle, BitcoinGUI *_gui = nullptr);
     ~WalletFrame();
 
     void setClientModel(ClientModel *clientModel);
 
     bool addWallet(WalletModel *walletModel);
-    bool setCurrentWallet(const QString& name);
-    bool removeWallet(const QString &name);
+    bool setCurrentWallet(WalletModel* wallet_model);
+    bool removeWallet(WalletModel* wallet_model);
     void removeAllWallets();
 
     bool handlePaymentRequest(const SendCoinsRecipient& recipient);
@@ -55,14 +55,15 @@ private:
     QStackedWidget *walletStack;
     BitcoinGUI *gui;
     ClientModel *clientModel;
-    QMap<QString, WalletView*> mapWalletViews;
+    QMap<WalletModel*, WalletView*> mapWalletViews;
 
     bool bOutOfSync;
 
     const PlatformStyle *platformStyle;
 
 public:
-    WalletView *currentWalletView();
+    WalletView* currentWalletView() const;
+    WalletModel* currentWalletModel() const;
 
 public Q_SLOTS:
     /** Switch to overview (home) page */
@@ -102,4 +103,4 @@ public Q_SLOTS:
     void outOfSyncWarningClicked();
 };
 
-#endif // FXTC_QT_WALLETFRAME_H
+#endif // BITCOIN_QT_WALLETFRAME_H

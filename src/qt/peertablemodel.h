@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FXTC_QT_PEERTABLEMODEL_H
-#define FXTC_QT_PEERTABLEMODEL_H
+#ifndef BITCOIN_QT_PEERTABLEMODEL_H
+#define BITCOIN_QT_PEERTABLEMODEL_H
 
 #include <net_processing.h> // For CNodeStateStats
 #include <net.h>
@@ -51,7 +51,7 @@ class PeerTableModel : public QAbstractTableModel
     Q_OBJECT
 
 public:
-    explicit PeerTableModel(interfaces::Node& node, ClientModel *parent = 0);
+    explicit PeerTableModel(interfaces::Node& node, ClientModel *parent = nullptr);
     ~PeerTableModel();
     const CNodeCombinedStats *getNodeStats(int idx);
     int getRowByNodeId(NodeId nodeid);
@@ -89,4 +89,4 @@ private:
     QTimer *timer;
 };
 
-#endif // FXTC_QT_PEERTABLEMODEL_H
+#endif // BITCOIN_QT_PEERTABLEMODEL_H

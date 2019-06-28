@@ -1,7 +1,6 @@
 // Copyright (c) 2011-2018 The Bitcoin Core developers
 // Copyright (c) 2014-2017 The Dash Core developers
 // Copyright (c) 2018 FXTC developers
-// Copyright (c) 2018-2019 The Veles Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -21,13 +20,9 @@
 #include <protocol.h>
 #include <script/script.h>
 #include <script/standard.h>
-#include <util.h>
+#include <util/system.h>
 
 #ifdef WIN32
-#ifdef _WIN32_WINNT
-#undef _WIN32_WINNT
-#endif
-#define _WIN32_WINNT 0x0501
 #ifdef _WIN32_IE
 #undef _WIN32_IE
 #endif
@@ -41,8 +36,6 @@
 #include <shlwapi.h>
 #endif
 
-#include <boost/scoped_array.hpp>
-
 #include <QAbstractItemView>
 #include <QApplication>
 #include <QClipboard>
@@ -52,23 +45,24 @@
 #include <QDoubleValidator>
 #include <QFileDialog>
 #include <QFont>
+#include <QFontDatabase>
+#include <QFontMetrics>
 #include <QKeyEvent>
 #include <QLineEdit>
+#include <QMouseEvent>
+#include <QProgressDialog>
 #include <QSettings>
 #include <QTextDocument> // for Qt::mightBeRichText
-// VELES BEGIN
-#include <QTextStream>   // for CSS dumping
-// VELES END
 #include <QThread>
 #include <QUrlQuery>
-#include <QMouseEvent>
 
+#if defined(Q_OS_MAC)
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
 
-#if QT_VERSION >= 0x50200
-#include <QFontDatabase>
+#include <objc/objc-runtime.h>
+#include <CoreServices/CoreServices.h>
 #endif
-
-static fs::detail::utf8_codecvt_facet utf8;
 
 namespace GUIUtil {
 
@@ -84,13 +78,7 @@ QString dateTimeStr(qint64 nTime)
 
 QFont fixedPitchFont()
 {
-#if QT_VERSION >= 0x50200
     return QFontDatabase::systemFont(QFontDatabase::FixedFont);
-#else
-    QFont font("Monospace");
-    font.setStyleHint(QFont::Monospace);
-    return font;
-#endif
 }
 
 // Just some dummy data to generate a convincing random-looking (but consistent) address
@@ -118,7 +106,7 @@ void setupAddressWidget(QValidatedLineEdit *widget, QWidget *parent)
     widget->setFont(fixedPitchFont());
     // We don't want translators to use own addresses in translations
     // and this is the only place, where this address is supplied.
-    widget->setPlaceholderText(QObject::tr("Enter a Veles address (e.g. %1)").arg(
+    widget->setPlaceholderText(QObject::tr("Enter a FxTCoin address (e.g. %1)").arg(
         QString::fromStdString(DummyAddress(Params()))));
     widget->setValidator(new BitcoinAddressEntryValidator(parent));
     widget->setCheckValidator(new BitcoinAddressCheckValidator(parent));
@@ -127,7 +115,7 @@ void setupAddressWidget(QValidatedLineEdit *widget, QWidget *parent)
 bool parseBitcoinURI(const QUrl &uri, SendCoinsRecipient *out)
 {
     // return if URI is not valid or is no bitcoin: URI
-    if(!uri.isValid() || uri.scheme() != QString("Veles"))
+    if(!uri.isValid() || uri.scheme() != QString("fxtcoin"))
         return false;
 
     SendCoinsRecipient rv;
@@ -189,7 +177,7 @@ bool parseBitcoinURI(QString uri, SendCoinsRecipient *out)
 
 QString formatBitcoinURI(const SendCoinsRecipient &info)
 {
-    QString ret = QString("Veles:%1").arg(info.address);
+    QString ret = QString("fxtcoin:%1").arg(info.address);
     int paramCount = 0;
 
     if (info.amount)
@@ -351,7 +339,7 @@ bool checkPoint(const QPoint &p, const QWidget *w)
 {
     QWidget *atW = QApplication::widgetAt(w->mapToGlobal(p));
     if (!atW) return false;
-    return atW->topLevelWidget() == w;
+    return atW->window() == w;
 }
 
 bool isObscured(QWidget *w)
@@ -361,6 +349,27 @@ bool isObscured(QWidget *w)
         && checkPoint(QPoint(0, w->height() - 1), w)
         && checkPoint(QPoint(w->width() - 1, w->height() - 1), w)
         && checkPoint(QPoint(w->width() / 2, w->height() / 2), w));
+}
+
+void bringToFront(QWidget* w)
+{
+#ifdef Q_OS_MAC
+    // Force application activation on macOS. With Qt 5.4 this is required when
+    // an action in the dock menu is triggered.
+    id app = objc_msgSend((id) objc_getClass("NSApplication"), sel_registerName("sharedApplication"));
+    objc_msgSend(app, sel_registerName("activateIgnoringOtherApps:"), YES);
+#endif
+
+    if (w) {
+        // activateWindow() (sometimes) helps with keyboard focus on Windows
+        if (w->isMinimized()) {
+            w->showNormal();
+        } else {
+            w->show();
+        }
+        w->activateWindow();
+        w->raise();
+    }
 }
 
 void openDebugLogfile()
@@ -374,10 +383,10 @@ void openDebugLogfile()
 
 bool openBitcoinConf()
 {
-    boost::filesystem::path pathConfig = GetConfigFile(gArgs.GetArg("-conf", BITCOIN_CONF_FILENAME));
+    fs::path pathConfig = GetConfigFile(gArgs.GetArg("-conf", BITCOIN_CONF_FILENAME));
 
     /* Create the file */
-    boost::filesystem::ofstream configFile(pathConfig, std::ios_base::app);
+    fsbridge::ofstream configFile(pathConfig, std::ios_base::app);
 
     if (!configFile.good())
         return false;
@@ -434,26 +443,22 @@ bool ToolTipToRichTextFilter::eventFilter(QObject *obj, QEvent *evt)
 
 void TableViewLastColumnResizingFixer::connectViewHeadersSignals()
 {
-    connect(tableView->horizontalHeader(), SIGNAL(sectionResized(int,int,int)), this, SLOT(on_sectionResized(int,int,int)));
-    connect(tableView->horizontalHeader(), SIGNAL(geometriesChanged()), this, SLOT(on_geometriesChanged()));
+    connect(tableView->horizontalHeader(), &QHeaderView::sectionResized, this, &TableViewLastColumnResizingFixer::on_sectionResized);
+    connect(tableView->horizontalHeader(), &QHeaderView::geometriesChanged, this, &TableViewLastColumnResizingFixer::on_geometriesChanged);
 }
 
 // We need to disconnect these while handling the resize events, otherwise we can enter infinite loops.
 void TableViewLastColumnResizingFixer::disconnectViewHeadersSignals()
 {
-    disconnect(tableView->horizontalHeader(), SIGNAL(sectionResized(int,int,int)), this, SLOT(on_sectionResized(int,int,int)));
-    disconnect(tableView->horizontalHeader(), SIGNAL(geometriesChanged()), this, SLOT(on_geometriesChanged()));
+    disconnect(tableView->horizontalHeader(), &QHeaderView::sectionResized, this, &TableViewLastColumnResizingFixer::on_sectionResized);
+    disconnect(tableView->horizontalHeader(), &QHeaderView::geometriesChanged, this, &TableViewLastColumnResizingFixer::on_geometriesChanged);
 }
 
 // Setup the resize mode, handles compatibility for Qt5 and below as the method signatures changed.
 // Refactored here for readability.
 void TableViewLastColumnResizingFixer::setViewHeaderResizeMode(int logicalIndex, QHeaderView::ResizeMode resizeMode)
 {
-#if QT_VERSION < 0x050000
-    tableView->horizontalHeader()->setResizeMode(logicalIndex, resizeMode);
-#else
     tableView->horizontalHeader()->setSectionResizeMode(logicalIndex, resizeMode);
-#endif
 }
 
 void TableViewLastColumnResizingFixer::resizeColumn(int nColumnIndex, int width)
@@ -555,10 +560,10 @@ fs::path static StartupShortcutPath()
 {
     std::string chain = gArgs.GetChainName();
     if (chain == CBaseChainParams::MAIN)
-        return GetSpecialFolderPath(CSIDL_STARTUP) / "Veles.lnk";
+        return GetSpecialFolderPath(CSIDL_STARTUP) / "FxTCoin.lnk";
     if (chain == CBaseChainParams::TESTNET) // Remove this special case when CBaseChainParams::TESTNET = "testnet4"
-        return GetSpecialFolderPath(CSIDL_STARTUP) / "Veles (testnet).lnk";
-    return GetSpecialFolderPath(CSIDL_STARTUP) / strprintf("Veles (%s).lnk", chain);
+        return GetSpecialFolderPath(CSIDL_STARTUP) / "FxTCoin (testnet).lnk";
+    return GetSpecialFolderPath(CSIDL_STARTUP) / strprintf("FxTCoin (%s).lnk", chain);
 }
 
 bool GetStartOnSystemStartup()
@@ -577,40 +582,28 @@ bool SetStartOnSystemStartup(bool fAutoStart)
         CoInitialize(nullptr);
 
         // Get a pointer to the IShellLink interface.
-        IShellLink* psl = nullptr;
+        IShellLinkW* psl = nullptr;
         HRESULT hres = CoCreateInstance(CLSID_ShellLink, nullptr,
-            CLSCTX_INPROC_SERVER, IID_IShellLink,
+            CLSCTX_INPROC_SERVER, IID_IShellLinkW,
             reinterpret_cast<void**>(&psl));
 
         if (SUCCEEDED(hres))
         {
             // Get the current executable path
-            TCHAR pszExePath[MAX_PATH];
-            GetModuleFileName(nullptr, pszExePath, sizeof(pszExePath));
+            WCHAR pszExePath[MAX_PATH];
+            GetModuleFileNameW(nullptr, pszExePath, ARRAYSIZE(pszExePath));
 
             // Start client minimized
             QString strArgs = "-min";
             // Set -testnet /-regtest options
             strArgs += QString::fromStdString(strprintf(" -testnet=%d -regtest=%d", gArgs.GetBoolArg("-testnet", false), gArgs.GetBoolArg("-regtest", false)));
 
-#ifdef UNICODE
-            boost::scoped_array<TCHAR> args(new TCHAR[strArgs.length() + 1]);
-            // Convert the QString to TCHAR*
-            strArgs.toWCharArray(args.get());
-            // Add missing '\0'-termination to string
-            args[strArgs.length()] = '\0';
-#endif
-
             // Set the path to the shortcut target
             psl->SetPath(pszExePath);
-            PathRemoveFileSpec(pszExePath);
+            PathRemoveFileSpecW(pszExePath);
             psl->SetWorkingDirectory(pszExePath);
             psl->SetShowCmd(SW_SHOWMINNOACTIVE);
-#ifndef UNICODE
-            psl->SetArguments(strArgs.toStdString().c_str());
-#else
-            psl->SetArguments(args.get());
-#endif
+            psl->SetArguments(strArgs.toStdWString().c_str());
 
             // Query IShellLink for the IPersistFile interface for
             // saving the shortcut in persistent storage.
@@ -618,11 +611,8 @@ bool SetStartOnSystemStartup(bool fAutoStart)
             hres = psl->QueryInterface(IID_IPersistFile, reinterpret_cast<void**>(&ppf));
             if (SUCCEEDED(hres))
             {
-                WCHAR pwsz[MAX_PATH];
-                // Ensure that the string is ANSI.
-                MultiByteToWideChar(CP_ACP, 0, StartupShortcutPath().string().c_str(), -1, pwsz, MAX_PATH);
                 // Save the link by calling IPersistFile::Save.
-                hres = ppf->Save(pwsz, TRUE);
+                hres = ppf->Save(StartupShortcutPath().wstring().c_str(), TRUE);
                 ppf->Release();
                 psl->Release();
                 CoUninitialize();
@@ -653,13 +643,13 @@ fs::path static GetAutostartFilePath()
 {
     std::string chain = gArgs.GetChainName();
     if (chain == CBaseChainParams::MAIN)
-        return GetAutostartDir() / "Veles.desktop";
-    return GetAutostartDir() / strprintf("Veles-%s.lnk", chain);
+        return GetAutostartDir() / "FxTCoin.desktop";
+    return GetAutostartDir() / strprintf("fxtcoin-%s.lnk", chain);
 }
 
 bool GetStartOnSystemStartup()
 {
-    fs::ifstream optionFile(GetAutostartFilePath());
+    fsbridge::ifstream optionFile(GetAutostartFilePath());
     if (!optionFile.good())
         return false;
     // Scan through file for "Hidden=true":
@@ -690,7 +680,7 @@ bool SetStartOnSystemStartup(bool fAutoStart)
 
         fs::create_directories(GetAutostartDir());
 
-        fs::ofstream optionFile(GetAutostartFilePath(), std::ios_base::out|std::ios_base::trunc);
+        fsbridge::ofstream optionFile(GetAutostartFilePath(), std::ios_base::out | std::ios_base::trunc);
         if (!optionFile.good())
             return false;
         std::string chain = gArgs.GetChainName();
@@ -698,9 +688,9 @@ bool SetStartOnSystemStartup(bool fAutoStart)
         optionFile << "[Desktop Entry]\n";
         optionFile << "Type=Application\n";
         if (chain == CBaseChainParams::MAIN)
-            optionFile << "Name=Veles\n";
+            optionFile << "Name=FxTCoin\n";
         else
-            optionFile << strprintf("Name=Veles (%s)\n", chain);
+            optionFile << strprintf("Name=FxTCoin (%s)\n", chain);
         optionFile << "Exec=" << pszExePath << strprintf(" -min -testnet=%d -regtest=%d\n", gArgs.GetBoolArg("-testnet", false), gArgs.GetBoolArg("-regtest", false));
         optionFile << "Terminal=false\n";
         optionFile << "Hidden=false\n";
@@ -710,18 +700,11 @@ bool SetStartOnSystemStartup(bool fAutoStart)
 }
 
 
-#elif defined(Q_OS_MAC)
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Wdeprecated-declarations"
+#elif defined(Q_OS_MAC) && defined(MAC_OS_X_VERSION_MIN_REQUIRED) && MAC_OS_X_VERSION_MIN_REQUIRED <= 101100
 // based on: https://github.com/Mozketo/LaunchAtLoginController/blob/master/LaunchAtLoginController.m
 
-#include <CoreFoundation/CoreFoundation.h>
-#include <CoreServices/CoreServices.h>
-
-LSSharedFileListItemRef findStartupItemInList(LSSharedFileListRef list, CFURLRef findUrl);
-LSSharedFileListItemRef findStartupItemInList(LSSharedFileListRef list, CFURLRef findUrl)
+LSSharedFileListItemRef findStartupItemInList(CFArrayRef listSnapshot, LSSharedFileListRef list, CFURLRef findUrl)
 {
-    CFArrayRef listSnapshot = LSSharedFileListCopySnapshot(list, nullptr);
     if (listSnapshot == nullptr) {
         return nullptr;
     }
@@ -746,15 +729,12 @@ LSSharedFileListItemRef findStartupItemInList(LSSharedFileListRef list, CFURLRef
         if(currentItemURL) {
             if (CFEqual(currentItemURL, findUrl)) {
                 // found
-                CFRelease(listSnapshot);
                 CFRelease(currentItemURL);
                 return item;
             }
             CFRelease(currentItemURL);
         }
     }
-
-    CFRelease(listSnapshot);
     return nullptr;
 }
 
@@ -766,10 +746,12 @@ bool GetStartOnSystemStartup()
     }
 
     LSSharedFileListRef loginItems = LSSharedFileListCreate(nullptr, kLSSharedFileListSessionLoginItems, nullptr);
-    LSSharedFileListItemRef foundItem = findStartupItemInList(loginItems, bitcoinAppUrl);
-
+    CFArrayRef listSnapshot = LSSharedFileListCopySnapshot(loginItems, nullptr);
+    bool res = (findStartupItemInList(listSnapshot, loginItems, bitcoinAppUrl) != nullptr);
     CFRelease(bitcoinAppUrl);
-    return !!foundItem; // return boolified object
+    CFRelease(loginItems);
+    CFRelease(listSnapshot);
+    return res;
 }
 
 bool SetStartOnSystemStartup(bool fAutoStart)
@@ -780,7 +762,8 @@ bool SetStartOnSystemStartup(bool fAutoStart)
     }
 
     LSSharedFileListRef loginItems = LSSharedFileListCreate(nullptr, kLSSharedFileListSessionLoginItems, nullptr);
-    LSSharedFileListItemRef foundItem = findStartupItemInList(loginItems, bitcoinAppUrl);
+    CFArrayRef listSnapshot = LSSharedFileListCopySnapshot(loginItems, nullptr);
+    LSSharedFileListItemRef foundItem = findStartupItemInList(listSnapshot, loginItems, bitcoinAppUrl);
 
     if(fAutoStart && !foundItem) {
         // add bitcoin app to startup item list
@@ -792,6 +775,8 @@ bool SetStartOnSystemStartup(bool fAutoStart)
     }
 
     CFRelease(bitcoinAppUrl);
+    CFRelease(loginItems);
+    CFRelease(listSnapshot);
     return true;
 }
 #pragma GCC diagnostic pop
@@ -802,101 +787,6 @@ bool SetStartOnSystemStartup(bool fAutoStart) { return false; }
 
 #endif
 
-void migrateQtSettings()
-{
-    // Migration (12.1)
-    QSettings settings;
-    if(!settings.value("fMigrationDone121", false).toBool()) {
-        settings.remove("theme");
-        settings.remove("nWindowPos");
-        settings.remove("nWindowSize");
-        settings.setValue("fMigrationDone121", true);
-    }
-}
-
-void saveWindowGeometry(const QString& strSetting, QWidget *parent)
-{
-    QSettings settings;
-    settings.setValue(strSetting + "Pos", parent->pos());
-    settings.setValue(strSetting + "Size", parent->size());
-}
-
-void restoreWindowGeometry(const QString& strSetting, const QSize& defaultSize, QWidget *parent)
-{
-    QSettings settings;
-    QPoint pos = settings.value(strSetting + "Pos").toPoint();
-    QSize size = settings.value(strSetting + "Size", defaultSize).toSize();
-
-    parent->resize(size);
-    parent->move(pos);
-
-    if ((!pos.x() && !pos.y()) || (QApplication::desktop()->screenNumber(parent) == -1))
-    {
-        QRect screen = QApplication::desktop()->screenGeometry();
-        QPoint defaultPos = screen.center() -
-            QPoint(defaultSize.width() / 2, defaultSize.height() / 2);
-        parent->resize(defaultSize);
-        parent->move(defaultPos);
-    }
-}
-
-// Return name of current UI-theme or default theme if no theme was found
-QString getThemeName()
-{
-    QSettings settings;
-    QString theme = settings.value("theme", "").toString();
-
-    if(!theme.isEmpty()){
-        return theme;
-    }
-    return QString("Veles");
-}
-
-// Open CSS when configured
-QString loadStyleSheet()
-{
-    //
-    // Load the stylesheet according to settings, override with -loadcss parameter,
-    // dump the currently loaded stylesheet with -outcss.
-    //
-    QString styleSheet;
-    QSettings settings;
-    QString cssName;
-    QString theme = settings.value("theme", "").toString();
-    QString customCssPath = QString::fromStdString(gArgs.GetArg("-loadcss", ""));
-    QString dumpCssPath = QString::fromStdString(gArgs.GetArg("-dumpcss", ""));
-
-/*     if(customCssPath != "") {
-        cssName = customCssPath;                // load custom CSS for dev / testing purposes
-     }
-     */
-     if(!theme.isEmpty()) {
-        cssName = QString(":/css/") + theme;    // custom style from settings
-
-     } else {
-        cssName = QString(":/css/velesTheme");       // default style
-        settings.setValue("theme", "velesTheme");
-     }
-
-    // load the css
-    QFile qFile(cssName);
-    if (qFile.open(QFile::ReadOnly)) {
-        styleSheet = QLatin1String(qFile.readAll());
-    }
-
-    // dump the css if rewuired
-    if(dumpCssPath != "") {
-        QFile outFile(dumpCssPath);
-        if (outFile.open(QFile::WriteOnly | QFile::Truncate)) {
-            QTextStream out(&outFile);
-            out << styleSheet;
-        }
-    }
-
-    return styleSheet;
-}
-// VELES END
-
 void setClipboard(const QString& str)
 {
     QApplication::clipboard()->setText(str, QClipboard::Clipboard);
@@ -905,12 +795,12 @@ void setClipboard(const QString& str)
 
 fs::path qstringToBoostPath(const QString &path)
 {
-    return fs::path(path.toStdString(), utf8);
+    return fs::path(path.toStdString());
 }
 
 QString boostPathToQString(const fs::path &path)
 {
-    return QString::fromStdString(path.string(utf8));
+    return QString::fromStdString(path.string());
 }
 
 QString formatDurationStr(int secs)
@@ -1060,6 +950,18 @@ bool ItemDelegate::eventFilter(QObject *object, QEvent *event)
         }
     }
     return QItemDelegate::eventFilter(object, event);
+}
+
+void PolishProgressDialog(QProgressDialog* dialog)
+{
+#ifdef Q_OS_MAC
+    // Workaround for macOS-only Qt bug; see: QTBUG-65750, QTBUG-70357.
+    const int margin = dialog->fontMetrics().width("X");
+    dialog->resize(dialog->width() + 2 * margin, dialog->height());
+    dialog->show();
+#else
+    Q_UNUSED(dialog);
+#endif
 }
 
 } // namespace GUIUtil

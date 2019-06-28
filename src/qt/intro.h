@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FXTC_QT_INTRO_H
-#define FXTC_QT_INTRO_H
+#ifndef BITCOIN_QT_INTRO_H
+#define BITCOIN_QT_INTRO_H
 
 #include <QDialog>
 #include <QMutex>
@@ -30,7 +30,8 @@ class Intro : public QDialog
     Q_OBJECT
 
 public:
-    explicit Intro(QWidget *parent = 0);
+    explicit Intro(QWidget *parent = nullptr,
+                   uint64_t blockchain_size = 0, uint64_t chain_state_size = 0);
     ~Intro();
 
     QString getDataDirectory();
@@ -54,7 +55,6 @@ public:
 
 Q_SIGNALS:
     void requestCheck();
-    void stopThread();
 
 public Q_SLOTS:
     void setStatus(int status, const QString &message, quint64 bytesAvailable);
@@ -71,6 +71,8 @@ private:
     QMutex mutex;
     bool signalled;
     QString pathToCheck;
+    uint64_t m_blockchain_size;
+    uint64_t m_chain_state_size;
 
     void startThread();
     void checkPath(const QString &dataDir);
@@ -79,4 +81,4 @@ private:
     friend class FreespaceChecker;
 };
 
-#endif // FXTC_QT_INTRO_H
+#endif // BITCOIN_QT_INTRO_H

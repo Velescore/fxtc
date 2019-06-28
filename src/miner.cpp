@@ -1,5 +1,5 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
-// Copyright (c) 2009-2018 The Bitcoin Core developers
+// Copyright (c) 2009-2019 The Bitcoin Core developers
 // Copyright (c) 2014-2017 The Dash Core developers
 // Copyright (c) 2018 FXTC developers
 // Distributed under the MIT software license, see the accompanying
@@ -12,8 +12,8 @@
 #include <chainparams.h>
 #include <coins.h>
 #include <consensus/consensus.h>
-#include <consensus/tx_verify.h>
 #include <consensus/merkle.h>
+#include <consensus/tx_verify.h>
 #include <consensus/validation.h>
 #include <hash.h>
 #include <key_io.h>
@@ -24,9 +24,8 @@
 #include <primitives/transaction.h>
 #include <script/standard.h>
 #include <timedata.h>
-#include <util.h>
-#include <utilmoneystr.h>
-#include <validation.h>
+#include <util/moneystr.h>
+#include <util/system.h>
 #include <validationinterface.h>
 
 // Dash
@@ -38,15 +37,10 @@
 #include <queue>
 #include <utility>
 
-// Unconfirmed transactions in the memory pool often depend on other
-// transactions in the memory pool. When we select transactions from the
-// pool, we select by highest fee rate of a transaction combined with all
-// its ancestors.
-
-uint64_t nLastBlockTx = 0;
-uint64_t nLastBlockWeight = 0;
-
+// FXTC BEGIN
+//int64_t UpdateTime(CBlockHeader* pblock, const Consensus::Params& consensusParams, const CBlockIndex* pindexPrev)
 int64_t UpdateTime(CBlock* pblock, const Consensus::Params& consensusParams, const CBlockIndex* pindexPrev)
+// FXTC END
 {
     int64_t nOldTime = pblock->nTime;
     int64_t nNewTime = std::max(pindexPrev->GetMedianTimePast()+1, GetAdjustedTime());
@@ -126,9 +120,8 @@ static BlockAssembler::Options DefaultOptions()
     // If -blockmaxweight is not given, limit to DEFAULT_BLOCK_MAX_WEIGHT
     BlockAssembler::Options options;
     options.nBlockMaxWeight = gArgs.GetArg("-blockmaxweight", DEFAULT_BLOCK_MAX_WEIGHT);
-    if (gArgs.IsArgSet("-blockmintxfee")) {
-        CAmount n = 0;
-        ParseMoney(gArgs.GetArg("-blockmintxfee", ""), n);
+    CAmount n = 0;
+    if (gArgs.IsArgSet("-blockmintxfee") && ParseMoney(gArgs.GetArg("-blockmintxfee", ""), n)) {
         options.blockMinFeeRate = CFeeRate(n);
     } else {
         options.blockMinFeeRate = CFeeRate(DEFAULT_BLOCK_MIN_TX_FEE);
@@ -152,7 +145,10 @@ void BlockAssembler::resetBlock()
     nFees = 0;
 }
 
-std::unique_ptr<CBlockTemplate> BlockAssembler::CreateNewBlock(const CScript& scriptPubKeyIn, bool fMineWitnessTx)
+Optional<int64_t> BlockAssembler::m_last_block_num_txs{nullopt};
+Optional<int64_t> BlockAssembler::m_last_block_weight{nullopt};
+
+std::unique_ptr<CBlockTemplate> BlockAssembler::CreateNewBlock(const CScript& scriptPubKeyIn)
 {
     int64_t nTimeStart = GetTimeMicros();
 
@@ -196,7 +192,7 @@ std::unique_ptr<CBlockTemplate> BlockAssembler::CreateNewBlock(const CScript& sc
     // not activated.
     // TODO: replace this with a call to main to assess validity of a mempool
     // transaction (which in most cases can be a no-op).
-    fIncludeWitness = IsWitnessEnabled(pindexPrev, chainparams.GetConsensus()) && fMineWitnessTx;
+    fIncludeWitness = IsWitnessEnabled(pindexPrev, chainparams.GetConsensus());
 
     int nPackagesSelected = 0;
     int nDescendantsUpdated = 0;
@@ -204,8 +200,8 @@ std::unique_ptr<CBlockTemplate> BlockAssembler::CreateNewBlock(const CScript& sc
 
     int64_t nTime1 = GetTimeMicros();
 
-    nLastBlockTx = nBlockTx;
-    nLastBlockWeight = nBlockWeight;
+    m_last_block_num_txs = nBlockTx;
+    m_last_block_weight = nBlockWeight;
 
     // Create coinbase transaction.
     CMutableTransaction coinbaseTx;

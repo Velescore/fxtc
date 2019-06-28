@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FXTC_POLICY_FEERATE_H
-#define FXTC_POLICY_FEERATE_H
+#ifndef BITCOIN_POLICY_FEERATE_H
+#define BITCOIN_POLICY_FEERATE_H
 
 #include <amount.h>
 #include <serialize.h>

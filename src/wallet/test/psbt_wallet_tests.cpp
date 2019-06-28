@@ -4,7 +4,9 @@
 
 #include <key_io.h>
 #include <script/sign.h>
-#include <utilstrencodings.h>
+#include <util/bip32.h>
+#include <util/strencodings.h>
+#include <wallet/psbtwallet.h>
 #include <wallet/rpcwallet.h>
 #include <wallet/wallet.h>
 #include <univalue.h>
@@ -13,12 +15,12 @@
 #include <test/test_bitcoin.h>
 #include <wallet/test/wallet_test_fixture.h>
 
-extern bool ParseHDKeypath(std::string keypath_str, std::vector<uint32_t>& keypath);
-
 BOOST_FIXTURE_TEST_SUITE(psbt_wallet_tests, WalletTestingSetup)
 
 BOOST_AUTO_TEST_CASE(psbt_updater_test)
 {
+    LOCK(m_wallet.cs_wallet);
+
     // Create prevtxs and add to wallet
     CDataStream s_prev_tx1(ParseHex("0200000000010158e87a21b56daf0c23be8e7070456c336f7cbaa5c8757924f545887bb2abdd7501000000171600145f275f436b09a8cc9a2eb2a2f528485c68a56323feffffff02d8231f1b0100000017a914aed962d6654f9a2b36608eb9d64d2b260db4f1118700c2eb0b0000000017a914b7f5faf40e3d40a5a459b1db3535f2b72fa921e88702483045022100a22edcc6e5bc511af4cc4ae0de0fcd75c7e04d8c1c3a8aa9d820ed4b967384ec02200642963597b9b1bc22c75e9f3e117284a962188bf5e8a74c895089046a20ad770121035509a48eb623e10aace8bfd0212fdb8a8e5af3c94b0b133b95e114cab89e4f7965000000"), SER_NETWORK, PROTOCOL_VERSION);
     CTransactionRef prev_tx1;
@@ -49,7 +51,7 @@ BOOST_AUTO_TEST_CASE(psbt_updater_test)
     m_wallet.AddCScript(ws1);
 
     // Add hd seed
-    CKey key = DecodeSecret("5KSSJQ7UNfFGwVgpCZDSHm5rVNhMFcFtvWM3zQ8mW4qNDEN7LFd"); // Mainnet and uncompressed form of cUkG8i1RFfWGWy5ziR11zJ5V4U4W3viSFCfyJmZnvQaUsd1xuF3T
+    CKey key = DecodeSecret("7y1FEiZzhGgAbJbXpMFNe6T2qPM5cEq55zwZGEUb2qN1CMWUsia"); // Mainnet and uncompressed form of cUkG8i1RFfWGWy5ziR11zJ5V4U4W3viSFCfyJmZnvQaUsd1xuF3T
     CPubKey master_pub_key = m_wallet.DeriveNewSeed(key);
     m_wallet.SetHDSeed(master_pub_key);
     m_wallet.NewKeyPool();
@@ -60,7 +62,8 @@ BOOST_AUTO_TEST_CASE(psbt_updater_test)
     ssData >> psbtx;
 
     // Fill transaction with our data
-    FillPSBT(&m_wallet, psbtx, SIGHASH_ALL, false, true);
+    bool complete = true;
+    BOOST_REQUIRE_EQUAL(TransactionError::OK, FillPSBT(&m_wallet, psbtx, complete, SIGHASH_ALL, false, true));
 
     // Get the final tx
     CDataStream ssTx(SER_NETWORK, PROTOCOL_VERSION);

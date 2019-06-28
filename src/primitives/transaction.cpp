@@ -9,7 +9,7 @@
 
 #include <hash.h>
 #include <tinyformat.h>
-#include <utilstrencodings.h>
+#include <util/strencodings.h>
 
 std::string COutPoint::ToString() const
 {
@@ -72,6 +72,7 @@ uint256 CMutableTransaction::GetHash() const
     return SerializeHash(*this, SER_GETHASH, SERIALIZE_TRANSACTION_NO_WITNESS);
 }
 
+// Dash
 std::string CMutableTransaction::ToString() const
 {
     std::string str;
@@ -87,7 +88,7 @@ std::string CMutableTransaction::ToString() const
         str += "    " + vout[i].ToString() + "\n";
     return str;
 }
-
+//
 
 uint256 CTransaction::ComputeHash() const
 {
@@ -135,7 +136,10 @@ unsigned int CTransaction::CalculateModifiedSize(unsigned int nTxSize) const
     // Providing any more cleanup incentive than making additional inputs free would
     // risk encouraging people to create junk outputs to redeem later.
     if (nTxSize == 0)
-        nTxSize = ::GetSerializeSize(*this, SER_NETWORK, PROTOCOL_VERSION);
+        // FXTC BEGIN
+        //nTxSize = ::GetSerializeSize(*this, SER_NETWORK, PROTOCOL_VERSION);
+        nTxSize = ::GetSerializeSize(*this, PROTOCOL_VERSION);
+        // FXTC END
     for (std::vector<CTxIn>::const_iterator it(vin.begin()); it != vin.end(); ++it)
     {
         unsigned int offset = 41U + std::min(110U, (unsigned int)it->scriptSig.size());
@@ -148,7 +152,7 @@ unsigned int CTransaction::CalculateModifiedSize(unsigned int nTxSize) const
 
 unsigned int CTransaction::GetTotalSize() const
 {
-    return ::GetSerializeSize(*this, SER_NETWORK, PROTOCOL_VERSION);
+    return ::GetSerializeSize(*this, PROTOCOL_VERSION);
 }
 
 std::string CTransaction::ToString() const

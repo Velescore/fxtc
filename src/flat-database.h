@@ -1,16 +1,16 @@
 // Copyright (c) 2014-2017 The Dash Core developers
-// Copyright (c) 2018 FXTC developers
+// Copyright (c) 2018-2019 FXTC developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FXTC_FLAT_DATABASE_H
-#define FXTC_FLAT_DATABASE_H
+#ifndef DASH_FLAT_DATABASE_H
+#define DASH_FLAT_DATABASE_H
 
 #include <chainparams.h>
 #include <clientversion.h>
 #include <hash.h>
 #include <streams.h>
-#include <util.h>
+#include <util/system.h>
 
 #include <boost/filesystem.hpp>
 
@@ -227,4 +227,4 @@ public:
 };
 
 
-#endif // FXTC_FLAT_DATABASE_H
+#endif // DASH_FLAT_DATABASE_H

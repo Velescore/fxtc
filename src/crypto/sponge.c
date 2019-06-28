@@ -1,3 +1,4 @@
+// Copyright (c) 2018-2019 FXTC developers
 /**
 * A simple implementation of Blake2b's internal permutation
 * in the form of a sponge.

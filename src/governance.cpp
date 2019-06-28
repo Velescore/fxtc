@@ -1,5 +1,5 @@
 // Copyright (c) 2014-2017 The Dash Core developers
-// Copyright (c) 2018 FXTC developers
+// Copyright (c) 2018-2019 FXTC developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -14,7 +14,11 @@
 #include <messagesigner.h>
 #include <netfulfilledman.h>
 #include <netmessagemaker.h>
-#include <util.h>
+#include <util/system.h>
+
+// FXTC BEGIN
+extern void Misbehaving(NodeId nodeid, int howmuch, const std::string& message="");
+// FXTC END
 
 CGovernanceManager governance;
 
@@ -132,7 +136,6 @@ void CGovernanceManager::ProcessMessage(CNode* pfrom, const std::string& strComm
 
         if(nProp == uint256()) {
             if(netfulfilledman.HasFulfilledRequest(pfrom->addr, NetMsgType::MNGOVERNANCESYNC)) {
-                LOCK(cs_main);
                 // Asking for the whole list multiple times in a short period of time is no good
                 LogPrint(BCLog::GOBJECT, "MNGOVERNANCESYNC -- peer already asked me for the list\n");
                 Misbehaving(pfrom->GetId(), 20);
@@ -267,7 +270,6 @@ void CGovernanceManager::ProcessMessage(CNode* pfrom, const std::string& strComm
         else {
             LogPrint(BCLog::GOBJECT, "MNGOVERNANCEOBJECTVOTE -- Rejected vote, error = %s\n", exception.what());
             if((exception.GetNodePenalty() != 0) && masternodeSync.IsSynced()) {
-                LOCK(cs_main);
                 Misbehaving(pfrom->GetId(), exception.GetNodePenalty());
             }
             return;

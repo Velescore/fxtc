@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>831</width>
-    <height>589</height>
+    <width>850</width>
+    <height>526</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -579,9 +579,6 @@
    </item>
    <item>
     <widget class="QScrollArea" name="scrollArea">
-     <property name="frameShape">
-      <enum>QFrame::NoFrame</enum>
-     </property>
      <property name="widgetResizable">
       <bool>true</bool>
      </property>
@@ -590,11 +587,11 @@
        <rect>
         <x>0</x>
         <y>0</y>
-        <width>813</width>
-        <height>143</height>
+        <width>830</width>
+        <height>104</height>
        </rect>
       </property>
-      <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,0">
+      <layout class="QVBoxLayout" name="verticalLayout_2" stretch="0,1">
        <property name="leftMargin">
         <number>0</number>
        </property>
@@ -618,9 +615,6 @@
         <spacer name="verticalSpacer">
          <property name="orientation">
           <enum>Qt::Vertical</enum>
-         </property>
-         <property name="sizeType">
-          <enum>QSizePolicy::Expanding</enum>
          </property>
          <property name="sizeHint" stdset="0">
           <size>
@@ -767,14 +761,14 @@
           </item>
           <item>
            <widget class="QLabel" name="fallbackFeeWarningLabel">
-            <property name="font">
-             <font>
-              <weight>75</weight>
-              <bold>true</bold>
-             </font>
-            </property>
             <property name="toolTip">
              <string>Using the fallbackfee can result in sending a transaction that will take several hours or days (or never) to confirm. Consider choosing your fee manually or wait until you have validated the complete chain.</string>
+            </property>
+            <property name="font">
+            <font>
+                <weight>75</weight>
+                <bold>true</bold>
+            </font>
             </property>
             <property name="text">
              <string>Warning: Fee estimation is currently not possible.</string>
@@ -856,7 +850,7 @@
                    <property name="toolTip">
                     <string>Specify a custom fee per kB (1,000 bytes) of the transaction's virtual size.
 
-Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satoshis per kB&quot; for a transaction size of 500 bytes (half of 1 kB) would ultimately yield a fee of only 50 satoshis.</string>
+Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis per kB" for a transaction size of 500 bytes (half of 1 kB) would ultimately yield a fee of only 50 satoshis.</string>
                    </property>
                    <property name="text">
                     <string>per kilobyte</string>
@@ -884,28 +878,15 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
                <item>
                 <layout class="QHBoxLayout" name="horizontalLayoutFee8">
                  <item>
-                  <widget class="QCheckBox" name="checkBoxMinimumFee">
-                   <property name="toolTip">
-                    <string>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for Veles transactions than the network can process.</string>
-                   </property>
-                   <property name="text">
-                    <string/>
-                   </property>
-                  </widget>
-                 </item>
-                 <item>
-                  <widget class="QLabel" name="labelMinFeeWarning">
+                  <widget class="QLabel" name="labelCustomFeeWarning">
                    <property name="enabled">
                     <bool>true</bool>
                    </property>
                    <property name="toolTip">
-                    <string>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for Veles transactions than the network can process.</string>
+                    <string>When there is less transaction volume than space in the blocks, miners as well as relaying nodes may enforce a minimum fee. Paying only this minimum fee is just fine, but be aware that this can result in a never confirming transaction once there is more demand for fxtcoin transactions than the network can process.</string>
                    </property>
                    <property name="text">
-                    <string>(read the tooltip)</string>
-                   </property>
-                   <property name="margin">
-                    <number>5</number>
+                    <string>A too low fee might result in a never confirming transaction (read the tooltip)</string>
                    </property>
                   </widget>
                  </item>
@@ -998,9 +979,6 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
                    <property name="text">
                     <string/>
                    </property>
-                   <property name="margin">
-                    <number>2</number>
-                   </property>
                   </widget>
                  </item>
                  <item>
@@ -1014,9 +992,6 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
                   <widget class="QLabel" name="labelSmartFee2">
                    <property name="text">
                     <string>(Smart fee not initialized yet. This usually takes a few blocks...)</string>
-                   </property>
-                   <property name="margin">
-                    <number>2</number>
                    </property>
                   </widget>
                  </item>
@@ -1044,23 +1019,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
                      <property name="text">
                       <string>Confirmation time target:</string>
                      </property>
-                     <property name="margin">
-                      <number>2</number>
-                     </property>
                     </widget>
-                   </item>
-                   <item>
-                    <spacer name="verticalSpacer_3">
-                     <property name="orientation">
-                      <enum>Qt::Vertical</enum>
-                     </property>
-                     <property name="sizeHint" stdset="0">
-                      <size>
-                       <width>1</width>
-                       <height>1</height>
-                      </size>
-                     </property>
-                    </spacer>
                    </item>
                   </layout>
                  </item>
@@ -1115,11 +1074,11 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
            </item>
            <item>
             <widget class="QCheckBox" name="optInRBF">
-             <property name="toolTip">
-              <string>With Replace-By-Fee (BIP-125) you can increase a transaction's fee after it is sent. Without this, a higher fee may be recommended to compensate for increased transaction delay risk.</string>
-             </property>
              <property name="text">
               <string>Enable Replace-By-Fee</string>
+             </property>
+             <property name="toolTip">
+              <string>With Replace-By-Fee (BIP-125) you can increase a transaction's fee after it is sent. Without this, a higher fee may be recommended to compensate for increased transaction delay risk.</string>
              </property>
             </widget>
            </item>
@@ -1161,7 +1120,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
         <string>S&amp;end</string>
        </property>
        <property name="icon">
-        <iconset>
+        <iconset resource="../bitcoin.qrc">
          <normaloff>:/icons/send</normaloff>:/icons/send</iconset>
        </property>
        <property name="autoDefault">
@@ -1187,7 +1146,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
         <string>Clear &amp;All</string>
        </property>
        <property name="icon">
-        <iconset>
+        <iconset resource="../bitcoin.qrc">
          <normaloff>:/icons/remove</normaloff>:/icons/remove</iconset>
        </property>
        <property name="autoDefault">
@@ -1204,7 +1163,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
         <string>Add &amp;Recipient</string>
        </property>
        <property name="icon">
-        <iconset>
+        <iconset resource="../bitcoin.qrc">
          <normaloff>:/icons/add</normaloff>:/icons/add</iconset>
        </property>
        <property name="autoDefault">
@@ -1270,15 +1229,15 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
  </widget>
  <customwidgets>
   <customwidget>
+   <class>QValidatedLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>qt/qvalidatedlineedit.h</header>
+  </customwidget>
+  <customwidget>
    <class>BitcoinAmountField</class>
    <extends>QLineEdit</extends>
    <header>qt/bitcoinamountfield.h</header>
    <container>1</container>
-  </customwidget>
-  <customwidget>
-   <class>QValidatedLineEdit</class>
-   <extends>QLineEdit</extends>
-   <header>qt/qvalidatedlineedit.h</header>
   </customwidget>
  </customwidgets>
  <resources>

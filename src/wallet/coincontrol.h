@@ -4,8 +4,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FXTC_WALLET_COINCONTROL_H
-#define FXTC_WALLET_COINCONTROL_H
+#ifndef BITCOIN_WALLET_COINCONTROL_H
+#define BITCOIN_WALLET_COINCONTROL_H
 
 #include <policy/feerate.h>
 #include <policy/fees.h>
@@ -84,4 +84,4 @@ private:
     std::set<COutPoint> setSelected;
 };
 
-#endif // FXTC_WALLET_COINCONTROL_H
+#endif // BITCOIN_WALLET_COINCONTROL_H

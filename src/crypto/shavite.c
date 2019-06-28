@@ -1,3 +1,4 @@
+// Copyright (c) 2018-2019 FXTC developers
 /* $Id: shavite.c 227 2010-06-16 17:28:38Z tp $ */
 /*
  * SHAvite-3 implementation.

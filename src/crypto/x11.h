@@ -1,12 +1,12 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2015 The Bitcoin Core developers
 // Copyright (c) 2014-2017 The Dash Core developers
-// Copyright (c) 2018 FXTC developers
+// Copyright (c) 2018-2019 FXTC developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FXTC_CRYPTO_X11_H
-#define FXTC_CRYPTO_X11_H
+#ifndef DASH_CRYPTO_X11_H
+#define DASH_CRYPTO_X11_H
 
 #include <uint256.h>
 
@@ -91,4 +91,4 @@ inline uint256 HashX11(const T1 pbegin, const T1 pend)
     return hash[10].trim256();
 }
 
-#endif // FXTC_CRYPTO_X11_H
+#endif // DASH_CRYPTO_X11_H

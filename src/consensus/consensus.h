@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FXTC_CONSENSUS_CONSENSUS_H
-#define FXTC_CONSENSUS_CONSENSUS_H
+#ifndef BITCOIN_CONSENSUS_CONSENSUS_H
+#define BITCOIN_CONSENSUS_CONSENSUS_H
 
 #include <stdlib.h>
 #include <stdint.h>
@@ -16,11 +16,7 @@ static const unsigned int MAX_BLOCK_WEIGHT = 4000000;
 /** The maximum allowed number of signature check operations in a block (network rule) */
 static const int64_t MAX_BLOCK_SIGOPS_COST = 80000;
 /** Coinbase transaction outputs can only be spent after this number of new blocks (network rule) */
-// VELES BEGIN
-//static const int COINBASE_MATURITY = 100;
-static const int COINBASE_MATURITY = 60;
-static const int COINBASE_MATURITY_850k = 200;
-// VELES END
+static const int COINBASE_MATURITY = 100;
 
 static const int WITNESS_SCALE_FACTOR = 4;
 
@@ -33,4 +29,4 @@ static constexpr unsigned int LOCKTIME_VERIFY_SEQUENCE = (1 << 0);
 /** Use GetMedianTimePast() instead of nTime for end point timestamp. */
 static constexpr unsigned int LOCKTIME_MEDIAN_TIME_PAST = (1 << 1);
 
-#endif // FXTC_CONSENSUS_CONSENSUS_H
+#endif // BITCOIN_CONSENSUS_CONSENSUS_H

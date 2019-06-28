@@ -70,12 +70,8 @@
         <translation>Құпия сөзді өзгерту</translation>
     </message>
     <message>
-        <source>Veles</source>
+        <source>FxTCoin</source>
         <translation>Биткоин</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>Әмиян</translation>
     </message>
     <message>
         <source>&amp;Send</source>
@@ -169,7 +165,7 @@
 <context>
     <name>Intro</name>
     <message>
-        <source>Veles</source>
+        <source>FxTCoin</source>
         <translation>Биткоин</translation>
     </message>
     <message>
@@ -299,6 +295,9 @@
     </context>
 <context>
     <name>UnitDisplayStatusBarControl</name>
+    </context>
+<context>
+    <name>WalletController</name>
     </context>
 <context>
     <name>WalletFrame</name>

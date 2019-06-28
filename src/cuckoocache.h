@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FXTC_CUCKOOCACHE_H
-#define FXTC_CUCKOOCACHE_H
+#ifndef BITCOIN_CUCKOOCACHE_H
+#define BITCOIN_CUCKOOCACHE_H
 
 #include <array>
 #include <algorithm>
@@ -397,7 +397,7 @@ public:
         std::array<uint32_t, 8> locs = compute_hashes(e);
         // Make sure we have not already inserted this element
         // If we have, make sure that it does not get deleted
-        for (uint32_t loc : locs)
+        for (const uint32_t loc : locs)
             if (table[loc] == e) {
                 please_keep(loc);
                 epoch_flags[loc] = last_epoch;
@@ -405,7 +405,7 @@ public:
             }
         for (uint8_t depth = 0; depth < depth_limit; ++depth) {
             // First try to insert to an empty slot, if one exists
-            for (uint32_t loc : locs) {
+            for (const uint32_t loc : locs) {
                 if (!collection_flags.bit_is_set(loc))
                     continue;
                 table[loc] = std::move(e);
@@ -467,7 +467,7 @@ public:
     inline bool contains(const Element& e, const bool erase) const
     {
         std::array<uint32_t, 8> locs = compute_hashes(e);
-        for (uint32_t loc : locs)
+        for (const uint32_t loc : locs)
             if (table[loc] == e) {
                 if (erase)
                     allow_erase(loc);
@@ -478,4 +478,4 @@ public:
 };
 } // namespace CuckooCache
 
-#endif // FXTC_CUCKOOCACHE_H
+#endif // BITCOIN_CUCKOOCACHE_H

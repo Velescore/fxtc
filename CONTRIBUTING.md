@@ -1,7 +1,7 @@
-Contributing to Veles Core
+Contributing to Bitcoin Core
 ============================
 
-The Veles Core project operates an open contributor model where anyone is
+The Bitcoin Core project operates an open contributor model where anyone is
 welcome to contribute towards development in the form of peer review, testing
 and patches. This document explains the practical process and guidelines for
 contributing.
@@ -15,18 +15,26 @@ merging pull requests as well as a "lead maintainer" who is responsible for the
 release cycle, overall merging, moderation and appointment of maintainers.
 
 If you're looking for somewhere to start contributing, check out the
-[good first issue](https://github.com/velescore/veles/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22)
+[good first issue](https://github.com/bitcoin/bitcoin/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22)
 list.
 
 Communication Channels
 ----------------------
 
-Most communication about Veles Core development happens on Discord, on the
-Velescore server. The easiest way to participate on Discord is with the web 
-client, using following link [https://discord.gg/rXgH6Qn](https://discord.gg/rXgH6Qn).
+Most communication about Bitcoin Core development happens on IRC, in the
+#bitcoin-core-dev channel on Freenode. The easiest way to participate on IRC is
+with the web client, [webchat.freenode.net](https://webchat.freenode.net/). Chat
+history logs can be found
+on [http://www.erisian.com.au/bitcoin-core-dev/](http://www.erisian.com.au/bitcoin-core-dev/)
+and [http://gnusha.org/bitcoin-core-dev/](http://gnusha.org/bitcoin-core-dev/).
 
 Discussion about code base improvements happens in GitHub issues and on pull
 requests.
+
+The developer
+[mailing list](https://lists.linuxfoundation.org/mailman/listinfo/bitcoin-dev)
+should be used to discuss complicated or controversial changes before working on
+a patch set.
 
 
 Contributor Workflow
@@ -60,6 +68,8 @@ If a particular commit references another issue, please add the reference. For
 example: `refs #1234` or `fixes #4321`. Using the `fixes` or `closes` keywords
 will cause the corresponding issue to be closed when the pull request is merged.
 
+Commit messages should never contain any `@` mentions.
+
 Please refer to the [Git manual](https://git-scm.com/doc) for more information
 about Git.
 
@@ -71,12 +81,12 @@ the pull request affects. Valid areas as:
 
   - *Consensus* for changes to consensus critical code
   - *Docs* for changes to the documentation
-  - *Qt* for changes to veles-qt
+  - *Qt* for changes to bitcoin-qt
   - *Mining* for changes to the mining code
   - *Net* or *P2P* for changes to the peer-to-peer network code
   - *RPC/REST/ZMQ* for changes to the RPC, REST or ZMQ APIs
   - *Scripts and tools* for changes to the scripts and tools
-  - *Tests* for changes to the veles unit tests or QA tests
+  - *Tests* for changes to the bitcoin unit tests or QA tests
   - *Trivial* should **only** be used for PRs that do not change generated
     executable code. Notably, refactors (change of function arguments and code
     reorganization) and changes in behavior should **not** be marked as trivial.
@@ -96,7 +106,7 @@ Examples:
     Trivial: Fix typo in init.cpp
 
 Note that translations should not be submitted as pull requests, please see
-[Translation Process](https://github.com/velescore/veles/blob/master/doc/translation_process.md) 
+[Translation Process](https://github.com/bitcoin/bitcoin/blob/master/doc/translation_process.md) 
 for more information on helping with translations.
 
 If a pull request is not to be considered for merging (yet), please
@@ -127,6 +137,10 @@ before it will be merged. The basic squashing workflow is shown below.
     # On the next screen, edit/refine commit messages.
     # Save and quit.
     git push -f # (force push to GitHub)
+
+Please update the resulting commit message if needed, it should read as a
+coherent message. In most cases this means that you should not just list the
+interim commits.
 
 If you have problems with squashing (or other workflows with `git`), you can
 alternatively enable "Allow edits from maintainers" in the right GitHub
@@ -185,11 +199,11 @@ workload on reviewing.
 "Decision Making" Process
 -------------------------
 
-The following applies to code changes to the Veles Core project (and related
-projects such as libsecp256k1), and is not to be confused with overall Veles
+The following applies to code changes to the Bitcoin Core project (and related
+projects such as libsecp256k1), and is not to be confused with overall Bitcoin
 Network Protocol consensus changes.
 
-Whether a pull request is merged into Veles Core rests with the project merge
+Whether a pull request is merged into Bitcoin Core rests with the project merge
 maintainers and ultimately the project lead.
 
 Maintainers will take into consideration if a patch is in line with the general
@@ -207,7 +221,7 @@ In general, all pull requests must:
   - Where bugs are fixed, where possible, there should be unit tests
     demonstrating the bug and also proving the fix. This helps prevent regression.
 
-Patches that change Veles consensus rules are considerably more involved than
+Patches that change Bitcoin consensus rules are considerably more involved than
 normal because they affect the entire ecosystem and so must be preceded by
 extensive mailing list discussions and have a numbered BIP. While each case will
 be different, one should be prepared to expend more time and effort than for
@@ -248,7 +262,7 @@ higher in terms of discussion and peer review requirements, keeping in mind that
 mistakes could be very costly to the wider community. This includes refactoring
 of consensus critical code.
 
-Where a patch set proposes to change the Veles consensus, it must have been
+Where a patch set proposes to change the Bitcoin consensus, it must have been
 discussed extensively on the mailing list and IRC, be accompanied by a widely
 discussed BIP and have a generally widely perceived technical consensus of being
 a worthwhile change based on the judgement of the maintainers.
@@ -288,7 +302,7 @@ about:
 Release Policy
 --------------
 
-The project leader is the release manager for each Veles Core release.
+The project leader is the release manager for each Bitcoin Core release.
 
 Copyright
 ---------

@@ -292,7 +292,7 @@ def initialize_datadir(dirname, n):
     datadir = get_datadir_path(dirname, n)
     if not os.path.isdir(datadir):
         os.makedirs(datadir)
-    with open(os.path.join(datadir, "bitcoin.conf"), 'w', encoding='utf8') as f:
+    with open(os.path.join(datadir, "fxtc.conf"), 'w', encoding='utf8') as f:
         f.write("regtest=1\n")
         f.write("[regtest]\n")
         f.write("port=" + str(p2p_port(n)) + "\n")
@@ -310,15 +310,15 @@ def get_datadir_path(dirname, n):
     return os.path.join(dirname, "node" + str(n))
 
 def append_config(datadir, options):
-    with open(os.path.join(datadir, "bitcoin.conf"), 'a', encoding='utf8') as f:
+    with open(os.path.join(datadir, "fxtc.conf"), 'a', encoding='utf8') as f:
         for option in options:
             f.write(option + "\n")
 
 def get_auth_cookie(datadir):
     user = None
     password = None
-    if os.path.isfile(os.path.join(datadir, "bitcoin.conf")):
-        with open(os.path.join(datadir, "bitcoin.conf"), 'r', encoding='utf8') as f:
+    if os.path.isfile(os.path.join(datadir, "fxtc.conf")):
+        with open(os.path.join(datadir, "fxtc.conf"), 'r', encoding='utf8') as f:
             for line in f:
                 if line.startswith("rpcuser="):
                     assert user is None  # Ensure that there is only one rpcuser line
@@ -326,7 +326,7 @@ def get_auth_cookie(datadir):
                 if line.startswith("rpcpassword="):
                     assert password is None  # Ensure that there is only one rpcpassword line
                     password = line.split("=")[1].strip("\n")
-    if os.path.isfile(os.path.join(datadir, "regtest", ".cookie")):
+    if os.path.isfile(os.path.join(datadir, "regtest", ".cookie")) and os.access(os.path.join(datadir, "regtest", ".cookie"), os.R_OK):
         with open(os.path.join(datadir, "regtest", ".cookie"), 'r', encoding="ascii") as f:
             userpass = f.read()
             split_userpass = userpass.split(':')
@@ -410,12 +410,12 @@ def sync_mempools(rpc_connections, *, wait=1, timeout=60, flush_scheduler=True):
 # Transaction/Block functions
 #############################
 
-def find_output(node, txid, amount):
+def find_output(node, txid, amount, *, blockhash=None):
     """
     Return index to output of txid with value amount
     Raises exception if there is none.
     """
-    txdata = node.getrawtransaction(txid, 1)
+    txdata = node.getrawtransaction(txid, 1, blockhash)
     for i in range(len(txdata["vout"])):
         if txdata["vout"][i]["value"] == amount:
             return i

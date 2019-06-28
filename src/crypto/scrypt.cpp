@@ -1,3 +1,4 @@
+// Copyright (c) 2018-2019 FXTC developers
 /*
  * Copyright 2009 Colin Percival, 2011 ArtForz, 2012-2013 pooler
  * All rights reserved.

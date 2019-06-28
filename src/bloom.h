@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FXTC_BLOOM_H
-#define FXTC_BLOOM_H
+#ifndef BITCOIN_BLOOM_H
+#define BITCOIN_BLOOM_H
 
 #include <serialize.h>
 
@@ -52,10 +52,6 @@ private:
     unsigned char nFlags;
 
     unsigned int Hash(unsigned int nHashNum, const std::vector<unsigned char>& vDataToHash) const;
-
-    // Private constructor for CRollingBloomFilter, no restrictions on size
-    CBloomFilter(const unsigned int nElements, const double nFPRate, const unsigned int nTweak);
-    friend class CRollingBloomFilter;
 
 public:
     /**
@@ -140,4 +136,4 @@ private:
     int nHashFuncs;
 };
 
-#endif // FXTC_BLOOM_H
+#endif // BITCOIN_BLOOM_H

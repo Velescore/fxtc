@@ -66,12 +66,12 @@
         <translation>Vastaanotto-osoitteet</translation>
     </message>
     <message>
-        <source>These are your Veles addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Nämä ovat Veles-osoitteesi maksujen lähettämistä varten. Tarkista aina määrä ja vastaanotto-osoite ennen kolikoiden lähettämistä.</translation>
+        <source>These are your FxTCoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Nämä ovat FxTCoin-osoitteesi maksujen lähettämistä varten. Tarkista aina määrä ja vastaanotto-osoite ennen kolikoiden lähettämistä.</translation>
     </message>
     <message>
-        <source>These are your Veles addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Tässä ovat Veles vastaanotto-osoitteesi. On suositeltavaa käyttää uutta vastaanotto-osoitetta jokaista lähetystä varten.</translation>
+        <source>These are your FxTCoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Tässä ovat FxTCoin vastaanotto-osoitteesi. On suositeltavaa käyttää uutta vastaanotto-osoitetta jokaista lähetystä varten.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -176,8 +176,8 @@
         <translation>Vahvista lompakon salaaminen</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR VELESS&lt;/b&gt;!</source>
-        <translation>Varoitus: Jos salaat lompakkosi ja menetät tunnuslauseesi, &lt;b&gt;MENETÄT KAIKKI VELESISI&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR FXTCOINS&lt;/b&gt;!</source>
+        <translation>Varoitus: Jos salaat lompakkosi ja menetät tunnuslauseesi, &lt;b&gt;MENETÄT KAIKKI FXTCOINISI&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -188,8 +188,8 @@
         <translation>Lompakko salattiin</translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your Veless from being stolen by malware infecting your computer.</source>
-        <translation>%1 sulkeutuu lopettaakseen salausprosessin. Muista, että salattukaan lompakko ei täysin suojaa sitä haittaohjelmien aiheuttamilta varkauksilta.</translation>
+        <source>Your wallet is now encrypted. Remember that encrypting your wallet cannot fully protect your fxtcoins from being stolen by malware infecting your computer.</source>
+        <translation>Lompakkosi on nyt salattu. Muistathan, että lompakon salaus ei riitä suojaamaan fxtcoinejasi viruksen tai muun haittaohjelman tekemältä varkaudelta.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -254,10 +254,6 @@
         <translation>&amp;Yleisnäkymä</translation>
     </message>
     <message>
-        <source>Node</source>
-        <translation>Solmu</translation>
-    </message>
-    <message>
         <source>Show general overview of wallet</source>
         <translation>Lompakon tilanteen yleiskatsaus</translation>
     </message>
@@ -314,24 +310,12 @@
         <translation>&amp;Vaihda Tunnuslause...</translation>
     </message>
     <message>
-        <source>&amp;Sending addresses...</source>
-        <translation>&amp;Lähetysosoitteet...</translation>
-    </message>
-    <message>
-        <source>&amp;Receiving addresses...</source>
-        <translation>&amp;Vastaanotto-osoitteet...</translation>
-    </message>
-    <message>
         <source>Open &amp;URI...</source>
         <translation>Avaa &amp;URI...</translation>
     </message>
     <message>
         <source>Wallet:</source>
         <translation>Lompakko:</translation>
-    </message>
-    <message>
-        <source>default wallet</source>
-        <translation>oletuslompakko</translation>
     </message>
     <message>
         <source>Click to disable network activity.</source>
@@ -358,8 +342,8 @@
         <translation>Välipalvelin on &lt;b&gt;käytössä&lt;/b&gt;: %1</translation>
     </message>
     <message>
-        <source>Send coins to a Veles address</source>
-        <translation>Lähetä kolikoita Veles-osoitteeseen</translation>
+        <source>Send coins to a FxTCoin address</source>
+        <translation>Lähetä kolikoita FxTCoin-osoitteeseen</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -382,12 +366,8 @@
         <translation>Varmista &amp;viesti...</translation>
     </message>
     <message>
-        <source>Veles</source>
-        <translation>Veles</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>Lompakko</translation>
+        <source>FxTCoin</source>
+        <translation>FxTCoin</translation>
     </message>
     <message>
         <source>&amp;Send</source>
@@ -403,19 +383,19 @@
     </message>
     <message>
         <source>Show or hide the main Window</source>
-        <translation>Näytä tai piilota Veles-ikkuna</translation>
+        <translation>Näytä tai piilota FxTCoin-ikkuna</translation>
     </message>
     <message>
         <source>Encrypt the private keys that belong to your wallet</source>
         <translation>Suojaa yksityiset avaimet, jotka kuuluvat lompakkoosi</translation>
     </message>
     <message>
-        <source>Sign messages with your Veles addresses to prove you own them</source>
-        <translation>Allekirjoita viestisi omalla Veles -osoitteellasi todistaaksesi, että omistat ne</translation>
+        <source>Sign messages with your FxTCoin addresses to prove you own them</source>
+        <translation>Allekirjoita viestisi omalla FxTCoin -osoitteellasi todistaaksesi, että omistat ne</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Veles addresses</source>
-        <translation>Varmista, että viestisi on allekirjoitettu määritetyllä Veles -osoitteella</translation>
+        <source>Verify messages to ensure they were signed with specified FxTCoin addresses</source>
+        <translation>Varmista, että viestisi on allekirjoitettu määritetyllä FxTCoin -osoitteella</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -434,8 +414,8 @@
         <translation>Välilehtipalkki</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and Veles: URIs)</source>
-        <translation>Pyydä maksuja (Luo QR koodit ja Veles: URIt)</translation>
+        <source>Request payments (generates QR codes and fxtcoin: URIs)</source>
+        <translation>Pyydä maksuja (Luo QR koodit ja fxtcoin: URIt)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -446,16 +426,16 @@
         <translation>Näytä vastaanottamiseen käytettyjen osoitteiden ja nimien lista</translation>
     </message>
     <message>
-        <source>Open a Veles: URI or payment request</source>
-        <translation>Avaa Veles: URI tai maksupyyntö</translation>
+        <source>Open a fxtcoin: URI or payment request</source>
+        <translation>Avaa fxtcoin: URI tai maksupyyntö</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
         <translation>&amp;Komentorivin valinnat</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to Veles network</source>
-        <translation><numerusform>%n aktiivinen yhteys Veles-verkkoon</numerusform><numerusform>%n aktiivista yhteyttä Veles-verkkoon</numerusform></translation>
+        <source>%n active connection(s) to FxTCoin network</source>
+        <translation><numerusform>%n aktiivinen yhteys FxTCoin-verkkoon</numerusform><numerusform>%n aktiivista yhteyttä FxTCoin-verkkoon</numerusform></translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -498,8 +478,28 @@
         <translation>Rahansiirtohistoria on ajan tasalla</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible Veles command-line options</source>
-        <translation>Näytä %1 ohjeet saadaksesi listan mahdollisista Velesin komentorivivalinnoista</translation>
+        <source>Show the %1 help message to get a list with possible FxTCoin command-line options</source>
+        <translation>Näytä %1 ohjeet saadaksesi listan mahdollisista FxTCoinin komentorivivalinnoista</translation>
+    </message>
+    <message>
+        <source>default wallet</source>
+        <translation>oletuslompakko</translation>
+    </message>
+    <message>
+        <source>&amp;Window</source>
+        <translation>&amp;Ikkuna</translation>
+    </message>
+    <message>
+        <source>Minimize</source>
+        <translation>Pienennä</translation>
+    </message>
+    <message>
+        <source>Restore</source>
+        <translation>Palauta</translation>
+    </message>
+    <message>
+        <source>Main Window</source>
+        <translation>Pääikkuna</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -523,6 +523,12 @@
         <source>Amount: %1
 </source>
         <translation>Määrä: %1
+</translation>
+    </message>
+    <message>
+        <source>Wallet: %1
+</source>
+        <translation>Lompakko: %1
 </translation>
     </message>
     <message>
@@ -560,6 +566,10 @@
         <translation>HD avaimen generointi on &lt;/b&gt;pois päältä&lt;/b&gt;</translation>
     </message>
     <message>
+        <source>Private key &lt;b&gt;disabled&lt;/b&gt;</source>
+        <translation>Yksityisavain &lt;b&gt;ei käytössä&lt;/b&gt;</translation>
+    </message>
+    <message>
         <source>Wallet is &lt;b&gt;encrypted&lt;/b&gt; and currently &lt;b&gt;unlocked&lt;/b&gt;</source>
         <translation>Lompakko on &lt;b&gt;salattu&lt;/b&gt; ja tällä hetkellä &lt;b&gt;avoinna&lt;/b&gt;</translation>
     </message>
@@ -568,8 +578,8 @@
         <translation>Lompakko on &lt;b&gt;salattu&lt;/b&gt; ja tällä hetkellä &lt;b&gt;lukittuna&lt;/b&gt;</translation>
     </message>
     <message>
-        <source>A fatal error occurred. Veles can no longer continue safely and will quit.</source>
-        <translation>Peruuttamaton virhe on tapahtunut. Veles ei voi enää jatkaa turvallisesti ja sammutetaan.</translation>
+        <source>A fatal error occurred. FxTCoin can no longer continue safely and will quit.</source>
+        <translation>Peruuttamaton virhe on tapahtunut. FxTCoin ei voi enää jatkaa turvallisesti ja sammutetaan.</translation>
     </message>
 </context>
 <context>
@@ -758,8 +768,16 @@
         <translation>Muokkaa lähettävää osoitetta</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid Veles address.</source>
-        <translation>Antamasi osoite "%1" ei ole kelvollinen Veles-osoite.</translation>
+        <source>The entered address "%1" is not a valid FxTCoin address.</source>
+        <translation>Antamasi osoite "%1" ei ole kelvollinen FxTCoin-osoite.</translation>
+    </message>
+    <message>
+        <source>Address "%1" already exists as a receiving address with label "%2" and so cannot be added as a sending address.</source>
+        <translation>Osoite "%1" on jo vastaanotto-osoitteena nimellä "%2", joten sitä ei voi lisätä lähetysosoitteeksi.</translation>
+    </message>
+    <message>
+        <source>The entered address "%1" is already in the address book with label "%2".</source>
+        <translation>Syötetty osoite "%1" on jo osoitekirjassa nimellä "%2".</translation>
     </message>
     <message>
         <source>Could not unlock wallet.</source>
@@ -847,8 +865,8 @@
         <translation>Määritä oma kansio:</translation>
     </message>
     <message>
-        <source>Veles</source>
-        <translation>Veles</translation>
+        <source>FxTCoin</source>
+        <translation>FxTCoin</translation>
     </message>
     <message>
         <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
@@ -859,8 +877,8 @@
         <translation>Noin %1 GB tietoa varastoidaan tähän hakemistoon.</translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the Veles block chain.</source>
-        <translation>%1 lataa ja tallentaa kopion Velesin lohkoketjusta.</translation>
+        <source>%1 will download and store a copy of the FxTCoin block chain.</source>
+        <translation>%1 lataa ja tallentaa kopion FxTCoinin lohkoketjusta.</translation>
     </message>
     <message>
         <source>The wallet will also be stored in this directory.</source>
@@ -874,7 +892,15 @@
         <source>Error</source>
         <translation>Virhe</translation>
     </message>
-    </context>
+    <message numerus="yes">
+        <source>%n GB of free space available</source>
+        <translation><numerusform>%n GB tilaa vapaana</numerusform><numerusform>%n GB tilaa vapaana</numerusform></translation>
+    </message>
+    <message numerus="yes">
+        <source>(of %n GB needed)</source>
+        <translation><numerusform>(tarvitaan %n GB)</numerusform><numerusform>(tarvitaan %n GB)</numerusform></translation>
+    </message>
+</context>
 <context>
     <name>ModalOverlay</name>
     <message>
@@ -882,12 +908,12 @@
         <translation>Lomake</translation>
     </message>
     <message>
-        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the Veles network, as detailed below.</source>
-        <translation>Viimeiset tapahtumat eivät välttämättä vielä näy, joten lompakkosi saldo voi olla virheellinen. Tieto korjautuu, kunhan lompakkosi synkronointi Veles-verkon kanssa on päättynyt. Tiedot näkyvät alla.</translation>
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the fxtcoin network, as detailed below.</source>
+        <translation>Viimeiset tapahtumat eivät välttämättä vielä näy, joten lompakkosi saldo voi olla virheellinen. Tieto korjautuu, kunhan lompakkosi synkronointi fxtcoin-verkon kanssa on päättynyt. Tiedot näkyvät alla.</translation>
     </message>
     <message>
-        <source>Attempting to spend Veless that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
-        <translation>Verkko ei tule hyväksymään sellaisten Velesien käyttämistä, jotka liittyvät vielä näkymättömissä oleviin siirtoihin.</translation>
+        <source>Attempting to spend fxtcoins that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <translation>Verkko ei tule hyväksymään sellaisten fxtcoinien käyttämistä, jotka liittyvät vielä näkymättömissä oleviin siirtoihin.</translation>
     </message>
     <message>
         <source>Number of blocks left</source>
@@ -921,11 +947,7 @@
         <source>Hide</source>
         <translation>Piilota</translation>
     </message>
-    <message>
-        <source>Unknown. Syncing Headers (%1)...</source>
-        <translation>Tuntematon. Synkronoidaan tunnisteita (%1)...</translation>
-    </message>
-</context>
+    </context>
 <context>
     <name>OpenURIDialog</name>
     <message>
@@ -972,12 +994,8 @@
         <translation>&amp;Tietokannan välimuistin koko</translation>
     </message>
     <message>
-        <source>MB</source>
-        <translation>MB</translation>
-    </message>
-    <message>
         <source>Number of script &amp;verification threads</source>
-        <translation>Script &amp;varmistuksen threadien määrä</translation>
+        <translation>Säikeiden määrä skriptien &amp;varmistuksessa</translation>
     </message>
     <message>
         <source>IP address of the proxy (e.g. IPv4: 127.0.0.1 / IPv6: ::1)</source>
@@ -986,6 +1004,10 @@
     <message>
         <source>Shows if the supplied default SOCKS5 proxy is used to reach peers via this network type.</source>
         <translation>Ilmoittaa, mikäli oletetettua SOCKS5-välityspalvelinta käytetään vertaisten tavoittamiseen tämän verkkotyypin kautta.</translation>
+    </message>
+    <message>
+        <source>Use separate SOCKS&amp;5 proxy to reach peers via Tor hidden services:</source>
+        <translation>Käytä SOCKS&amp;5-välityspalvelinta tavoittamaan Tor-verkon piilotetut palvelut:</translation>
     </message>
     <message>
         <source>Hide the icon from the system tray.</source>
@@ -1002,10 +1024,6 @@
     <message>
         <source>Third party URLs (e.g. a block explorer) that appear in the transactions tab as context menu items. %s in the URL is replaced by transaction hash. Multiple URLs are separated by vertical bar |.</source>
         <translation>Ulkopuoliset URL-osoitteet (esim. block explorer,) jotka esiintyvät siirrot-välilehdellä valikossa. %s URL-osoitteessa korvataan siirtotunnuksella. Useampi URL-osoite on eroteltu pystyviivalla |.</translation>
-    </message>
-    <message>
-        <source>Active command-line options that override above options:</source>
-        <translation>Aktiiviset komentorivivalinnat jotka ohittavat ylläolevat valinnat:</translation>
     </message>
     <message>
         <source>Open the %1 configuration file from the working directory.</source>
@@ -1026,6 +1044,22 @@
     <message>
         <source>&amp;Network</source>
         <translation>&amp;Verkko</translation>
+    </message>
+    <message>
+        <source>Disables some advanced features but all blocks will still be fully validated. Reverting this setting requires re-downloading the entire blockchain. Actual disk usage may be somewhat higher.</source>
+        <translation>Jättää pois joitain edistyneitä ominaisuuksia, mutta silti varmistaa kaikki lohkot kokonaan. Tämän asetuksen muutto vaatii koko lohkoketjun uudelleen lataamisen. Levyn käyttöaste saattaa olla hiukan suurempaa.</translation>
+    </message>
+    <message>
+        <source>Prune &amp;block storage to</source>
+        <translation>Karsi lohkovaraston kooksi</translation>
+    </message>
+    <message>
+        <source>GB</source>
+        <translation>Gt</translation>
+    </message>
+    <message>
+        <source>Reverting this setting requires re-downloading the entire blockchain.</source>
+        <translation>Tämän asetuksen muuttaminen vaatii koko lohkoketjun uudelleenlataamista.</translation>
     </message>
     <message>
         <source>(0 = auto, &lt;0 = leave that many cores free)</source>
@@ -1052,8 +1086,8 @@
         <translation>&amp;Käytä varmistamattomia vaihtorahoja</translation>
     </message>
     <message>
-        <source>Automatically open the Veles client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Avaa Veles-asiakasohjelman portti reitittimellä automaattisesti. Tämä toimii vain, jos reitittimesi tukee UPnP:tä ja se on käytössä.</translation>
+        <source>Automatically open the FxTCoin client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Avaa FxTCoin-asiakasohjelman portti reitittimellä automaattisesti. Tämä toimii vain, jos reitittimesi tukee UPnP:tä ja se on käytössä.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -1068,8 +1102,8 @@
         <translation>Hyväksy sisääntulevia yhteyksiä</translation>
     </message>
     <message>
-        <source>Connect to the Veles network through a SOCKS5 proxy.</source>
-        <translation>Yhdistä Veles-verkkoon SOCKS5-välityspalvelimen kautta.</translation>
+        <source>Connect to the FxTCoin network through a SOCKS5 proxy.</source>
+        <translation>Yhdistä FxTCoin-verkkoon SOCKS5-välityspalvelimen kautta.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1104,8 +1138,8 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the Veles network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Yhdistä Veles-verkkoon erillisen SOCKS5-välityspalvelimen kautta piilotettuja Tor-palveluja varten.</translation>
+        <source>Connect to the FxTCoin network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Yhdistä FxTCoin-verkkoon erillisen SOCKS5-välityspalvelimen kautta piilotettuja Tor-palveluja varten.</translation>
     </message>
     <message>
         <source>&amp;Window</source>
@@ -1137,11 +1171,11 @@
     </message>
     <message>
         <source>&amp;Unit to show amounts in:</source>
-        <translation>Yksikkö jona Veles-määrät näytetään</translation>
+        <translation>Yksikkö jona fxtcoin-määrät näytetään</translation>
     </message>
     <message>
         <source>Choose the default subdivision unit to show in the interface and when sending coins.</source>
-        <translation>Valitse mitä yksikköä käytetään ensisijaisesti Veles-määrien näyttämiseen.</translation>
+        <translation>Valitse mitä yksikköä käytetään ensisijaisesti fxtcoin-määrien näyttämiseen.</translation>
     </message>
     <message>
         <source>Whether to show coin control features or not.</source>
@@ -1211,8 +1245,8 @@
         <translation>Lomake</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Veles network after a connection is established, but this process has not completed yet.</source>
-        <translation>Näytetyt tiedot eivät välttämättä ole ajantasalla. Lompakkosi synkronoituu Veles-verkon kanssa automaattisesti yhteyden muodostamisen jälkeen, mutta synkronointi on vielä meneillään.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the FxTCoin network after a connection is established, but this process has not completed yet.</source>
+        <translation>Näytetyt tiedot eivät välttämättä ole ajantasalla. Lompakkosi synkronoituu FxTCoin-verkon kanssa automaattisesti yhteyden muodostamisen jälkeen, mutta synkronointi on vielä meneillään.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1252,7 +1286,7 @@
     </message>
     <message>
         <source>Your current total balance</source>
-        <translation>Tililläsi tällä hetkellä olevien Velesien määrä</translation>
+        <translation>Tililläsi tällä hetkellä olevien FxTCoinien määrä</translation>
     </message>
     <message>
         <source>Your current balance in watch-only addresses</source>
@@ -1286,12 +1320,16 @@
         <translation>Maksupyyntövirhe</translation>
     </message>
     <message>
-        <source>Cannot start Veles: click-to-pay handler</source>
-        <translation>Velesia ei voi käynnistää: klikkaa-maksaaksesi -käsittelijän virhe</translation>
+        <source>Cannot start fxtcoin: click-to-pay handler</source>
+        <translation>FxTCoinia ei voi käynnistää: klikkaa-maksaaksesi -käsittelijän virhe</translation>
     </message>
     <message>
         <source>URI handling</source>
         <translation>URI käsittely</translation>
+    </message>
+    <message>
+        <source>'fxtcoin://' is not a valid URI. Use 'fxtcoin:' instead.</source>
+        <translation>'fxtcoin://' ei ole kelvollinen URI. Käytä 'fxtcoin:' sen sijaan.</translation>
     </message>
     <message>
         <source>Payment request fetch URL is invalid: %1</source>
@@ -1302,8 +1340,8 @@
         <translation>Virheellinen maksuosoite %1</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid Veles address or malformed URI parameters.</source>
-        <translation>URIa ei voitu jäsentää! Tämä voi johtua virheellisestä Veles-osoitteesta tai väärin muotoilluista URI parametreista.</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid FxTCoin address or malformed URI parameters.</source>
+        <translation>URIa ei voitu jäsentää! Tämä voi johtua virheellisestä FxTCoin-osoitteesta tai väärin muotoilluista URI parametreista.</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -1404,8 +1442,8 @@
         <translation>Määrä</translation>
     </message>
     <message>
-        <source>Enter a Veles address (e.g. %1)</source>
-        <translation>Syötä Veles-osoite (esim. %1)</translation>
+        <source>Enter a FxTCoin address (e.g. %1)</source>
+        <translation>Syötä FxTCoin-osoite (esim. %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1435,9 +1473,33 @@
         <source>%1 ms</source>
         <translation>%1 ms</translation>
     </message>
+    <message numerus="yes">
+        <source>%n second(s)</source>
+        <translation><numerusform>%n sekunti</numerusform><numerusform>%n sekuntia</numerusform></translation>
+    </message>
+    <message numerus="yes">
+        <source>%n minute(s)</source>
+        <translation><numerusform>%n minuutti</numerusform><numerusform>%n minuuttia</numerusform></translation>
+    </message>
+    <message numerus="yes">
+        <source>%n hour(s)</source>
+        <translation><numerusform>%n tunti</numerusform><numerusform>%n tuntia</numerusform></translation>
+    </message>
+    <message numerus="yes">
+        <source>%n day(s)</source>
+        <translation><numerusform>%n päivä</numerusform><numerusform>%n päivää</numerusform></translation>
+    </message>
+    <message numerus="yes">
+        <source>%n week(s)</source>
+        <translation><numerusform>%n viikko</numerusform><numerusform>%n viikkoa</numerusform></translation>
+    </message>
     <message>
         <source>%1 and %2</source>
         <translation>%1 ja %2</translation>
+    </message>
+    <message numerus="yes">
+        <source>%n year(s)</source>
+        <translation><numerusform>%n vuosi</numerusform><numerusform>%n vuotta</numerusform></translation>
     </message>
     <message>
         <source>%1 B</source>
@@ -1467,8 +1529,16 @@
 <context>
     <name>QObject::QObject</name>
     <message>
+        <source>Error parsing command line arguments: %1.</source>
+        <translation>Virhe käsitellessä komentorivin valintaa: %1.</translation>
+    </message>
+    <message>
         <source>Error: Specified data directory "%1" does not exist.</source>
         <translation>Virhe: Annettua data-hakemistoa "%1" ei ole olemassa.</translation>
+    </message>
+    <message>
+        <source>Error: Cannot parse configuration file: %1.</source>
+        <translation>Virhe: Asetustiedostoa ei voida käsitellä: %1.</translation>
     </message>
     <message>
         <source>Error: %1</source>
@@ -1559,6 +1629,10 @@
     <message>
         <source>Memory usage</source>
         <translation>Muistin käyttö</translation>
+    </message>
+    <message>
+        <source>Wallet: </source>
+        <translation>Lompakko:</translation>
     </message>
     <message>
         <source>&amp;Reset</source>
@@ -1729,16 +1803,16 @@
         <translation>&amp;Poista esto</translation>
     </message>
     <message>
-        <source>default wallet</source>
-        <translation>oletuslompakko</translation>
-    </message>
-    <message>
         <source>Welcome to the %1 RPC console.</source>
         <translation>Tervetuloa %1 RPC-konsoliin.</translation>
     </message>
     <message>
         <source>Use up and down arrows to navigate history, and %1 to clear screen.</source>
         <translation>Käytä nuolia ylös ja alas selataksesi historiaa, sekä %1 tyhjentääkseksi ruudun.</translation>
+    </message>
+    <message>
+        <source>Type %1 for an overview of available commands.</source>
+        <translation>Kirjoita %1 nähdäksesi yleiskatsauksen käytettävissä olevista komennoista.</translation>
     </message>
     <message>
         <source>For more information on using this console type %1.</source>
@@ -1800,8 +1874,8 @@
         <translation>&amp;Viesti:</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the Veles network.</source>
-        <translation>Valinnainen viesti liitetään maksupyyntöön ja näytetään avattaessa. Viestiä ei lähetetä Veles-verkkoon.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the FxTCoin network.</source>
+        <translation>Valinnainen viesti liitetään maksupyyntöön ja näytetään avattaessa. Viestiä ei lähetetä FxTCoin-verkkoon.</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -1822,6 +1896,14 @@
     <message>
         <source>Clear</source>
         <translation>Tyhjennä</translation>
+    </message>
+    <message>
+        <source>Native segwit addresses (aka Bech32 or BIP-173) reduce your transaction fees later on and offer better protection against typos, but old wallets don't support them. When unchecked, an address compatible with older wallets will be created instead.</source>
+        <translation>Natiivi segwit osoite (nk. Bech32 tai BIP173) rajoittaa siirtomaksuja myöhemmin ja tarjoaa paremman suojan kirjoitusvihreitä vastaan, mutta vanhat lompakot eivät tue ominaisuutta. Jos tätä ei valita, luodaan vanhojen lompakoiden kanssa yhteensopivia osoitteita.</translation>
+    </message>
+    <message>
+        <source>Generate native segwit (Bech32) address</source>
+        <translation>Luo natiivi segwit (Bech32) -osoite</translation>
     </message>
     <message>
         <source>Requested payments history</source>
@@ -2037,10 +2119,6 @@
         <translation>Piilota</translation>
     </message>
     <message>
-        <source>(read the tooltip)</source>
-        <translation>(lue työkaluvinkki)</translation>
-    </message>
-    <message>
         <source>Recommended:</source>
         <translation>Suositeltu:</translation>
     </message>
@@ -2075,6 +2153,10 @@
     <message>
         <source>Enable Replace-By-Fee</source>
         <translation>Käytä Replace-By-Fee:tä</translation>
+    </message>
+    <message>
+        <source>With Replace-By-Fee (BIP-125) you can increase a transaction's fee after it is sent. Without this, a higher fee may be recommended to compensate for increased transaction delay risk.</source>
+        <translation>Replace-By-Fee:tä (BIP-125) käyttämällä voit korottaa siirtotapahtuman palkkiota sen lähettämisen jälkeen. Ilman tätä saatetaan suositella käyttämään suurempaa palkkiota kompensoimaan viiveen kasvamisen riskiä.</translation>
     </message>
     <message>
         <source>Clear &amp;All</source>
@@ -2137,8 +2219,20 @@
         <translation>tai</translation>
     </message>
     <message>
+        <source>You can increase the fee later (signals Replace-By-Fee, BIP-125).</source>
+        <translation>Voit korottaa palkkiota myöhemmin (osoittaa Replace-By-Fee:tä, BIP-125).</translation>
+    </message>
+    <message>
+        <source>Please, review your transaction.</source>
+        <translation>Tarkistathan siirtosi.</translation>
+    </message>
+    <message>
         <source>Transaction fee</source>
         <translation>Siirtokulu</translation>
+    </message>
+    <message>
+        <source>Total Amount</source>
+        <translation>Yhteensä</translation>
     </message>
     <message>
         <source>Confirm send coins</source>
@@ -2180,13 +2274,13 @@
         <source>Payment request expired.</source>
         <translation>Maksupyyntö vanhentui.</translation>
     </message>
-    <message>
-        <source>Pay only the required fee of %1</source>
-        <translation>Maksa vain vaadittu kulu %1 </translation>
+    <message numerus="yes">
+        <source>Estimated to begin confirmation within %n block(s).</source>
+        <translation><numerusform>Vahvistuminen alkaa arviolta %n lohkon sisällä.</numerusform><numerusform>Vahvistuminen alkaa arviolta %n lohkon sisällä.</numerusform></translation>
     </message>
     <message>
-        <source>Warning: Invalid Veles address</source>
-        <translation>Varoitus: Virheellinen Veles-osoite </translation>
+        <source>Warning: Invalid FxTCoin address</source>
+        <translation>Varoitus: Virheellinen FxTCoin-osoite </translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -2228,8 +2322,8 @@
         <translation>Tämä on normaali maksu.</translation>
     </message>
     <message>
-        <source>The Veles address to send the payment to</source>
-        <translation>Veles-osoite johon maksu lähetetään</translation>
+        <source>The FxTCoin address to send the payment to</source>
+        <translation>FxTCoin-osoite johon maksu lähetetään</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -2248,8 +2342,8 @@
         <translation>Poista tämä alkio</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less Veless than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation>Kulu vähennetään lähetettävästä määrästä. Saaja vastaanottaa vähemmän Veleseja kuin merkitset Määrä-kenttään. Jos saajia on monia, kulu jaetaan tasan.</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less fxtcoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation>Kulu vähennetään lähetettävästä määrästä. Saaja vastaanottaa vähemmän fxtcoineja kuin merkitset Määrä-kenttään. Jos saajia on monia, kulu jaetaan tasan.</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -2276,8 +2370,8 @@
         <translation>Aseta nimi tälle osoitteelle lisätäksesi sen käytettyjen osoitteiden listalle.</translation>
     </message>
     <message>
-        <source>A message that was attached to the Veles: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Veles network.</source>
-        <translation>Viesti joka liitettiin Veles: URI:iin tallennetaan rahansiirtoon viitteeksi. Tätä viestiä ei lähetetä Veles-verkkoon.</translation>
+        <source>A message that was attached to the fxtcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the FxTCoin network.</source>
+        <translation>Viesti joka liitettiin fxtcoin: URI:iin tallennetaan rahansiirtoon viitteeksi. Tätä viestiä ei lähetetä FxTCoin-verkkoon.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -2321,12 +2415,12 @@
         <translation>&amp;Allekirjoita viesti</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive Veless sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation>Voit allekirjoittaa viestit / sopimukset omalla osoitteellasi todistaaksesi että voit vastaanottaa siihen lähetetyt Velesit. Varo allekirjoittamasta mitään epämääräistä, sillä phishing-hyökkääjät voivat huijata sinua luovuttamaan henkilöllisyytesi allekirjoituksella. Allekirjoita ainoastaan täysin yksityiskohtainen selvitys siitä, mihin olet sitoutumassa.</translation>
+        <source>You can sign messages/agreements with your addresses to prove you can receive fxtcoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <translation>Voit allekirjoittaa viestit / sopimukset omalla osoitteellasi todistaaksesi että voit vastaanottaa siihen lähetetyt fxtcoinit. Varo allekirjoittamasta mitään epämääräistä, sillä phishing-hyökkääjät voivat huijata sinua luovuttamaan henkilöllisyytesi allekirjoituksella. Allekirjoita ainoastaan täysin yksityiskohtainen selvitys siitä, mihin olet sitoutumassa.</translation>
     </message>
     <message>
-        <source>The Veles address to sign the message with</source>
-        <translation>Veles-osoite jolla viesti allekirjoitetaan</translation>
+        <source>The FxTCoin address to sign the message with</source>
+        <translation>FxTCoin-osoite jolla viesti allekirjoitetaan</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2357,8 +2451,8 @@
         <translation>Kopioi tämänhetkinen allekirjoitus leikepöydälle</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this Veles address</source>
-        <translation>Allekirjoita viesti todistaaksesi, että omistat tämän Veles-osoitteen</translation>
+        <source>Sign the message to prove you own this FxTCoin address</source>
+        <translation>Allekirjoita viesti todistaaksesi, että omistat tämän FxTCoin-osoitteen</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -2381,12 +2475,12 @@
         <translation>Syötä vastaanottajan osoite, viesti ja allekirjoitus (varmista että kopioit rivinvaihdot, välilyönnit, sarkaimet yms. täsmälleen) alle vahvistaaksesi viestin. Varo lukemasta allekirjoitukseen enempää kuin mitä viestissä itsessään on välttääksesi man-in-the-middle -hyökkäyksiltä. Huomaa, että tämä todentaa ainoastaan allekirjoittavan vastaanottajan osoitteen, tämä ei voi todentaa minkään tapahtuman lähettäjää!</translation>
     </message>
     <message>
-        <source>The Veles address the message was signed with</source>
-        <translation>Veles-osoite jolla viesti on allekirjoitettu</translation>
+        <source>The FxTCoin address the message was signed with</source>
+        <translation>FxTCoin-osoite jolla viesti on allekirjoitettu</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified Veles address</source>
-        <translation>Tarkista viestin allekirjoitus varmistaaksesi, että se allekirjoitettiin tietyllä Veles-osoitteella</translation>
+        <source>Verify the message to ensure it was signed with the specified FxTCoin address</source>
+        <translation>Tarkista viestin allekirjoitus varmistaaksesi, että se allekirjoitettiin tietyllä FxTCoin-osoitteella</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -2465,6 +2559,10 @@
 </context>
 <context>
     <name>TransactionDesc</name>
+    <message numerus="yes">
+        <source>Open for %n more block(s)</source>
+        <translation><numerusform>Avoinna vielä %n lohkon ajan</numerusform><numerusform>Avoinna vielä %n lohkon ajan</numerusform></translation>
+    </message>
     <message>
         <source>Open until %1</source>
         <translation>Avoinna %1 asti</translation>
@@ -2540,6 +2638,10 @@
     <message>
         <source>Credit</source>
         <translation>Krediitti</translation>
+    </message>
+    <message numerus="yes">
+        <source>matures in %n more block(s)</source>
+        <translation><numerusform>kypsyy %n lohkon kuluttua</numerusform><numerusform>kypsyy %n lohkon kuluttua</numerusform></translation>
     </message>
     <message>
         <source>not accepted</source>
@@ -2638,6 +2740,10 @@
     <message>
         <source>Label</source>
         <translation>Nimike</translation>
+    </message>
+    <message numerus="yes">
+        <source>Open for %n more block(s)</source>
+        <translation><numerusform>Avoinna vielä %n lohkon ajan</numerusform><numerusform>Avoinna vielä %n lohkon ajan</numerusform></translation>
     </message>
     <message>
         <source>Open until %1</source>
@@ -2895,6 +3001,9 @@
     </message>
 </context>
 <context>
+    <name>WalletController</name>
+    </context>
+<context>
     <name>WalletFrame</name>
     <message>
         <source>No wallet has been loaded.</source>
@@ -2906,6 +3015,10 @@
     <message>
         <source>Send Coins</source>
         <translation>Lähetä kolikoita</translation>
+    </message>
+    <message>
+        <source>Fee bump error</source>
+        <translation>Virhe nostaessa palkkiota.</translation>
     </message>
     <message>
         <source>Increasing transaction fee failed</source>
@@ -2938,6 +3051,10 @@
     <message>
         <source>Could not commit transaction</source>
         <translation>Siirtoa ei voitu tehdä</translation>
+    </message>
+    <message>
+        <source>default wallet</source>
+        <translation>oletuslompakko</translation>
     </message>
 </context>
 <context>
@@ -2974,7 +3091,11 @@
         <source>The wallet data was successfully saved to %1.</source>
         <translation>Lompakko tallennettiin onnistuneesti tiedostoon %1.</translation>
     </message>
-    </context>
+    <message>
+        <source>Cancel</source>
+        <translation>Peruuta</translation>
+    </message>
+</context>
 <context>
     <name>bitcoin-core</name>
     <message>
@@ -3006,8 +3127,8 @@
         <translation>HTTP-palvelinta ei voitu käynnistää. Katso debug-lokista lisätietoja.</translation>
     </message>
     <message>
-        <source>Veles Core</source>
-        <translation>Veles-ydin</translation>
+        <source>FxTCoin Core</source>
+        <translation>FxTCoin-ydin</translation>
     </message>
     <message>
         <source>The %s developers</source>
@@ -3082,10 +3203,6 @@
         <translation>Haluatko uudelleenrakentaa lohkotietokannan nyt?</translation>
     </message>
     <message>
-        <source>Error creating %s: You can't create non-HD wallets with this version.</source>
-        <translation>Virhe luodessa %s: Et voi luoda ei-HD lompakkoja tällä versiolla.</translation>
-    </message>
-    <message>
         <source>Error initializing block database</source>
         <translation>Virhe alustaessa lohkotietokantaa</translation>
     </message>
@@ -3146,6 +3263,14 @@
         <translation>Virheellinen määrä -fallbackfee=&lt;amount&gt;: '%s'</translation>
     </message>
     <message>
+        <source>Specified blocks directory "%s" does not exist.</source>
+        <translation>Määrättyä lohkohakemistoa "%s" ei ole olemassa.</translation>
+    </message>
+    <message>
+        <source>Upgrading txindex database</source>
+        <translation>Päivitetään txindex -tietokantaa</translation>
+    </message>
+    <message>
         <source>Loading P2P addresses...</source>
         <translation>Ladataan P2P-vertaisten osoitteita...</translation>
     </message>
@@ -3166,6 +3291,10 @@
         <translation>Karsittu tila ei ole yhteensopiva -txindex:n kanssa.</translation>
     </message>
     <message>
+        <source>Replaying blocks...</source>
+        <translation>Tarkastetaan lohkoja..</translation>
+    </message>
+    <message>
         <source>Rewinding blocks...</source>
         <translation>Varmistetaan lohkoja...</translation>
     </message>
@@ -3182,16 +3311,8 @@
         <translation>Kytkeytyminen kohteeseen %s ei onnistu tällä tietokoneella. %s on luultavasti jo käynnissä.</translation>
     </message>
     <message>
-        <source>Unsupported argument -benchmark ignored, use -debug=bench.</source>
-        <translation>Argumenttia -benchmark ei tueta, käytä -debug=bench.</translation>
-    </message>
-    <message>
-        <source>Unsupported argument -debugnet ignored, use -debug=net.</source>
-        <translation>Argumenttia -debugnet ei tueta, käytä -debug=net.</translation>
-    </message>
-    <message>
-        <source>Unsupported argument -tor found, use -onion.</source>
-        <translation>Argumenttia -tor ei tueta, käytä -onion.</translation>
+        <source>Unable to generate keys</source>
+        <translation>Avaimia ei voitu luoda</translation>
     </message>
     <message>
         <source>Unsupported logging category %s=%s.</source>
@@ -3222,12 +3343,12 @@
         <translation>Palataksesi karsimattomaan tilaan joudut uudelleenrakentamaan tietokannan -reindex -valinnalla. Tämä lataa koko lohkoketjun uudestaan.</translation>
     </message>
     <message>
-        <source>Error loading %s: You can't disable HD on an already existing HD wallet</source>
-        <translation>Virhe ladattaessa %s: Et voi poistaa HD-ominaisuutta jo olemassa olevasta HD-lompakosta.</translation>
-    </message>
-    <message>
         <source>Error reading from database, shutting down.</source>
         <translation>Virheitä tietokantaa luettaessa, ohjelma pysäytetään.</translation>
+    </message>
+    <message>
+        <source>Error upgrading chainstate database</source>
+        <translation>Virhe päivittäessä chainstate-tietokantaa</translation>
     </message>
     <message>
         <source>Information</source>
@@ -3262,6 +3383,14 @@
         <translation>Siirron vahvistus epäonnistui</translation>
     </message>
     <message>
+        <source>Specified -walletdir "%s" does not exist</source>
+        <translation>Määriteltyä lompakon hakemistoa "%s" ei ole olemassa.</translation>
+    </message>
+    <message>
+        <source>Specified -walletdir "%s" is a relative path</source>
+        <translation>Määritelty lompakkohakemisto "%s" sijaitsee suhteellisessa polussa</translation>
+    </message>
+    <message>
         <source>The transaction amount is too small to pay the fee</source>
         <translation>Rahansiirron määrä on liian pieni kattaakseen maksukulun</translation>
     </message>
@@ -3290,6 +3419,10 @@
         <translation>Varmistetaan lompakko(ja)...</translation>
     </message>
     <message>
+        <source>Wallet %s resides outside wallet directory %s</source>
+        <translation>Lompakko %s sijaitsee lompakkohakemiston %s ulkopuolella.</translation>
+    </message>
+    <message>
         <source>Warning</source>
         <translation>Varoitus</translation>
     </message>
@@ -3306,20 +3439,8 @@
         <translation>-maxtxfee on asetettu erittäin suureksi! Tämänkokoisia kuluja saatetaan maksaa yhdessä rahansiirrossa.</translation>
     </message>
     <message>
-        <source>Error loading %s: You can't enable HD on an already existing non-HD wallet</source>
-        <translation>Virhe ladattaessa %s: Et voi ottaa HD:ta käyttöön jo olemassa olevalle ei-HD -lompakolle.</translation>
-    </message>
-    <message>
-        <source>Unsupported argument -socks found. Setting SOCKS version isn't possible anymore, only SOCKS5 proxies are supported.</source>
-        <translation>Ei tuettu argumentti -socks löytynyt. SOCKS -version asetusta ei enää tueta, ainoastaan SOCKS5 -välityspalvelimet on tuettu.</translation>
-    </message>
-    <message>
-        <source>Unsupported argument -whitelistalwaysrelay ignored, use -whitelistrelay and/or -whitelistforcerelay.</source>
-        <translation>Argumenttia -whitelistalwaysrelay ei tueta ja se ohitettiin. Käytä -whitelistrelay ja/tai -whitelistforcerelay.</translation>
-    </message>
-    <message>
-        <source>Warning: Unknown block versions being mined! It's possible unknown rules are in effect</source>
-        <translation>Varoitus: Tuntemattomia lohkoversioita louhitaan! Tuntemattomia sääntöjä saattaa olla voimassa</translation>
+        <source>This is the transaction fee you may pay when fee estimates are not available.</source>
+        <translation>Tämän siirtomaksun maksat, kun siirtomaksun arviointi ei ole käytettävissä.</translation>
     </message>
     <message>
         <source>%s is set very high!</source>
@@ -3336,6 +3457,10 @@
     <message>
         <source>Starting network threads...</source>
         <translation>Käynnistetään verkkoa...</translation>
+    </message>
+    <message>
+        <source>The wallet will avoid paying less than the minimum relay fee.</source>
+        <translation>Lompakko välttää maksamasta alle vähimmäisen välityskulun.</translation>
     </message>
     <message>
         <source>This is the minimum transaction fee you pay on every transaction.</source>
@@ -3364,6 +3489,14 @@
     <message>
         <source>Insufficient funds</source>
         <translation>Lompakon saldo ei riitä</translation>
+    </message>
+    <message>
+        <source>Fee estimation failed. Fallbackfee is disabled. Wait a few blocks or enable -fallbackfee.</source>
+        <translation>Siirtomaksun arviointi epäonnistui. Odota muutama lohko tai käytä -fallbackfee -valintaa..</translation>
+    </message>
+    <message>
+        <source>Cannot write to data directory '%s'; check permissions.</source>
+        <translation>Hakemistoon '%s' ei voida kirjoittaa. Tarkista käyttöoikeudet.</translation>
     </message>
     <message>
         <source>Loading block index...</source>

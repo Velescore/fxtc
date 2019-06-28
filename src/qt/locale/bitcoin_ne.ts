@@ -107,10 +107,6 @@
         <translation>शारांश</translation>
     </message>
     <message>
-        <source>Node</source>
-        <translation>नोड</translation>
-    </message>
-    <message>
         <source>Show general overview of wallet</source>
         <translation>वालेटको साधारण शारांश देखाउनुहोस्</translation>
     </message>
@@ -167,14 +163,6 @@
         <translation>&amp;amp;पासफ्रेज परिवर्तन गर्नुहोस्...</translation>
     </message>
     <message>
-        <source>&amp;Sending addresses...</source>
-        <translation>&amp;amp;पठाउने ठेगानाहरू...</translation>
-    </message>
-    <message>
-        <source>&amp;Receiving addresses...</source>
-        <translation>&amp;amp;प्राप्त गर्ने ठेगानाहरू...</translation>
-    </message>
-    <message>
         <source>Open &amp;URI...</source>
         <translation>URI &amp;amp;खोल्नुहोस्...</translation>
     </message>
@@ -183,7 +171,7 @@
         <translation>डिस्कमा ब्लकलाई पुनः सूचीकरण गरिँदै...</translation>
     </message>
     <message>
-        <source>Send coins to a Veles address</source>
+        <source>Send coins to a FxTCoin address</source>
         <translation>बिटकोइन ठेगानामा सिक्का पठाउनुहोस्</translation>
     </message>
     <message>
@@ -243,7 +231,7 @@
 <context>
     <name>OverviewPage</name>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the Veles network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the FxTCoin network after a connection is established, but this process has not completed yet.</source>
         <translation>देखाइएको सूचना पूरानो हुन सक्छ । कनेक्सन स्थापित भएपछि, तपाईंको वालेट बिटकोइन नेटवर्कमा स्वचालित रूपमा समिकरण हुन्छ , तर यो प्रक्रिया अहिले सम्म पूरा भएको छैन ।</translation>
     </message>
     <message>
@@ -308,7 +296,7 @@
         <translation>रकम</translation>
     </message>
     <message>
-        <source>Enter a Veles address (e.g. %1)</source>
+        <source>Enter a FxTCoin address (e.g. %1)</source>
         <translation>कृपया बिटकोइन ठेगाना प्रवेश गर्नुहोस् (उदाहरण %1)</translation>
     </message>
     </context>
@@ -352,7 +340,7 @@
         <translation>पहिला प्रयोग गरिएको ठेगाना प्रयोग गर्नुहोस्</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less Veless than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less fxtcoins than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
         <translation>पठाइँदै गरेको रकमबाट शुल्क कटौती गरिनेछ । प्राप्तकर्ताले तपाईंले रकम क्षेत्रमा प्रवेष गरेको भन्दा थोरै बिटकोइन प्राप्त गर्ने छन् । धेरै प्राप्तकर्ता चयन गरिएको छ भने समान रूपमा शुल्क विभाजित गरिनेछ ।</translation>
     </message>
     <message>
@@ -360,7 +348,7 @@
         <translation>यो ठेगानालाई प्रयोग गरिएको ठेगानाको सूचीमा थप्न एउटा लेबल प्रविष्ट गर्नुहोस्</translation>
     </message>
     <message>
-        <source>A message that was attached to the Veles: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the Veles network.</source>
+        <source>A message that was attached to the fxtcoin: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the FxTCoin network.</source>
         <translation>बिटकोइनमा संलग्न गरिएको सन्देश: तपाईंको मध्यस्थको लागि कारोबारको साथमा भण्डारण गरिने URI । नोट: यो सन्देश बिटकोइन नेटवर्क मार्फत पठाइने छैन ।</translation>
     </message>
     </context>
@@ -373,7 +361,7 @@
 <context>
     <name>SignVerifyMessageDialog</name>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive Veless sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <source>You can sign messages/agreements with your addresses to prove you can receive fxtcoins sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
         <translation>आफ्नो ठेगानामा पठाइएको बिटकोइन प्राप्त गर्न सकिन्छ भनेर प्रमाणित गर्न तपाईंले ती ठेगानाले सन्देश/सम्झौताहरूमा हस्ताक्षर गर्न सक्नुहुन्छ । फिसिङ आक्रमणले तपाईंलाई छक्याएर अरूका लागि तपाईंको परिचयमा हस्ताक्षर गराउने प्रयास गर्न सक्ने भएकाले अस्पष्ट वा जथाभावीमा हस्ताक्षर गर्दा ध्यान दिनुहोस् । आफू सहमत भएको पूर्ण विस्तृत-कथनमा मात्र हस्ताक्षर गर्नुहोस् ।</translation>
     </message>
     <message>
@@ -414,6 +402,9 @@
     </context>
 <context>
     <name>UnitDisplayStatusBarControl</name>
+    </context>
+<context>
+    <name>WalletController</name>
     </context>
 <context>
     <name>WalletFrame</name>
@@ -474,18 +465,6 @@
     <message>
         <source>Unable to bind to %s on this computer. %s is probably already running.</source>
         <translation>यो कम्प्युटरको %s मा बाँध्न सकिएन । %s सम्भवित रूपमा पहिलैबाट चलिरहेको छ ।</translation>
-    </message>
-    <message>
-        <source>Unsupported argument -benchmark ignored, use -debug=bench.</source>
-        <translation>असमर्थित तर्क -बेन्चमार्कलाई बेवास्ता गरियो, -डिबग=बेन्च प्रयोग गर्नुहोस् ।</translation>
-    </message>
-    <message>
-        <source>Unsupported argument -debugnet ignored, use -debug=net.</source>
-        <translation>असमर्थित तर्क -डिबगनेटलाई बेवास्ता गरियो, -डिबग=नेट प्रयोग गर्नुहोस् । </translation>
-    </message>
-    <message>
-        <source>Unsupported argument -tor found, use -onion.</source>
-        <translation>असमर्थित तर्क -टोर फेला पर्यो, -ओनियन प्रयोग गर्नुहोस् । </translation>
     </message>
     <message>
         <source>Verifying blocks...</source>

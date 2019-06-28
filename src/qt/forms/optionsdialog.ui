@@ -121,7 +121,7 @@
          <item>
           <widget class="QLabel" name="databaseCacheUnitLabel">
            <property name="text">
-            <string>MB</string>
+            <string>MiB</string>
            </property>
            <property name="textFormat">
             <enum>Qt::PlainText</enum>
@@ -264,7 +264,7 @@
        <item>
         <widget class="QCheckBox" name="mapPortUpnp">
          <property name="toolTip">
-          <string>Automatically open the Veles client port on the router. This only works when your router supports UPnP and it is enabled.</string>
+          <string>Automatically open the FxTCoin client port on the router. This only works when your router supports UPnP and it is enabled.</string>
          </property>
          <property name="text">
           <string>Map port using &amp;UPnP</string>
@@ -284,7 +284,7 @@
        <item>
         <widget class="QCheckBox" name="connectSocks">
          <property name="toolTip">
-          <string>Connect to the Veles network through a SOCKS5 proxy.</string>
+          <string>Connect to the FxTCoin network through a SOCKS5 proxy.</string>
          </property>
          <property name="text">
           <string>&amp;Connect through SOCKS5 proxy (default proxy):</string>
@@ -471,7 +471,7 @@
        <item>
         <widget class="QCheckBox" name="connectSocksTor">
          <property name="toolTip">
-          <string>Connect to the Veles network through a separate SOCKS5 proxy for Tor hidden services.</string>
+          <string>Connect to the FxTCoin network through a separate SOCKS5 proxy for Tor hidden services.</string>
          </property>
          <property name="text">
           <string>Use separate SOCKS&amp;5 proxy to reach peers via Tor hidden services:</string>
@@ -654,56 +654,6 @@
         </layout>
        </item>
        <item>
-        <widget class="QLabel" name="label_3">
-         <property name="toolTip">
-          <string notr="true"/>
-         </property>
-         <property name="statusTip">
-          <string notr="true"/>
-         </property>
-         <property name="whatsThis">
-          <string notr="true"/>
-         </property>
-         <property name="accessibleName">
-          <string notr="true"/>
-         </property>
-         <property name="text">
-          <string>Language missing or translation incomplete? Help contributing translations here:
-https://www.transifex.com/projects/p/dash/</string>
-         </property>
-         <property name="wordWrap">
-          <bool>true</bool>
-         </property>
-         <property name="openExternalLinks">
-          <bool>true</bool>
-         </property>
-         <property name="textInteractionFlags">
-          <set>Qt::TextBrowserInteraction</set>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_4_Display" stretch="0,0">
-         <item>
-          <widget class="QLabel" name="themeLabel">
-           <property name="text">
-            <string>User Interface Theme:</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QValueComboBox" name="theme"/>
-         </item>
-        </layout>
-       </item>
-       <item>
-        <widget class="Line" name="line">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-        </widget>
-       </item>
-       <item>
         <layout class="QHBoxLayout" name="horizontalLayout_2_Display">
          <item>
           <widget class="QLabel" name="unitLabel">
@@ -727,22 +677,6 @@ https://www.transifex.com/projects/p/dash/</string>
          </item>
         </layout>
        </item>
-      <!-- maybe in future
-       <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_5_Display">
-         <item>
-          <widget class="QLabel" name="digitsLabel">
-           <property name="text">
-            <string>Decimal digits</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QValueComboBox" name="digits"/>
-         </item>
-        </layout>
-       </item>
-     -->
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout_3_Display">
          <item>
@@ -792,7 +726,7 @@ https://www.transifex.com/projects/p/dash/</string>
         <item>
          <widget class="QLabel" name="overriddenByCommandLineInfoLabel">
           <property name="text">
-           <string>Active command-line options that override above options:</string>
+           <string>Options set in this dialog are overridden by the command line or in the configuration file:</string>
           </property>
           <property name="textFormat">
            <enum>Qt::PlainText</enum>

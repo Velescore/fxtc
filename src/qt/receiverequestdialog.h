@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FXTC_QT_RECEIVEREQUESTDIALOG_H
-#define FXTC_QT_RECEIVEREQUESTDIALOG_H
+#ifndef BITCOIN_QT_RECEIVEREQUESTDIALOG_H
+#define BITCOIN_QT_RECEIVEREQUESTDIALOG_H
 
 #include <qt/walletmodel.h>
 
@@ -28,7 +28,7 @@ class QRImageWidget : public QLabel
     Q_OBJECT
 
 public:
-    explicit QRImageWidget(QWidget *parent = 0);
+    explicit QRImageWidget(QWidget *parent = nullptr);
     QImage exportImage();
 
 public Q_SLOTS:
@@ -48,7 +48,7 @@ class ReceiveRequestDialog : public QDialog
     Q_OBJECT
 
 public:
-    explicit ReceiveRequestDialog(QWidget *parent = 0);
+    explicit ReceiveRequestDialog(QWidget *parent = nullptr);
     ~ReceiveRequestDialog();
 
     void setModel(WalletModel *model);
@@ -66,4 +66,4 @@ private:
     SendCoinsRecipient info;
 };
 
-#endif // FXTC_QT_RECEIVEREQUESTDIALOG_H
+#endif // BITCOIN_QT_RECEIVEREQUESTDIALOG_H

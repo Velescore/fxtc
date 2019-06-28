@@ -5,8 +5,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FXTC_CHAINPARAMS_H
-#define FXTC_CHAINPARAMS_H
+#ifndef BITCOIN_CHAINPARAMS_H
+#define BITCOIN_CHAINPARAMS_H
 
 #include <chainparamsbase.h>
 #include <consensus/params.h>
@@ -69,6 +69,10 @@ public:
     /** Policy: Filter transactions that do not match well-defined patterns */
     bool RequireStandard() const { return fRequireStandard; }
     uint64_t PruneAfterHeight() const { return nPruneAfterHeight; }
+    /** Minimum free space (in GB) needed for data directory */
+    uint64_t AssumedBlockchainSize() const { return m_assumed_blockchain_size; }
+    /** Minimum free space (in GB) needed for data directory when pruned; Does not include prune target*/
+    uint64_t AssumedChainStateSize() const { return m_assumed_chain_state_size; }
     /** Make miner stop after a block is found. In RPC, don't return until nGenProcLimit blocks are generated */
     bool MineBlocksOnDemand() const { return fMineBlocksOnDemand; }
     /** Return the BIP70 network string (main, test or regtest) */
@@ -81,12 +85,17 @@ public:
     const std::string& Bech32HRP() const { return bech32_hrp; }
     const std::vector<SeedSpec6>& FixedSeeds() const { return vFixedSeeds; }
     const CCheckpointData& Checkpoints() const { return checkpointData; }
+    // Dash
     int PoolMaxTransactions() const { return nPoolMaxTransactions; }
     int FulfilledRequestExpireTime() const { return nFulfilledRequestExpireTime; }
+    //
     const ChainTxData& TxData() const { return chainTxData; }
-    void UpdateVersionBitsParameters(Consensus::DeploymentPos d, int64_t nStartTime, int64_t nTimeout);
+    // Dash
     std::string SporkPubKey() const { return strSporkPubKey; }
+    //
+    // FXTC BEGIN
     std::string FounderAddress() const { return founderAddress; }
+    // FXTC END
 protected:
     CChainParams() {}
 
@@ -94,6 +103,8 @@ protected:
     CMessageHeader::MessageStartChars pchMessageStart;
     int nDefaultPort;
     uint64_t nPruneAfterHeight;
+    uint64_t m_assumed_blockchain_size;
+    uint64_t m_assumed_chain_state_size;
     std::vector<std::string> vSeeds;
     std::vector<unsigned char> base58Prefixes[MAX_BASE58_TYPES];
     std::string bech32_hrp;
@@ -104,8 +115,10 @@ protected:
     bool fRequireStandard;
     bool fMineBlocksOnDemand;
     CCheckpointData checkpointData;
+    // Dash
     int nPoolMaxTransactions;
     int nFulfilledRequestExpireTime;
+    //
     ChainTxData chainTxData;
     bool m_fallback_fee_enabled;
     // Dash
@@ -122,7 +135,7 @@ protected:
  * @returns a CChainParams* of the chosen chain.
  * @throws a std::runtime_error if the chain is not supported.
  */
-std::unique_ptr<CChainParams> CreateChainParams(const std::string& chain);
+std::unique_ptr<const CChainParams> CreateChainParams(const std::string& chain);
 
 /**
  * Return the currently selected parameters. This won't change after app
@@ -136,9 +149,4 @@ const CChainParams &Params();
  */
 void SelectParams(const std::string& chain);
 
-/**
- * Allows modifying the Version Bits regtest parameters.
- */
-void UpdateVersionBitsParameters(Consensus::DeploymentPos d, int64_t nStartTime, int64_t nTimeout);
-
-#endif // FXTC_CHAINPARAMS_H
+#endif // BITCOIN_CHAINPARAMS_H

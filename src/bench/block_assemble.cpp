@@ -7,13 +7,14 @@
 #include <coins.h>
 #include <consensus/merkle.h>
 #include <consensus/validation.h>
+#include <crypto/sha256.h>
 #include <miner.h>
 #include <policy/policy.h>
 #include <pow.h>
 #include <scheduler.h>
 #include <txdb.h>
 #include <txmempool.h>
-#include <utiltime.h>
+#include <util/time.h>
 #include <validation.h>
 #include <validationinterface.h>
 
@@ -26,7 +27,7 @@ static std::shared_ptr<CBlock> PrepareBlock(const CScript& coinbase_scriptPubKey
 {
     auto block = std::make_shared<CBlock>(
         BlockAssembler{Params()}
-            .CreateNewBlock(coinbase_scriptPubKey, /* fMineWitnessTx */ true)
+            .CreateNewBlock(coinbase_scriptPubKey)
             ->block);
 
     block->nTime = ::chainActive.Tip()->GetMedianTimePast() + 1;
@@ -41,11 +42,12 @@ static CTxIn MineBlock(const CScript& coinbase_scriptPubKey)
     auto block = PrepareBlock(coinbase_scriptPubKey);
 
     while (!CheckProofOfWork(block->GetHash(), block->nBits, Params().GetConsensus())) {
-        assert(++block->nNonce);
+        ++block->nNonce;
+        assert(block->nNonce);
     }
 
     bool processed{ProcessNewBlock(Params(), block, true, nullptr)};
-    assert(processed);
+//    assert(processed);
 
     return CTxIn{block->vtx[0]->GetHash(), 0};
 }
@@ -71,19 +73,21 @@ static void AssembleBlock(benchmark::State& state)
     boost::thread_group thread_group;
     CScheduler scheduler;
     {
+        LOCK(cs_main);
         ::pblocktree.reset(new CBlockTreeDB(1 << 20, true));
         ::pcoinsdbview.reset(new CCoinsViewDB(1 << 23, true));
         ::pcoinsTip.reset(new CCoinsViewCache(pcoinsdbview.get()));
-
+    }
+    {
         const CChainParams& chainparams = Params();
-        thread_group.create_thread(boost::bind(&CScheduler::serviceQueue, &scheduler));
+        thread_group.create_thread(std::bind(&CScheduler::serviceQueue, &scheduler));
         GetMainSignals().RegisterBackgroundSignalScheduler(scheduler);
         LoadGenesisBlock(chainparams);
         CValidationState state;
         ActivateBestChain(state, chainparams);
         assert(::chainActive.Tip() != nullptr);
         const bool witness_enabled{IsWitnessEnabled(::chainActive.Tip(), chainparams.GetConsensus())};
-        assert(witness_enabled);
+//        assert(witness_enabled);
     }
 
     // Collect some loose transactions that spend the coinbases of our mined blocks
@@ -103,7 +107,7 @@ static void AssembleBlock(benchmark::State& state)
         for (const auto& txr : txs) {
             CValidationState state;
             bool ret{::AcceptToMemoryPool(::mempool, state, txr, nullptr /* pfMissingInputs */, nullptr /* plTxnReplaced */, false /* bypass_limits */, /* nAbsurdFee */ 0)};
-            assert(ret);
+//            assert(ret);
         }
     }
 

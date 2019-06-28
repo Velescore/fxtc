@@ -41,10 +41,10 @@ MasternodeList::MasternodeList(const PlatformStyle *platformStyle, QWidget *pare
     ui->setupUi(this);
 
     ui->startButton->setEnabled(false);
-    /*edit values to fit in the window without horizontal scrollbar need old values stay in comment*/
-    int columnAliasWidth = 70; //100
-    int columnAddressWidth = 160; //200
-    int columnProtocolWidth = 90; // 60
+
+    int columnAliasWidth = 100;
+    int columnAddressWidth = 200;
+    int columnProtocolWidth = 60;
     int columnStatusWidth = 80;
     int columnActiveWidth = 130;
     int columnLastSeenWidth = 130;
@@ -67,12 +67,12 @@ MasternodeList::MasternodeList(const PlatformStyle *platformStyle, QWidget *pare
     QAction *startAliasAction = new QAction(tr("Start alias"), this);
     contextMenu = new QMenu();
     contextMenu->addAction(startAliasAction);
-    connect(ui->tableWidgetMyMasternodes, SIGNAL(customContextMenuRequested(const QPoint&)), this, SLOT(showContextMenu(const QPoint&)));
-    connect(startAliasAction, SIGNAL(triggered()), this, SLOT(on_startButton_clicked()));
+    connect(ui->tableWidgetMyMasternodes, &MasternodeList::customContextMenuRequested, this, &MasternodeList::showContextMenu);
+    connect(startAliasAction, &QAction::triggered, [this]{ on_startButton_clicked(); });
 
     timer = new QTimer(this);
-    connect(timer, SIGNAL(timeout()), this, SLOT(updateNodeList()));
-    connect(timer, SIGNAL(timeout()), this, SLOT(updateMyNodeList()));
+    connect(timer, &QTimer::timeout, [this]{ updateNodeList(); });
+    connect(timer, &QTimer::timeout, [this]{ updateMyNodeList(); });
     timer->start(1000);
 
     fFilterUpdated = false;
@@ -90,7 +90,7 @@ void MasternodeList::setClientModel(ClientModel *model)
     this->clientModel = model;
     if(model) {
         // try to update list when masternode count changes
-        connect(clientModel, SIGNAL(strMasternodesChanged(QString)), this, SLOT(updateNodeList()));
+        connect(clientModel, &ClientModel::strMasternodesChanged, this, &MasternodeList::updateNodeList);
     }
 }
 

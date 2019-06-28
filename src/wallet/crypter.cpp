@@ -10,7 +10,7 @@
 #include <crypto/sha512.h>
 #include <script/script.h>
 #include <script/standard.h>
-#include <util.h>
+#include <util/system.h>
 
 #include <openssl/aes.h>
 #include <openssl/evp.h>
@@ -296,8 +296,8 @@ bool CCryptoKeyStore::Lock(bool fAllowMixing)
 }
 
 // Dash
-//bool CCryptoKeyStore::Unlock(const CKeyingMaterial& vMasterKeyIn)
-bool CCryptoKeyStore::Unlock(const CKeyingMaterial& vMasterKeyIn, bool fForMixingOnly)
+//bool CCryptoKeyStore::Unlock(const CKeyingMaterial& vMasterKeyIn, bool accept_no_keys)
+bool CCryptoKeyStore::Unlock(const CKeyingMaterial& vMasterKeyIn, bool accept_no_keys, bool fForMixingOnly)
 //
 {
     {
@@ -305,7 +305,7 @@ bool CCryptoKeyStore::Unlock(const CKeyingMaterial& vMasterKeyIn, bool fForMixin
         if (!SetCrypted())
             return false;
 
-        bool keyPass = false;
+        bool keyPass = mapCryptedKeys.empty(); // Always pass when there are no encrypted keys
         bool keyFail = false;
         CryptedKeyMap::const_iterator mi = mapCryptedKeys.begin();
         for (; mi != mapCryptedKeys.end(); ++mi)
@@ -325,9 +325,9 @@ bool CCryptoKeyStore::Unlock(const CKeyingMaterial& vMasterKeyIn, bool fForMixin
         if (keyPass && keyFail)
         {
             LogPrintf("The wallet is probably corrupted: Some keys decrypt but not all.\n");
-            assert(false);
+            throw std::runtime_error("Error unlocking wallet: some keys decrypt but not all. Your wallet file may be corrupt.");
         }
-        if (keyFail || !keyPass)
+        if (keyFail || (!keyPass && !accept_no_keys))
             return false;
         vMasterKey = vMasterKeyIn;
         fDecryptionThoroughlyChecked = true;
@@ -437,7 +437,7 @@ bool CCryptoKeyStore::EncryptKeys(CKeyingMaterial& vMasterKeyIn)
         return false;
 
     fUseCrypto = true;
-    for (KeyMap::value_type& mKey : mapKeys)
+    for (const KeyMap::value_type& mKey : mapKeys)
     {
         const CKey &key = mKey.second;
         CPubKey vchPubKey = key.GetPubKey();

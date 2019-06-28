@@ -1,5 +1,5 @@
 // Copyright (c) 2014-2017 The Dash Core developers
-// Copyright (c) 2018 FXTC developers
+// Copyright (c) 2018-2019 FXTC developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -16,7 +16,7 @@
 #include <spork.h>
 #include <sync.h>
 #include <txmempool.h>
-#include <util.h>
+#include <util/system.h>
 #include <consensus/validation.h>
 #include <validationinterface.h>
 #ifdef ENABLE_WALLET
@@ -623,7 +623,7 @@ bool CInstantSend::ResolveConflicts(const CTxLockCandidate& txLockCandidate)
     // No conflicts were found so far, check to see if it was already included in block
     CTransactionRef txTmp;
     uint256 hashBlock;
-    if(GetTransaction(txHash, txTmp, Params().GetConsensus(), hashBlock, true) && hashBlock != uint256()) {
+    if(GetTransaction(txHash, txTmp, Params().GetConsensus(), hashBlock) && hashBlock != uint256()) {
         LogPrint(BCLog::INSTANTSEND, "CInstantSend::ResolveConflicts -- Done, %s is included in block %s\n", txHash.ToString(), hashBlock.ToString());
         return true;
     }

@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FXTC_INDEX_BASE_H
-#define FXTC_INDEX_BASE_H
+#ifndef BITCOIN_INDEX_BASE_H
+#define BITCOIN_INDEX_BASE_H
 
 #include <dbwrapper.h>
 #include <primitives/block.h>
@@ -95,4 +95,4 @@ public:
     void Stop();
 };
 
-#endif // FXTC_INDEX_BASE_H
+#endif // BITCOIN_INDEX_BASE_H

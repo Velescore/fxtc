@@ -1,3 +1,4 @@
+// Copyright (c) 2018-2019 FXTC developers
 /* $Id: sph_groestl.h 216 2010-06-08 09:46:57Z tp $ */
 /**
  * Groestl interface. This code implements Groestl with the recommended
@@ -32,8 +33,8 @@
  * @author   Thomas Pornin <thomas.pornin@cryptolog.com>
  */
 
-#ifndef FXTC_CRYPTO_SPH_GROESTL_H
-#define FXTC_CRYPTO_SPH_GROESTL_H
+#ifndef RNRT_CRYPTO_SPH_GROESTL_H
+#define RNRT_CRYPTO_SPH_GROESTL_H
 
 #ifdef __cplusplus
 extern "C"{
@@ -326,4 +327,4 @@ void sph_groestl512_addbits_and_close(
 }
 #endif
 
-#endif // FXTC_CRYPTO_SPH_GROESTL_H
+#endif // RNRT_CRYPTO_SPH_GROESTL_H

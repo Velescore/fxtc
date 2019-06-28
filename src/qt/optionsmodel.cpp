@@ -11,6 +11,7 @@
 #include <qt/optionsmodel.h>
 
 #include <qt/bitcoinunits.h>
+#include <qt/guiconstants.h>
 #include <qt/guiutil.h>
 
 #include <interfaces/node.h>
@@ -23,7 +24,7 @@
 // Dash
 #ifdef ENABLE_WALLET
 #include <masternodeconfig.h>
-#endif
+#endif // ENABLE_WALLET
 //
 
 #include <QNetworkProxy>
@@ -83,21 +84,16 @@ void OptionsModel::Init(bool resetSettings)
         settings.setValue("strThirdPartyTxUrls", "");
     strThirdPartyTxUrls = settings.value("strThirdPartyTxUrls", "").toString();
 
-    if (!settings.contains("theme"))
-        settings.setValue("theme", "");
-
     if (!settings.contains("fCoinControlFeatures"))
         settings.setValue("fCoinControlFeatures", false);
     fCoinControlFeatures = settings.value("fCoinControlFeatures", false).toBool();
 
     // Dash
+#ifdef ENABLE_WALLET
     if (!settings.contains("fShowMasternodesTab"))
     settings.setValue("fShowMasternodesTab", masternodeConfig.getCount());
+#endif // ENABLE_WALLET
     //
-
-    //if (!settings.contains("digits"))
-    //    settings.setValue("digits", "2");
-
 
     // These are shared with the core or have a command-line parameter
     // and we want command-line parameters to overwrite the GUI settings.
@@ -112,10 +108,10 @@ void OptionsModel::Init(bool resetSettings)
         settings.setValue("bPrune", false);
     if (!settings.contains("nPruneSize"))
         settings.setValue("nPruneSize", 2);
-    // Convert prune size to MB:
-    const uint64_t nPruneSizeMB = settings.value("nPruneSize").toInt() * 1000;
-    if (!m_node.softSetArg("-prune", settings.value("bPrune").toBool() ? std::to_string(nPruneSizeMB) : "0")) {
-      addOverriddenOption("-prune");
+    // Convert prune size from GB to MiB:
+    const uint64_t nPruneSizeMiB = (settings.value("nPruneSize").toInt() * GB_BYTES) >> 20;
+    if (!m_node.softSetArg("-prune", settings.value("bPrune").toBool() ? std::to_string(nPruneSizeMiB) : "0")) {
+        addOverriddenOption("-prune");
     }
 
     if (!settings.contains("nDatabaseCache"))
@@ -311,10 +307,6 @@ QVariant OptionsModel::data(const QModelIndex & index, int role) const
             return nDisplayUnit;
         case ThirdPartyTxUrls:
             return strThirdPartyTxUrls;
-        //case Digits:
-        //    return settings.value("digits");
-        case Theme:
-            return settings.value("theme");
         case Language:
             return settings.value("language");
         case CoinControlFeatures:
@@ -444,21 +436,6 @@ bool OptionsModel::setData(const QModelIndex & index, const QVariant & value, in
                 setRestartRequired(true);
             }
             break;
-      /*
-        case Digits:
-            if (settings.value("digits") != value) {
-                settings.setValue("digits", value);
-                setRestartRequired(true);
-            }
-            break;
-                                                    */
-        case Theme:
-            if (settings.value("theme") != value) {
-                settings.setValue("theme", value);
-                setRestartRequired(true);
-            }
-            break;
-
         case Language:
             if (settings.value("language") != value) {
                 settings.setValue("language", value);

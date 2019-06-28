@@ -1,10 +1,10 @@
 // Copyright (c) 2014-2017 The Dash Core developers
-// Copyright (c) 2018 FXTC developers
+// Copyright (c) 2018-2019 FXTC developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FXTC_GOVERNANCE_H
-#define FXTC_GOVERNANCE_H
+#ifndef DASH_GOVERNANCE_H
+#define DASH_GOVERNANCE_H
 
 //#define ENABLE_DASH_DEBUG
 
@@ -18,7 +18,7 @@
 #include <net.h>
 #include <sync.h>
 #include <timedata.h>
-#include <util.h>
+#include <util/system.h>
 
 class CGovernanceManager;
 class CGovernanceTriggerManager;
@@ -461,4 +461,4 @@ private:
 
 };
 
-#endif // FXTC_GOVERNANCE_H
+#endif // DASH_GOVERNANCE_H

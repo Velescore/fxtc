@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 # Copyright (c) 2015-2018 The Bitcoin Core developers
+# Copyright (c) 2018-2019 FXTC developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -22,12 +23,16 @@ CMD_ROOT_DIR = '`git rev-parse --show-toplevel`/{}'.format(FOLDER_GREP)
 CMD_GREP_ARGS = r"git grep --perl-regexp '{}' -- {} ':(exclude){}'".format(REGEX_ARG, CMD_ROOT_DIR, FOLDER_TEST)
 CMD_GREP_DOCS = r"git grep --perl-regexp '{}' {}".format(REGEX_DOC, CMD_ROOT_DIR)
 # list unsupported, deprecated and duplicate args as they need no documentation
-SET_DOC_OPTIONAL = set(['-rpcssl', '-benchmark', '-h', '-help', '-socks', '-tor', '-debugnet', '-whitelistalwaysrelay', '-promiscuousmempoolflags', '-blockminsize', '-dbcrashratio', '-forcecompactdb', '-usehd', '-privatesendamount', '-masternodeprivkey', '-enableprivatesend', '-keepassname', '-walletbackupsdir', '-instantsenddepth', '-liquidityprovider', '-keepassid', '-litemode', '-instantsendnotify', '-enableinstantsend', '-keepassport', '-privatesendmultisession', '-keepasskey', '-sporkkey', '-mnconflock', '-keepass', '-masternode', '-createwalletbackups', '-privatesendrounds'])
+SET_DOC_OPTIONAL = set(['-h', '-help', '-dbcrashratio', '-forcecompactdb',    '-privatesendamount', '-masternodeprivkey', '-enableprivatesend', '-keepassname', '-walletbackupsdir', '-instantsenddepth', '-liquidityprovider', '-keepassid', '-litemode', '-instantsendnotify', '-enableinstantsend', '-keepassport', '-privatesendmultisession', '-keepasskey', '-sporkkey', '-mnconflock', '-keepass', '-masternode', '-createwalletbackups', '-privatesendrounds'])
 
 
 def main():
-    used = check_output(CMD_GREP_ARGS, shell=True, universal_newlines=True)
-    docd = check_output(CMD_GREP_DOCS, shell=True, universal_newlines=True)
+    if sys.version_info >= (3, 6):
+        used = check_output(CMD_GREP_ARGS, shell=True, universal_newlines=True, encoding='utf8')
+        docd = check_output(CMD_GREP_DOCS, shell=True, universal_newlines=True, encoding='utf8')
+    else:
+        used = check_output(CMD_GREP_ARGS, shell=True).decode('utf8').strip()
+        docd = check_output(CMD_GREP_DOCS, shell=True).decode('utf8').strip()
 
     args_used = set(re.findall(re.compile(REGEX_ARG), used))
     args_docd = set(re.findall(re.compile(REGEX_DOC), docd)).union(SET_DOC_OPTIONAL)

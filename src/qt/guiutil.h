@@ -4,8 +4,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FXTC_QT_GUIUTIL_H
-#define FXTC_QT_GUIUTIL_H
+#ifndef BITCOIN_QT_GUIUTIL_H
+#define BITCOIN_QT_GUIUTIL_H
 
 #include <amount.h>
 #include <fs.h>
@@ -33,6 +33,7 @@ class QAbstractItemView;
 class QDateTime;
 class QFont;
 class QLineEdit;
+class QProgressDialog;
 class QUrl;
 class QWidget;
 QT_END_NAMESPACE
@@ -117,6 +118,9 @@ namespace GUIUtil
     // Determine whether a widget is hidden behind other windows
     bool isObscured(QWidget *w);
 
+    // Activate, show and raise the widget
+    void bringToFront(QWidget* w);
+
     // Open debug.log
     void openDebugLogfile();
 
@@ -137,7 +141,7 @@ namespace GUIUtil
         Q_OBJECT
 
     public:
-        explicit ToolTipToRichTextFilter(int size_threshold, QObject *parent = 0);
+        explicit ToolTipToRichTextFilter(int size_threshold, QObject *parent = nullptr);
 
     protected:
         bool eventFilter(QObject *obj, QEvent *evt);
@@ -193,18 +197,6 @@ namespace GUIUtil
 
     /* Convert OS specific boost path to QString through UTF-8 */
     QString boostPathToQString(const fs::path &path);
-
-    /** Dash port: Load global CSS theme */
-    QString loadStyleSheet();
-
-    /** Return name of current CSS theme */
-    QString getThemeName();
-
-    /* Convert QString to OS specific boost path through UTF-8 */
-    boost::filesystem::path qstringToBoostPath(const QString &path);
-
-    /* Convert OS specific boost path to QString through UTF-8 */
-    QString boostPathToQString(const boost::filesystem::path &path);
 
     /* Convert seconds into a QString with days, hours, mins, secs */
     QString formatDurationStr(int secs);
@@ -264,6 +256,9 @@ namespace GUIUtil
     private:
         bool eventFilter(QObject *object, QEvent *event);
     };
+
+    // Fix known bugs in QProgressDialog class.
+    void PolishProgressDialog(QProgressDialog* dialog);
 } // namespace GUIUtil
 
-#endif // FXTC_QT_GUIUTIL_H
+#endif // BITCOIN_QT_GUIUTIL_H

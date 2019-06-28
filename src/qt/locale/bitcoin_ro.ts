@@ -62,12 +62,12 @@
         <translation>Adresele de primire</translation>
     </message>
     <message>
-        <source>These are your Veles addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Acestea sunt adresele tale Veles pentru trimiterea plății. Verifică mereu suma și adresa de primire înainte de trimiterea monedelor.</translation>
+        <source>These are your FxTCoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Acestea sunt adresele tale FxTCoin pentru trimiterea plății. Verifică mereu suma și adresa de primire înainte de trimiterea monedelor.</translation>
     </message>
     <message>
-        <source>These are your Veles addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Acestea sunt adresele tale Veles pentru primirea plăților. Este recomandată folosirea de noi adrese de primire pentru fiecare tranzacție.</translation>
+        <source>These are your FxTCoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Acestea sunt adresele tale FxTCoin pentru primirea plăților. Este recomandată folosirea de noi adrese de primire pentru fiecare tranzacție.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -164,8 +164,8 @@
         <translation>Confirmă criptarea portofelului</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR VELESS&lt;/b&gt;!</source>
-        <translation>Atenție: Dacă îți criptezi portofelul și uiți parola, îți vei &lt;b&gt; PIERDE TOȚI VELESS&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR FXTCOINS&lt;/b&gt;!</source>
+        <translation>Atenție: Dacă îți criptezi portofelul și uiți parola, îți vei &lt;b&gt; PIERDE TOȚI FXTCOINS&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -174,10 +174,6 @@
     <message>
         <source>Wallet encrypted</source>
         <translation>Portofel criptat</translation>
-    </message>
-    <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcoins from being stolen by malware infecting your computer.</source>
-        <translation>%1 se va inchide pentru a termina procesul de criptare. Aduți aminte că prin criptarea portofelului tău virtual, nu îți poți proteja complet monedele virtuale de a fi furate când te-ai infectat cu un virus de tip malware pe calculatorul tau.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -242,10 +238,6 @@
         <translation>Vizualizare de ansamblu</translation>
     </message>
     <message>
-        <source>Node</source>
-        <translation>Nod</translation>
-    </message>
-    <message>
         <source>Show general overview of wallet</source>
         <translation>Arată o prezentare generală a portofelului.</translation>
     </message>
@@ -298,14 +290,6 @@
         <translation>&amp;Schimbă parola...</translation>
     </message>
     <message>
-        <source>&amp;Sending addresses...</source>
-        <translation>&amp;Trimite adresele...</translation>
-    </message>
-    <message>
-        <source>&amp;Receiving addresses...</source>
-        <translation>&amp;Primește adresele...</translation>
-    </message>
-    <message>
         <source>Open &amp;URI...</source>
         <translation>Deschide &amp;URI...</translation>
     </message>
@@ -314,8 +298,8 @@
         <translation>Click pentru a permite, din nou, activitate rețelei.</translation>
     </message>
     <message>
-        <source>Send coins to a Veles address</source>
-        <translation>Trimite monedele către o adresă Veles</translation>
+        <source>Send coins to a FxTCoin address</source>
+        <translation>Trimite monedele către o adresă FxTCoin</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -338,12 +322,8 @@
         <translation>&amp;Verifică mesajul...</translation>
     </message>
     <message>
-        <source>Veles</source>
-        <translation>Veles</translation>
-    </message>
-    <message>
-        <source>Wallet</source>
-        <translation>Portofel</translation>
+        <source>FxTCoin</source>
+        <translation>FxTCoin</translation>
     </message>
     <message>
         <source>&amp;Send</source>
@@ -366,12 +346,12 @@
         <translation>Criptează cheile private care aparțin portofelului tău.</translation>
     </message>
     <message>
-        <source>Sign messages with your Veles addresses to prove you own them</source>
-        <translation>Semnează mesajele cu adresa ta de Veles pentru a face dovada că îți aparțin.</translation>
+        <source>Sign messages with your FxTCoin addresses to prove you own them</source>
+        <translation>Semnează mesajele cu adresa ta de FxTCoin pentru a face dovada că îți aparțin.</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified Veles addresses</source>
-        <translation>Verifică mesajele cu scopul de a asigura faptul că au fost semnate cu adresa de Veles specificată.</translation>
+        <source>Verify messages to ensure they were signed with specified FxTCoin addresses</source>
+        <translation>Verifică mesajele cu scopul de a asigura faptul că au fost semnate cu adresa de FxTCoin specificată.</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -386,8 +366,8 @@
         <translation>&amp;Ajutor</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and Veles: URIs)</source>
-        <translation>Cerere plată (generează coduri QR și Veles: URIs)</translation>
+        <source>Request payments (generates QR codes and fxtcoin: URIs)</source>
+        <translation>Cerere plată (generează coduri QR și fxtcoin: URIs)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -398,8 +378,8 @@
         <translation>Afișează lista adreselor de primire utilizate și etichetele.</translation>
     </message>
     <message>
-        <source>Open a Veles: URI or payment request</source>
-        <translation>Deschide un Veles: URI sau cerere de plată</translation>
+        <source>Open a fxtcoin: URI or payment request</source>
+        <translation>Deschide un fxtcoin: URI sau cerere de plată</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -428,6 +408,10 @@
     <message>
         <source>Up to date</source>
         <translation>Actual</translation>
+    </message>
+    <message>
+        <source>&amp;Window</source>
+        <translation>&amp;Fereastra</translation>
     </message>
     <message>
         <source>Date: %1
@@ -499,6 +483,10 @@
     <message>
         <source>Change:</source>
         <translation>Schimbă:</translation>
+    </message>
+    <message>
+        <source>(un)select all</source>
+        <translation>(de)selectează tot</translation>
     </message>
     <message>
         <source>Tree mode</source>
@@ -625,8 +613,8 @@
         <translation>Alege un folder/director personalizat</translation>
     </message>
     <message>
-        <source>Veles</source>
-        <translation>Veles</translation>
+        <source>FxTCoin</source>
+        <translation>FxTCoin</translation>
     </message>
     <message>
         <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
@@ -656,8 +644,8 @@
         <translation>formular</translation>
     </message>
     <message>
-        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the Veles network, as detailed below.</source>
-        <translation>Posibil ca tranzacțiile recente să nu fie vizibile, încă, astfel bilanțul portofelului tău poate fi incorect. Aceste informații vor fi corecte o dată ce portofelul tău a încheiat sincronizarea cu rețeaua Veles, conform descrierii de mai jos.</translation>
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the fxtcoin network, as detailed below.</source>
+        <translation>Posibil ca tranzacțiile recente să nu fie vizibile, încă, astfel bilanțul portofelului tău poate fi incorect. Aceste informații vor fi corecte o dată ce portofelul tău a încheiat sincronizarea cu rețeaua fxtcoin, conform descrierii de mai jos.</translation>
     </message>
     <message>
         <source>Unknown...</source>
@@ -688,10 +676,6 @@
     <message>
         <source>Options</source>
         <translation>Opțiuni</translation>
-    </message>
-    <message>
-        <source>MB</source>
-        <translation>MB</translation>
     </message>
     <message>
         <source>IP address of the proxy (e.g. IPv4: 127.0.0.1 / IPv6: ::1)</source>
@@ -1269,6 +1253,9 @@
     <name>UnitDisplayStatusBarControl</name>
     </context>
 <context>
+    <name>WalletController</name>
+    </context>
+<context>
     <name>WalletFrame</name>
     </context>
 <context>
@@ -1284,8 +1271,8 @@
 <context>
     <name>bitcoin-core</name>
     <message>
-        <source>Veles Core</source>
-        <translation>Veles Core</translation>
+        <source>FxTCoin Core</source>
+        <translation>FxTCoin Core</translation>
     </message>
     <message>
         <source>Upgrading UTXO database</source>

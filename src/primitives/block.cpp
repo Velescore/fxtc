@@ -1,7 +1,6 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2018 The Bitcoin Core developers
 // Copyright (c) 2018 FXTC developers
-// Copyright (c) 2018-2019 Veles Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -9,34 +8,26 @@
 
 #include <hash.h>
 #include <tinyformat.h>
-#include <utilstrencodings.h>
+#include <util/strencodings.h>
 #include <crypto/common.h>
 
+// FXTC BEGIN
 #include <crypto/lyra2z.h>
 #include <crypto/nist5.h>
 #include <crypto/scrypt.h>
 #include <crypto/x11.h>
 #include <crypto/x16r.h>
-
-// VELES BEGIN
-#include <versionbits.h>
-// VELES END
+// FXTC END
 
 uint256 CBlockHeader::GetHash() const
 {
     return SerializeHash(*this);
 }
 
+// FXTC BEGIN
 uint256 CBlockHeader::GetPoWHash() const
 {
     uint256 powHash = uint256S("ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
-
-  // VELES BEGIN
-  if ((nVersion & VERSIONBITS_TOP_MASK) != VERSIONBITS_TOP_BITS)
-      scrypt_1024_1_1_256(BEGIN(nVersion), BEGIN(powHash));
-  else
-  {
-  // VELES END
 
     switch (nVersion & ALGO_VERSION_MASK)
     {
@@ -49,37 +40,25 @@ uint256 CBlockHeader::GetPoWHash() const
         default:           break; // FXTC TODO: we should not be here
     }
 
-  // VELES BEGIN
-  }
-  // VELES END
     return powHash;
 }
+// FXTC END
 
-// FXTC BEGIN
 unsigned int CBlockHeader::GetAlgoEfficiency(int nBlockHeight) const
 {
     switch (nVersion & ALGO_VERSION_MASK)
     {
-        // VELES BEGIN
-        //case ALGO_SHA256D: return       1;
         case ALGO_SHA256D: return       1;
-        //case ALGO_SCRYPT:  return   13747;
-        case ALGO_SCRYPT:  return   12984;
-        //case ALGO_NIST5:   return    2631;
-        case ALGO_NIST5:   return     513;     // 298735;
-        //case ALGO_LYRA2Z:  return 2014035;
-        case ALGO_LYRA2Z:  return 1973648;
-        //case ALGO_X11:     return     477;
-        case ALGO_X11:     return     513;
-        //case ALGO_X16R:    return  263100;
-        case ALGO_X16R:    return  257849;
-        // VELES END
+        case ALGO_SCRYPT:  return   13747;
+        case ALGO_NIST5:   return    2631;
+        case ALGO_LYRA2Z:  return 2014035;
+        case ALGO_X11:     return     477;
+        case ALGO_X16R:    return  263100;
         default:           return       1; // FXTC TODO: we should not be here
     }
 
     return 1; // FXTC TODO: we should not be here
 }
-// FXTC END
 
 std::string CBlock::ToString() const
 {

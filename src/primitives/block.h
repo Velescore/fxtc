@@ -2,24 +2,24 @@
 // Copyright (c) 2009-2018 The Bitcoin Core developers
 // Copyright (c) 2014-2017 The Dash Core developers
 // Copyright (c) 2018 FXTC developers
-// Copyright (c) 2018-2019 Veles Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FXTC_PRIMITIVES_BLOCK_H
-#define FXTC_PRIMITIVES_BLOCK_H
+#ifndef BITCOIN_PRIMITIVES_BLOCK_H
+#define BITCOIN_PRIMITIVES_BLOCK_H
 
 #include <primitives/transaction.h>
 #include <serialize.h>
 #include <uint256.h>
 
+// FXTC BEGIN
 // Algo number in nVersion
 enum {
     ALGO_VERSION_MASK    = (255 << 8),
 
     ALGO_SHA256D         = (  0 << 8),
     ALGO_SCRYPT          = (  1 << 8),
-    ALGO_NIST5           = (  2 << 8),
+    ALGO_NIST5           = (  2 << 8), // inactive
     ALGO_LYRA2Z          = (  3 << 8),
     ALGO_X11             = (  4 << 8),
     ALGO_X16R            = (  5 << 8),
@@ -28,6 +28,7 @@ enum {
 };
 
 const unsigned int ALGO_ACTIVE_COUNT = 5;
+// FXTC END
 
 /** Nodes collect new transactions into a block, hash them into a hash tree,
  * and scan through nonce values to make the block's hash satisfy proof-of-work
@@ -40,9 +41,6 @@ class CBlockHeader
 {
 public:
     // header
-    // VELES BEGIN
-    static const int32_t CURRENT_VERSION = 4;
-    // VELES END
     int32_t nVersion;
     uint256 hashPrevBlock;
     uint256 hashMerkleRoot;
@@ -69,10 +67,7 @@ public:
 
     void SetNull()
     {
-        // VELES BEGIN
-        //nVersion = 0;
-        nVersion = CBlockHeader::CURRENT_VERSION;
-        // VELES END
+        nVersion = 0;
         hashPrevBlock.SetNull();
         hashMerkleRoot.SetNull();
         nTime = 0;
@@ -187,4 +182,4 @@ struct CBlockLocator
     }
 };
 
-#endif // FXTC_PRIMITIVES_BLOCK_H
+#endif // BITCOIN_PRIMITIVES_BLOCK_H

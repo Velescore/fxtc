@@ -3,7 +3,7 @@
     <name>AddressBookPage</name>
     <message>
         <source>Right-click to edit address or label</source>
-        <translation>Klikatu eskuinean helbidea edo etiketa aldatzeko</translation>
+        <translation>Klikatu eskuinarekin helbidea edo etiketa aldatzeko</translation>
     </message>
     <message>
         <source>Create a new address</source>
@@ -66,12 +66,12 @@
         <translation>Helbideak jasotzen</translation>
     </message>
     <message>
-        <source>These are your Veles addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Hauek dira zuk dirua jaso dezaketen Veles helbideak. Egiaztatu beti diru-kopurua eta dirua jasoko duen helbidea zuzen egon daitezen, txanponak bidali baino lehen.</translation>
+        <source>These are your FxTCoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Hauek dira zuk dirua jaso dezaketen FxTCoin helbideak. Egiaztatu beti diru-kopurua eta dirua jasoko duen helbidea zuzen egon daitezen, txanponak bidali baino lehen.</translation>
     </message>
     <message>
-        <source>These are your Veles addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Hauek dira zure dirua jasotzeko Veles helbideak. Gomendagarria da, operazio bakoitza helbide berri batekin egitea.</translation>
+        <source>These are your FxTCoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Hauek dira zure dirua jasotzeko FxTCoin helbideak. Gomendagarria da, operazio bakoitza helbide berri batekin egitea.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -136,6 +136,14 @@
         <translation>Pasahitz berria errepiikatu</translation>
     </message>
     <message>
+        <source>Show password</source>
+        <translation>Erakutsi pasahitza</translation>
+    </message>
+    <message>
+        <source>Enter the new passphrase to the wallet.&lt;br/&gt;Please use a passphrase of &lt;b&gt;ten or more random characters&lt;/b&gt;, or &lt;b&gt;eight or more words&lt;/b&gt;.</source>
+        <translation>Sartu pasaesaldi bat diru-zorrorako. Mesedez erabili ausazko hamar edo gehiago karaktere edo zortzi edo gehiago hitz.</translation>
+    </message>
+    <message>
         <source>Encrypt wallet</source>
         <translation>Diruzorroa enkriptatu</translation>
     </message>
@@ -164,8 +172,8 @@
         <translation>Diruorroaren enkriptazioa berretsi</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR VELESS&lt;/b&gt;!</source>
-        <translation>Abisua: Diruzorroa enkriptatzen baduzu eta zure pasahitza galtzen baduzu, &lt;b&gt;VELES GUZTIAK GALDUKO DITUZU&lt;/b&gt;!</translation>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR FXTCOINS&lt;/b&gt;!</source>
+        <translation>Abisua: Diruzorroa enkriptatzen baduzu eta zure pasahitza galtzen baduzu, &lt;b&gt;FXTCOIN GUZTIAK GALDUKO DITUZU&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -250,10 +258,6 @@
         <translation>&amp;Aukerak...</translation>
     </message>
     <message>
-        <source>&amp;Receiving addresses...</source>
-        <translation>&amp;Helbideak jasotzen...</translation>
-    </message>
-    <message>
         <source>Change the passphrase used for wallet encryption</source>
         <translation>Diruzorroa enkriptatzeko erabilitako pasahitza aldatu</translation>
     </message>
@@ -272,6 +276,10 @@
     <message>
         <source>Tabs toolbar</source>
         <translation>Fitxen tresna-barra</translation>
+    </message>
+    <message>
+        <source>Error</source>
+        <translation>Akatsa</translation>
     </message>
     <message>
         <source>Up to date</source>
@@ -368,6 +376,10 @@
     </context>
 <context>
     <name>Intro</name>
+    <message>
+        <source>Error</source>
+        <translation>Akatsa</translation>
+    </message>
     </context>
 <context>
     <name>ModalOverlay</name>
@@ -384,6 +396,10 @@
     <message>
         <source>Options</source>
         <translation>Aukerak</translation>
+    </message>
+    <message>
+        <source>Error</source>
+        <translation>Akatsa</translation>
     </message>
     </context>
 <context>
@@ -785,6 +801,9 @@
     <name>UnitDisplayStatusBarControl</name>
     </context>
 <context>
+    <name>WalletController</name>
+    </context>
+<context>
     <name>WalletFrame</name>
     </context>
 <context>
@@ -808,6 +827,10 @@
 <context>
     <name>bitcoin-core</name>
     <message>
+        <source>Loading wallet...</source>
+        <translation>Diru-zorroa kargatzen</translation>
+    </message>
+    <message>
         <source>Rescanning...</source>
         <translation>Birbilatzen...</translation>
     </message>
@@ -815,5 +838,9 @@
         <source>Done loading</source>
         <translation>Zamaketa amaitua</translation>
     </message>
-    </context>
+    <message>
+        <source>Error</source>
+        <translation>Akatsa</translation>
+    </message>
+</context>
 </TS>

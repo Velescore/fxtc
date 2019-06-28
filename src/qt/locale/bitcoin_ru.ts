@@ -66,12 +66,12 @@
         <translation>Адреса получения</translation>
     </message>
     <message>
-        <source>These are your Veles addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Это ваши адреса Veles для отправки платежей. Всегда проверяйте количество и адрес получателя перед отправкой перевода.</translation>
+        <source>These are your FxTCoin addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Это ваши адреса FxTCoin для отправки платежей. Всегда проверяйте количество и адрес получателя перед отправкой перевода.</translation>
     </message>
     <message>
-        <source>These are your Veles addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Это ваши адреса Veles для приёма платежей. Рекомендуется использовать новый адрес получения для каждой транзакции.</translation>
+        <source>These are your FxTCoin addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Это ваши адреса FxTCoin для приёма платежей. Рекомендуется использовать новый адрес получения для каждой транзакции.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -176,7 +176,7 @@
         <translation>Подтвердить шифрование кошелька</translation>
     </message>
     <message>
-        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR VELESS&lt;/b&gt;!</source>
+        <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR FXTCOINS&lt;/b&gt;!</source>
         <translation>Предупреждение: если вы зашифруете бумажник и потеряете пароль, вы &lt;b&gt;ПОТЕРЯЕТЕ ВСЕ ВАШИ БИТКОИНЫ&lt;/b&gt;!</translation>
     </message>
     <message>
@@ -188,8 +188,16 @@
         <translation>Кошелёк зашифрован</translation>
     </message>
     <message>
+        <source>Your wallet is now encrypted. Remember that encrypting your wallet cannot fully protect your fxtcoins from being stolen by malware infecting your computer.</source>
+        <translation>Бумажник зашифрован. Помните, что шифрование не способно полностью защитить Ваши fxtcоины, которые могут быть украдены вредоносным ПО</translation>
+    </message>
+    <message>
         <source>Wallet encryption failed</source>
         <translation>Не удалось зашифровать бумажник</translation>
+    </message>
+    <message>
+        <source>Wallet encryption failed due to an internal error. Your wallet was not encrypted.</source>
+        <translation>Сбой шифрования кошелька из-за внутренней ошибки. Ваш кошелёк не был зашифрован.</translation>
     </message>
     <message>
         <source>Wallet unlock failed</source>
@@ -224,10 +232,6 @@
     <message>
         <source>&amp;Overview</source>
         <translation>&amp;Обзор</translation>
-    </message>
-    <message>
-        <source>Node</source>
-        <translation>Узел</translation>
     </message>
     <message>
         <source>&amp;Transactions</source>
@@ -270,12 +274,28 @@
         <translation>&amp;Зашифровать кошелёк...</translation>
     </message>
     <message>
-        <source>Wallet</source>
+        <source>Wallet:</source>
         <translation>Кошелёк</translation>
+    </message>
+    <message>
+        <source>Reindexing blocks on disk...</source>
+        <translation>Переиндексация блоков на диске...</translation>
+    </message>
+    <message>
+        <source>&amp;Debug window</source>
+        <translation>&amp;Окно отладки</translation>
     </message>
     <message>
         <source>Error</source>
         <translation>Ошибка</translation>
+    </message>
+    <message>
+        <source>&amp;Window</source>
+        <translation>&amp;Окно</translation>
+    </message>
+    <message>
+        <source>Minimize</source>
+        <translation>Сворачивать</translation>
     </message>
     </context>
 <context>
@@ -337,6 +357,10 @@
     </context>
 <context>
     <name>ReceiveCoinsDialog</name>
+    <message>
+        <source>Clear</source>
+        <translation>Очистить</translation>
+    </message>
     </context>
 <context>
     <name>ReceiveRequestDialog</name>
@@ -433,6 +457,9 @@
     <name>UnitDisplayStatusBarControl</name>
     </context>
 <context>
+    <name>WalletController</name>
+    </context>
+<context>
     <name>WalletFrame</name>
     </context>
 <context>
@@ -457,7 +484,7 @@
     </message>
     <message>
         <source>The wallet will avoid paying less than the minimum relay fee.</source>
-        <translation>Кошелёк постарается не платить меньше, чем минимальная комиссия передачи.</translation>
+        <translation>Кошелёк будет избегать оплат меньших, нежели минимальная комиссия передачи.</translation>
     </message>
     <message>
         <source>Transaction amounts must not be negative</source>

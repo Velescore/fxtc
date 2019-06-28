@@ -3,11 +3,12 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef FXTC_ARITH_UINT256_H
-#define FXTC_ARITH_UINT256_H
+#ifndef BITCOIN_ARITH_UINT256_H
+#define BITCOIN_ARITH_UINT256_H
 
 #include <assert.h>
 #include <cstring>
+#include <limits>
 #include <stdexcept>
 #include <stdint.h>
 #include <string>
@@ -189,7 +190,7 @@ public:
     {
         // prefix operator
         int i = 0;
-        while (i < WIDTH && --pn[i] == (uint32_t)-1)
+        while (i < WIDTH && --pn[i] == std::numeric_limits<uint32_t>::max())
             i++;
         return *this;
     }
@@ -285,4 +286,4 @@ public:
 uint256 ArithToUint256(const arith_uint256 &);
 arith_uint256 UintToArith256(const uint256 &);
 
-#endif // FXTC_ARITH_UINT256_H
+#endif // BITCOIN_ARITH_UINT256_H

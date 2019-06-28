@@ -16,16 +16,17 @@
 #include <core_io.h>
 #include <interfaces/handler.h>
 #include <interfaces/node.h>
-#include <validation.h>
 #include <sync.h>
 #include <uint256.h>
-#include <util.h>
+#include <util/system.h>
+#include <validation.h>
 
 #include <QColor>
 #include <QDateTime>
 #include <QDebug>
 #include <QIcon>
 #include <QList>
+
 
 // Amount column is right-aligned it contains numbers
 static int column_alignments[] = {
@@ -58,7 +59,7 @@ struct TxLessThan
 class TransactionTablePriv
 {
 public:
-    TransactionTablePriv(TransactionTableModel *_parent) :
+    explicit TransactionTablePriv(TransactionTableModel *_parent) :
         parent(_parent)
     {
     }
@@ -191,13 +192,13 @@ public:
             // simply re-use the cached status.
             interfaces::WalletTxStatus wtx;
             int numBlocks;
-            int64_t adjustedTime;
-            if (wallet.tryGetTxStatus(rec->hash, wtx, numBlocks, adjustedTime) && rec->statusUpdateNeeded(numBlocks)) {
-                rec->updateStatus(wtx, numBlocks, adjustedTime);
+            int64_t block_time;
+            if (wallet.tryGetTxStatus(rec->hash, wtx, numBlocks, block_time) && rec->statusUpdateNeeded(numBlocks)) {
+                rec->updateStatus(wtx, numBlocks, block_time);
             }
             return rec;
         }
-        return 0;
+        return nullptr;
     }
 
     QString describe(interfaces::Node& node, interfaces::Wallet& wallet, TransactionRecord *rec, int unit)
@@ -226,7 +227,7 @@ TransactionTableModel::TransactionTableModel(const PlatformStyle *_platformStyle
     columns << QString() << QString() << tr("Date") << tr("Type") << tr("Label") << BitcoinUnits::getAmountColumnTitle(walletModel->getOptionsModel()->getDisplayUnit());
     priv->refreshWallet(walletModel->wallet());
 
-    connect(walletModel->getOptionsModel(), SIGNAL(displayUnitChanged(int)), this, SLOT(updateDisplayUnit()));
+    connect(walletModel->getOptionsModel(), &OptionsModel::displayUnitChanged, this, &TransactionTableModel::updateDisplayUnit);
 
     subscribeToCoreSignals();
 }
@@ -361,19 +362,18 @@ QString TransactionTableModel::formatTxType(const TransactionRecord *wtx) const
 
 QVariant TransactionTableModel::txAddressDecoration(const TransactionRecord *wtx) const
 {
-    QString theme = GUIUtil::getThemeName();
     switch(wtx->type)
     {
     case TransactionRecord::Generated:
-    return QIcon(":/icons/" + theme + "/tx_mined");
+        return QIcon(":/icons/tx_mined");
     case TransactionRecord::RecvWithAddress:
     case TransactionRecord::RecvFromOther:
-    return QIcon(":/icons/" + theme + "/tx_input");
+        return QIcon(":/icons/tx_input");
     case TransactionRecord::SendToAddress:
     case TransactionRecord::SendToOther:
-        return QIcon(":/icons/" + theme + "/tx_output");
+        return QIcon(":/icons/tx_output");
     default:
-        return QIcon(":/icons/" + theme + "/tx_inout");
+        return QIcon(":/icons/tx_inout");
     }
 }
 
@@ -437,36 +437,35 @@ QString TransactionTableModel::formatTxAmount(const TransactionRecord *wtx, bool
 
 QVariant TransactionTableModel::txStatusDecoration(const TransactionRecord *wtx) const
 {
-    QString theme = GUIUtil::getThemeName();
     switch(wtx->status.status)
     {
     case TransactionStatus::OpenUntilBlock:
     case TransactionStatus::OpenUntilDate:
         return COLOR_TX_STATUS_OPENUNTILDATE;
     case TransactionStatus::Unconfirmed:
-        return QIcon(":/icons/" + theme + "/transaction_0");
+        return QIcon(":/icons/transaction_0");
     case TransactionStatus::Abandoned:
-        return QIcon(":/icons/" + theme + "/transaction_abandoned");
+        return QIcon(":/icons/transaction_abandoned");
     case TransactionStatus::Confirming:
         switch(wtx->status.depth)
         {
-        case 1: return QIcon(":/icons/" + theme + "/transaction_1");
-        case 2: return QIcon(":/icons/" + theme + "/transaction_2");
-        case 3: return QIcon(":/icons/" + theme + "/transaction_3");
-        case 4: return QIcon(":/icons/" + theme + "/transaction_4");
-        default: return QIcon(":/icons/" + theme + "/transaction_5");
+        case 1: return QIcon(":/icons/transaction_1");
+        case 2: return QIcon(":/icons/transaction_2");
+        case 3: return QIcon(":/icons/transaction_3");
+        case 4: return QIcon(":/icons/transaction_4");
+        default: return QIcon(":/icons/transaction_5");
         };
     case TransactionStatus::Confirmed:
-        return QIcon(":/icons/" + theme + "/transaction_confirmed");
+        return QIcon(":/icons/transaction_confirmed");
     case TransactionStatus::Conflicted:
-        return QIcon(":/icons/" + theme + "/transaction_conflicted");
+        return QIcon(":/icons/transaction_conflicted");
     case TransactionStatus::Immature: {
         int total = wtx->status.depth + wtx->status.matures_in;
         int part = (wtx->status.depth * 4 / total) + 1;
-        return QIcon(QString(":/icons/" + theme + "/transaction_%1").arg(part));
+        return QIcon(QString(":/icons/transaction_%1").arg(part));
         }
     case TransactionStatus::NotAccepted:
-        return QIcon(":/icons/" + theme + "/transaction_0");
+        return QIcon(":/icons/transaction_0");
     default:
         return COLOR_BLACK;
     }
@@ -474,9 +473,8 @@ QVariant TransactionTableModel::txStatusDecoration(const TransactionRecord *wtx)
 
 QVariant TransactionTableModel::txWatchonlyDecoration(const TransactionRecord *wtx) const
 {
-    QString theme = GUIUtil::getThemeName();
     if (wtx->involvesWatchAddress)
-        return QIcon(":/icons/" + theme + "/eye");
+        return QIcon(":/icons/eye");
     else
         return QVariant();
 }
@@ -513,9 +511,8 @@ QVariant TransactionTableModel::data(const QModelIndex &index, int role) const
         break;
     case Qt::DecorationRole:
     {
-      //QIcon icon = qvariant_cast<QIcon>(index.data(RawDecorationRole));
-        //return platformStyle->TextColorIcon(icon);
-        return qvariant_cast<QIcon>(index.data(RawDecorationRole));
+        QIcon icon = qvariant_cast<QIcon>(index.data(RawDecorationRole));
+        return platformStyle->TextColorIcon(icon);
     }
     case Qt::DisplayRole:
         switch(index.column())
@@ -748,8 +745,8 @@ static void ShowProgress(TransactionTableModel *ttm, const std::string &title, i
 void TransactionTableModel::subscribeToCoreSignals()
 {
     // Connect signals to wallet
-    m_handler_transaction_changed = walletModel->wallet().handleTransactionChanged(boost::bind(NotifyTransactionChanged, this, _1, _2));
-    m_handler_show_progress = walletModel->wallet().handleShowProgress(boost::bind(ShowProgress, this, _1, _2));
+    m_handler_transaction_changed = walletModel->wallet().handleTransactionChanged(std::bind(NotifyTransactionChanged, this, std::placeholders::_1, std::placeholders::_2));
+    m_handler_show_progress = walletModel->wallet().handleShowProgress(std::bind(ShowProgress, this, std::placeholders::_1, std::placeholders::_2));
 }
 
 void TransactionTableModel::unsubscribeFromCoreSignals()
