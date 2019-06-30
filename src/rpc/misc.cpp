@@ -116,7 +116,7 @@ UniValue spork(const JSONRPCRequest& request)
         // VELES BEGIN
         for(int nSporkID = SPORK_VELES_START; nSporkID <= SPORK_VELES_END; nSporkID++){
             if(sporkManager.GetSporkNameByID(nSporkID) != "Unknown")
-                ret.push_back(Pair(sporkManager.GetSporkNameByID(nSporkID), sporkManager.GetSporkValue(nSporkID)));
+                ret.pushKV(sporkManager.GetSporkNameByID(nSporkID), sporkManager.GetSporkValue(nSporkID));
         }
         // VELES END
         return ret;
@@ -135,7 +135,7 @@ UniValue spork(const JSONRPCRequest& request)
         // VELES BEGIN
         for(int nSporkID = SPORK_VELES_START; nSporkID <= SPORK_VELES_END; nSporkID++){
             if(sporkManager.GetSporkNameByID(nSporkID) != "Unknown")
-                ret.push_back(Pair(sporkManager.GetSporkNameByID(nSporkID), sporkManager.IsSporkActive(nSporkID)));
+                ret.pushKV(sporkManager.GetSporkNameByID(nSporkID), sporkManager.GetSporkValue(nSporkID));
         }
         // VELES END
         return ret;
