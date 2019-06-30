@@ -236,6 +236,10 @@ public:
      */
     void NotifyMasternodeUpdates(CConnman& connman);
 
+    // VELES BEGIN
+    void CheckRemoteActivation(CConnman& connman);
+    // VELES END
+
 };
 
 #endif // DASH_MASTERNODEMAN_H

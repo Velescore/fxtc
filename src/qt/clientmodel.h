@@ -105,7 +105,9 @@ private:
     // Dash
     QTimer *pollMnTimer;
     //
-
+    // VELES BEGIN
+    QString appendQtWarnings(QString warnings) const;
+    // VELES END
     void subscribeToCoreSignals();
     void unsubscribeFromCoreSignals();
 

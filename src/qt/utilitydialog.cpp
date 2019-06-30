@@ -56,7 +56,7 @@ HelpMessageDialog::HelpMessageDialog(interfaces::Node& node, QWidget *parent, bo
     {
         setWindowTitle(tr("About %1").arg(tr(PACKAGE_NAME)));
 
-        std::string licenseInfo = LicenseInfo();
+        //std::string licenseInfo = LicenseInfo();
         /// HTML-format the license message from the core
         QString licenseInfoHTML = QString::fromStdString(LicenseInfo());
         // Make URLs clickable
@@ -68,8 +68,12 @@ HelpMessageDialog::HelpMessageDialog(interfaces::Node& node, QWidget *parent, bo
 
         ui->aboutMessage->setTextFormat(Qt::RichText);
         ui->scrollArea->setVerticalScrollBarPolicy(Qt::ScrollBarAsNeeded);
-        text = version + "\n" + QString::fromStdString(FormatParagraph(licenseInfo));
-        ui->aboutMessage->setText(version + "<br><br>" + licenseInfoHTML);
+        // VELES BEGIN
+        text = version + "\n\"" + CLIENT_VERSION_CODENAME + "\"\n\n" + licenseInfoHTML;
+        ui->aboutMessage->setText(version + "<br>\"" + CLIENT_VERSION_CODENAME + "\"<br><br>" + licenseInfoHTML);
+        //text = version + "\n\n" + licenseInfo;
+        //ui->aboutMessage->setText(version + "<br><br>" + licenseInfoHTML);
+        // VELES END
         ui->aboutMessage->setWordWrap(true);
         ui->helpMessage->setVisible(false);
     } else {

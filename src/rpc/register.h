@@ -28,6 +28,10 @@ void RegisterDashMasternodeRPCCommands(CRPCTable &tableRPC);
 /** Register Dash Governance RPC commands */
 void RegisterDashGovernanceRPCCommands(CRPCTable &tableRPC);
 //
+// Veles
+/** Register dVPN management commands **/
+void RegisterVpnRPCCommands(CRPCTable &t);
+//
 
 static inline void RegisterAllCoreRPCCommands(CRPCTable &t)
 {

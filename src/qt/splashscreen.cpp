@@ -34,21 +34,48 @@ SplashScreen::SplashScreen(interfaces::Node& node, Qt::WindowFlags f, const Netw
     int paddingTop              = 50;
     int titleVersionVSpace      = 17;
     int titleCopyrightVSpace    = 40;
+    // VELES BEGIN
+    int titleCopyrightWidth     = 220;
+    int paddingRightCopyright   = 30;
+    // VELES END
 
     float fontFactor            = 1.0;
     float devicePixelRatio      = 1.0;
     devicePixelRatio = static_cast<QGuiApplication*>(QCoreApplication::instance())->devicePixelRatio();
 
     // define text to place
-    QString titleText       = tr(PACKAGE_NAME);
-    QString versionText     = QString("Version %1").arg(QString::fromStdString(FormatFullVersion()));
+    //QString titleText       = tr(PACKAGE_NAME);
+    //QString versionText     = QString("Version %1").arg(QString::fromStdString(FormatFullVersion()));
+    // VELES BEGIN
+    QString copyrightText   = QString::fromUtf8(CopyrightHolders(strprintf("\xc2\xA9 %u-%u ", 2009, COPYRIGHT_YEAR)).c_str());
+    QString titleAddText    = networkStyle->getTitleAddText();
+    // VELES END
+
     // FXTC BEGIN
     //QString copyrightText   = QString::fromUtf8(CopyrightHolders(strprintf("\xc2\xA9 %u-%u ", 2009, COPYRIGHT_YEAR)).c_str());
-    QString copyrightText   = QString::fromUtf8(CopyrightHolders(strprintf("\xc2\xA9 ")).c_str());
+    //QString copyrightText   = QString::fromUtf8(CopyrightHolders(strprintf("\xc2\xA9 ")).c_str());
     // FXTC END
-    QString titleAddText    = networkStyle->getTitleAddText();
 
     QString font            = QApplication::font().toString();
+
+    // VELES BEGIN
+    QPixmap splashPixmap;
+    QRect splashRect(QPoint(0,0), QSize(480,320));
+    QString titleText       = tr(PACKAGE_NAME) + " GUI";
+    QString versionText     = QString::fromStdString(FormatFullVersion()).split("-").value(0) + " \"" + CLIENT_VERSION_CODENAME + "\"";
+    QString splashScreenPath = ":/images/splash";
+
+    if (!CLIENT_VERSION_IS_RELEASE)
+        splashScreenPath = ":/images/splash_prerelease";
+    if(gArgs.GetBoolArg("-regtest", false))
+        splashScreenPath = ":/images/splash_testnet";
+    if(gArgs.GetBoolArg("-testnet", false))
+        splashScreenPath = ":/images/splash_testnet";
+
+    // replace for copyright sign
+    copyrightText.replace("Copyright (C)", QChar(0x00A9));
+    copyrightText.replace("Copyright (c)", QChar(0x00A9));
+    // VELES END
 
     // create a bitmap according to device pixelratio
     QSize splashSize(480*devicePixelRatio,320*devicePixelRatio);
@@ -68,26 +95,55 @@ SplashScreen::SplashScreen(interfaces::Node& node, Qt::WindowFlags f, const Netw
     pixPaint.fillRect(rGradient, gradient);
 
     // draw the bitcoin icon, expected size of PNG: 1024x1024
+    // VELES BEGIN
+    // use custom splash screen instead of the icon
+    splashPixmap = QPixmap(splashScreenPath);
+    pixPaint.drawPixmap(splashRect, splashPixmap);
+    /*
     QRect rectIcon(QPoint(-150,-122), QSize(430,430));
 
     const QSize requiredSize(1024,1024);
     QPixmap icon(networkStyle->getAppIcon().pixmap(requiredSize));
 
     pixPaint.drawPixmap(rectIcon, icon);
+    */
+    // VELES END
 
     // check font size and drawing with
-    pixPaint.setFont(QFont(font, 33*fontFactor));
+    pixPaint.setFont(QFont(font, 35*fontFactor));   // Veles edit
     QFontMetrics fm = pixPaint.fontMetrics();
     int titleTextWidth = fm.width(titleText);
     if (titleTextWidth > 176) {
         fontFactor = fontFactor * 176 / titleTextWidth;
     }
 
-    pixPaint.setFont(QFont(font, 33*fontFactor));
+    pixPaint.setFont(QFont(font, 35*fontFactor));   // Veles edit
     fm = pixPaint.fontMetrics();
     titleTextWidth  = fm.width(titleText);
     pixPaint.drawText(pixmap.width()/devicePixelRatio-titleTextWidth-paddingRight,paddingTop,titleText);
 
+    // VELES BEGIN
+    // version info with codename
+    {
+        pixPaint.setFont(QFont(font, 20 * fontFactor));
+        QFontMetrics vfm = pixPaint.fontMetrics();
+        int versionTextWidth = vfm.width(versionText);
+        const int x = pixmap.width() / devicePixelRatio - versionTextWidth - paddingRight;
+        const int y = paddingTop+titleVersionVSpace;
+        QRect versionRect(x, y, pixmap.width() - x - paddingRight, paddingTop + titleCopyrightVSpace);
+        pixPaint.drawText(versionRect, Qt::AlignLeft | Qt::AlignTop, versionText);
+    }
+
+    // draw copyright stuff
+    {
+        pixPaint.setPen(QColor(100,100,100));
+        pixPaint.setFont(QFont(font, 15 * fontFactor));
+        const int x = pixmap.width() / devicePixelRatio - titleCopyrightWidth - paddingRightCopyright;
+        const int y = paddingTop + titleCopyrightVSpace;
+        QRect copyrightRect(x, y, pixmap.width() - x - paddingRightCopyright, pixmap.height() - y);
+        pixPaint.drawText(copyrightRect, Qt::AlignLeft | Qt::AlignTop | Qt::TextWordWrap, copyrightText);
+    }
+    /*
     pixPaint.setFont(QFont(font, 15*fontFactor));
 
     // if the version string is too long, reduce size
@@ -97,9 +153,8 @@ SplashScreen::SplashScreen(interfaces::Node& node, Qt::WindowFlags f, const Netw
         pixPaint.setFont(QFont(font, 10*fontFactor));
         titleVersionVSpace -= 5;
     }
-    pixPaint.drawText(pixmap.width()/devicePixelRatio-titleTextWidth-paddingRight+2,paddingTop+titleVersionVSpace,versionText);
+    pixPaint.drawText(pixmap.width()/devicePixelRatio-titleTextWidth-paddingRight,paddingTop+titleVersionVSpace,versionText);
 
-    // draw copyright stuff
     {
         pixPaint.setFont(QFont(font, 10*fontFactor));
         const int x = pixmap.width()/devicePixelRatio-titleTextWidth-paddingRight;
@@ -107,6 +162,9 @@ SplashScreen::SplashScreen(interfaces::Node& node, Qt::WindowFlags f, const Netw
         QRect copyrightRect(x, y, pixmap.width() - x - paddingRight, pixmap.height() - y);
         pixPaint.drawText(copyrightRect, Qt::AlignLeft | Qt::AlignTop | Qt::TextWordWrap, copyrightText);
     }
+    */
+    // VELES END
+
 
     // draw additional text if special network
     if(!titleAddText.isEmpty()) {

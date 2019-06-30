@@ -25,6 +25,9 @@
 #include <support/events.h>
 
 #include <univalue.h>
+// VELES BEGIN
+#include <veleslogo.h>
+// VELES END
 
 const std::function<std::string(const char*)> G_TRANSLATION_FUN = nullptr;
 
@@ -478,6 +481,12 @@ static int CommandLineRPC(int argc, char *argv[])
                         strPrint = result.get_str();
                     else
                         strPrint = result.write(2);
+
+                    // VELES BEGIN
+                    // Show ASCII logo header over the main help page
+                    if (method == "help" && args.size() < 1)
+                        strPrint = strVelesCoreLogoAscii + strPrint;
+                    // VELES END
                 }
                 // Connection succeeded, no need to retry.
                 break;

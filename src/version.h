@@ -12,17 +12,26 @@
  */
 
 //static const int PROTOCOL_VERSION = 70015;
-static const int PROTOCOL_VERSION = 70208;
+// VELES BEGIN
+//static const int PROTOCOL_VERSION = 70208;
+static const int PROTOCOL_VERSION = 80010;
+// VELES END
 
 //! initial proto version, to be increased after version/verack negotiation
 static const int INIT_PROTO_VERSION = 209;
 
 //! In this version, 'getheaders' was introduced.
 //static const int GETHEADERS_VERSION = 31800;
-static const int GETHEADERS_VERSION = 70077;
+// VELES BEGIN
+//static const int GETHEADERS_VERSION = 70077;
+static const int GETHEADERS_VERSION = 80008;
+// VELES END
 
 //! disconnect from peers older than this proto version
-static const int MIN_PEER_PROTO_VERSION = GETHEADERS_VERSION;
+// VELES BEGIN
+//static const int MIN_PEER_PROTO_VERSION = GETHEADERS_VERSION;
+static const int MIN_PEER_PROTO_VERSION = 80010;
+// VELES END
 
 //! nTime field added to CAddress, starting with this version;
 //! if possible, avoid requesting addresses nodes older than this

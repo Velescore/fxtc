@@ -73,4 +73,11 @@ void SetupServerArgs();
 /** Returns licensing information (for -version) */
 std::string LicenseInfo();
 
+// VELES BEGIN
+/**
+ * Shows project logo in ASCII if logging to the console is enabled.
+ */
+void DisplayBootLogo();
+// VELES
+
 #endif // BITCOIN_INIT_H

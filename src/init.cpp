@@ -81,6 +81,9 @@
 // Pivx
 #include <sporkdb.h>
 //
+// VELES BEGIN
+#include <veleslogo.h>
+// VELES END
 
 #ifndef WIN32
 #include <attributes.h>
@@ -426,7 +429,10 @@ void SetupServerArgs()
         "-dbcrashratio", "-forcecompactdb",
         // GUI args. These will be overwritten by SetupUIArgs for the GUI
         "-allowselfsignedrootcertificates", "-choosedatadir", "-lang=<lang>", "-min", "-resetguisettings", "-rootcertificates=<file>", "-splash", "-uiplatform"};
-
+        // VELES BEGIN
+        // GUI args
+        "-loadcss", "-dumpcss";
+        // VELES END
     gArgs.AddArg("-version", "Print version and exit", false, OptionsCategory::OPTIONS);
     gArgs.AddArg("-alertnotify=<cmd>", "Execute command when a relevant alert is received or we see a really long fork (%s in cmd is replaced by message)", false, OptionsCategory::OPTIONS);
     gArgs.AddArg("-assumevalid=<hex>", strprintf("If this block is in the chain assume that it and its ancestors are valid and potentially skip their script verification (0 to verify all, default: %s, testnet: %s)", defaultChainParams->GetConsensus().defaultAssumeValid.GetHex(), testnetChainParams->GetConsensus().defaultAssumeValid.GetHex()), false, OptionsCategory::OPTIONS);
@@ -582,7 +588,10 @@ void SetupServerArgs()
     gArgs.AddArg("-blockmaxweight=<n>", strprintf("Set maximum BIP141 block weight (default: %d)", DEFAULT_BLOCK_MAX_WEIGHT), false, OptionsCategory::BLOCK_CREATION);
     gArgs.AddArg("-blockmintxfee=<amt>", strprintf("Set lowest fee rate (in %s/kB) for transactions to be included in block creation. (default: %s)", CURRENCY_UNIT, FormatMoney(DEFAULT_BLOCK_MIN_TX_FEE)), false, OptionsCategory::BLOCK_CREATION);
     gArgs.AddArg("-blockversion=<n>", "Override block version to test forking scenarios", true, OptionsCategory::BLOCK_CREATION);
-    gArgs.AddArg("-algo=<algo>", strprintf("Mining algorithm: sha256d, scrypt, lyra2z, x11, x16r (default: sha256d)"), false, OptionsCategory::BLOCK_CREATION);
+    // VELES BEGIN
+    //gArgs.AddArg("-algo=<algo>", strprintf("Mining algorithm: sha256d, scrypt, lyra2z, x11, x16r (default: sha256)"), false, OptionsCategory::BLOCK_CREATION);
+    gArgs.AddArg("-algo=<algo>", strprintf("Mining algorithm: sha256d, scrypt, lyra2z, x11, x16r (default: scrypt)"), false, OptionsCategory::BLOCK_CREATION);
+    // VELES END
 
     gArgs.AddArg("-rest", strprintf("Accept public REST requests (default: %u)", DEFAULT_REST_ENABLE), false, OptionsCategory::RPC);
     gArgs.AddArg("-rpcallowip=<ip>", "Allow JSON-RPC connections from specified source. Valid for <ip> are a single IP (e.g. 1.2.3.4), a network/netmask (e.g. 1.2.3.4/255.255.255.0) or a network/CIDR (e.g. 1.2.3.4/24). This option can be specified multiple times", false, OptionsCategory::RPC);
@@ -948,7 +957,15 @@ void InitLogging()
 #endif
     LogPrintf(PACKAGE_NAME " version %s\n", version_string);
 }
-
+/*
+// VELES BEGIN
+void DisplayBootLogo()
+{
+    if (g_logger->m_print_to_console)
+        fprintf(stdout, "%s\n", strVelesCoreLogoAscii.c_str());
+}
+// VELES END
+*/
 namespace { // Variables internal to initialization process only
 
 int nMaxConnections;
@@ -1243,7 +1260,10 @@ bool AppInitParameterInteraction()
 
     // FXTC BEGIN
     // algo switch
-    std::string strAlgo = gArgs.GetArg("-algo","sha256d");
+    // VELES BEGIN
+    //std::string strAlgo = gArgs.GetArg("-algo","sha256");
+    std::string strAlgo = gArgs.GetArg("-algo","scrypt");
+    // VELES END
     transform(strAlgo.begin(), strAlgo.end(), strAlgo.begin(), ::tolower);
     if (strAlgo == "sha256d")
          miningAlgo = ALGO_SHA256D;

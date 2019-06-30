@@ -34,11 +34,20 @@ const CBaseChainParams& BaseParams()
 std::unique_ptr<CBaseChainParams> CreateBaseChainParams(const std::string& chain)
 {
     if (chain == CBaseChainParams::MAIN)
-        return MakeUnique<CBaseChainParams>("", 9469);
+    // VELES BEGIN
+    //return MakeUnique<CBaseChainParams>("", 9469);
+        return MakeUnique<CBaseChainParams>("", 5493);
+    // VELES END
     else if (chain == CBaseChainParams::TESTNET)
-        return MakeUnique<CBaseChainParams>("testnet", 19469);
+    // VELES BEGIN
+    //return MakeUnique<CBaseChainParams>("testnet", 19469);
+        return MakeUnique<CBaseChainParams>("testnet", 33812);
+    // VELES END
     else if (chain == CBaseChainParams::REGTEST)
-        return MakeUnique<CBaseChainParams>("regtest", 29469);
+    // VELES BEGIN
+    //return MakeUnique<CBaseChainParams>("regtest", 29469);
+    return MakeUnique<CBaseChainParams>("regtest", 29469); // rpc port not defined for regtest in Veles Core 0.10
+    // VELES END
     else
         throw std::runtime_error(strprintf("%s: Unknown chain %s.", __func__, chain));
 }

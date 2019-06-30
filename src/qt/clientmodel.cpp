@@ -31,6 +31,10 @@
 #include <privatesend.h>
 //
 
+// VELES BEGIN
+#include <QFileInfo>
+// VELES END
+
 #include <stdint.h>
 
 #include <QDebug>
@@ -175,9 +179,40 @@ enum BlockSource ClientModel::getBlockSource() const
     return BlockSource::NONE;
 }
 
+// VELES BEGIN
+QString ClientModel::appendQtWarnings(QString warnings) const
+{
+    QString loadCssPath = QString::fromStdString(gArgs.GetArg("-loadcss", ""));
+    QString dumpCssPath = QString::fromStdString(gArgs.GetArg("-dumpcss", ""));
+
+    if (loadCssPath != "") {
+        QFileInfo checkInputFile(loadCssPath);
+
+        if (checkInputFile.exists() && checkInputFile.isFile())
+            warnings += QString(warnings.isEmpty() ? "" : "\n") + "[debug] Loaded stylesheet from file: " + loadCssPath;
+        else
+            warnings += QString(warnings.isEmpty() ? "" : "\n") + "[warning] Cannot load stylesheet - file not found: " + loadCssPath;
+    }
+
+    if (dumpCssPath != "") {
+        QFileInfo checkOutputFile(dumpCssPath);
+
+        if (checkOutputFile.exists() && checkOutputFile.isFile())
+            warnings += QString(warnings.isEmpty() ? "" : "\n") + "[debug] Dumped current stylesheet to file: " + dumpCssPath;
+        else
+            warnings += QString(warnings.isEmpty() ? "" : "\n") + "[warning] Cannot dump stylesheet - path not found: " + dumpCssPath;
+    }
+
+    return warnings;
+}
+// VELES END
+
 QString ClientModel::getStatusBarWarnings() const
 {
-    return QString::fromStdString(m_node.getWarnings("gui"));
+  // VELES BEGIN
+  // Append Qt wallet development warnings if available
+  return appendQtWarnings(QString::fromStdString(m_node.getWarnings("gui")));
+  // VELES END
 }
 
 OptionsModel *ClientModel::getOptionsModel()

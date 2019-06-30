@@ -11,17 +11,20 @@
 #include <script/standard.h>           // For CTxDestination
 #include <support/allocators/secure.h> // For SecureString
 #include <ui_interface.h>              // For ChangeType
-// Dash
+// VELES BEGIN
+// Othervise build fails with NO_WALLET=1
 #ifdef ENABLE_WALLET
 #include <wallet/wallet.h>
-#else  // ENABLE_WALLET
+#endif
+// VELES END
+/*#else  // ENABLE_WALLET
 // FXTC TODO:
 enum AvailableCoinsType
 {
     ALL_COINS
 };
 #endif // ENABLE_WALLET
-//
+//*/
 
 #include <functional>
 #include <map>
@@ -151,6 +154,21 @@ public:
     //! List locked coins.
     virtual void listLockedCoins(std::vector<COutPoint>& outputs) = 0;
 
+    // VELES BEGIN
+#ifndef ENABLE_WALLET
+    // Dash, from wallet/wallet.h
+    enum AvailableCoinsType
+    {
+        ALL_COINS,
+        ONLY_DENOMINATED,
+        ONLY_NONDENOMINATED,
+        ONLY_MASTERNODE_COLLATERAL, // find masternode outputs including locked ones (use with caution)
+        ONLY_PRIVATESEND_COLLATERAL
+    };
+    //
+    // VELES END
+ #endif
+     
     //! Create transaction.
     virtual std::unique_ptr<PendingWalletTx> createTransaction(const std::vector<CRecipient>& recipients,
         const CCoinControl& coin_control,

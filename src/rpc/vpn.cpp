@@ -59,7 +59,7 @@ static UniValue getvpntotals(const JSONRPCRequest& request)
     return obj;
 }
 */
-
+/*
 // Preparation
 static const CRPCCommand commands[] =
 { //  category              name                      actor (function)         argNames
@@ -73,3 +73,4 @@ void RegisterVpnRPCCommands(CRPCTable &t)
     for (unsigned int vcidx = 0; vcidx < ARRAYLEN(commands); vcidx++)
         t.appendCommand(commands[vcidx].name, &commands[vcidx]);
 }
+*/
