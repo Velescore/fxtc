@@ -296,12 +296,12 @@ public:
         pchMessageStart[1] = 0x64;
         pchMessageStart[2] = 0x46;
         pchMessageStart[3] = 0x98;
-        nDefaultPort = 19468;
+        nDefaultPort = 21335;
         nPruneAfterHeight = 1000;
         m_assumed_blockchain_size = 1;
         m_assumed_chain_state_size = 0;
 
-        genesis = CreateGenesisBlock(1528335299, 18627478, 0x1e0ffff0, 536870912, consensus.nMinimumSubsidy);
+        genesis = CreateGenesisBlock(1541515957, 271643, 0x1e0ffff0, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
         //assert(consensus.hashGenesisBlock == uint256S("000000cf9c24c95589943d0d0555260eb59a4f41ca74638d29db9f4f2ff981df"));
         //assert(genesis.hashMerkleRoot == uint256S("0xe36b6a8bf04edc01c2b3d5c43349eda9d704b0f930bd6176b920e605442b4f52"));
@@ -375,7 +375,7 @@ public:
 
         // Dash
         consensus.nMasternodeMinimumConfirmations = 15;
-	consensus.nMasternodePaymentsStartBlock = 240;
+	      consensus.nMasternodePaymentsStartBlock = 240;
         consensus.nMasternodePaymentsIncreaseBlock = 350;
         consensus.nMasternodePaymentsIncreasePeriod = 10;
         consensus.nMasternodeCollateralMinimum = 1; // starting MN collateral
@@ -432,7 +432,7 @@ public:
         pchMessageStart[1] = 0x44;
         pchMessageStart[2] = 0x66;
         pchMessageStart[3] = 0x88;
-        nDefaultPort = 29468;
+        nDefaultPort = 33814;
         nPruneAfterHeight = 1000;
         m_assumed_blockchain_size = 0;
         m_assumed_chain_state_size = 0;
