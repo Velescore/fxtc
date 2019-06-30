@@ -51,6 +51,9 @@
 
 #include <future>
 #include <sstream>
+// VELES BEGIN
+#include <vector>
+// VELES END
 
 #include <boost/algorithm/string/replace.hpp>
 #include <boost/thread.hpp>
@@ -270,6 +273,9 @@ std::atomic_bool g_is_mempool_loaded{false};
 // Dash
 map<uint256, int64_t> mapRejectedBlocks GUARDED_BY(cs_main);
 //
+// VELES BEGIN
+std::map<int, std::map<int, CAmount>> totalSupplyIndex;
+// VELES END
 
 /** Constant stuff for coinbase transactions we create: */
 CScript COINBASE_FLAGS;
@@ -1220,47 +1226,398 @@ double ConvertBitsToDouble(unsigned int nBits)
 }
 // FXTC END
 
-// FXTC BEGIN
-//CAmount GetBlockSubsidy(int nHeight, const Consensus::Params& consensusParams)
-CAmount GetBlockSubsidy(int nHeight, CBlockHeader pblock, const Consensus::Params& consensusParams, bool fSuperblockPartOnly)
-// FXTC END
+// VELES BEGIN
+// Note that this method will return the correct results only if nStartVlock and nEndBlock are
+// within the same halving epoch.
+CAmount CountBlockRewards(int nStartBlock, int nEndBlock, HalvingParameters *halvingParams)
 {
-    int halvings = nHeight / consensusParams.nSubsidyHalvingInterval;
+    CBlockIndex *pb = chainActive.Tip();
+    CAmount nRewards = 0;
+
+    // use indexed value if exists
+    if (totalSupplyIndex.count(nStartBlock) && totalSupplyIndex[nStartBlock].count(nEndBlock))
+        return totalSupplyIndex[nStartBlock][nEndBlock];
+
+    while (pb->pprev) {
+        pb = pb->pprev;
+
+        if (pb->nHeight >= nStartBlock && pb->nHeight <= nEndBlock) {
+            nRewards += GetBlockSubsidy(pb->nHeight, pb->GetBlockHeader(), Params().GetConsensus(), false, halvingParams);
+        }
+    }
+    totalSupplyIndex[nStartBlock][nEndBlock] = nRewards;    // update the index
+
+    return nRewards;
+}
+
+HalvingParameters *GetSubsidyHalvingParameters(int nHeight, const Consensus::Params& consensusParams)
+{
+    int nHeightOffset = (int)sporkManager.GetSporkValue(SPORK_VELES_04_REWARD_UPGRADE_ALPHA_START);
+    int nCurrentEpoch = 0;
+    HalvingParameters *params = new HalvingParameters();
+    CAmount nCurrentMaxSupply = 0;
+    CAmount nCurrentHalvingRealSupply = 0;
+    CAmount nCurrentEpochRealSupply = 0;
+    CAmount nBlocksToProccess = nHeight - nHeightOffset;
+
+    // default halving settings for first epoch
+    params->nHalvingInterval = consensusParams.nSubsidyHalvingInterval;
+
+    // premine epoch
+    params->epochs.push_back (HalvingEpoch{});
+    params->epochs[nCurrentEpoch].nMaxBlockSubsidy = 50000 * COIN;
+    params->epochs[nCurrentEpoch].nStartBlock = 1;
+    params->epochs[nCurrentEpoch].nEndBlock = 1;
+    params->epochs[nCurrentEpoch].nStartSupply = 0;
+    params->epochs[nCurrentEpoch].nEndSupply = 50000 * COIN;
+    params->epochs[nCurrentEpoch].fHasEnded = true;
+    nCurrentEpoch++;
+    // bootstrap epoch
+    params->epochs.push_back (HalvingEpoch{});
+    params->epochs[nCurrentEpoch].nMaxBlockSubsidy = 8 * COIN;
+    params->epochs[nCurrentEpoch].nStartBlock = 2;
+    params->epochs[nCurrentEpoch].nStartSupply = 50000 * COIN;
+    params->epochs[nCurrentEpoch].nEndBlock = nHeightOffset - 1;
+
+    // we're still in the bootstrap epoch
+    if (nHeight < nHeightOffset) {
+
+        return params;
+    }
+    params->epochs[nCurrentEpoch].fHasEnded = true;
+    params->epochs[nCurrentEpoch].nEndSupply = params->epochs[nCurrentEpoch].nStartSupply
+        + CountBlockRewards(params->epochs[nCurrentEpoch].nStartBlock, params->epochs[nCurrentEpoch].nEndBlock - 1, params);
+    nCurrentEpoch++;
+    // first VCIP01 epoch before first halving
+    params->epochs.push_back (HalvingEpoch{});
+    params->epochs[nCurrentEpoch].nMaxBlockSubsidy = 8 * COIN * consensusParams.nVlsRewardsAlphaMultiplier;
+    params->epochs[nCurrentEpoch].nStartBlock = nHeightOffset;
+    params->epochs[nCurrentEpoch].nStartSupply = params->epochs[nCurrentEpoch - 1].nEndSupply;
+    params->epochs[nCurrentEpoch].nEndBlock = nHeightOffset + params->nHalvingInterval - 1;
+
+    // we're still before the first halving is supposed to occur
+    if (nHeight <= params->epochs[nCurrentEpoch].nEndBlock)
+        return params;
+
+    // at least one epoch has already ended
+    while(nBlocksToProccess >= params->nHalvingInterval) {
+        nBlocksToProccess -= params->nHalvingInterval;
+        nCurrentEpoch++;
+        // let's finish the old epoch
+        params->epochs[nCurrentEpoch - 1].fHasEnded = true;
+        //params->epochs[nCurrentEpoch - 1].nEndSupply = GetTotalSupply(params->epochs[nCurrentEpoch - 1].nEndBlock);
+        params->epochs[nCurrentEpoch - 1].nEndSupply = params->epochs[nCurrentEpoch - 1].nStartSupply
+            + CountBlockRewards(params->epochs[nCurrentEpoch - 1].nStartBlock, params->epochs[nCurrentEpoch - 1].nEndBlock - 1, params);
+        // initialize new epoch struct
+        //params->epochs[nCurrentEpoch] = HalvingEpoch;   //*(new HalvingEpoch());
+        params->epochs.push_back (HalvingEpoch{});
+        params->epochs[nCurrentEpoch].nStartBlock = params->epochs[nCurrentEpoch - 1].nEndBlock + 1;
+        params->epochs[nCurrentEpoch].nStartSupply = params->epochs[nCurrentEpoch - 1].nEndSupply;
+        params->epochs[nCurrentEpoch].nMaxBlockSubsidy = params->epochs[nCurrentEpoch - 1].nMaxBlockSubsidy;
+        params->epochs[nCurrentEpoch].nDynamicRewardsBoostFactor = params->epochs[nCurrentEpoch - 1].nDynamicRewardsBoostFactor;
+
+        nCurrentMaxSupply = params->epochs[nCurrentEpoch - 1].nMaxBlockSubsidy * params->nHalvingInterval;
+        nCurrentEpochRealSupply = params->epochs[nCurrentEpoch - 1].nEndSupply - params->epochs[nCurrentEpoch - 1].nStartSupply;
+        nCurrentHalvingRealSupply += nCurrentEpochRealSupply;
+
+        // let's check whether we have released enough coins to the circulation,
+        // then halve the subsidy and double the halving interval
+        if (nCurrentHalvingRealSupply >= nCurrentMaxSupply * HALVING_MIN_SUPPLY_TARGET) {
+            params->nHalvingInterval *= 2;
+            params->nHalvingCount++;
+            params->epochs[nCurrentEpoch].nMaxBlockSubsidy >>= 1;
+            params->epochs[nCurrentEpoch].fIsSubsidyHalved = true;
+            nCurrentHalvingRealSupply = 0;
+            // slow down the dynamic reward boost
+            if (params->epochs[nCurrentEpoch].nDynamicRewardsBoostFactor > HALVING_MAX_BOOST_STEP)
+                params->epochs[nCurrentEpoch].nDynamicRewardsBoostFactor /= 2;
+            else
+                params->epochs[nCurrentEpoch].nDynamicRewardsBoostFactor = 0;
+
+        } else {
+            // boost dynamic rewards if we're far from target supply
+            if (nCurrentEpochRealSupply < nCurrentMaxSupply * HALVING_MIN_BOOST_SUPPLY_TARGET) {
+                if (params->epochs[nCurrentEpoch].nDynamicRewardsBoostFactor)
+                    params->epochs[nCurrentEpoch].nDynamicRewardsBoostFactor *= 2;
+                else
+                    params->epochs[nCurrentEpoch].nDynamicRewardsBoostFactor = HALVING_MAX_BOOST_STEP;
+            }
+        }
+        // complete the next epoch struct
+        params->epochs[nCurrentEpoch].nEndBlock = params->epochs[nCurrentEpoch - 1].nEndBlock + params->nHalvingInterval;
+        // update halving params
+        params->nDynamicRewardsBoostFactor = params->epochs[nCurrentEpoch].nDynamicRewardsBoostFactor;
+    }
+
+    return params;
+}
+
+HalvingParameters *GetSubsidyHalvingParameters(int nHeight)
+{
+    return GetSubsidyHalvingParameters(nHeight, Params().GetConsensus());
+}
+
+HalvingParameters *GetSubsidyHalvingParameters()
+{
+    return GetSubsidyHalvingParameters((int)chainActive.Height());
+}
+
+double GetAlgoCostFactor(int32_t nAlgo, int nHeight)
+{
+    double factor = 100;
+    CAmount totalAdjustements = 0;
+    // Nist5 bootstraping and reward discovery
+    int nNistAlphaBumpUpFactor = 10;
+    int nNistAlphaBumpUpHeight = 51000;
+
+    // We have a possibility to perform 2 more cost factor adjustements, taking
+    // advantage of spork protocol.
+    if (nHeight >= sporkManager.GetSporkValue(SPORK_VELES_05B_ADJUST_COST_FACTOR_START)) {
+        switch (nAlgo)
+        {
+            case ALGO_SHA256D:
+                factor = sporkManager.GetSporkValue(SPORK_VELES_05B_ADJUST_COST_FACTOR_SHA256D);
+                break;
+            case ALGO_SCRYPT:
+                factor = sporkManager.GetSporkValue(SPORK_VELES_05B_ADJUST_COST_FACTOR_SCRYPT);
+                break;
+            case ALGO_LYRA2Z:
+                factor = sporkManager.GetSporkValue(SPORK_VELES_05B_ADJUST_COST_FACTOR_LYRA2Z);
+                break;
+            case ALGO_X11:
+                factor = sporkManager.GetSporkValue(SPORK_VELES_05B_ADJUST_COST_FACTOR_X11);
+                break;
+            case ALGO_X16R:
+                factor = sporkManager.GetSporkValue(SPORK_VELES_05B_ADJUST_COST_FACTOR_X16R);
+                break;
+            case ALGO_NIST5:
+                factor = sporkManager.GetSporkValue(SPORK_VELES_05B_ADJUST_COST_FACTOR_NIST5);
+                break;
+        }
+
+        totalAdjustements = sporkManager.GetSporkValue(SPORK_VELES_05B_ADJUST_COST_FACTOR_SHA256D)
+            + sporkManager.GetSporkValue(SPORK_VELES_05B_ADJUST_COST_FACTOR_SCRYPT)
+            + sporkManager.GetSporkValue(SPORK_VELES_05B_ADJUST_COST_FACTOR_LYRA2Z)
+            + sporkManager.GetSporkValue(SPORK_VELES_05B_ADJUST_COST_FACTOR_X11)
+            + sporkManager.GetSporkValue(SPORK_VELES_05B_ADJUST_COST_FACTOR_X16R)
+            + sporkManager.GetSporkValue(SPORK_VELES_05B_ADJUST_COST_FACTOR_NIST5);
+
+    } else if (nHeight >= sporkManager.GetSporkValue(SPORK_VELES_05A_ADJUST_COST_FACTOR_START)) {
+        switch (nAlgo)
+        {
+            case ALGO_SHA256D:
+                factor = sporkManager.GetSporkValue(SPORK_VELES_05A_ADJUST_COST_FACTOR_SHA256D);
+                break;
+            case ALGO_SCRYPT:
+                factor = sporkManager.GetSporkValue(SPORK_VELES_05A_ADJUST_COST_FACTOR_SCRYPT);
+                break;
+            case ALGO_LYRA2Z:
+                factor = sporkManager.GetSporkValue(SPORK_VELES_05A_ADJUST_COST_FACTOR_LYRA2Z);
+                break;
+            case ALGO_X11:
+                factor = sporkManager.GetSporkValue(SPORK_VELES_05A_ADJUST_COST_FACTOR_X11);
+                break;
+            case ALGO_X16R:
+                factor = sporkManager.GetSporkValue(SPORK_VELES_05A_ADJUST_COST_FACTOR_X16R);
+                break;
+            case ALGO_NIST5:
+                factor = sporkManager.GetSporkValue(SPORK_VELES_05A_ADJUST_COST_FACTOR_NIST5);
+                break;
+        }
+
+        totalAdjustements = sporkManager.GetSporkValue(SPORK_VELES_05A_ADJUST_COST_FACTOR_SHA256D)
+            + sporkManager.GetSporkValue(SPORK_VELES_05A_ADJUST_COST_FACTOR_SCRYPT)
+            + sporkManager.GetSporkValue(SPORK_VELES_05A_ADJUST_COST_FACTOR_LYRA2Z)
+            + sporkManager.GetSporkValue(SPORK_VELES_05A_ADJUST_COST_FACTOR_X11)
+            + sporkManager.GetSporkValue(SPORK_VELES_05A_ADJUST_COST_FACTOR_X16R)
+            + sporkManager.GetSporkValue(SPORK_VELES_05A_ADJUST_COST_FACTOR_NIST5);
+
+    // Apply default cost factor values if the sporks are not activated yed
+    } else {
+        switch (nAlgo)
+        {
+            case ALGO_SHA256D:
+                factor = SPORK_VELES_05A_ADJUST_COST_FACTOR_SHA256D_DEFAULT;
+                break;
+            case ALGO_SCRYPT:
+                factor = SPORK_VELES_05A_ADJUST_COST_FACTOR_SCRYPT_DEFAULT;
+                break;
+            case ALGO_LYRA2Z:
+                factor = SPORK_VELES_05A_ADJUST_COST_FACTOR_LYRA2Z_DEFAULT;
+                break;
+            case ALGO_X11:
+                factor = SPORK_VELES_05A_ADJUST_COST_FACTOR_X11_DEFAULT;
+                break;
+            case ALGO_X16R:
+                factor = SPORK_VELES_05A_ADJUST_COST_FACTOR_X16R_DEFAULT;
+                break;
+            case ALGO_NIST5:
+                if (nHeight < nNistAlphaBumpUpHeight)
+                    factor = SPORK_VELES_05A_ADJUST_COST_FACTOR_NIST5_DEFAULT;
+                else
+                    factor = SPORK_VELES_05A_ADJUST_COST_FACTOR_NIST5_DEFAULT * nNistAlphaBumpUpFactor;
+                break;
+        }
+
+        totalAdjustements = SPORK_VELES_05A_ADJUST_COST_FACTOR_SHA256D_DEFAULT
+            + SPORK_VELES_05A_ADJUST_COST_FACTOR_SCRYPT_DEFAULT
+            + SPORK_VELES_05A_ADJUST_COST_FACTOR_LYRA2Z_DEFAULT
+            + SPORK_VELES_05A_ADJUST_COST_FACTOR_X11_DEFAULT
+            + SPORK_VELES_05A_ADJUST_COST_FACTOR_X16R_DEFAULT
+            + SPORK_VELES_05A_ADJUST_COST_FACTOR_NIST5_DEFAULT;
+
+        if (nHeight >= nNistAlphaBumpUpHeight)
+            totalAdjustements += SPORK_VELES_05A_ADJUST_COST_FACTOR_NIST5_DEFAULT * (nNistAlphaBumpUpFactor - 1);
+    }
+
+    return factor / (totalAdjustements / 6);
+}
+
+double GetAlgoCostFactor(int32_t nAlgo)
+{
+    return GetAlgoCostFactor(nAlgo, (int)chainActive.Height());
+}
+
+
+double GetBlockAlgoCostFactor(CBlockHeader *pblock, int nHeight)
+{
+    return GetAlgoCostFactor(pblock->nVersion & ALGO_VERSION_MASK, nHeight);
+}
+
+CAmount GetBlockSubsidy(int nHeight, CBlockHeader pblock, const Consensus::Params& consensusParams, bool fSuperblockPartOnly, HalvingParameters *halvingParams)
+{
+    CAmount nSubsidy = 0;
+
+    //HalvingParameters *halvingParams = GetSubsidyHalvingParameters(nHeight, consensusParams);
+    if (halvingParams == nullptr)
+        halvingParams = GetSubsidyHalvingParameters(nHeight, consensusParams);
+
     // Force block reward to zero when right shift is undefined.
-    if (halvings >= 64)
+    if (halvingParams->nHalvingCount >= 64)
         return 0;
 
-    // FXTC BEGIN
+    nSubsidy = 8 * COIN;
+
     if (nHeight == 1)
-        return 1 * COIN;        // Founder marker (Ownership is transferred by moving this coin)
-    else if (nHeight == 2)
-        return 200000 * COIN;   // Exchange Fund (Exchange fees, Masternode listing fees, ...)
-    else if (nHeight == 3)
-        return 10000 * COIN;    // Marketing Fund (Wallet, Website, Marketing, ...)
-    else if (nHeight == 4)
-        return 789999 * COIN;   // Reserve Fund (Locked for future use)
+        nSubsidy = 50000 * COIN;
 
-    CAmount nSubsidy = ConvertBitsToDouble(pblock.nBits) * COIN / (49500000 / pblock.GetAlgoEfficiency(nHeight)); // dynamic block reward by algo efficiency
-    nSubsidy /= GetHandbrakeForce(pblock.nVersion, nHeight);
+    // Subsidy is cut on each halving that has occured
+    nSubsidy >>= halvingParams->nHalvingCount;
 
-    // Subsidy is cut in half every 865,000 blocks which will occur approximately every 3 years.
-    nSubsidy >>= halvings;
-    // Make halvings linear since start block defined in spork
-    if (nHeight >= sporkManager.GetSporkValue(SPORK_FXTC_03_BLOCK_REWARD_SMOOTH_HALVING_START)) {
-        nSubsidy -= ((nSubsidy >> 1) * (nHeight % consensusParams.nSubsidyHalvingInterval)) / consensusParams.nSubsidyHalvingInterval;
+    // First FXTC fork/spork regarding mining rewards
+    if (nHeight >= sporkManager.GetSporkValue(SPORK_VELES_01_FXTC_CHAIN_START)) {
+        // Maximul subsidy limit needed until Veles spork 02
+        CAmount nMaxSubsidy = nSubsidy;
+
+        // Calculate the dynamic block reward accordingly to an algo efficiency table
+        nSubsidy = ConvertBitsToDouble(pblock.nBits) * COIN / (49500000 / pblock.GetAlgoEfficiency(nHeight));
+        nSubsidy /= GetHandbrakeForce(pblock.nVersion, nHeight);
+
+        // Cut subsidy a half on each halving
+        // removed plan for SPORK_VELES_03_NO_SUBSIDY_HALVING_START.
+        nSubsidy >>= halvingParams->nHalvingCount;
+
+        // Veles hard fork to enable Alpha block reward upgrade
+        // merged from FXTC spork "smooth halvingParams->nHalvingCount" to make halvingParams->nHalvingCount linear
+        // since the specific block PORK_FXTC_03_BLOCK_REWARD_SMOOTH_HALVING_START
+        // Proposal removed in VCIP01
+        //if (nHeight >= sporkManager.GetSporkValue(SPORK_VELES_04_REWARD_UPGRADE_ALPHA_START))
+        //    nSubsidy -= ((nSubsidy >> 1) * (nHeight % halvingParams->nHalvingInterval)) / halvingParams->nHalvingInterval;
+
+        // VCIP01 adjust the rewards accordingly as per algo
+        if (nHeight >= sporkManager.GetSporkValue(SPORK_VELES_04_REWARD_UPGRADE_ALPHA_START)) {
+            nSubsidy *= GetBlockAlgoCostFactor(&pblock, nHeight);
+            nSubsidy *= 1 + halvingParams->nDynamicRewardsBoostFactor;
+            nSubsidy *= consensusParams.nVlsRewardsAlphaMultiplier;
+            nMaxSubsidy *= consensusParams.nVlsRewardsAlphaMultiplier;
+
+            // Sporks to manage emergency situations when dynamic rewards neneds to be adjusted
+            int nDynamicSubsidyCorrectionFactor = 300;
+
+            if (nHeight >= 51000)
+                nDynamicSubsidyCorrectionFactor = 400;  // increased to balance-out Nist5 reward increase
+
+            if (nHeight >= sporkManager.GetSporkValue(SPORK_VELES_06A_DYNAMIC_REWARD_BOOST1_START))
+                nDynamicSubsidyCorrectionFactor = sporkManager.GetSporkValue(SPORK_VELES_06A_DYNAMIC_REWARD_BOOST1_FACTOR);
+
+            if (nHeight >= sporkManager.GetSporkValue(SPORK_VELES_06B_DYNAMIC_REWARD_BOOST2_START))
+                nDynamicSubsidyCorrectionFactor = sporkManager.GetSporkValue(SPORK_VELES_06B_DYNAMIC_REWARD_BOOST2_FACTOR);
+
+            if (nHeight >= sporkManager.GetSporkValue(SPORK_VELES_06C_DYNAMIC_REWARD_BOOST3_START))
+                nDynamicSubsidyCorrectionFactor = sporkManager.GetSporkValue(SPORK_VELES_06C_DYNAMIC_REWARD_BOOST3_FACTOR);
+
+            nSubsidy *= nDynamicSubsidyCorrectionFactor * 0.01;
+        }
+
+        // Ensure minimum subsidy
+        if (nSubsidy < consensusParams.nMinimumSubsidy)
+            nSubsidy = consensusParams.nMinimumSubsidy;
+
+        // Ensure maximum subsidy
+        if (nSubsidy > nMaxSubsidy) //nHeight < sporkManager.GetSporkValue(SPORK_VELES_02_UNLIMITED_BLOCK_SUBSIDY_START))
+            nSubsidy = nMaxSubsidy;
     }
-    // Force minimum subsidy allowed
-    if (nSubsidy < consensusParams.nMinimumSubsidy) {
-        nSubsidy = consensusParams.nMinimumSubsidy;
-    }
-    // FXTC END
 
     // Hard fork to reduce the block reward by 10 extra percent (allowing budget/superblocks)
-    CAmount nSuperblockPart = (nHeight >= consensusParams.nBudgetPaymentsStartBlock) ? nSubsidy/10 : 0;
+    CAmount nSuperblockPart = (nHeight >= consensusParams.nBudgetPaymentsStartBlock) ? nSubsidy / 10 : 0;
 
     return fSuperblockPartOnly ? nSuperblockPart : nSubsidy - nSuperblockPart;
 }
 
+double GetSmoothPaymentFactor(int nHeight, int nStartHeight, int nEndHeight, double nStartFactor, double nEndFactor)
+{
+    if (nHeight <= nStartHeight)
+        return nStartFactor;
+
+    return nStartFactor + (nEndFactor - nStartFactor) / ((nEndHeight - nStartHeight) / (nHeight - nStartHeight));
+}
+
+CAmount GetMasternodePayment(int nHeight, CAmount blockValue)
+{
+    //int nMasternodePaymentFixHeight = 51000;
+    int nIncreaseStartHeight = sporkManager.GetSporkValue(SPORK_VELES_04_REWARD_UPGRADE_ALPHA_START);
+    const Consensus::Params consensus = Params().GetConsensus();
+
+    if (nHeight < nIncreaseStartHeight)
+        return blockValue * consensus.nMasternodePaymentsLegacyPercent * 0.01;
+
+    if (nHeight < 51000)    // no MN payments during the alpha epoch between blocks 50k and 51k
+        return 0;
+
+    return blockValue * GetSmoothPaymentFactor(
+        nHeight,
+        nIncreaseStartHeight,
+        nIncreaseStartHeight + consensus.nMasternodePaymentsIncreasePeriod,
+        consensus.nMasternodePaymentsStartPercent * 0.01,
+        consensus.nMasternodePaymentsFinalPercent * 0.01
+        );
+}
+
+CAmount GetFounderReward(int nHeight, CAmount blockValue)
+{
+    //int nMasternodePaymentFixHeight = 51000;
+    int nDecreaseStartHeight = sporkManager.GetSporkValue(SPORK_VELES_04_REWARD_UPGRADE_ALPHA_START);
+    const Consensus::Params consensus = Params().GetConsensus();
+
+    if (nHeight < sporkManager.GetSporkValue(SPORK_VELES_01_FXTC_CHAIN_START))
+        return (CAmount)0;
+
+    if (nHeight < sporkManager.GetSporkValue(SPORK_VELES_04_REWARD_UPGRADE_ALPHA_START))
+        return blockValue * consensus.nDevFundPaymentsLegacyPercent * 0.01;
+
+     if (nHeight < 51000)    // no DEV fund payments during the alpha epoch between blocks 50k and 51k
+        return 0;
+
+    return blockValue * GetSmoothPaymentFactor(
+        nHeight,
+        nDecreaseStartHeight,
+        nDecreaseStartHeight + consensus.nDevFundPaymentsDecreasePeriod,
+        consensus.nDevFundPaymentsStartPercent * 0.01,
+        consensus.nDevFundPaymentsFinalPercent * 0.01
+        );
+}
+// VELES END
+/*
 // FXTC BEGIN
 CAmount GetMasternodePayment(int nHeight, CAmount blockValue)
 {
@@ -1287,7 +1644,7 @@ CAmount GetFounderReward(int nHeight, CAmount blockValue)
         return ret;
 }
 // FXTC END
-
+*/
 bool IsInitialBlockDownload()
 {
     // Once this function has returned false, it must remain false.
@@ -1809,6 +2166,8 @@ VersionBitsCache versionbitscache GUARDED_BY(cs_main);
 
 int32_t ComputeBlockVersion(const CBlockIndex* pindexPrev, const Consensus::Params& params)
 {
+    if (pindexPrev->nHeight+1 < sporkManager.GetSporkValue(SPORK_VELES_01_FXTC_CHAIN_START)) return 4;
+
     LOCK(cs_main);
     int32_t nVersion = VERSIONBITS_TOP_BITS;
 
@@ -2190,7 +2549,7 @@ bool CChainState::ConnectBlock(const CBlock& block, CValidationState& state, CBl
                          error("ConnectBlock(): coinbase pays too much (actual=%d vs limit=%d)",
                                block.vtx[0]->GetValueOut(), blockReward),
                                REJECT_INVALID, "bad-cb-amount");
-
+/*
     // FXTC BEGIN
     CAmount founderReward = GetFounderReward(pindex->nHeight, block.vtx[0]->GetValueOut());
     if (!sporkManager.IsSporkActive(SPORK_FXTC_02_IGNORE_FOUNDER_REWARD_CHECK) && founderReward > 0) {
@@ -2214,7 +2573,7 @@ bool CChainState::ConnectBlock(const CBlock& block, CValidationState& state, CBl
     }
 
     // FXTC END
-
+*/
     // DASH : MODIFIED TO CHECK MASTERNODE PAYMENTS AND SUPERBLOCKS
 
     // It's possible that we simply don't have enough data and this could fail
@@ -2424,7 +2783,10 @@ void static UpdateTip(const CBlockIndex *pindexNew, const CChainParams& chainPar
     }
 
     std::string warningMessages;
-    if (!IsInitialBlockDownload())
+    // VELES BEGIN
+    //if (!IsInitialBlockDownload())
+    if (false)
+    // VELES END
     {
         int nUpgraded = 0;
         const CBlockIndex* pindex = pindexNew;

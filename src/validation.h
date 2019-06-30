@@ -142,6 +142,12 @@ static const bool DEFAULT_PEERBLOOMFILTERS = true;
 /** Default for -stopatheight */
 static const int DEFAULT_STOPATHEIGHT = 0;
 
+// VELES BEGIN
+static const double HALVING_MIN_SUPPLY_TARGET = 0.80;
+static const double HALVING_MIN_BOOST_SUPPLY_TARGET = 0.60;
+static const double HALVING_MAX_BOOST_STEP = 0.5;
+// VELES END
+
 struct BlockHasher
 {
     // this used to call `GetCheapHash()` in uint256, which was later moved; the
@@ -287,9 +293,41 @@ bool GetTransaction(const uint256& hash, CTransactionRef& tx, const Consensus::P
  * validationinterface callback.
  */
 bool ActivateBestChain(CValidationState& state, const CChainParams& chainparams, std::shared_ptr<const CBlock> pblock = std::shared_ptr<const CBlock>());
+// VELES BEGIN
+struct HalvingEpoch
+{
+	int nStartBlock = 0;
+	int nEndBlock = 0;
+//	int nTimesHalvingDelayed = 0;
+	double nDynamicRewardsBoostFactor = 0;
+	bool fHasEnded = false;
+	bool fIsSubsidyHalved = false;
+	CAmount nMaxBlockSubsidy = 0;
+	CAmount nStartSupply = 0;
+	CAmount nEndSupply = 0;
+//	CAmount nMaxSupply;
+};
+struct HalvingParameters
+{
+    int nHalvingCount = 0;
+    int nHalvingInterval = 0;
+    double nDynamicRewardsBoostFactor = 0;
+//    int nNextHalvingBlockHeight = 0;
+//    int nLastHalvingBlockHeight = 0;
+    std::vector<HalvingEpoch> epochs;
+};
+CAmount CountBlockRewards(int nStartBlock, int nEndBlock, HalvingParameters *halvingParams);
+CAmount GetTotalSupply(int nHeight = 0);
+HalvingParameters *GetSubsidyHalvingParameters(int nHeight, const Consensus::Params& consensusParams);
+HalvingParameters *GetSubsidyHalvingParameters(int nHeight);
+HalvingParameters *GetSubsidyHalvingParameters();
+double GetAlgoCostFactor(int32_t nAlgo, int nHeight);
+double GetAlgoCostFactor(int32_t nAlgo);
+double GetBlockAlgoCostFactor(CBlockHeader *pblock, int nHeight);
+// VELES END
 // FXTC BEGIN
 //CAmount GetBlockSubsidy(int nHeight, const Consensus::Params& consensusParams);
-CAmount GetBlockSubsidy(int nHeight, CBlockHeader pblock, const Consensus::Params& consensusParams, bool fSuperblockPartOnly = false);
+CAmount GetBlockSubsidy(int nHeight, CBlockHeader pblock, const Consensus::Params& consensusParams, bool fSuperblockPartOnly = false, HalvingParameters *halvingParams = nullptr);
 // FXTC END
 // Dash
 CAmount GetMasternodePayment(int nHeight, CAmount blockValue);
