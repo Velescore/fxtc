@@ -240,11 +240,19 @@ public:
         // Dash
         consensus.nMasternodeMinimumConfirmations = 15;
         consensus.nMasternodePaymentsStartBlock = 10; // not true, but it's ok as long as it's less then nMasternodePaymentsIncreaseBlock
-        consensus.nMasternodePaymentsIncreaseBlock = 10;
+        //consensus.nMasternodePaymentsIncreaseBlock = 10;
         consensus.nMasternodePaymentsIncreasePeriod = 25;
         consensus.nMasternodeCollateralMinimum = 10; // starting MN collateral
         consensus.nMasternodeCollateralMaximum = 1000; // MN collateral at infinity
-
+        // VELES BEGIN
+         consensus.nMasternodePaymentsStartPercent =  5;
+         consensus.nMasternodePaymentsFinalPercent =  60; // will be reached in ca 5 yrs
+         consensus.nMasternodePaymentsLegacyPercent = 40; // value used until VCIP01
+         consensus.nDevFundPaymentsDecreasePeriod =   365 * 576 * 5;   // 5 years
+         consensus.nDevFundPaymentsStartPercent =  5;
+         consensus.nDevFundPaymentsFinalPercent =  0; // no more dev rewards after 5 years
+         consensus.nDevFundPaymentsLegacyPercent = 5;
+         // VELES END
         consensus.nInstantSendKeepLock = 6;
 
         consensus.nBudgetPaymentsStartBlock = 4100;
@@ -376,11 +384,19 @@ public:
         // Dash
         consensus.nMasternodeMinimumConfirmations = 15;
 	      consensus.nMasternodePaymentsStartBlock = 240;
-        consensus.nMasternodePaymentsIncreaseBlock = 350;
+        //consensus.nMasternodePaymentsIncreaseBlock = 350;
         consensus.nMasternodePaymentsIncreasePeriod = 10;
         consensus.nMasternodeCollateralMinimum = 1; // starting MN collateral
         consensus.nMasternodeCollateralMaximum = 100; // MN collateral at infinity
-
+        // VELES BEGIN
+        consensus.nMasternodePaymentsStartPercent =  5;
+        consensus.nMasternodePaymentsFinalPercent =  60; // will be reached in ca 5 yrs
+        consensus.nMasternodePaymentsLegacyPercent = 40; // value used until VCIP01
+        consensus.nDevFundPaymentsDecreasePeriod =   365 * 576 * 5;   // 5 years
+        consensus.nDevFundPaymentsStartPercent =  5;
+        consensus.nDevFundPaymentsFinalPercent =  0; // no more dev rewards after 5 years
+        consensus.nDevFundPaymentsLegacyPercent = 5;
+       // VELES END
         consensus.nInstantSendKeepLock = 6;
 
         consensus.nBudgetPaymentsStartBlock = 1000;
