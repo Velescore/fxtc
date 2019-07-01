@@ -740,7 +740,7 @@ fs::path GetDefaultDataDir()
         pathRet = fs::path(pszHome);
 #ifdef MAC_OSX
     // Mac
-    return pathRet / "Library/Application Support/Veles;
+    return pathRet / "Library/Application Support/Veles";
 #else
     // Unix
     return pathRet / ".veles";
